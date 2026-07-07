@@ -1,0 +1,13 @@
+{
+  "itemGroup.utility_core": "Example Mod Tab",
+  "block.utility_core.example_block": "Example Block",
+  "item.utility_core.example_item": "Example Item",
+
+  "utility_core.configuration.title": "Utility Core Configs",
+  "utility_core.configuration.section.utility_core.common.toml": "Utility Core Configs",
+  "utility_core.configuration.section.utility_core.common.toml.title": "Utility Core Configs",
+  "utility_core.configuration.items": "Item List",
+  "utility_core.configuration.logDirtBlock": "Log Dirt Block",
+  "utility_core.configuration.magicNumberIntroduction": "Magic Number Text",
+  "utility_core.configuration.magicNumber": "Magic Number"
+}
