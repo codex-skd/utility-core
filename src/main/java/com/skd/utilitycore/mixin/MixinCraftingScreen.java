@@ -42,22 +42,7 @@ public class MixinCraftingScreen {
 
         if (cachedRecipes.size() > 1) {
             renderRecipeSelector(extractor, mc, mouseX, mouseY, cachedRecipes, selX, selY);
-        } else {
-            renderIndicator(extractor, mouseX, mouseY, selX, selY, cachedRecipes.size());
         }
-    }
-
-    private static void renderIndicator(GuiGraphicsExtractor extractor, int mouseX, int mouseY,
-                                         int selX, int selY, int recipeCount) {
-        boolean hovering = mouseX >= selX && mouseX < selX + 16 && mouseY >= selY && mouseY < selY + 16;
-        int color = hovering ? 0xFF888888 : 0xFF555555;
-        extractor.fill(selX, selY, selX + 16, selY + 16, color);
-
-        PolymorphClientHandler.setHovering(false);
-
-        String text = recipeCount == 0 ? "?" : String.valueOf(recipeCount);
-        Minecraft mc = Minecraft.getInstance();
-        extractor.text(mc.font, text, selX + 4, selY + 3, 0xFFFFFFFF);
     }
 
     private static void renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,
