@@ -60,13 +60,14 @@ public class MixinCraftingScreen {
                 int x = selX + i * 18;
                 int y = selY + j * 18;
 
-                int bgColor = idx == selected ? 0xCC448844 : 0xAA333333;
+                int bgColor = idx == selected ? 0xFF448844 : 0xFFFFFFFF;
                 if (mouseX >= x && mouseX < x + 18 && mouseY >= y && mouseY < y + 18) {
-                    bgColor = 0xAA666666;
+                    bgColor = idx == selected ? 0xFF66AA66 : 0xFFCCCCCC;
                     hovering = true;
                 }
 
-                extractor.fill(x, y, x + 18, y + 18, bgColor);
+                extractor.fill(x, y, x + 18, y + 18, 0xFF000000);
+                extractor.fill(x + 1, y + 1, x + 17, y + 17, bgColor);
                 extractor.item(recipes.get(idx).output(), x + 1, y + 1);
                 extractor.itemDecorations(mc.font, recipes.get(idx).output(), x + 1, y + 1);
             }
