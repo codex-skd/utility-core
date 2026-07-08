@@ -1,6 +1,5 @@
 package com.skd.utilitycore.network;
 
-import com.skd.utilitycore.UtilityCore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
@@ -16,6 +15,11 @@ public class ModNetwork {
                     SelectRecipePacket.TYPE,
                     SelectRecipePacket.STREAM_CODEC,
                     SelectRecipePacket::handle
+            );
+            registrar.playToClient(
+                    SyncRecipesPacket.TYPE,
+                    SyncRecipesPacket.STREAM_CODEC,
+                    SyncRecipesPacket::handle
             );
         });
     }

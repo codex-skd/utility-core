@@ -2,20 +2,16 @@ package com.skd.utilitycore.client;
 
 import com.skd.utilitycore.Config;
 import com.skd.utilitycore.UtilityCore;
-import com.skd.utilitycore.mixin.AccessorAbstractContainerScreen;
-import com.skd.utilitycore.mixin.AccessorCraftingMenu;
-import com.skd.utilitycore.mixin.MixinCraftingScreen;
 import com.skd.utilitycore.network.SelectRecipePacket;
 import com.skd.utilitycore.polymorph.RecipeFinder;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.CraftingScreen;
-import net.minecraft.world.inventory.AbstractCraftingMenu;
 import net.minecraft.world.inventory.CraftingContainer;
-import net.minecraft.world.inventory.CraftingMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.RecipeAccess;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -36,10 +32,11 @@ public class PolymorphClientHandler {
     private static int selectorX;
     private static int selectorY;
     private static boolean hovering = false;
+    private static int selectedIndex = 0;
 
     @SubscribeEvent
     public static void onMousePressed(ScreenEvent.MouseButtonPressed.Pre event) {
-        if (!(event.getScreen() instanceof CraftingScreen screen)) return;
+        if (!(event.getScreen() instanceof CraftingScreen)) return;
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) return;
 
         double mouseX = event.getMouseX();
@@ -51,6 +48,7 @@ public class PolymorphClientHandler {
             int row = ((int) mouseY - selectorY) / 18;
             int index = row * 4 + column;
             if (index >= 0 && index < cachedRecipes.size()) {
+                selectedIndex = index;
                 ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
                 event.setCanceled(true);
             }
@@ -62,13 +60,15 @@ public class PolymorphClientHandler {
             cachedRecipes.clear();
             return;
         }
+        RecipeManager rm = getRecipeManager(mc);
+        if (rm == null) {
+            return;
+        }
         CraftingInput input = container.asCraftInput();
-
         List<ItemStack> inputs = captureInputs(container);
         if (inputsChanged(lastInputs, inputs)) {
             List<RecipeHolder<CraftingRecipe>> recipes;
             try {
-                RecipeManager rm = (RecipeManager) mc.level.recipeAccess();
                 recipes = RecipeFinder.getRecipesFor(rm, RecipeType.CRAFTING, input, mc.level);
             } catch (Exception e) {
                 UtilityCore.LOGGER.error("Error finding recipes: {}", e.getMessage());
@@ -76,16 +76,51 @@ public class PolymorphClientHandler {
                 lastInputs.clear();
                 return;
             }
-            int max = Config.MAX_RECIPES_DISPLAYED.get();
-            cachedRecipes.clear();
-            for (RecipeHolder<CraftingRecipe> holder : recipes) {
-                if (cachedRecipes.size() >= max) break;
-                ItemStack output = holder.value().assemble(input);
-                cachedRecipes.add(RecipePair.of(holder, output.copy()));
-            }
+            UtilityCore.LOGGER.debug("[UtilityCore] updateRecipeCache: found {} recipes", recipes.size());
+            setRecipeOutputs(recipes, input);
             lastInputs.clear();
             lastInputs.addAll(inputs);
         }
+    }
+
+    private static void setRecipeOutputs(List<RecipeHolder<CraftingRecipe>> recipes, CraftingInput input) {
+        int max = Config.MAX_RECIPES_DISPLAYED.get();
+        cachedRecipes.clear();
+        for (RecipeHolder<CraftingRecipe> holder : recipes) {
+            if (cachedRecipes.size() >= max) break;
+            ItemStack output = holder.value().assemble(input);
+            cachedRecipes.add(RecipePair.of(holder, output.copy()));
+        }
+    }
+
+    public static void receiveServerRecipes(List<ItemStack> outputs) {
+        cachedRecipes.clear();
+        for (ItemStack stack : outputs) {
+            cachedRecipes.add(RecipePair.of(null, stack));
+        }
+        if (selectedIndex >= cachedRecipes.size()) {
+            selectedIndex = 0;
+        }
+    }
+
+    public static int getSelectedIndex() {
+        return selectedIndex;
+    }
+
+    public static void setSelectedIndex(int index) {
+        selectedIndex = index;
+    }
+
+    private static RecipeManager getRecipeManager(Minecraft mc) {
+        var integratedServer = mc.getSingleplayerServer();
+        if (integratedServer != null) {
+            return integratedServer.getRecipeManager();
+        }
+        RecipeAccess recipeAccess = mc.level.recipeAccess();
+        if (recipeAccess instanceof RecipeManager rm) {
+            return rm;
+        }
+        return null;
     }
 
     public static List<RecipePair> getCachedRecipes() {

@@ -2,10 +2,12 @@ package com.skd.utilitycore.mixin;
 
 import com.skd.utilitycore.Config;
 import com.skd.utilitycore.attachment.ModAttachments;
+import com.skd.utilitycore.network.SyncRecipesPacket;
 import com.skd.utilitycore.polymorph.PlayerRecipeData;
 import com.skd.utilitycore.polymorph.RecipeFinder;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingContainer;
@@ -17,6 +19,7 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -47,6 +50,15 @@ public class MixinCraftingMenu {
             return;
         }
 
+        List<ItemStack> outputs = new ArrayList<>();
+        List<RecipePair> pairs = new ArrayList<>();
+        for (RecipeHolder<CraftingRecipe> holder : allRecipes) {
+            ItemStack output = holder.value().assemble(input);
+            pairs.add(RecipePair.of(holder, output.copy()));
+            outputs.add(output.copy());
+        }
+        sendSyncPacket(player, outputs);
+
         if (allRecipes.isEmpty()) {
             result.setItem(0, ItemStack.EMPTY);
             menu.setRemoteSlot(0, ItemStack.EMPTY);
@@ -62,11 +74,6 @@ public class MixinCraftingMenu {
         List<ItemStack> inputs = captureInputs(container);
 
         if (data.inputsChanged(inputs)) {
-            List<RecipePair> pairs = new ArrayList<>();
-            for (RecipeHolder<CraftingRecipe> holder : allRecipes) {
-                ItemStack output = holder.value().assemble(input);
-                pairs.add(RecipePair.of(holder, output.copy()));
-            }
             data.setRecipes(pairs, inputs);
         }
 
@@ -78,11 +85,6 @@ public class MixinCraftingMenu {
             holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
         } else {
             holderToUse = allRecipes.get(0);
-            List<RecipePair> pairs = new ArrayList<>();
-            for (RecipeHolder<CraftingRecipe> holder : allRecipes) {
-                ItemStack output = holder.value().assemble(input);
-                pairs.add(RecipePair.of(holder, output.copy()));
-            }
             data.setRecipes(pairs, inputs);
         }
 
@@ -101,5 +103,12 @@ public class MixinCraftingMenu {
             inputs.add(container.getItem(i).copy());
         }
         return inputs;
+    }
+
+    @Unique
+    private static void sendSyncPacket(Player player, List<ItemStack> outputs) {
+        if (player instanceof ServerPlayer sp) {
+            PacketDistributor.sendToPlayer(sp, new SyncRecipesPacket(outputs));
+        }
     }
 }

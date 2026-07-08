@@ -1,7 +1,6 @@
 package com.skd.utilitycore.mixin;
 
 import com.skd.utilitycore.Config;
-import com.skd.utilitycore.UtilityCore;
 import com.skd.utilitycore.client.PolymorphClientHandler;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.client.Minecraft;
@@ -36,19 +35,36 @@ public class MixinCraftingScreen {
         PolymorphClientHandler.updateRecipeCache(container, mc);
         List<RecipePair> cachedRecipes = PolymorphClientHandler.getCachedRecipes();
 
+        AccessorAbstractContainerScreen accessor = (AccessorAbstractContainerScreen) (Object) this;
+        int selX = accessor.utility_core$getLeftPos() + 155;
+        int selY = accessor.utility_core$getTopPos() + 30;
+        PolymorphClientHandler.setSelectorPosition(selX, selY);
+
         if (cachedRecipes.size() > 1) {
-            AccessorAbstractContainerScreen accessor = (AccessorAbstractContainerScreen) (Object) this;
-            int selX = accessor.utility_core$getLeftPos() + 155;
-            int selY = accessor.utility_core$getTopPos() + 30;
-            PolymorphClientHandler.setSelectorPosition(selX, selY);
             renderRecipeSelector(extractor, mc, mouseX, mouseY, cachedRecipes, selX, selY);
+        } else {
+            renderIndicator(extractor, mouseX, mouseY, selX, selY, cachedRecipes.size());
         }
+    }
+
+    private static void renderIndicator(GuiGraphicsExtractor extractor, int mouseX, int mouseY,
+                                         int selX, int selY, int recipeCount) {
+        boolean hovering = mouseX >= selX && mouseX < selX + 16 && mouseY >= selY && mouseY < selY + 16;
+        int color = hovering ? 0xFF888888 : 0xFF555555;
+        extractor.fill(selX, selY, selX + 16, selY + 16, color);
+
+        PolymorphClientHandler.setHovering(false);
+
+        String text = recipeCount == 0 ? "?" : String.valueOf(recipeCount);
+        Minecraft mc = Minecraft.getInstance();
+        extractor.text(mc.font, text, selX + 4, selY + 3, 0xFFFFFFFF);
     }
 
     private static void renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,
                                               List<RecipePair> recipes, int selX, int selY) {
         int columns = Math.min(4, recipes.size());
         int rows = (int) Math.ceil((double) recipes.size() / columns);
+        int selected = PolymorphClientHandler.getSelectedIndex();
 
         boolean hovering = false;
         for (int j = 0; j < rows; j++) {
@@ -59,7 +75,7 @@ public class MixinCraftingScreen {
                 int x = selX + i * 18;
                 int y = selY + j * 18;
 
-                int bgColor = 0xAA333333;
+                int bgColor = idx == selected ? 0xCC448844 : 0xAA333333;
                 if (mouseX >= x && mouseX < x + 18 && mouseY >= y && mouseY < y + 18) {
                     bgColor = 0xAA666666;
                     hovering = true;
