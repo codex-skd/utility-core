@@ -6,7 +6,8 @@
   "refmap": "utility_core.refmap.json",
   "mixins": [
     "AccessorCraftingMenu",
-    "MixinCraftingMenu"
+    "MixinCraftingMenu",
+    "MixinDamageContainer"
   ],
   "client": [
     "AccessorAbstractContainerScreen",

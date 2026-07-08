@@ -52,6 +52,11 @@ List<RecipeHolder<CraftingRecipe>> recipes = api.getRecipesFor(
 // Get player recipe selection data
 PlayerRecipeData data = api.getPlayerRecipeData(player);
 
-// Clear recipe selection data
+// Clear player recipe selection data
 api.clearPlayerRecipeData(player);
+
+## Changelog
+
+### 1.0.3
+- Fixed server crash with Armadillo + Tombstone + Apothic Attributes: negative damage clamped to 0
 ```
