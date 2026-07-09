@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(DamageContainer.class)
 public class MixinDamageContainer {
 
-    @Redirect(method = "setNewDamage", at = @At(value = "INVOKE", target = "Lcom/google/common/base/Preconditions;checkArgument(ZLjava/lang/Object;)V"))
+    @Redirect(method = "setNewDamage", at = @At(value = "INVOKE", target = "Lcom/google/common/base/Preconditions;checkArgument(ZLjava/lang/Object;)V"), require = 0)
     private void utility_core$bypassNegativeDamageCheck(boolean expression, Object message) {
         // Suppress "Damage cannot be negative" to prevent server crash.
         // The negative value will still be stored, but the damage system
