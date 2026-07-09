@@ -5,7 +5,14 @@ A library mod for NeoForge that provides shared utilities and features for mod d
 ## Features
 
 ### Recipe Conflict Resolution (Polymorph-style)
-When multiple crafting recipes match the same inputs, a selection widget appears in the crafting table GUI allowing players to choose which output they want. The selected recipe is highlighted in green.
+When multiple crafting recipes match the same inputs, a selection widget appears in the crafting table GUI allowing players to choose which output they want. The selected recipe is highlighted in green with a black border, and alternatives are shown with a white background.
+
+- **Server-side**: Detects matching recipes, stores the player's selection via attachments, syncs the output list to the client
+- **Client-side**: Renders a recipe selector grid, sends selection changes back to the server
+- **Instant update**: The result slot updates immediately when clicking an alternative recipe
+
+### Damage Safety
+Negative damage values from mod interactions (e.g., Apothic Attributes critical strikes + Tombstone's Decrepitude effect) are automatically clamped to 0, preventing `IllegalArgumentException: Damage cannot be negative` crashes that would otherwise crash the server.
 
 ### Configurable
 All features can be configured via the in-game config screen or the config file:
@@ -54,9 +61,19 @@ PlayerRecipeData data = api.getPlayerRecipeData(player);
 
 // Clear player recipe selection data
 api.clearPlayerRecipeData(player);
+```
 
 ## Changelog
 
 ### 1.0.3
-- Fixed server crash with Armadillo + Tombstone + Apothic Attributes: negative damage clamped to 0
-```
+- Fixed server crash "Damage cannot be negative" when Apothic Attributes critical strike interacts with Tombstone's Decrepitude effect on Armadillos (negative damage is now clamped to 0 instead of throwing an exception).
+
+### 1.0.2
+- Fixed result slot not updating visually after recipe selection
+
+### 1.0.1
+- Initial release
+- Recipe conflict resolution for crafting table: choose between multiple crafting outputs
+- Configurable settings (enable/disable, max recipes displayed)
+- Developer API for custom integrations
+- English translations
