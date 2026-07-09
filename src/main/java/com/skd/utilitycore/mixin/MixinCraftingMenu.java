@@ -9,6 +9,7 @@ import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.CraftingMenu;
@@ -33,20 +34,21 @@ import java.util.List;
 public class MixinCraftingMenu {
 
     @Inject(method = "slotChangedCraftingGrid", at = @At("HEAD"), cancellable = true)
-    private static void onSlotChangedCraftingGrid(AbstractContainerMenu menu, ServerLevel level, Player player,
+    private static void onSlotChangedCraftingGrid(AbstractContainerMenu menu, Level level, Player player,
                                                    CraftingContainer container, ResultContainer result,
                                                    RecipeHolder<CraftingRecipe> recipe, CallbackInfo ci) {
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) {
             return;
         }
 
-        RecipeManager rm = level.recipeAccess();
+        RecipeManager rm = ((ServerLevel) level).recipeAccess();
         CraftingInput input = container.asCraftInput();
 
         List<RecipeHolder<CraftingRecipe>> allRecipes;
         try {
             allRecipes = RecipeFinder.getRecipesFor(rm, RecipeType.CRAFTING, input, level);
         } catch (Exception e) {
+            com.skd.utilitycore.UtilityCore.LOGGER.error("[UtilityCore] slotChangedCraftingGrid recipe lookup failed: {}", e.getMessage(), e);
             return;
         }
 
@@ -57,7 +59,6 @@ public class MixinCraftingMenu {
             pairs.add(RecipePair.of(holder, output.copy()));
             outputs.add(output.copy());
         }
-        sendSyncPacket(player, outputs);
 
         if (allRecipes.isEmpty()) {
             result.setItem(0, ItemStack.EMPTY);
@@ -66,7 +67,15 @@ public class MixinCraftingMenu {
             return;
         }
 
+        sendSyncPacket(player, outputs);
+
         if (allRecipes.size() == 1) {
+            RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
+            ItemStack assembled = single.value().assemble(input);
+            result.setItem(0, assembled);
+            result.setRecipeUsed(single);
+            menu.setRemoteSlot(0, assembled);
+            ci.cancel();
             return;
         }
 
