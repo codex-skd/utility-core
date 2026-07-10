@@ -6,6 +6,7 @@ import com.skd.utilitycore.network.SyncRecipesPacket;
 import com.skd.utilitycore.polymorph.PlayerRecipeData;
 import com.skd.utilitycore.polymorph.RecipeFinder;
 import com.skd.utilitycore.polymorph.RecipePair;
+import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -59,48 +60,47 @@ public class MixinCraftingMenu {
             outputs.add(output.copy());
         }
 
+        ItemStack finalResult;
+
         if (allRecipes.isEmpty()) {
-            result.setItem(0, ItemStack.EMPTY);
-            menu.setRemoteSlot(0, ItemStack.EMPTY);
-            ci.cancel();
-            return;
-        }
-
-        sendSyncPacket(player, outputs);
-
-        if (allRecipes.size() == 1) {
-            RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
-            ItemStack assembled = single.value().assemble(input);
-            result.setItem(0, assembled);
-            result.setRecipeUsed(single);
-            menu.setRemoteSlot(0, assembled);
-            ci.cancel();
-            return;
-        }
-
-        PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
-        List<ItemStack> inputs = captureInputs(container);
-
-        if (data.inputsChanged(inputs)) {
-            data.setRecipes(pairs, inputs);
-        }
-
-        RecipePair selected = data.getSelectedRecipe();
-        RecipeHolder<CraftingRecipe> holderToUse;
-
-        if (selected != null && allRecipes.stream().anyMatch(
-                r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
-            holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
+            finalResult = ItemStack.EMPTY;
         } else {
-            holderToUse = allRecipes.get(0);
-            data.setRecipes(pairs, inputs);
+            sendSyncPacket(player, outputs);
+
+            if (allRecipes.size() == 1) {
+                RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
+                result.setRecipeUsed(single);
+                finalResult = single.value().assemble(input);
+            } else {
+                PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
+                List<ItemStack> inputs = captureInputs(container);
+
+                if (data.inputsChanged(inputs)) {
+                    data.setRecipes(pairs, inputs);
+                }
+
+                RecipePair selected = data.getSelectedRecipe();
+                RecipeHolder<CraftingRecipe> holderToUse;
+
+                if (selected != null && allRecipes.stream().anyMatch(
+                        r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
+                    holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
+                } else {
+                    holderToUse = allRecipes.get(0);
+                    data.setRecipes(pairs, inputs);
+                }
+
+                result.setRecipeUsed(holderToUse);
+                finalResult = holderToUse.value().assemble(input);
+            }
         }
 
-        ItemStack assembled = holderToUse.value().assemble(input);
-        result.setItem(0, assembled);
-        result.setRecipeUsed(holderToUse);
-        menu.setRemoteSlot(0, assembled);
-
+        result.setItem(0, finalResult);
+        menu.setRemoteSlot(0, finalResult);
+        if (player instanceof ServerPlayer sp) {
+            sp.connection.send(new ClientboundContainerSetSlotPacket(
+                    menu.containerId, menu.incrementStateId(), 0, finalResult));
+        }
         ci.cancel();
     }
 

@@ -8,10 +8,12 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.CraftingMenu;
+import net.minecraft.world.inventory.AbstractCraftingMenu;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record SelectRecipePacket(int selectedIndex) implements CustomPacketPayload {
@@ -38,9 +40,13 @@ public record SelectRecipePacket(int selectedIndex) implements CustomPacketPaylo
             data.setSelectedIndex(packet.selectedIndex);
             RecipePair selected = data.getSelectedRecipe();
             AbstractContainerMenu menu = player.containerMenu;
-            if (menu instanceof CraftingMenu cm && selected != null) {
+            if (selected != null && menu instanceof AbstractCraftingMenu acm) {
                 menu.setRemoteSlot(0, selected.output());
-                var slots = cm.getInputGridSlots();
+                if (player instanceof ServerPlayer sp) {
+                    sp.connection.send(new ClientboundContainerSetSlotPacket(
+                            menu.containerId, menu.incrementStateId(), 0, selected.output()));
+                }
+                var slots = acm.getInputGridSlots();
                 if (!slots.isEmpty()) {
                     menu.slotsChanged(slots.getFirst().container);
                 }

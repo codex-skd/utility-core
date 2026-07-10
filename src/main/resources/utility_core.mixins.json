@@ -10,7 +10,8 @@
   ],
   "client": [
     "AccessorAbstractContainerScreen",
-    "MixinCraftingScreen"
+    "MixinCraftingScreen",
+    "MixinInventoryScreen"
   ],
   "server": [],
   "injectors": {

@@ -6,7 +6,9 @@ import com.skd.utilitycore.network.SelectRecipePacket;
 import com.skd.utilitycore.polymorph.RecipeFinder;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.CraftingScreen;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
@@ -36,7 +38,7 @@ public class PolymorphClientHandler {
 
     @SubscribeEvent
     public static void onMousePressed(ScreenEvent.MouseButtonPressed.Pre event) {
-        if (!(event.getScreen() instanceof CraftingScreen)) return;
+        if (!(event.getScreen() instanceof CraftingScreen) && !(event.getScreen() instanceof InventoryScreen)) return;
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) return;
 
         double mouseX = event.getMouseX();
@@ -134,6 +136,40 @@ public class PolymorphClientHandler {
 
     public static void setHovering(boolean h) {
         hovering = h;
+    }
+
+    public static ItemStack renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,
+                                                  int selX, int selY) {
+        List<RecipePair> recipes = cachedRecipes;
+        if (recipes.size() <= 1) return ItemStack.EMPTY;
+        int columns = Math.min(4, recipes.size());
+        int rows = (int) Math.ceil((double) recipes.size() / columns);
+
+        boolean hoveringNow = false;
+        ItemStack hoveredStack = ItemStack.EMPTY;
+        for (int j = 0; j < rows; j++) {
+            for (int i = 0; i < columns; i++) {
+                int idx = j * columns + i;
+                if (idx >= recipes.size()) break;
+
+                int x = selX + i * 18;
+                int y = selY + j * 18;
+
+                int bgColor = idx == selectedIndex ? 0xFF448844 : 0xFFFFFFFF;
+                if (mouseX >= x && mouseX < x + 18 && mouseY >= y && mouseY < y + 18) {
+                    bgColor = idx == selectedIndex ? 0xFF66AA66 : 0xFFCCCCCC;
+                    hoveringNow = true;
+                    hoveredStack = recipes.get(idx).output();
+                }
+
+                extractor.fill(x, y, x + 18, y + 18, 0xFF000000);
+                extractor.fill(x + 1, y + 1, x + 17, y + 17, bgColor);
+                extractor.item(recipes.get(idx).output(), x + 1, y + 1);
+                extractor.itemDecorations(mc.font, recipes.get(idx).output(), x + 1, y + 1);
+            }
+        }
+        hovering = hoveringNow;
+        return hoveredStack;
     }
 
     public static List<ItemStack> captureInputs(CraftingContainer container) {

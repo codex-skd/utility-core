@@ -5,18 +5,17 @@ import com.skd.utilitycore.client.PolymorphClientHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.screens.inventory.CraftingScreen;
-import net.minecraft.world.inventory.AbstractCraftingMenu;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.world.inventory.CraftingContainer;
-import net.minecraft.world.inventory.CraftingMenu;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(CraftingScreen.class)
-public class MixinCraftingScreen {
+@Mixin(InventoryScreen.class)
+public class MixinInventoryScreen {
 
     @Inject(method = "extractBackground", at = @At("TAIL"))
     private void onExtractBackground(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
@@ -26,13 +25,13 @@ public class MixinCraftingScreen {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null || mc.level == null) return;
 
-        CraftingMenu menu = (CraftingMenu) screen.getMenu();
-        CraftingContainer container = ((AccessorCraftingMenu) (AbstractCraftingMenu) menu).utility_core$getCraftSlots();
+        InventoryMenu menu = (InventoryMenu) screen.getMenu();
+        CraftingContainer container = menu.getCraftSlots();
 
         PolymorphClientHandler.updateRecipeCache(container, mc);
 
         AccessorAbstractContainerScreen accessor = (AccessorAbstractContainerScreen) (Object) this;
-        int selX = accessor.utility_core$getLeftPos() + 155;
+        int selX = accessor.utility_core$getLeftPos() + 124;
         int selY = accessor.utility_core$getTopPos() + 30;
         PolymorphClientHandler.setSelectorPosition(selX, selY);
 
