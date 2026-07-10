@@ -2,6 +2,7 @@ package com.skd.utilitycore.network;
 
 import com.skd.utilitycore.UtilityCore;
 import com.skd.utilitycore.attachment.ModAttachments;
+import com.skd.utilitycore.mixin.AccessorCraftingMenu;
 import com.skd.utilitycore.polymorph.PlayerRecipeData;
 import com.skd.utilitycore.polymorph.RecipePair;
 import io.netty.buffer.ByteBuf;
@@ -12,7 +13,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingMenu;
-import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.inventory.ResultContainer;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record SelectRecipePacket(int selectedIndex) implements CustomPacketPayload {
@@ -39,12 +40,11 @@ public record SelectRecipePacket(int selectedIndex) implements CustomPacketPaylo
             data.setSelectedIndex(packet.selectedIndex);
             RecipePair selected = data.getSelectedRecipe();
             AbstractContainerMenu menu = player.containerMenu;
-            if (menu instanceof CraftingMenu cm && selected != null) {
+            if (menu instanceof CraftingMenu cm && selected != null && selected.recipe() != null) {
+                ResultContainer result = ((AccessorCraftingMenu) cm).utility_core$getResultSlots();
+                result.setItem(0, selected.output());
+                result.setRecipeUsed(selected.recipe());
                 menu.setRemoteSlot(0, selected.output());
-                var slots = cm.getInputGridSlots();
-                if (!slots.isEmpty()) {
-                    menu.slotsChanged(slots.getFirst().container);
-                }
             }
         });
     }

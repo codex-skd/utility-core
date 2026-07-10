@@ -5,12 +5,16 @@ import com.skd.utilitycore.client.PolymorphClientHandler;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CraftingScreen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AbstractCraftingMenu;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.CraftingMenu;
+import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -19,6 +23,13 @@ import java.util.List;
 
 @Mixin(CraftingScreen.class)
 public class MixinCraftingScreen {
+
+    @Unique
+    private static ItemStack utility_core$hoveredStack = ItemStack.EMPTY;
+    @Unique
+    private static int utility_core$hoveredMouseX = 0;
+    @Unique
+    private static int utility_core$hoveredMouseY = 0;
 
     @Inject(method = "extractBackground", at = @At("TAIL"))
     private void onExtractBackground(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
@@ -40,8 +51,18 @@ public class MixinCraftingScreen {
         int selY = accessor.utility_core$getTopPos() + 30;
         PolymorphClientHandler.setSelectorPosition(selX, selY);
 
+        utility_core$hoveredStack = ItemStack.EMPTY;
         if (cachedRecipes.size() > 1) {
             renderRecipeSelector(extractor, mc, mouseX, mouseY, cachedRecipes, selX, selY);
+        }
+    }
+
+    @Inject(method = "extractRenderState", at = @At("TAIL"))
+    private void onExtractRenderState(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
+        if (!utility_core$hoveredStack.isEmpty()) {
+            Minecraft mc = Minecraft.getInstance();
+            List<Component> tooltip = Screen.getTooltipFromItem(mc, utility_core$hoveredStack);
+            extractor.setTooltipForNextFrame(mc.font, tooltip, utility_core$hoveredStack.getTooltipImage(), mouseX, mouseY);
         }
     }
 
@@ -64,6 +85,9 @@ public class MixinCraftingScreen {
                 if (mouseX >= x && mouseX < x + 18 && mouseY >= y && mouseY < y + 18) {
                     bgColor = idx == selected ? 0xFF66AA66 : 0xFFCCCCCC;
                     hovering = true;
+                    utility_core$hoveredStack = recipes.get(idx).output();
+                    utility_core$hoveredMouseX = mouseX;
+                    utility_core$hoveredMouseY = mouseY;
                 }
 
                 extractor.fill(x, y, x + 18, y + 18, 0xFF000000);
