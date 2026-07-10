@@ -7,7 +7,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CraftingScreen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AbstractCraftingMenu;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.CraftingMenu;
@@ -52,27 +51,8 @@ public class MixinCraftingScreen {
         }
 
         if (!utility_core$hoveredStack.isEmpty()) {
-            renderSimpleTooltip(extractor, mc, utility_core$hoveredStack.getHoverName(), mouseX, mouseY);
+            extractor.setTooltipForNextFrame(mc.font, utility_core$hoveredStack.getHoverName(), mouseX, mouseY);
         }
-    }
-
-    private static void renderSimpleTooltip(GuiGraphicsExtractor extractor, Minecraft mc, Component name, int mouseX, int mouseY) {
-        int tw = mc.font.width(name);
-        int tx = Math.min(mouseX + 12, extractor.guiWidth() - tw - 10);
-        int ty = Math.min(mouseY - 12, extractor.guiHeight() - 20);
-        if (ty < 4) ty = mouseY + 12;
-        int padding = 4;
-        int bx1 = tx - padding;
-        int by1 = ty - padding;
-        int bx2 = tx + tw + padding;
-        int by2 = ty + 9 + padding;
-        extractor.fill(bx1, by1, bx2, by2, 0xF0100010);
-        extractor.fill(bx1 + 1, by1 + 1, bx2 - 1, by2 - 1, 0xF0FFFFFF);
-        extractor.fill(bx1 + 1, by1, bx2 - 1, by1 + 1, 0xF0FFFFFF);
-        extractor.fill(bx1 + 1, by2 - 1, bx2 - 1, by2, 0xF0FFFFFF);
-        extractor.fill(bx1, by1 + 1, bx1 + 1, by2 - 1, 0xF0FFFFFF);
-        extractor.fill(bx2 - 1, by1 + 1, bx2, by2 - 1, 0xF0FFFFFF);
-        extractor.text(mc.font, name, tx, ty, 0xFF000000, true);
     }
 
     private static void renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,

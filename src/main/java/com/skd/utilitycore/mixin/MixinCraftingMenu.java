@@ -9,7 +9,6 @@ import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.CraftingMenu;
@@ -34,14 +33,14 @@ import java.util.List;
 public class MixinCraftingMenu {
 
     @Inject(method = "slotChangedCraftingGrid", at = @At("HEAD"), cancellable = true)
-    private static void onSlotChangedCraftingGrid(AbstractContainerMenu menu, Level level, Player player,
+    private static void onSlotChangedCraftingGrid(AbstractContainerMenu menu, ServerLevel level, Player player,
                                                    CraftingContainer container, ResultContainer result,
                                                    RecipeHolder<CraftingRecipe> recipe, CallbackInfo ci) {
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) {
             return;
         }
 
-        RecipeManager rm = ((ServerLevel) level).recipeAccess();
+        RecipeManager rm = level.recipeAccess();
         CraftingInput input = container.asCraftInput();
 
         List<RecipeHolder<CraftingRecipe>> allRecipes;
