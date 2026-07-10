@@ -5,7 +5,6 @@ import com.skd.utilitycore.client.PolymorphClientHandler;
 import com.skd.utilitycore.polymorph.RecipePair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CraftingScreen;
 import net.minecraft.network.chat.Component;
@@ -26,10 +25,6 @@ public class MixinCraftingScreen {
 
     @Unique
     private static ItemStack utility_core$hoveredStack = ItemStack.EMPTY;
-    @Unique
-    private static int utility_core$hoveredMouseX = 0;
-    @Unique
-    private static int utility_core$hoveredMouseY = 0;
 
     @Inject(method = "extractBackground", at = @At("TAIL"))
     private void onExtractBackground(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
@@ -55,15 +50,20 @@ public class MixinCraftingScreen {
         if (cachedRecipes.size() > 1) {
             renderRecipeSelector(extractor, mc, mouseX, mouseY, cachedRecipes, selX, selY);
         }
+
+        if (!utility_core$hoveredStack.isEmpty()) {
+            renderSimpleTooltip(extractor, mc, utility_core$hoveredStack.getHoverName(), mouseX, mouseY);
+        }
     }
 
-    @Inject(method = "extractRenderState", at = @At("TAIL"))
-    private void onExtractRenderState(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
-        if (!utility_core$hoveredStack.isEmpty()) {
-            Minecraft mc = Minecraft.getInstance();
-            List<Component> tooltip = Screen.getTooltipFromItem(mc, utility_core$hoveredStack);
-            extractor.setTooltipForNextFrame(mc.font, tooltip, utility_core$hoveredStack.getTooltipImage(), mouseX, mouseY);
-        }
+    private static void renderSimpleTooltip(GuiGraphicsExtractor extractor, Minecraft mc, Component name, int mouseX, int mouseY) {
+        int tw = mc.font.width(name);
+        int tx = mouseX + 12;
+        int ty = mouseY - 12;
+        int padding = 3;
+        extractor.fill(tx - padding, ty - padding, tx + tw + padding, ty + 9 + padding, 0xF0100010);
+        extractor.fill(tx - padding + 1, ty - padding + 1, tx + tw + padding - 1, ty + 9 + padding - 1, 0xF0FFFFFF);
+        extractor.text(mc.font, name, tx, ty, 0xFF000000);
     }
 
     private static void renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,
@@ -86,8 +86,6 @@ public class MixinCraftingScreen {
                     bgColor = idx == selected ? 0xFF66AA66 : 0xFFCCCCCC;
                     hovering = true;
                     utility_core$hoveredStack = recipes.get(idx).output();
-                    utility_core$hoveredMouseX = mouseX;
-                    utility_core$hoveredMouseY = mouseY;
                 }
 
                 extractor.fill(x, y, x + 18, y + 18, 0xFF000000);
