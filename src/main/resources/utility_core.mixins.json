@@ -7,7 +7,8 @@
     "AccessorCraftingMenu",
     "MixinCraftingMenu",
     "MixinDamageContainer",
-    "MixinItemInput"
+    "MixinItemInputBridge",
+    "MixinItemStack"
   ],
   "client": [
     "AccessorAbstractContainerScreen",
