@@ -17,8 +17,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(InventoryScreen.class)
 public class MixinInventoryScreen {
 
-    @Inject(method = "extractBackground", at = @At("TAIL"))
-    private void onExtractBackground(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
+    @Inject(method = "extractRenderState", at = @At("TAIL"))
+    private void onExtractRenderState(GuiGraphicsExtractor extractor, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) return;
 
         AbstractContainerScreen<?> screen = (AbstractContainerScreen<?>) (Object) this;
@@ -32,7 +32,7 @@ public class MixinInventoryScreen {
 
         AccessorAbstractContainerScreen accessor = (AccessorAbstractContainerScreen) (Object) this;
         int selX = accessor.utility_core$getLeftPos() + 172;
-        int selY = accessor.utility_core$getTopPos() + 28;
+        int selY = accessor.utility_core$getTopPos() + 27;
         PolymorphClientHandler.setSelectorPosition(selX, selY);
 
         ItemStack hovered = PolymorphClientHandler.renderRecipeSelector(extractor, mc, mouseX, mouseY, selX, selY);

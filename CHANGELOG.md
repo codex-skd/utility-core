@@ -2,7 +2,10 @@
 
 ## 1.0.18
 - Fixed: recipe conflict selector in inventory 2x2 crafting grid positioned on top of the grid instead of to the right of the result slot
-- Moved selector position from `leftPos + 124, topPos + 30` (overlapping grid) to `leftPos + 172, topPos + 28` (right of result slot)
+- Moved selector position from `leftPos + 124, topPos + 30` (overlapping grid) to `leftPos + 172, topPos + 27` (right of result slot)
+- Fixed: selector in inventory screen rendered behind status effects (buffs/debuffs covering the selector)
+- Changed injection point from `extractBackground` to `extractRenderState` to render in the top GUI layer
+- Fine-tuned Y alignment by -1 pixel
 
 ## 1.0.17
 - Fixed: recipe conflict selector would persist on screen after clearing the crafting grid or switching to a non-conflicting recipe
