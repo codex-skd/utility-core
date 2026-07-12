@@ -1,5 +1,27 @@
 # Utility Core Changelog
 
+## 1.0.18
+- Fixed: recipe conflict selector in inventory 2x2 crafting grid positioned on top of the grid instead of to the right of the result slot
+- Moved selector position from `leftPos + 124, topPos + 30` (overlapping grid) to `leftPos + 172, topPos + 28` (right of result slot)
+
+## 1.0.17
+- Fixed: recipe conflict selector would persist on screen after clearing the crafting grid or switching to a non-conflicting recipe
+- Server now clears client recipe cache and PlayerRecipeData when crafting grid has ≤1 matching recipe
+- Client now clears recipe cache when closing crafting/inventory screen
+- Fixed: recipe selector staying visible in inventory screen after using it once
+
+## 1.0.16
+- Fixed: Tombstone auto-resets GUI scale to maximum when opening its menus and fails to restore it on screen close
+- Added mixin for TBScreen.removed() to restore original GUI scale as a safety net when screens are closed unexpectedly
+
+## 1.0.15
+- Fixed crash: Tombstone 9.5.6 mixin `ItemInputMixin` crashes on `ItemCombinerScreen` due to changed method signature in MC 1.21.3
+- Registered `TombstoneErrorHandler` via `Mixins.registerErrorHandlerClass()` to suppress the mixin injection error gracefully instead of crashing
+
+## 1.0.14
+- Fixed crash: Tombstone 9.5.6 mixin `ItemInputMixin` crashes on `ItemCombinerScreen` due to changed method signatures in MC 1.21.3
+- Added `TombstoneErrorHandler` implementing `IMixinErrorHandler` to suppress the incompatibility error
+
 ## 0.0.1-beta.6
 - Fixed crash on startup: packet type identifier format corrected (`Identifier.parse` instead of `createType`)
 - Mouse click handling moved from mixin to NeoForge `ScreenEvent.MouseButtonPressed.Pre`

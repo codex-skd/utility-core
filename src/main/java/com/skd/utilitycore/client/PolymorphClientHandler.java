@@ -37,6 +37,15 @@ public class PolymorphClientHandler {
     private static int selectedIndex = 0;
 
     @SubscribeEvent
+    public static void onScreenClosed(ScreenEvent.Closing event) {
+        if (event.getScreen() instanceof CraftingScreen || event.getScreen() instanceof InventoryScreen) {
+            cachedRecipes.clear();
+            lastInputs.clear();
+            selectedIndex = 0;
+        }
+    }
+
+    @SubscribeEvent
     public static void onMousePressed(ScreenEvent.MouseButtonPressed.Pre event) {
         if (!(event.getScreen() instanceof CraftingScreen) && !(event.getScreen() instanceof InventoryScreen)) return;
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) return;

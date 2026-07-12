@@ -64,35 +64,37 @@ public class MixinCraftingMenu {
 
         if (allRecipes.isEmpty()) {
             finalResult = ItemStack.EMPTY;
+            sendSyncPacket(player, List.of());
+            player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
+        } else if (allRecipes.size() == 1) {
+            sendSyncPacket(player, List.of());
+            player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
+            RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
+            result.setRecipeUsed(single);
+            finalResult = single.value().assemble(input);
         } else {
             sendSyncPacket(player, outputs);
 
-            if (allRecipes.size() == 1) {
-                RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
-                result.setRecipeUsed(single);
-                finalResult = single.value().assemble(input);
-            } else {
-                PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
-                List<ItemStack> inputs = captureInputs(container);
+            PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
+            List<ItemStack> inputs = captureInputs(container);
 
-                if (data.inputsChanged(inputs)) {
-                    data.setRecipes(pairs, inputs);
-                }
-
-                RecipePair selected = data.getSelectedRecipe();
-                RecipeHolder<CraftingRecipe> holderToUse;
-
-                if (selected != null && allRecipes.stream().anyMatch(
-                        r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
-                    holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
-                } else {
-                    holderToUse = allRecipes.get(0);
-                    data.setRecipes(pairs, inputs);
-                }
-
-                result.setRecipeUsed(holderToUse);
-                finalResult = holderToUse.value().assemble(input);
+            if (data.inputsChanged(inputs)) {
+                data.setRecipes(pairs, inputs);
             }
+
+            RecipePair selected = data.getSelectedRecipe();
+            RecipeHolder<CraftingRecipe> holderToUse;
+
+            if (selected != null && allRecipes.stream().anyMatch(
+                    r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
+                holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
+            } else {
+                holderToUse = allRecipes.get(0);
+                data.setRecipes(pairs, inputs);
+            }
+
+            result.setRecipeUsed(holderToUse);
+            finalResult = holderToUse.value().assemble(input);
         }
 
         result.setItem(0, finalResult);

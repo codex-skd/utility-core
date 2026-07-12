@@ -12,7 +12,8 @@
   "client": [
     "AccessorAbstractContainerScreen",
     "MixinCraftingScreen",
-    "MixinInventoryScreen"
+    "MixinInventoryScreen",
+    "MixinTBScreen"
   ],
   "server": [],
   "injectors": {

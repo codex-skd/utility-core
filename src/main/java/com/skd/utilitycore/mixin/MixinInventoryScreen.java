@@ -31,8 +31,8 @@ public class MixinInventoryScreen {
         PolymorphClientHandler.updateRecipeCache(container, mc);
 
         AccessorAbstractContainerScreen accessor = (AccessorAbstractContainerScreen) (Object) this;
-        int selX = accessor.utility_core$getLeftPos() + 124;
-        int selY = accessor.utility_core$getTopPos() + 30;
+        int selX = accessor.utility_core$getLeftPos() + 172;
+        int selY = accessor.utility_core$getTopPos() + 28;
         PolymorphClientHandler.setSelectorPosition(selX, selY);
 
         ItemStack hovered = PolymorphClientHandler.renderRecipeSelector(extractor, mc, mouseX, mouseY, selX, selY);
