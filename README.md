@@ -1,26 +1,26 @@
 # Utility Core
 
-A library mod for NeoForge (MC 26.1.2) that provides shared utilities and features.
+Un mod librería para NeoForge (MC 26.1.2) que proporciona utilidades y características compartidas.
 
-## Features
+## Características
 
-- **Recipe Conflict Resolution**: When multiple crafting recipes match the same inputs, a selection widget appears in the crafting table GUI. Click an alternative to pick the desired output.
-- **Damage Safety**: Negative damage from mod interactions (e.g., Apothic Attributes + Tombstone) is clamped to 0, preventing server crashes.
-- **Configurable**: Enable/disable features and configure max displayed recipes via in-game config or `config/utility_core-common.toml`.
-- **Developer API**: `PolymorphApi` for other mods to integrate with the recipe selection system.
+- **Resolución de conflictos de recetas**: Cuando varias recetas de crafteo coinciden con los mismos ingredientes, aparece un selector en la mesa de crafteo. Haz clic en una alternativa para elegir el resultado deseado.
+- **Seguridad antidaño negativo**: El daño negativo de interacciones entre mods (ej. Apothic Attributes + Tombstone) se limita a 0, evitando caídas del servidor.
+- **Configurable**: Activa/desactiva funciones y configura el máximo de recetas mostradas desde el menú de configuración del juego o `config/utility_core-common.toml`.
+- **API para desarrolladores**: `PolymorphApi` para que otros mods se integren con el sistema de selección de recetas.
 
-## Requirements
+## Requisitos
 
-- NeoForge 26.1.2+ (both client and server)
+- NeoForge 26.1.2+ (cliente y servidor)
 
-## Known Incompatibilities
+## Incompatibilidades conocidas
 
-- **Fast Workbench (fastbench)**: Conflicts with the recipe selection system. Remove it to use this feature.
+- **Fast Workbench (fastbench)**: Entra en conflicto con el sistema de selección de recetas. Desinstálalo para usar esta función.
 
-## Build
+## Compilar
 
 ```bash
 gradlew build
 ```
 
-The jar will be at `build/libs/utility_core-<version>.jar`.
+El jar se generará en `build/libs/utility_core-<versión>.jar`.
