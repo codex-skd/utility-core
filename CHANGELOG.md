@@ -1,6 +1,9 @@
 # Utility Core Changelog
 
-## 1.0.18
+## 1.0.20
+- Clean rebuild to fix corrupted jar artifact (no functional changes from 1.0.19)
+
+## 1.0.19
 - Fixed: recipe conflict selector in inventory 2x2 crafting grid positioned on top of the grid instead of to the right of the result slot
 - Moved selector position from `leftPos + 124, topPos + 30` (overlapping grid) to `leftPos + 172, topPos + 27` (right of result slot)
 - Fixed: selector in inventory screen rendered behind status effects (buffs/debuffs covering the selector)
