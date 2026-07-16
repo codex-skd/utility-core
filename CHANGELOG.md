@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.0.21
+- Documentación: actualizado WORKFLOW.md con secciones Ramas y nuevo formato de tags
+- Reestructurada rama de desarrollo a `minecraft/26.1.2/neoforge-26.1.2.78/production`
+- Tags de CurseForge ahora siguen el formato `<mc-version>-neoforge-<version>`
+
 ## 1.0.20
 - Reconstrucción limpia para solucionar jar corrupto (sin cambios funcionales respecto a 1.0.19)
 
