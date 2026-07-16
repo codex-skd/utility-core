@@ -23,4 +23,4 @@ Un mod librería para NeoForge (MC 26.1.2) que proporciona utilidades y caracter
 gradlew build
 ```
 
-El jar se generará en `build/libs/utility_core-<versión>.jar`.
+El jar se generará en `build/libs/utility_core-<minecraft_version>-neoforge-<versión>.jar`.
