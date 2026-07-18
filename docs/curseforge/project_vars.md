@@ -36,13 +36,13 @@ minecraft/26.1.2/neoforge-26.1.2.78/production
 ## Tag
 
 Formato: `<mc-version>-<framework>-<version>`
-Ejemplo: `26.1.2-neoforge-1.0.21`
+Ejemplo: `26.1.2-neoforge-1.0.22`
 
 ## Parámetros del upload
 
 | Campo | Valor | Notas |
 |-------|-------|-------|
-| `displayName` | `Utility Core (1.0.21)` | Nombre visible: `display_name (version)` |
+| `displayName` | `Utility Core (1.0.22)` | Nombre visible: `display_name (version)` |
 | `changelog` | HTML (no Markdown) | Ver estructura abajo |
 | `changelogType` | `html` | Obligatorio para que se vea bien |
 | `releaseType` | `release` o `beta` | Según el tipo de versión |
@@ -69,7 +69,7 @@ Ejemplo: `26.1.2-neoforge-1.0.21`
 
 <hr>
 
-<p><strong>JAR</strong>: <code>utility_core-26.1.2-neoforge-1.0.21.jar</code></p>
+<p><strong>JAR</strong>: <code>utility_core-26.1.2-neoforge-1.0.22.jar</code></p>
 ```
 
 ## Subir archivo (JAR) con Python
@@ -78,11 +78,11 @@ Ejemplo: `26.1.2-neoforge-1.0.21`
 import json, uuid, urllib.request
 
 boundary = uuid.uuid4().hex
-version = "1.0.21"
+version = "1.0.22"
 
 metadata = {
     "displayName": f"Utility Core ({version})",
-    "changelog": "<h2>v1.0.21 - Titulo</h2>",
+    "changelog": "<h2>v1.0.22 - Titulo</h2>",
     "changelogType": "html",
     "gameVersionNames": ["Client", "Server", "26.1.2", "NeoForge"],
     "releaseType": "release"
@@ -99,7 +99,7 @@ body += b'Content-Disposition: form-data; name="metadata"\r\n'
 body += b"Content-Type: application/json\r\n\r\n"
 body += meta_bytes + b"\r\n"
 body += f"--{boundary}\r\n".encode()
-body += b'Content-Disposition: form-data; name="file"; filename="utility_core-26.1.2-neoforge-{version}.jar"\r\n'
+body += f'Content-Disposition: form-data; name="file"; filename="utility_core-26.1.2-neoforge-{version}.jar"\r\n'.encode()
 body += b"Content-Type: application/java-archive\r\n\r\n"
 body += jar_data + b"\r\n"
 body += f"--{boundary}--\r\n".encode()

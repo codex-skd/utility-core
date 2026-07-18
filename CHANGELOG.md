@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.0.22
+- Añadida compatibilidad con OutpostZero: prevenida destrucción de armadura por daño de infección masivo
+- Nuevo `OutpostZeroCompat` con `LivingDamageEvent.Pre` que limita daño `outpostzero:infection` a 10000
+- Sin dependencia de compilación a OutpostZero — solo APIs vanilla/NeoForge
+
 ## 1.0.21
 - Documentación: actualizado WORKFLOW.md con secciones Ramas y nuevo formato de tags
 - Reestructurada rama de desarrollo a `minecraft/26.1.2/neoforge-26.1.2.78/production`
