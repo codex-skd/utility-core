@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.0.24
+- Corregido Ender Dragon auto-respawn: `tryRespawn()` no coloca cristales, solo verifica si existen
+- Ahora coloca 12 EndCrystal en posiciones vanilla (radio 3), BEI (radio 7) y YUNG-vanilla (radio 2) para cubrir todos los mods
+- Añadida compatibilidad con YUNG's Better End Island (detecta y usa su API de respawn)
+- Usa reflexión para acceder a `exitPortalLocation` y colocar cristales
+
 ## 1.0.23
 - Añadidos toggles de configuración para TODAS las features (Tombstone, OutpostZero, Negative Damage, Ender Dragon)
 - Nuevo `EnderDragonRespawnHandler`: reaparece al Ender Dragon automáticamente al iniciar el servidor si fue asesinado previamente (configurable, default: false)
