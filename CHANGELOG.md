@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.0.23
+- Añadidos toggles de configuración para TODAS las features (Tombstone, OutpostZero, Negative Damage, Ender Dragon)
+- Nuevo `EnderDragonRespawnHandler`: reaparece al Ender Dragon automáticamente al iniciar el servidor si fue asesinado previamente (configurable, default: false)
+- Todas las descripciones de configuración bilingües EN/ES
+- Features de compatibilidad solo se activan si el mod correspondiente está presente Y el toggle está habilitado
+
 ## 1.0.22
 - Añadida compatibilidad con OutpostZero: prevenida destrucción de armadura por daño de infección masivo
 - Nuevo `OutpostZeroCompat` con `LivingDamageEvent.Pre` que limita daño `outpostzero:infection` a 10000

@@ -1,5 +1,6 @@
 package com.skd.utilitycore.mixin;
 
+import com.skd.utilitycore.Config;
 import net.minecraft.commands.arguments.item.ItemInput;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,7 +44,7 @@ public class MixinItemInput {
 
     @Inject(method = "createItemStack", at = @At("RETURN"), cancellable = true)
     private void onCreateItemStack(int count, CallbackInfoReturnable<ItemStack> cir) {
-        if (!TOMBSTONE_ACTIVE) return;
+        if (!TOMBSTONE_ACTIVE || !Config.ENABLE_TOMBSTONE_ITEM_INIT_FIX.get()) return;
 
         ItemStack stack = cir.getReturnValue();
         if (stack.isEmpty()) return;

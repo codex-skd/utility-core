@@ -1,5 +1,6 @@
 package com.skd.utilitycore.compat;
 
+import com.skd.utilitycore.Config;
 import com.skd.utilitycore.UtilityCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -17,6 +18,7 @@ public class OutpostZeroCompat {
 
     @SubscribeEvent
     public static void onLivingDamagePre(LivingDamageEvent.Pre event) {
+        if (!Config.ENABLE_OUTPOSTZERO_DAMAGE_CAP.get()) return;
         if (event.getSource().is(INFECTION_DAMAGE_TYPE)) {
             float damage = event.getNewDamage();
             if (damage > MAX_DAMAGE) {

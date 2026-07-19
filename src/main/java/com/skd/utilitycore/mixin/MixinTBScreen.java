@@ -1,5 +1,6 @@
 package com.skd.utilitycore.mixin;
 
+import com.skd.utilitycore.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,6 +28,7 @@ public class MixinTBScreen {
 
     @Inject(method = "init(Lnet/minecraft/client/Minecraft;II)V", at = @At("HEAD"))
     private void onScreenInit(Minecraft mc, int width, int height, CallbackInfo ci) {
+        if (!Config.ENABLE_TOMBSTONE_GUI_SCALE_FIX.get()) return;
         Screen self = (Screen) (Object) this;
         if (utilityCore$isTombstoneScreen(self)) {
             utilityCore$savedGuiScale = mc.options.guiScale().get();
@@ -35,6 +37,7 @@ public class MixinTBScreen {
 
     @Inject(method = "removed", at = @At("HEAD"))
     private void onScreenRemoved(CallbackInfo ci) {
+        if (!Config.ENABLE_TOMBSTONE_GUI_SCALE_FIX.get()) return;
         Screen self = (Screen) (Object) this;
         if (utilityCore$isTombstoneScreen(self) && utilityCore$savedGuiScale > 0) {
             Minecraft mc = Minecraft.getInstance();

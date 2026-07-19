@@ -17,10 +17,19 @@ public class TombstoneErrorHandler implements IMixinErrorHandler {
 
     @Override
     public ErrorAction onApplyError(String targetClassName, Throwable th, IMixinInfo mixin, ErrorAction action) {
+        if (!isEnabled()) return action;
         if (mixin != null && "ovh.corail.tombstone.mixin.ItemInputMixin".equals(mixin.getClassName())) {
             LOGGER.warn("[UtilityCore] Suppressed Tombstone ItemInputMixin error on {}: {}", targetClassName, th.getMessage());
             return ErrorAction.WARN;
         }
         return action;
+    }
+
+    private static boolean isEnabled() {
+        try {
+            return Config.ENABLE_TOMBSTONE_ERROR_HANDLER.get();
+        } catch (Exception e) {
+            return true;
+        }
     }
 }
