@@ -1,5 +1,12 @@
 # Utility Core — Registro de cambios
 
+## 1.0.25
+- Corregido Ender Dragon auto-respawn con YUNG's Better End Island: `tryRespawn()` es no-op con YUNG
+- Detecta YUNG via reflexión y llama a `advanceRespawnStage(START)` en su API nativa
+- Eliminada colocación manual de cristales (causaba apilamiento en reinicios)
+- Eliminada doble llamada a `tryRespawn()` (corrompía máquina de estados)
+- Fallback a `tryRespawn()` vanilla si YUNG no está presente
+
 ## 1.0.24
 - Corregido Ender Dragon auto-respawn: `tryRespawn()` no coloca cristales, solo verifica si existen
 - Ahora coloca 12 EndCrystal en posiciones vanilla (radio 3), BEI (radio 7) y YUNG-vanilla (radio 2) para cubrir todos los mods
