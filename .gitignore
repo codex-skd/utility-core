@@ -32,8 +32,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-### Graphify ###
-graphify-out/
+
 
 ### Minecraft Modding ###
 run/
