@@ -36,13 +36,13 @@ minecraft/26.1.2/neoforge-26.1.2.78/production
 ## Tag
 
 Formato: `<mc-version>-<framework>-<version>`
-Ejemplo: `26.1.2-neoforge-1.0.24`
+Ejemplo: `26.1.2-neoforge-1.0.25`
 
 ## Parámetros del upload
 
 | Campo | Valor | Notas |
 |-------|-------|-------|
-| `displayName` | `Utility Core (1.0.24)` | Nombre visible: `display_name (version)` |
+| `displayName` | `Utility Core (1.0.25)` | Nombre visible: `display_name (version)` |
 | `changelog` | HTML (no Markdown) | Ver estructura abajo |
 | `changelogType` | `html` | Obligatorio para que se vea bien |
 | `releaseType` | `release` o `beta` | Según el tipo de versión |
@@ -78,11 +78,11 @@ Ejemplo: `26.1.2-neoforge-1.0.24`
 import json, uuid, urllib.request
 
 boundary = uuid.uuid4().hex
-version = "1.0.24"
+version = "1.0.25"
 
 metadata = {
     "displayName": f"Utility Core ({version})",
-    "changelog": "<h2>v1.0.24 - Titulo</h2>",
+    "changelog": "<h2>v{version} - Ver documentacion docs/curseforge/versions/{version}.md</h2>",
     "changelogType": "html",
     "gameVersionNames": ["Client", "Server", "26.1.2", "NeoForge"],
     "releaseType": "release"
