@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.0.32
+- Corregido Ender Dragon auto-respawn con YUNG Better End Island: los cristales ahora tienen `setBeamTarget()` como `ItemEndCrystal.useOn()`, necesario para que YUNG los detecte
+- Revertidas posiciones a cardinales (N/S/E/W) — diagonales no tienen bedrock en BEI
+- Si YUNG presente: coloca cristales con beamTarget + `advanceRespawnStage(START)`
+- Si YUNG ausente: coloca cristales + `tryRespawn()` vanilla
+
 ## 1.0.25
 - Corregido Ender Dragon auto-respawn con YUNG's Better End Island: `tryRespawn()` es no-op con YUNG
 - Detecta YUNG via reflexión y llama a `advanceRespawnStage(START)` en su API nativa
