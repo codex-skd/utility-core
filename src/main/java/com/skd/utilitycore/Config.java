@@ -50,5 +50,25 @@ public class Config {
                      "ES: Reaparece autom\u00e1ticamente al Ender Dragon con animaci\u00f3n vanilla completa (torres de obsidiana, cristales) al iniciar el servidor si fue asesinado previamente.")
             .define("enableEndDragonRespawn", false);
 
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
+            .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
+                     "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")
+            .define("chunkGen.enabled", false);
+
+    public static final ModConfigSpec.IntValue CHUNK_GEN_CHUNKS_PER_TICK = BUILDER
+            .comment("EN: Number of chunks to generate per server tick. Higher values generate faster but may cause lag.",
+                     "ES: N\u00famero de chunks a generar por tick del servidor. Valores m\u00e1s altos generan m\u00e1s r\u00e1pido pero pueden causar lag.")
+            .defineInRange("chunkGen.chunksPerTick", 1, 1, 64);
+
+    public static final ModConfigSpec.IntValue CHUNK_GEN_MAX_RADIUS = BUILDER
+            .comment("EN: Maximum radius in chunks to generate (0 = unlimited). Stops when this radius is reached.",
+                     "ES: Radio m\u00e1ximo en chunks a generar (0 = ilimitado). Se detiene al alcanzar este radio.")
+            .defineInRange("chunkGen.maxRadius", 0, 0, 100000);
+
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_RUN_WITH_PLAYERS = BUILDER
+            .comment("EN: If true, generation continues even with players online. If false, pauses when players join.",
+                     "ES: Si es true, la generaci\u00f3n contin\u00faa aunque haya jugadores. Si es false, se pausa cuando entran jugadores.")
+            .define("chunkGen.runWithPlayers", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 }
