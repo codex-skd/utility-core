@@ -192,6 +192,11 @@ public class ChunkGenManager {
         return state;
     }
 
+    public int getChunkX() { return state != null ? state.chunkX : 0; }
+    public int getChunkZ() { return state != null ? state.chunkZ : 0; }
+    public int getRadius() { return state != null ? state.radius : 0; }
+    public long getTotalGenerated() { return state != null ? state.totalGenerated : 0; }
+
     private void moveToNext() {
         if (firstStep) {
             firstStep = false;

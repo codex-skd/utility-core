@@ -18,6 +18,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Mixins;
 
@@ -56,10 +57,7 @@ public class UtilityCore {
     @SubscribeEvent
     public void onPlayerLeave(PlayerEvent.PlayerLoggedOutEvent event) {
         if (chunkGenManager != null) {
-            var server = event.getEntity().getServer();
-            if (server != null) {
-                chunkGenManager.onPlayerLeave(server);
-            }
+            chunkGenManager.onPlayerLeave(ServerLifecycleHooks.getCurrentServer());
         }
     }
 
@@ -73,15 +71,15 @@ public class UtilityCore {
                                         ctx.getSource().sendSuccess(() -> Component.literal("§c[ChunkGen] Not available"), false);
                                         return 0;
                                     }
-                                    var state = chunkGenManager.getState();
-                                    if (state == null) {
+                                    if (chunkGenManager.getState() == null) {
                                         ctx.getSource().sendSuccess(() -> Component.literal("§e[ChunkGen] No state loaded. Use /utilitycore chunkgen start"), false);
                                     } else {
                                         ctx.getSource().sendSuccess(() -> Component.literal(
                                                 String.format("§a[ChunkGen] %s | %s | Position: (%d, %d) | Radius: %d | Generated: %d chunks",
                                                         chunkGenManager.isRunning() ? "§aRunning" : "§cStopped",
                                                         chunkGenManager.isPaused() ? "§ePaused" : "§aActive",
-                                                        state.chunkX, state.chunkZ, state.radius, state.totalGenerated)), false);
+                                                        chunkGenManager.getChunkX(), chunkGenManager.getChunkZ(),
+                                                        chunkGenManager.getRadius(), chunkGenManager.getTotalGenerated())), false);
                                     }
                                     return Command.SINGLE_SUCCESS;
                                 }))

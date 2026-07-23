@@ -1,5 +1,13 @@
 # Utility Core — Registro de cambios
 
+## 1.0.33
+- Añadido ChunkGen: generación automática de chunks en espiral desde (0,0)
+- Auto-pausa al entrar jugadores, auto-reanudación al irse el último
+- Progreso persistente en `config/utility_core_chunk_gen.json`
+- Logs de progreso cada 100 chunks
+- Comando `/utilitycore chunkgen` con subcomandos status/start/pause/stop/reset
+- Config: `chunkGen.enabled`, `chunkGen.chunksPerTick`, `chunkGen.maxRadius`, `chunkGen.runWithPlayers`
+
 ## 1.0.32
 - Corregido Ender Dragon auto-respawn con YUNG Better End Island: los cristales ahora tienen `setBeamTarget()` como `ItemEndCrystal.useOn()`, necesario para que YUNG los detecte
 - Revertidas posiciones a cardinales (N/S/E/W) — diagonales no tienen bedrock en BEI
