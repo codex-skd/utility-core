@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.0.38
+- Corregido respawn del Ender Dragon con YUNG BEI: escanea niveles Y alrededor del portal para encontrar bedrock a distancia 7
+
 ## 1.0.37
 - ChunkGen: evita que el servidor se auto-pause mientras genera chunks (resetea `nextTickTick` por reflection)
 - ChunkGen: la generación continúa aunque el servidor esté vacío
