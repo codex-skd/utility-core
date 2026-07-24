@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.0.35
+- ChunkGen: guardado de estado al apagar el servidor (ServerStoppingEvent)
+- ChunkGen: log de progreso al iniciar el servidor
+- Corregido versionado tras commit accidental del CI-main en rama production
+
 ## 1.0.34
 - Corregido respawn del Ender Dragon con YUNG Better End Island: coloca cristales a distancia 7 (BEI) y 2 (vanilla), usa `tryRespawn()` en vez de reflection a API interna de YUNG
 - Eliminada dependencia de reflection a `IBetterDragonFight` y `advanceRespawnStage()` — YUNG ahora se integra vía su override natural de `tryRespawn()`
