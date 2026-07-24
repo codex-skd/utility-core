@@ -96,14 +96,23 @@ public class EnderDragonRespawnHandler {
         int i = 0;
 
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos pos = new BlockPos(cx, cy, cz).relative(dir, dist);
+            int x = cx + dir.getStepX() * dist;
+            int z = cz + dir.getStepZ() * dist;
+            BlockPos found = null;
 
-            // Must be on bedrock with air above
-            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) return false;
-            if (!level.getBlockState(pos.above()).isAir()) return false;
-            if (!level.getBlockState(pos.above(2)).isAir()) return false;
+            // Scan Y levels around the portal to find bedrock
+            for (int y = cy + 10; y >= cy - 10; y--) {
+                BlockPos pos = new BlockPos(x, y, z);
+                if (level.getBlockState(pos).is(Blocks.BEDROCK)) {
+                    if (level.getBlockState(pos.above()).isAir()) {
+                        found = pos;
+                        break;
+                    }
+                }
+            }
 
-            targets[i++] = pos;
+            if (found == null) return false;
+            targets[i++] = found;
         }
 
         UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals on bedrock (center=({},{},{}), dist={})", cx, cy, cz, dist);
