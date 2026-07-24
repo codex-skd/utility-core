@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java": {
-    "mtime": 1784893538.3226073,
-    "ast_hash": "e258c11ade999a20f6069f83bc759d9b",
+    "mtime": 1784908282.1663463,
+    "ast_hash": "a318b8992faaeb12c149c92852eccc4f",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1784893538.3089707,
-    "ast_hash": "99c09297ccdf53aede82a2d055639e77",
+    "mtime": 1784908293.745969,
+    "ast_hash": "3b5a6532d500db2696be3eceb038ade9",
     "semantic_hash": ""
   },
   "README.md": {
@@ -242,6 +242,11 @@
   "docs/curseforge/versions/1.0.35.md": {
     "mtime": 1784893541.6094189,
     "ast_hash": "8716c3dce0f9bd754cd7d6edd7395d15",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.36.md": {
+    "mtime": 1784908320.8213327,
+    "ast_hash": "9f71685554ab0ef98eba36221fe0a37f",
     "semantic_hash": ""
   }
 }
