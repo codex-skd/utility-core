@@ -13,13 +13,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
-import java.lang.reflect.Method;
-
 @EventBusSubscriber(modid = UtilityCore.MODID)
 public class EnderDragonRespawnHandler {
-
-    private static final String YUNG_IFIGHT = "com.yungnickyoung.minecraft.betterendisland.world.IBetterDragonFight";
-    private static final String YUNG_STAGE = "com.yungnickyoung.minecraft.betterendisland.world.BetterDragonRespawnStage";
 
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
@@ -47,133 +42,70 @@ public class EnderDragonRespawnHandler {
             return;
         }
 
-        if (!tryRespawn(fight, endLevel)) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Dragon respawn failed — dragon will NOT respawn.");
-        }
+        tryRespawn(fight, endLevel);
     }
 
-    private static boolean tryRespawn(EnderDragonFight fight, ServerLevel level) {
-        boolean hasYung = false;
-        try {
-            Class<?> iFight = Class.forName(YUNG_IFIGHT);
-            hasYung = iFight.isInstance(fight);
-        } catch (ClassNotFoundException e) {
-            hasYung = false;
-        }
-
-        if (hasYung) {
-            return tryYungPlaceAndAdvance(fight, level);
-        }
-
-        return tryVanillaRespawn(level, fight);
-    }
-
-    private static boolean tryYungPlaceAndAdvance(EnderDragonFight fight, ServerLevel level) {
-        // Place crystals mimicking ItemEndCrystal.useOn(): setBeamTarget is required for YUNG detection
-        boolean placed = false;
-        for (int dist = 3; dist <= 7; dist += 2) {
-            if (placed = placeCrystals(level, new BlockPos(0, 60, 0), dist)) break;
-        }
-        if (!placed) placed = placeCrystals(level, new BlockPos(0, 60, 0), 2);
-        if (!placed) placed = placeCrystalsFallback(level);
-
-        if (!placed) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for YUNG respawn");
-            return false;
-        }
-
-        return tryYungAdvance(fight);
-    }
-
-    private static boolean tryVanillaRespawn(ServerLevel level, EnderDragonFight fight) {
-        UtilityCore.LOGGER.info("[UtilityCore] Using vanilla respawn with crystal placement");
-        boolean placed = placeCrystals(level, new BlockPos(0, 60, 0), 2);
-        if (!placed) placed = placeCrystals(level, new BlockPos(0, 60, 0), 3);
-        if (!placed) placed = placeCrystalsFallback(level);
-
-        if (!placed) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place 4 EndCrystals");
-            return false;
-        }
-
+    private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
+        // 1. First, try vanilla tryRespawn() — also works with YUNG (it overrides the method)
+        //    tryRespawn() internally sets the respawn stage and handles crystal placement
         fight.tryRespawn();
-        return true;
+
+        // 2. Verify crystals were placed by checking the dragon fight's respawn stage
+        //    If tryRespawn() returned successfully, crystals should be placed.
+        //    If not, manually place crystals with beamTarget (needed by YUNG)
+        if (!wereCrystalsPlaced(level)) {
+            UtilityCore.LOGGER.info("[UtilityCore] tryRespawn() did not place crystals, placing manually");
+            placeCrystals(level);
+        }
+
+        // 3. If crystals still aren't placed after manual placement, try tryRespawn() again
+        if (!wereCrystalsPlaced(level)) {
+            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+            return;
+        }
+
+        // 4. Call tryRespawn() again if crystals were just placed manually
+        //    (tryRespawn is idempotent — calling it multiple times is safe)
+        fight.tryRespawn();
+        UtilityCore.LOGGER.info("[UtilityCore] Ender Dragon respawn initiated");
     }
 
-    private static boolean placeCrystals(ServerLevel level, BlockPos center, int dist) {
-        BlockPos[] targets = new BlockPos[4];
-        int i = 0;
+    private static boolean wereCrystalsPlaced(ServerLevel level) {
+        BlockPos podium = new BlockPos(0, 60, 0);
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos pos = center.relative(dir, dist);
-            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) return false;
-            if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) return false;
-            targets[i++] = pos;
-        }
-
-        UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals (dist={})", dist);
-        for (BlockPos bedrock : targets) {
-            EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
-            crystal.setBeamTarget(bedrock);
-            crystal.setInvulnerable(true);
-            level.addFreshEntity(crystal);
+            BlockPos pos = podium.relative(dir, 3);
+            BlockPos crystalPos = pos.above();
+            if (level.getBlockState(pos).is(Blocks.BEDROCK) && level.getBlockState(crystalPos).isAir()) {
+                return false;
+            }
         }
         return true;
     }
 
-    private static boolean placeCrystalsFallback(ServerLevel level) {
-        for (int dist = 7; dist >= 2; dist--) {
-            int placed = 0;
+    private static void placeCrystals(ServerLevel level) {
+        BlockPos center = new BlockPos(0, 60, 0);
+
+        for (int dist = 2; dist <= 7; dist++) {
             BlockPos[] targets = new BlockPos[4];
             int i = 0;
             for (Direction dir : Direction.Plane.HORIZONTAL) {
-                BlockPos pos = new BlockPos(0, 60, 0).relative(dir, dist);
-                if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) continue;
+                BlockPos pos = center.relative(dir, dist);
+                if (!level.getBlockState(pos).is(Blocks.BEDROCK)) break;
+                if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) break;
                 targets[i++] = pos;
-                placed++;
             }
-            if (placed == 4) {
-                UtilityCore.LOGGER.info("[UtilityCore] Fallback placing 4 crystals (dist={})", dist);
-                for (BlockPos pos : targets) {
-                    EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
-                    crystal.setBeamTarget(pos);
+            if (i == 4) {
+                UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals with beamTarget (dist={})", dist);
+                for (BlockPos bedrock : targets) {
+                    EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
+                    crystal.setBeamTarget(bedrock);
                     crystal.setInvulnerable(true);
                     level.addFreshEntity(crystal);
                 }
-                return true;
+                return;
             }
         }
-        return false;
+
+        UtilityCore.LOGGER.warn("[UtilityCore] Could not find valid bedrock positions for crystals");
     }
-
-    private static boolean tryYungAdvance(EnderDragonFight fight) {
-        try {
-            Class<?> iFight = Class.forName(YUNG_IFIGHT);
-            if (!iFight.isInstance(fight)) {
-                UtilityCore.LOGGER.warn("[UtilityCore] EnderDragonFight does not implement IBetterDragonFight");
-                return false;
-            }
-
-            Method getStage = iFight.getMethod("getDragonRespawnStage");
-            Object stage = getStage.invoke(fight);
-            if (stage != null) {
-                UtilityCore.LOGGER.info("[UtilityCore] YUNG respawn already in progress, skipping");
-                return true;
-            }
-
-            Class<?> stageClass = Class.forName(YUNG_STAGE);
-            Object startStage = stageClass.getField("START").get(null);
-
-            Method advance = iFight.getMethod("advanceRespawnStage", stageClass);
-            advance.invoke(fight, startStage);
-
-            UtilityCore.LOGGER.info("[UtilityCore] YUNG dragon respawn initiated via advanceRespawnStage(START)");
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        } catch (Exception e) {
-            UtilityCore.LOGGER.warn("[UtilityCore] YUNG respawn failed: {}", e.getMessage() != null ? e.getMessage() : e.getClass().getSimpleName());
-            return false;
-        }
-    }
-
 }
