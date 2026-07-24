@@ -16,7 +16,7 @@ import net.neoforged.neoforge.event.server.ServerStartedEvent;
 @EventBusSubscriber(modid = UtilityCore.MODID)
 public class EnderDragonRespawnHandler {
 
-    private static final String YUNG_IFIGHT = "com.yungnickyoung.minecraft.betterendisland.world.IBetterDragonFight";
+    private static final String YUNG_ACCESSOR = "com.yungnickyoung.minecraft.betterendisland.mixin.accessor.EnderDragonFightAccessor";
 
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
@@ -47,65 +47,64 @@ public class EnderDragonRespawnHandler {
         tryRespawn(fight, endLevel);
     }
 
-    private static boolean hasYung() {
+    private static BlockPos getPortalCenter(EnderDragonFight fight) {
+        // Try YUNG accessor first — gets the exit portal position from its mixin
         try {
-            Class.forName(YUNG_IFIGHT);
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
+            Class<?> accessor = Class.forName(YUNG_ACCESSOR);
+            if (accessor.isInstance(fight)) {
+                Object portal = accessor.getMethod("getPortalLocation").invoke(fight);
+                if (portal instanceof BlockPos pos) {
+                    UtilityCore.LOGGER.info("[UtilityCore] YUNG exit portal at {}", pos);
+                    return pos;
+                }
+            }
+        } catch (Exception e) {
+            // YUNG not present or method not accessible
         }
+        return new BlockPos(0, 60, 0);
     }
 
     private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
-        if (hasYung()) {
-            tryRespawnYung(fight, level);
-        } else {
-            tryRespawnVanilla(fight, level);
-        }
-    }
+        BlockPos portal = getPortalCenter(fight);
 
-    private static void tryRespawnYung(EnderDragonFight fight, ServerLevel level) {
-        // YUNG checks crystals at distance 7 (BEI radius) first, then distance 2 (vanilla radius)
-        // Try dist=7 first (optimistic for BEI), then dist=2 (vanilla fallback)
-        boolean placed = placeCrystals(level, 7) || placeCrystals(level, 2);
+        // Place crystals at YUNG's BEI position (dist=7 from portal.above(1))
+        // and at vanilla position (dist=2 from portal) as fallback
+        boolean placed = placeCrystalsAt(level, portal.above(1), 7)
+                      || placeCrystalsAt(level, portal, 2);
 
         if (!placed) {
-            // If both fail, try any distance
-            for (int d = 3; d <= 6; d++) {
-                if (placeCrystals(level, d)) {
-                    placed = true;
-                    break;
-                }
+            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+            return;
+        }
+
+        fight.tryRespawn();
+        UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated");
+    }
+
+    private static boolean placeCrystalsAt(ServerLevel level, BlockPos origin, int dist) {
+        // Place EndCrystal entities at origin.relative(dir, dist).above()
+        // YUNG: checks for EndCrystal entities at exitPortal.above(1).relative(dir, 7)
+        // Vanilla: checks at exitPortal.below(2).relative(dir, 2)
+        // We just place — YUNG/vanilla will find them by entity lookup
+
+        if (dist == 7) {
+            // YUNG BEI mode — place without bedrock check
+            UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals dist={} from {}", dist, origin);
+            for (Direction dir : Direction.Plane.HORIZONTAL) {
+                BlockPos target = origin.relative(dir, dist);
+                BlockPos crystalPos = target.above();
+                EndCrystal crystal = new EndCrystal(level, crystalPos.getX() + 0.5, crystalPos.getY(), crystalPos.getZ() + 0.5);
+                crystal.setBeamTarget(target);
+                crystal.setInvulnerable(true);
+                level.addFreshEntity(crystal);
             }
+            return true;
         }
 
-        if (!placed) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for YUNG dragon respawn");
-            return;
-        }
-
-        // tryRespawn() triggers YUNG's override → spawnDragon() → checks crystals at dist=7 or dist=2
-        fight.tryRespawn();
-        UtilityCore.LOGGER.info("[UtilityCore] YUNG dragon respawn initiated via tryRespawn()");
-    }
-
-    private static void tryRespawnVanilla(EnderDragonFight fight, ServerLevel level) {
-        boolean placed = placeCrystals(level, 2) || placeCrystals(level, 3);
-
-        if (!placed) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for vanilla dragon respawn");
-            return;
-        }
-
-        fight.tryRespawn();
-        UtilityCore.LOGGER.info("[UtilityCore] Vanilla dragon respawn initiated");
-    }
-
-    private static boolean placeCrystals(ServerLevel level, int dist) {
-        BlockPos center = new BlockPos(0, 60, 0);
+        // Legacy mode (dist=2, 3, etc.) — try to find bedrock positions
         BlockPos[] targets = new BlockPos[4];
         int i = 0;
-
+        BlockPos center = new BlockPos(origin.getX(), 60, origin.getZ());
         for (Direction dir : Direction.Plane.HORIZONTAL) {
             BlockPos pos = center.relative(dir, dist);
             if (!level.getBlockState(pos).is(Blocks.BEDROCK)) return false;
