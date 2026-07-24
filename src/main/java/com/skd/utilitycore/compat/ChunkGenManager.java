@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.Config;
+import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.chunk.status.ChunkStatus;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -59,6 +61,25 @@ public class ChunkGenManager {
         loadState();
     }
 
+    private static Field nextTickTickField;
+    static {
+        try {
+            Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
+            f.setAccessible(true);
+            nextTickTickField = f;
+        } catch (Exception e) {
+            nextTickTickField = null;
+        }
+    }
+
+    private void keepAlive(MinecraftServer server) {
+        if (nextTickTickField != null) {
+            try {
+                nextTickTickField.setLong(server, Util.getMillis() + 50L);
+            } catch (Exception ignored) {}
+        }
+    }
+
     public void tick(MinecraftServer server) {
         if (!Config.CHUNK_GEN_ENABLED.get()) return;
 
@@ -69,6 +90,11 @@ public class ChunkGenManager {
                 start(true);
             }
             return;
+        }
+
+        // Prevent server from pausing while generation is active
+        if (playerCount == 0) {
+            keepAlive(server);
         }
 
         if (playerCount > 0 && !Config.CHUNK_GEN_RUN_WITH_PLAYERS.get()) {
