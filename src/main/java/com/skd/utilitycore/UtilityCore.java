@@ -17,6 +17,8 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.slf4j.Logger;
@@ -58,6 +60,26 @@ public class UtilityCore {
     public void onPlayerLeave(PlayerEvent.PlayerLoggedOutEvent event) {
         if (chunkGenManager != null) {
             chunkGenManager.onPlayerLeave(ServerLifecycleHooks.getCurrentServer());
+        }
+    }
+
+    @SubscribeEvent
+    public void onServerStarted(ServerStartedEvent event) {
+        if (chunkGenManager != null && Config.CHUNK_GEN_ENABLED.get()) {
+            long total = chunkGenManager.getTotalGenerated();
+            if (total > 0) {
+                LOGGER.info("[ChunkGen] Ready. Previous progress: {} chunks generated up to radius {}",
+                        total, chunkGenManager.getRadius());
+            } else {
+                LOGGER.info("[ChunkGen] Ready. No previous state found, will start from (0, 0)");
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onServerStopping(ServerStoppingEvent event) {
+        if (chunkGenManager != null) {
+            chunkGenManager.onServerStopping();
         }
     }
 

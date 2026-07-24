@@ -126,6 +126,14 @@ public class ChunkGenManager {
         saveState();
     }
 
+    public void onServerStopping() {
+        if (state != null) {
+            saveState();
+            LOGGER.info("[ChunkGen] Server stopping. Progress saved at ({}, {}), {} chunks generated",
+                    state.chunkX, state.chunkZ, state.totalGenerated);
+        }
+    }
+
     public void onPlayerLeave(MinecraftServer server) {
         if (!Config.CHUNK_GEN_ENABLED.get() || server == null || state == null) return;
         LOGGER.info("[ChunkGen] Player left. Position: ({}, {}), chunks generated: {}",
