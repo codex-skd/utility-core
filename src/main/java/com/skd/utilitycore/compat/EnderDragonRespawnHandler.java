@@ -48,7 +48,6 @@ public class EnderDragonRespawnHandler {
     }
 
     private static BlockPos getPortalCenter(EnderDragonFight fight) {
-        // Try YUNG accessor first — gets the exit portal position from its mixin
         try {
             Class<?> accessor = Class.forName(YUNG_ACCESSOR);
             if (accessor.isInstance(fight)) {
@@ -58,61 +57,56 @@ public class EnderDragonRespawnHandler {
                     return pos;
                 }
             }
-        } catch (Exception e) {
-            // YUNG not present or method not accessible
-        }
+        } catch (Exception ignored) {}
         return new BlockPos(0, 60, 0);
     }
 
     private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
         BlockPos portal = getPortalCenter(fight);
+        int portalY = portal.getY();
 
-        // Place crystals at YUNG's BEI position (dist=7 from portal.above(1))
-        // and at vanilla position (dist=2 from portal) as fallback
-        boolean placed = placeCrystalsAt(level, portal.above(1), 7)
-                      || placeCrystalsAt(level, portal, 2);
-
-        if (!placed) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+        // Try YUNG BEI positions (dist=7 from portal at portal Y)
+        if (placeCrystalsAt(level, portal.getX(), portalY, portal.getZ(), 7)) {
+            fight.tryRespawn();
+            UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (YUNG dist=7)");
             return;
         }
 
-        fight.tryRespawn();
-        UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated");
-    }
-
-    private static boolean placeCrystalsAt(ServerLevel level, BlockPos origin, int dist) {
-        // Place EndCrystal entities at origin.relative(dir, dist).above()
-        // YUNG: checks for EndCrystal entities at exitPortal.above(1).relative(dir, 7)
-        // Vanilla: checks at exitPortal.below(2).relative(dir, 2)
-        // We just place — YUNG/vanilla will find them by entity lookup
-
-        if (dist == 7) {
-            // YUNG BEI mode — place without bedrock check
-            UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals dist={} from {}", dist, origin);
-            for (Direction dir : Direction.Plane.HORIZONTAL) {
-                BlockPos target = origin.relative(dir, dist);
-                BlockPos crystalPos = target.above();
-                EndCrystal crystal = new EndCrystal(level, crystalPos.getX() + 0.5, crystalPos.getY(), crystalPos.getZ() + 0.5);
-                crystal.setBeamTarget(target);
-                crystal.setInvulnerable(true);
-                level.addFreshEntity(crystal);
-            }
-            return true;
+        // Fallback: vanilla positions (dist=2 from (0, 60, 0))
+        if (placeCrystalsAt(level, 0, 60, 0, 2)) {
+            fight.tryRespawn();
+            UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (vanilla dist=2)");
+            return;
         }
 
-        // Legacy mode (dist=2, 3, etc.) — try to find bedrock positions
+        // Last resort: try any distance 3-6 from (0, 60, 0)
+        for (int d = 3; d <= 6; d++) {
+            if (placeCrystalsAt(level, 0, 60, 0, d)) {
+                fight.tryRespawn();
+                UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (fallback dist={})", d);
+                return;
+            }
+        }
+
+        UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+    }
+
+    private static boolean placeCrystalsAt(ServerLevel level, int cx, int cy, int cz, int dist) {
         BlockPos[] targets = new BlockPos[4];
         int i = 0;
-        BlockPos center = new BlockPos(origin.getX(), 60, origin.getZ());
+
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos pos = center.relative(dir, dist);
+            BlockPos pos = new BlockPos(cx, cy, cz).relative(dir, dist);
+
+            // Must be on bedrock with air above
             if (!level.getBlockState(pos).is(Blocks.BEDROCK)) return false;
-            if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) return false;
+            if (!level.getBlockState(pos.above()).isAir()) return false;
+            if (!level.getBlockState(pos.above(2)).isAir()) return false;
+
             targets[i++] = pos;
         }
 
-        UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals with beamTarget (dist={})", dist);
+        UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals on bedrock (center=({},{},{}), dist={})", cx, cy, cz, dist);
         for (BlockPos bedrock : targets) {
             EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
             crystal.setBeamTarget(bedrock);

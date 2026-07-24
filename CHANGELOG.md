@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.0.36
+- Corregido respawn del Ender Dragon con YUNG Better End Island: coloca cristales a distancia 7 desde el portal central (YUNG BEI) o distancia 2 desde (0,60,0) (vanilla)
+- Detecta la posición exacta del portal vía `EnderDragonFightAccessor.getPortalLocation()` si YUNG está presente
+
 ## 1.0.35
 - ChunkGen: guardado de estado al apagar el servidor (ServerStoppingEvent)
 - ChunkGen: log de progreso al iniciar el servidor
