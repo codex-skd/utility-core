@@ -16,6 +16,8 @@ import net.neoforged.neoforge.event.server.ServerStartedEvent;
 @EventBusSubscriber(modid = UtilityCore.MODID)
 public class EnderDragonRespawnHandler {
 
+    private static final String YUNG_IFIGHT = "com.yungnickyoung.minecraft.betterendisland.world.IBetterDragonFight";
+
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
         if (!Config.ENABLE_END_DRAGON_RESPAWN.get()) return;
@@ -45,67 +47,79 @@ public class EnderDragonRespawnHandler {
         tryRespawn(fight, endLevel);
     }
 
-    private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
-        // 1. First, try vanilla tryRespawn() — also works with YUNG (it overrides the method)
-        //    tryRespawn() internally sets the respawn stage and handles crystal placement
-        fight.tryRespawn();
+    private static boolean hasYung() {
+        try {
+            Class.forName(YUNG_IFIGHT);
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
 
-        // 2. Verify crystals were placed by checking the dragon fight's respawn stage
-        //    If tryRespawn() returned successfully, crystals should be placed.
-        //    If not, manually place crystals with beamTarget (needed by YUNG)
-        if (!wereCrystalsPlaced(level)) {
-            UtilityCore.LOGGER.info("[UtilityCore] tryRespawn() did not place crystals, placing manually");
-            placeCrystals(level);
+    private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
+        if (hasYung()) {
+            tryRespawnYung(fight, level);
+        } else {
+            tryRespawnVanilla(fight, level);
+        }
+    }
+
+    private static void tryRespawnYung(EnderDragonFight fight, ServerLevel level) {
+        // YUNG checks crystals at distance 7 (BEI radius) first, then distance 2 (vanilla radius)
+        // Try dist=7 first (optimistic for BEI), then dist=2 (vanilla fallback)
+        boolean placed = placeCrystals(level, 7) || placeCrystals(level, 2);
+
+        if (!placed) {
+            // If both fail, try any distance
+            for (int d = 3; d <= 6; d++) {
+                if (placeCrystals(level, d)) {
+                    placed = true;
+                    break;
+                }
+            }
         }
 
-        // 3. If crystals still aren't placed after manual placement, try tryRespawn() again
-        if (!wereCrystalsPlaced(level)) {
-            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+        if (!placed) {
+            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for YUNG dragon respawn");
             return;
         }
 
-        // 4. Call tryRespawn() again if crystals were just placed manually
-        //    (tryRespawn is idempotent — calling it multiple times is safe)
+        // tryRespawn() triggers YUNG's override → spawnDragon() → checks crystals at dist=7 or dist=2
         fight.tryRespawn();
-        UtilityCore.LOGGER.info("[UtilityCore] Ender Dragon respawn initiated");
+        UtilityCore.LOGGER.info("[UtilityCore] YUNG dragon respawn initiated via tryRespawn()");
     }
 
-    private static boolean wereCrystalsPlaced(ServerLevel level) {
-        BlockPos podium = new BlockPos(0, 60, 0);
+    private static void tryRespawnVanilla(EnderDragonFight fight, ServerLevel level) {
+        boolean placed = placeCrystals(level, 2) || placeCrystals(level, 3);
+
+        if (!placed) {
+            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for vanilla dragon respawn");
+            return;
+        }
+
+        fight.tryRespawn();
+        UtilityCore.LOGGER.info("[UtilityCore] Vanilla dragon respawn initiated");
+    }
+
+    private static boolean placeCrystals(ServerLevel level, int dist) {
+        BlockPos center = new BlockPos(0, 60, 0);
+        BlockPos[] targets = new BlockPos[4];
+        int i = 0;
+
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos pos = podium.relative(dir, 3);
-            BlockPos crystalPos = pos.above();
-            if (level.getBlockState(pos).is(Blocks.BEDROCK) && level.getBlockState(crystalPos).isAir()) {
-                return false;
-            }
+            BlockPos pos = center.relative(dir, dist);
+            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) return false;
+            if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) return false;
+            targets[i++] = pos;
+        }
+
+        UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals with beamTarget (dist={})", dist);
+        for (BlockPos bedrock : targets) {
+            EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
+            crystal.setBeamTarget(bedrock);
+            crystal.setInvulnerable(true);
+            level.addFreshEntity(crystal);
         }
         return true;
-    }
-
-    private static void placeCrystals(ServerLevel level) {
-        BlockPos center = new BlockPos(0, 60, 0);
-
-        for (int dist = 2; dist <= 7; dist++) {
-            BlockPos[] targets = new BlockPos[4];
-            int i = 0;
-            for (Direction dir : Direction.Plane.HORIZONTAL) {
-                BlockPos pos = center.relative(dir, dist);
-                if (!level.getBlockState(pos).is(Blocks.BEDROCK)) break;
-                if (!level.getBlockState(pos.above()).isAir() || !level.getBlockState(pos.above(2)).isAir()) break;
-                targets[i++] = pos;
-            }
-            if (i == 4) {
-                UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals with beamTarget (dist={})", dist);
-                for (BlockPos bedrock : targets) {
-                    EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
-                    crystal.setBeamTarget(bedrock);
-                    crystal.setInvulnerable(true);
-                    level.addFreshEntity(crystal);
-                }
-                return;
-            }
-        }
-
-        UtilityCore.LOGGER.warn("[UtilityCore] Could not find valid bedrock positions for crystals");
     }
 }
