@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.0.39
+- Corregido respawn del Ender Dragon con YUNG BEI: coloca bedrock + cristal en la posición exacta donde YUNG busca (dist=7, Y=portalY+1) si no encuentra bedrock existente
+
 ## 1.0.38
 - Corregido respawn del Ender Dragon con YUNG BEI: escanea niveles Y alrededor del portal para encontrar bedrock a distancia 7
 

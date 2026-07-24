@@ -63,65 +63,95 @@ public class EnderDragonRespawnHandler {
 
     private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
         BlockPos portal = getPortalCenter(fight);
-        int portalY = portal.getY();
+        int py = portal.getY();
 
-        // Try YUNG BEI positions (dist=7 from portal at portal Y)
-        if (placeCrystalsAt(level, portal.getX(), portalY, portal.getZ(), 7)) {
-            fight.tryRespawn();
-            UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (YUNG dist=7)");
+        // YUNG searches for crystals at:
+        //   checkForBEIRespawnCrystals: dist=7 from portal.above(1)   → Y=py+1
+        //   checkForVanillaRespawnCrystals: dist=2 from portal.below(2) → Y=py-2
+        // If no bedrock exists at those positions, we PLACE bedrock there.
+
+        boolean placed = forceCrystals(level, portal.getX(), py, portal.getZ());
+
+        if (!placed) {
+            UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
             return;
         }
 
-        // Fallback: vanilla positions (dist=2 from (0, 60, 0))
-        if (placeCrystalsAt(level, 0, 60, 0, 2)) {
-            fight.tryRespawn();
-            UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (vanilla dist=2)");
-            return;
-        }
-
-        // Last resort: try any distance 3-6 from (0, 60, 0)
-        for (int d = 3; d <= 6; d++) {
-            if (placeCrystalsAt(level, 0, 60, 0, d)) {
-                fight.tryRespawn();
-                UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated (fallback dist={})", d);
-                return;
-            }
-        }
-
-        UtilityCore.LOGGER.warn("[UtilityCore] Could not place crystals for dragon respawn");
+        fight.tryRespawn();
+        UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated");
     }
 
-    private static boolean placeCrystalsAt(ServerLevel level, int cx, int cy, int cz, int dist) {
-        BlockPos[] targets = new BlockPos[4];
+    private static boolean forceCrystals(ServerLevel level, int px, int py, int pz) {
+        // Try YUNG BEI positions first: dist=7 at portal.above(1) height
+        if (tryPlaceAt(level, px, py + 1, pz, 7)) {
+            return true;
+        }
+        // Try vanilla positions: dist=2 at portal.below(2) height
+        if (tryPlaceAt(level, px, py - 2, pz, 2)) {
+            return true;
+        }
+        // Fallback: try distances 3-6 at portal Y
+        for (int d = 3; d <= 6; d++) {
+            if (tryPlaceAt(level, px, py, pz, d)) {
+                return true;
+            }
+        }
+        // Last resort: place bedrock + crystal at YUNG positions regardless of terrain
+        UtilityCore.LOGGER.info("[UtilityCore] No bedrock found, placing bedrock + crystals at dist=7 Y={}", py + 1);
+        placeCrystalWithBedrock(level, px, py + 1, pz, 7);
+        return true;
+    }
+
+    private static boolean tryPlaceAt(ServerLevel level, int cx, int cy, int cz, int dist) {
+        BlockPos[] positions = new BlockPos[4];
         int i = 0;
-
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            int x = cx + dir.getStepX() * dist;
-            int z = cz + dir.getStepZ() * dist;
+            BlockPos pos = new BlockPos(
+                cx + dir.getStepX() * dist,
+                cy,
+                cz + dir.getStepZ() * dist
+            );
+            // Scan Y around target to find existing bedrock with air above
             BlockPos found = null;
-
-            // Scan Y levels around the portal to find bedrock
             for (int y = cy + 10; y >= cy - 10; y--) {
-                BlockPos pos = new BlockPos(x, y, z);
-                if (level.getBlockState(pos).is(Blocks.BEDROCK)) {
-                    if (level.getBlockState(pos.above()).isAir()) {
-                        found = pos;
-                        break;
-                    }
+                BlockPos check = new BlockPos(pos.getX(), y, pos.getZ());
+                if (level.getBlockState(check).is(Blocks.BEDROCK) && level.getBlockState(check.above()).isAir()) {
+                    found = check;
+                    break;
                 }
             }
-
             if (found == null) return false;
-            targets[i++] = found;
+            positions[i++] = found;
         }
 
         UtilityCore.LOGGER.info("[UtilityCore] Placing 4 crystals on bedrock (center=({},{},{}), dist={})", cx, cy, cz, dist);
-        for (BlockPos bedrock : targets) {
+        for (BlockPos bedrock : positions) {
             EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
             crystal.setBeamTarget(bedrock);
             crystal.setInvulnerable(true);
             level.addFreshEntity(crystal);
         }
         return true;
+    }
+
+    private static void placeCrystalWithBedrock(ServerLevel level, int cx, int cy, int cz, int dist) {
+        for (Direction dir : Direction.Plane.HORIZONTAL) {
+            BlockPos pos = new BlockPos(
+                cx + dir.getStepX() * dist,
+                cy,
+                cz + dir.getStepZ() * dist
+            );
+            // Clear area
+            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+            level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+            level.setBlock(pos.above(2), Blocks.AIR.defaultBlockState(), 3);
+            // Place bedrock
+            level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), 3);
+            // Place crystal
+            EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
+            crystal.setBeamTarget(pos);
+            crystal.setInvulnerable(true);
+            level.addFreshEntity(crystal);
+        }
     }
 }
