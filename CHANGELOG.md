@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.0.41
+- ChunkGen: archivo de estado movido a `utility_core/chunk_pregen/utility_core_chunk_gen.json`
+
 ## 1.0.40
 - ChunkGen: keepAlive ahora escanea todos los long fields de MinecraftServer para encontrar el tick timer (compatible con cualquier versión)
 - ChunkGen: archivo de estado movido a la raíz del servidor (`utility_core_chunk_gen.json`)
