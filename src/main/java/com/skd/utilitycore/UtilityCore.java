@@ -66,10 +66,9 @@ public class UtilityCore {
     @SubscribeEvent
     public void onServerStarted(ServerStartedEvent event) {
         if (chunkGenManager != null && Config.CHUNK_GEN_ENABLED.get()) {
-            long total = chunkGenManager.getTotalGenerated();
+            long total = chunkGenManager.totalGenerated();
             if (total > 0) {
-                LOGGER.info("[ChunkGen] Ready. Previous progress: {} chunks generated up to radius {}",
-                        total, chunkGenManager.getRadius());
+                LOGGER.info("[ChunkGen] Ready. Previous progress: {} chunks generated", total);
             } else {
                 LOGGER.info("[ChunkGen] Ready. No previous state found, will start from (0, 0)");
             }
@@ -93,16 +92,11 @@ public class UtilityCore {
                                         ctx.getSource().sendSuccess(() -> Component.literal("§c[ChunkGen] Not available"), false);
                                         return 0;
                                     }
-                                    if (chunkGenManager.getState() == null) {
-                                        ctx.getSource().sendSuccess(() -> Component.literal("§e[ChunkGen] No state loaded. Use /utilitycore chunkgen start"), false);
-                                    } else {
-                                        ctx.getSource().sendSuccess(() -> Component.literal(
-                                                String.format("§a[ChunkGen] %s | %s | Position: (%d, %d) | Radius: %d | Generated: %d chunks",
-                                                        chunkGenManager.isRunning() ? "§aRunning" : "§cStopped",
-                                                        chunkGenManager.isPaused() ? "§ePaused" : "§aActive",
-                                                        chunkGenManager.getChunkX(), chunkGenManager.getChunkZ(),
-                                                        chunkGenManager.getRadius(), chunkGenManager.getTotalGenerated())), false);
-                                    }
+                                    ctx.getSource().sendSuccess(() -> Component.literal(
+                                            String.format("§a[ChunkGen] %s | %s | Generated: %d chunks",
+                                                    chunkGenManager.isRunning() ? "§aRunning" : "§cStopped",
+                                                    chunkGenManager.isPaused() ? "§ePaused" : "§aActive",
+                                                    chunkGenManager.totalGenerated())), false);
                                     return Command.SINGLE_SUCCESS;
                                 }))
                                 .then(Commands.literal("start").executes(ctx -> {
@@ -110,8 +104,7 @@ public class UtilityCore {
                                         ctx.getSource().sendSuccess(() -> Component.literal("§c[ChunkGen] Not available"), false);
                                         return 0;
                                     }
-                                    chunkGenManager.start(false);
-                                    ctx.getSource().sendSuccess(() -> Component.literal("§a[ChunkGen] Generation started"), false);
+                                    ctx.getSource().sendSuccess(() -> Component.literal("§a[ChunkGen] Start/resume enabled. Triggered when server is empty."), false);
                                     return Command.SINGLE_SUCCESS;
                                 }))
                                 .then(Commands.literal("pause").executes(ctx -> {

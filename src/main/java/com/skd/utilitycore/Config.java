@@ -75,5 +75,20 @@ public class Config {
                      "ES: Evita que el servidor se pause (timeout de 60s inactivo) mientras ChunkGen genera. Puede aumentar el uso de CPU en servidores vac\u00edos.")
             .define("chunkGen.keepAlive", true);
 
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_DIMENSION_OVERWORLD = BUILDER
+            .comment("EN: Pre-generate chunks in the Overworld.",
+                     "ES: Pregenerar chunks en el Overworld.")
+            .define("chunkGen.dimensionOverworld", true);
+
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_DIMENSION_NETHER = BUILDER
+            .comment("EN: Pre-generate chunks in the Nether.",
+                     "ES: Pregenerar chunks en el Nether.")
+            .define("chunkGen.dimensionNether", false);
+
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_DIMENSION_END = BUILDER
+            .comment("EN: Pre-generate chunks in The End.",
+                     "ES: Pregenerar chunks en el End.")
+            .define("chunkGen.dimensionEnd", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 }

@@ -5,9 +5,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.Config;
-import net.minecraft.util.Util;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.Util;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
 import org.slf4j.Logger;
@@ -16,25 +17,30 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ChunkGenManager {
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path STATE_FILE = Path.of("utility_core", "chunk_pregen", "utility_core_chunk_gen.json");
+    private static final ResourceKey<Level>[] DIM_KEYS = new ResourceKey[]{Level.OVERWORLD, Level.NETHER, Level.END};
+    private static final String[] DIM_NAMES = {"minecraft:overworld", "minecraft:the_nether", "minecraft:the_end"};
 
-    private State state;
-    private boolean paused = false;
+    private final Map<String, DimState> dims = new HashMap<>();
     private boolean running = false;
+    private boolean paused = false;
+    private int dimIndex = 0;
     private int ticksSinceLastLog = 0;
 
-    private int dirX = 1, dirZ = 0;
-    private int segmentLen = 1;
-    private int stepsInSegment = 0;
-    private int segmentsChanged = 0;
-    private boolean firstStep = true;
+    private static class RootState {
+        @SerializedName("dimensions") Map<String, DimState> dimensions = new HashMap<>();
+    }
 
-    private static class State {
+    private static class DimState {
         @SerializedName("chunk_x") int chunkX;
         @SerializedName("chunk_z") int chunkZ;
         @SerializedName("radius") int radius;
@@ -45,32 +51,219 @@ public class ChunkGenManager {
         @SerializedName("steps_in_segment") int stepsInSegment = 0;
         @SerializedName("segments_changed") int segmentsChanged = 0;
         @SerializedName("first_step") boolean firstStep = true;
-
-        State() {}
-
-        State(int chunkX, int chunkZ, int radius, long totalGenerated, int segmentLen) {
-            this.chunkX = chunkX;
-            this.chunkZ = chunkZ;
-            this.radius = radius;
-            this.totalGenerated = totalGenerated;
-            this.segmentLen = segmentLen;
-        }
     }
+
+    private Field tickField;
+    private boolean tickFieldSearched = false;
 
     public ChunkGenManager() {
         loadState();
     }
 
-    private Field tickField;
-    private boolean tickFieldSearched = false;
+    public void tick(MinecraftServer server) {
+        if (!Config.CHUNK_GEN_ENABLED.get()) return;
+
+        int playerCount = server.getPlayerCount();
+
+        if (!running) {
+            if (playerCount == 0) {
+                start(server);
+            }
+            return;
+        }
+
+        if (playerCount > 0 && !Config.CHUNK_GEN_RUN_WITH_PLAYERS.get()) {
+            if (!paused) {
+                paused = true;
+                LOGGER.info("[ChunkGen] Player joined, pausing generation");
+            }
+            return;
+        }
+
+        if (paused) {
+            paused = false;
+            LOGGER.info("[ChunkGen] No more players, resuming generation");
+        }
+
+        if (playerCount == 0) {
+            keepAlive(server);
+        }
+
+        int chunksPerTick = Config.CHUNK_GEN_CHUNKS_PER_TICK.get();
+        int maxRadius = Config.CHUNK_GEN_MAX_RADIUS.get();
+
+        for (int i = 0; i < chunksPerTick; i++) {
+            String dim = nextDimension();
+            if (dim == null) return;
+
+            DimState state = dims.get(dim);
+            if (state == null) continue;
+
+            ServerLevel level = null;
+            for (int d = 0; d < DIM_NAMES.length; d++) {
+                if (DIM_NAMES[d].equals(dim)) {
+                    level = server.getLevel(DIM_KEYS[d]);
+                    break;
+                }
+            }
+            if (level == null) {
+                LOGGER.warn("[ChunkGen] Dimension {} not found, skipping", dim);
+                continue;
+            }
+
+            if (maxRadius > 0 && state.radius > maxRadius) {
+                LOGGER.info("[ChunkGen] Dimension {} reached max radius {}, stopping", dim, maxRadius);
+                dims.remove(dim);
+                if (dims.isEmpty()) {
+                    stopAll();
+                    return;
+                }
+                continue;
+            }
+
+            level.getChunk(state.chunkX, state.chunkZ, ChunkStatus.FULL, true);
+            state.totalGenerated++;
+            moveToNext(state);
+            updateRadius(state);
+
+            ticksSinceLastLog++;
+            if (ticksSinceLastLog >= 100) {
+                ticksSinceLastLog = 0;
+                LOGGER.info("[ChunkGen] Generated {} chunks so far. Pos: ({}, {}), radius: {}, dim: {}",
+                        totalGenerated(), state.chunkX, state.chunkZ, state.radius, dim);
+            }
+        }
+
+        saveState();
+    }
+
+    private String nextDimension() {
+        List<String> active = activeDimensions();
+        if (active.isEmpty()) return null;
+        dimIndex = dimIndex % active.size();
+        return active.get(dimIndex++);
+    }
+
+    private List<String> activeDimensions() {
+        List<String> list = new ArrayList<>();
+        for (Map.Entry<String, DimState> e : dims.entrySet()) {
+            if (e.getValue() != null) list.add(e.getKey());
+        }
+        return list;
+    }
+
+    private void start(MinecraftServer server) {
+        boolean[] configs = {
+            Config.CHUNK_GEN_DIMENSION_OVERWORLD.get(),
+            Config.CHUNK_GEN_DIMENSION_NETHER.get(),
+            Config.CHUNK_GEN_DIMENSION_END.get()
+        };
+
+        boolean any = false;
+        for (int i = 0; i < 3; i++) {
+            if (configs[i] && !dims.containsKey(DIM_NAMES[i])) {
+                // Verify dimension exists on this server
+                if (server.getLevel(DIM_KEYS[i]) != null) {
+                    DimState s = new DimState();
+                    s.dirX = 1; s.dirZ = 0;
+                    s.segmentLen = 1;
+                    s.firstStep = true;
+                    dims.put(DIM_NAMES[i], s);
+                    any = true;
+                }
+            }
+        }
+
+        if (!any) {
+            running = false;
+            return;
+        }
+
+        running = true;
+        paused = false;
+        dimIndex = 0;
+        LOGGER.info("[ChunkGen] Auto-starting. Dimensions: {}", String.join(", ", activeDimensions()));
+        saveState();
+    }
+
+    private void stopAll() {
+        running = false;
+        paused = false;
+        LOGGER.info("[ChunkGen] All dimensions completed");
+        saveState();
+    }
+
+    public void pause() {
+        if (!running) return;
+        paused = true;
+        LOGGER.info("[ChunkGen] Generation paused");
+        saveState();
+    }
+
+    public void stop() {
+        if (!running) return;
+        running = false;
+        paused = false;
+        LOGGER.info("[ChunkGen] Generation stopped");
+        saveState();
+    }
+
+    public void reset() {
+        dims.clear();
+        running = false;
+        paused = false;
+        LOGGER.info("[ChunkGen] Progress reset for all dimensions");
+        saveState();
+    }
+
+    public void onPlayerJoin() {
+        LOGGER.info("[ChunkGen] Player joined. Total generated: {} chunks", totalGenerated());
+    }
+
+    public void onPlayerLeave(MinecraftServer server) {
+        LOGGER.info("[ChunkGen] Player left. Total generated: {} chunks", totalGenerated());
+    }
+
+    public void onServerStopping() {
+        saveState();
+        LOGGER.info("[ChunkGen] Server stopping. Saved progress: {} chunks", totalGenerated());
+    }
+
+    public boolean isRunning() { return running; }
+    public boolean isPaused() { return paused; }
+    public long totalGenerated() {
+        return dims.values().stream().mapToLong(s -> s.totalGenerated).sum();
+    }
+
+    // --- Spiral ---
+
+    private static void moveToNext(DimState s) {
+        if (s.firstStep) { s.firstStep = false; return; }
+        s.chunkX += s.dirX;
+        s.chunkZ += s.dirZ;
+        s.stepsInSegment++;
+        if (s.stepsInSegment >= s.segmentLen) {
+            s.stepsInSegment = 0;
+            s.segmentsChanged++;
+            int tmp = s.dirX;
+            s.dirX = s.dirZ;
+            s.dirZ = -tmp;
+            if (s.segmentsChanged % 2 == 0) s.segmentLen++;
+        }
+    }
+
+    private static void updateRadius(DimState s) {
+        int r = Math.max(Math.abs(s.chunkX), Math.abs(s.chunkZ));
+        if (r > s.radius) s.radius = r;
+    }
+
+    // --- Keep Alive ---
 
     private void keepAlive(MinecraftServer server) {
         if (!Config.CHUNK_GEN_KEEP_ALIVE.get()) return;
         if (!tickFieldSearched) {
             tickFieldSearched = true;
             long now = Util.getMillis();
-
-            // Prefer exact name first (vanilla MinecraftServer field)
             try {
                 Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
                 f.setAccessible(true);
@@ -80,8 +273,6 @@ public class ChunkGenManager {
                     LOGGER.info("[ChunkGen] Found tick field: nextTickTick = {}", val);
                 }
             } catch (Exception ignored) {}
-
-            // Fallback: scan all long fields
             if (tickField == null) {
                 for (Field f : MinecraftServer.class.getDeclaredFields()) {
                     if (f.getType() != long.class) continue;
@@ -96,255 +287,42 @@ public class ChunkGenManager {
                     } catch (Exception ignored) {}
                 }
             }
-
             if (tickField == null) {
                 LOGGER.warn("[ChunkGen] No tick field found. Server may pause after 60s idle.");
             }
         }
         if (tickField != null) {
-            try {
-                tickField.setLong(server, Util.getMillis() + 50L);
-            } catch (Exception ignored) {}
+            try { tickField.setLong(server, Util.getMillis() + 50L); }
+            catch (Exception ignored) {}
         }
     }
 
-    public void tick(MinecraftServer server) {
-        if (!Config.CHUNK_GEN_ENABLED.get()) return;
-
-        int playerCount = server.getPlayerCount();
-
-        if (!running) {
-            if (playerCount == 0) {
-                start(true);
-            }
-            return;
-        }
-
-        // Prevent server from pausing while generation is active
-        if (playerCount == 0) {
-            keepAlive(server);
-        }
-
-        if (playerCount > 0 && !Config.CHUNK_GEN_RUN_WITH_PLAYERS.get()) {
-            if (!paused) {
-                paused = true;
-                LOGGER.info("[ChunkGen] Player joined, pausing generation. Position: ({}), chunks generated: {}",
-                        state != null ? state.chunkX + ", " + state.chunkZ : "none", state != null ? state.totalGenerated : 0);
-            }
-            return;
-        }
-
-        if (paused) {
-            paused = false;
-            LOGGER.info("[ChunkGen] No more players, resuming generation. Position: ({}), chunks generated: {}",
-                    state != null ? state.chunkX + ", " + state.chunkZ : "none", state != null ? state.totalGenerated : 0);
-        }
-
-        ServerLevel overworld = server.getLevel(Level.OVERWORLD);
-        if (overworld == null) return;
-
-        int chunksPerTick = Config.CHUNK_GEN_CHUNKS_PER_TICK.get();
-        int maxRadius = Config.CHUNK_GEN_MAX_RADIUS.get();
-
-        for (int i = 0; i < chunksPerTick; i++) {
-            if (state == null) break;
-
-            if (maxRadius > 0 && state.radius > maxRadius) {
-                stop(true);
-                return;
-            }
-
-            int cx = state.chunkX;
-            int cz = state.chunkZ;
-            overworld.getChunk(cx, cz, ChunkStatus.FULL, true);
-            state.totalGenerated++;
-
-            moveToNext();
-            updateRadius();
-
-            ticksSinceLastLog++;
-            if (ticksSinceLastLog >= 100) {
-                ticksSinceLastLog = 0;
-                LOGGER.info("[ChunkGen] Generated {} chunks so far. Position: ({}, {}), radius: {}",
-                        state.totalGenerated, state.chunkX, state.chunkZ, state.radius);
-            }
-        }
-
-        saveState();
-    }
-
-    public void onPlayerJoin() {
-        if (!Config.CHUNK_GEN_ENABLED.get() || state == null) return;
-        LOGGER.info("[ChunkGen] Player joined. Position: ({}, {}), chunks generated: {}",
-                state.chunkX, state.chunkZ, state.totalGenerated);
-        saveState();
-    }
-
-    public void onServerStopping() {
-        if (state != null) {
-            saveState();
-            LOGGER.info("[ChunkGen] Server stopping. Progress saved at ({}, {}), {} chunks generated",
-                    state.chunkX, state.chunkZ, state.totalGenerated);
-        }
-    }
-
-    public void onPlayerLeave(MinecraftServer server) {
-        if (!Config.CHUNK_GEN_ENABLED.get() || server == null || state == null) return;
-        LOGGER.info("[ChunkGen] Player left. Position: ({}, {}), chunks generated: {}",
-                state.chunkX, state.chunkZ, state.totalGenerated);
-    }
-
-    public void start(boolean auto) {
-        if (state == null) {
-            state = new State(0, 0, 0, 0, 1);
-        }
-        running = true;
-        paused = false;
-        firstStep = true;
-        syncStateToSpiral();
-        if (auto) {
-            LOGGER.info("[ChunkGen] Auto-starting generation from ({}, {}). Previously generated: {} chunks",
-                    state.chunkX, state.chunkZ, state.totalGenerated);
-        } else {
-            LOGGER.info("[ChunkGen] Generation started from ({}, {}). Previously generated: {} chunks",
-                    state.chunkX, state.chunkZ, state.totalGenerated);
-        }
-        saveState();
-    }
-
-    public void pause() {
-        if (!running || state == null) return;
-        paused = true;
-        LOGGER.info("[ChunkGen] Generation paused at ({}, {}). Generated: {} chunks",
-                state.chunkX, state.chunkZ, state.totalGenerated);
-        saveState();
-    }
-
-    public void stop() {
-        if (!running || state == null) return;
-        running = false;
-        paused = false;
-        LOGGER.info("[ChunkGen] Generation stopped at ({}, {}). Generated: {} chunks",
-                state.chunkX, state.chunkZ, state.totalGenerated);
-        saveState();
-    }
-
-    public void reset() {
-        state = new State(0, 0, 0, 0, 1);
-        running = false;
-        paused = false;
-        dirX = 1; dirZ = 0;
-        segmentLen = 1;
-        stepsInSegment = 0;
-        segmentsChanged = 0;
-        firstStep = true;
-        LOGGER.info("[ChunkGen] Progress reset to (0, 0)");
-        saveState();
-    }
-
-    public boolean isRunning() {
-        return running;
-    }
-
-    public boolean isPaused() {
-        return paused;
-    }
-
-    public State getState() {
-        return state;
-    }
-
-    public int getChunkX() { return state != null ? state.chunkX : 0; }
-    public int getChunkZ() { return state != null ? state.chunkZ : 0; }
-    public int getRadius() { return state != null ? state.radius : 0; }
-    public long getTotalGenerated() { return state != null ? state.totalGenerated : 0; }
-
-    private void moveToNext() {
-        if (firstStep) {
-            firstStep = false;
-            return;
-        }
-
-        state.chunkX += dirX;
-        state.chunkZ += dirZ;
-        stepsInSegment++;
-
-        if (stepsInSegment >= segmentLen) {
-            stepsInSegment = 0;
-            segmentsChanged++;
-
-            int tmp = dirX;
-            dirX = dirZ;
-            dirZ = -tmp;
-
-            if (segmentsChanged % 2 == 0) {
-                segmentLen++;
-            }
-        }
-    }
-
-    private void updateRadius() {
-        int r = Math.max(Math.abs(state.chunkX), Math.abs(state.chunkZ));
-        if (r > state.radius) {
-            state.radius = r;
-        }
-    }
-
-    private void syncStateToSpiral() {
-        dirX = state.dirX;
-        dirZ = state.dirZ;
-        segmentLen = state.segmentLen;
-        stepsInSegment = state.stepsInSegment;
-        segmentsChanged = state.segmentsChanged;
-        firstStep = state.firstStep;
-    }
-
-    private void saveStateToSpiral() {
-        if (state == null) return;
-        state.dirX = dirX;
-        state.dirZ = dirZ;
-        state.segmentLen = segmentLen;
-        state.stepsInSegment = stepsInSegment;
-        state.segmentsChanged = segmentsChanged;
-        state.firstStep = firstStep;
-    }
-
-    private void stop(boolean complete) {
-        running = false;
-        paused = false;
-        if (complete) {
-            LOGGER.info("[ChunkGen] Generation complete! Generated {} chunks up to radius {}",
-                    state != null ? state.totalGenerated : 0, state != null ? state.radius : 0);
-        }
-        saveState();
-    }
+    // --- Persistence ---
 
     private void loadState() {
         if (Files.notExists(STATE_FILE)) return;
         try {
             String json = Files.readString(STATE_FILE);
-            state = GSON.fromJson(json, State.class);
-            if (state != null) {
-                syncStateToSpiral();
-                LOGGER.info("[ChunkGen] Loaded state: position ({}, {}), {} chunks generated",
-                        state.chunkX, state.chunkZ, state.totalGenerated);
+            RootState root = GSON.fromJson(json, RootState.class);
+            if (root != null && root.dimensions != null) {
+                dims.putAll(root.dimensions);
+                LOGGER.info("[ChunkGen] Loaded state: {} chunks across {} dimensions",
+                        totalGenerated(), dims.size());
             }
         } catch (IOException e) {
-            LOGGER.warn("[ChunkGen] Could not load state file: {}", e.getMessage());
+            LOGGER.warn("[ChunkGen] Could not load state: {}", e.getMessage());
         }
     }
 
     private void saveState() {
-        if (state == null) return;
-        saveStateToSpiral();
+        if (dims.isEmpty()) return;
+        RootState root = new RootState();
+        root.dimensions = dims;
         try {
-            Path parent = STATE_FILE.getParent();
-            if (parent != null) {
-                Files.createDirectories(parent);
-            }
-            Files.writeString(STATE_FILE, GSON.toJson(state));
+            Files.createDirectories(STATE_FILE.getParent());
+            Files.writeString(STATE_FILE, GSON.toJson(root));
         } catch (IOException e) {
-            LOGGER.warn("[ChunkGen] Could not save state file: {}", e.getMessage());
+            LOGGER.warn("[ChunkGen] Could not save state: {}", e.getMessage());
         }
     }
 }
