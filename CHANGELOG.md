@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.1.0
+- ChunkGen: soporte multi-dimensión (Overworld, Nether, End) configurable individualmente
+- ChunkGen: keepAlive configurable (evita pausa del servidor mientras genera)
+- ChunkGen: límite de chunks por tick aumentado a 300
+- Fixed: null-safe saveState path creation
+
 ## 1.0.41
 - ChunkGen: archivo de estado movido a `utility_core/chunk_pregen/utility_core_chunk_gen.json`
 
