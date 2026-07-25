@@ -55,18 +55,25 @@
 </ul>
 
 <h3>&#9881;&#65039; Fully Configurable</h3>
-<p>Every feature can be enabled/disabled individually via the in-game config screen or <code>config/utility_core-common.toml</code>:</p>
-<ul>
-<li><code>enableCraftingRecipeSelector</code> &mdash; Crafting conflict resolution</li>
-<li><code>enableNegativeDamageFix</code> &mdash; Damage crash prevention</li>
-<li><code>enableEndDragonRespawn</code> &mdash; Auto-respawn Ender Dragon</li>
-<li><code>enableTombstoneGuiScaleFix</code> / <code>enableTombstoneItemInitFix</code> / <code>enableTombstoneErrorHandler</code> &mdash; Tombstone fixes</li>
-<li><code>enableOutpostZeroDamageCap</code> &mdash; OutpostZero compatibility</li>
-<li><code>chunkGen.enabled</code> &mdash; Chunk pregenerator</li>
-<li><code>chunkGen.chunksPerTick</code> &mdash; Generation speed (1-300)</li>
-<li><code>chunkGen.dimensionOverworld</code> / <code>dimensionNether</code> / <code>dimensionEnd</code> &mdash; Target dimensions</li>
-<li><code>chunkGen.keepAlive</code> &mdash; Prevent server idle pause</li>
-</ul>
+<p>Every feature can be enabled/disabled individually via <code>config/utility_core-common.toml</code>:</p>
+
+<table>
+<tr><th>Config</th><th>Default</th><th>Mod</th><th>Why</th></tr>
+<tr><td><code>enableCraftingRecipeSelector</code></td><td>true</td><td>Any mod with recipe conflicts</td><td>Shows a selector UI when multiple crafting recipes match the same ingredients. Incompatible with Fast Workbench (fastbench).</td></tr>
+<tr><td><code>enableNegativeDamageFix</code></td><td>true</td><td>Apothic Attributes + Tombstone</td><td>Apothic critical strikes + Tombstone Decrepitude can produce negative damage values, crashing the server with <code>IllegalArgumentException: Damage cannot be negative</code>. This clamps damage to 0.</td></tr>
+<tr><td><code>enableEndDragonRespawn</code></td><td>false</td><td>YUNG&#8217;s Better End Island</td><td>Automatically respawns the Ender Dragon on server start. Detects YUNG&#8217;s exit portal position and places crystals at the correct locations. Works with both vanilla and YUNG&#8217;s custom end island.</td></tr>
+<tr><td><code>enableTombstoneGuiScaleFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone forces GUI scale to 4 when opening its screens. This restores the original scale when closing.</td></tr>
+<tr><td><code>enableTombstoneItemInitFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone items (lollipop, magic_scroll) obtained via <code>/give</code> lack proper NBT data. This initializes them correctly.</td></tr>
+<tr><td><code>enableTombstoneErrorHandler</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone 9.x has a mixin (<code>ItemInputMixin</code>) that fails to apply in certain NeoForge versions. Instead of crashing, this suppresses the error gracefully.</td></tr>
+<tr><td><code>enableOutpostZeroDamageCap</code></td><td>true</td><td>OutpostZero</td><td>OutpostZero infection damage can bypass death events and destroy armor before the player dies. Caps damage at 10000 to allow death events to fire first.</td></tr>
+<tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
+<tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>
+<tr><td><code>chunkGen.dimensionOverworld</code></td><td>true</td><td>Vanilla / All</td><td>Generate chunks in the Overworld.</td></tr>
+<tr><td><code>chunkGen.dimensionNether</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in the Nether.</td></tr>
+<tr><td><code>chunkGen.dimensionEnd</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in The End.</td></tr>
+<tr><td><code>chunkGen.runWithPlayers</code></td><td>false</td><td>Vanilla / All</td><td>If true, generation continues even when players are online. If false, pauses on player join.</td></tr>
+<tr><td><code>chunkGen.keepAlive</code></td><td>true</td><td>Vanilla / All</td><td>Prevents the dedicated server from idling (60s timeout) while chunks are being generated.</td></tr>
+</table>
 
 <br>
 
