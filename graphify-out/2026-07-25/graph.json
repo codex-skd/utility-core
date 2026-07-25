@@ -876,7 +876,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_getcachedrecipes",
-      "community": 1,
+      "community": 2,
       "norm_label": ".getcachedrecipes()"
     },
     {
@@ -886,7 +886,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_setselectorposition",
-      "community": 18,
+      "community": 1,
       "norm_label": ".setselectorposition()"
     },
     {
@@ -1360,14 +1360,34 @@
       "norm_label": "serverlevel"
     },
     {
-      "label": ".placeCrystalsAt()",
+      "label": ".forceCrystals()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
-      "source_location": "L94",
+      "source_location": "L84",
       "_origin": "ast",
-      "id": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalsat",
+      "id": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
       "community": 14,
-      "norm_label": ".placecrystalsat()"
+      "norm_label": ".forcecrystals()"
+    },
+    {
+      "label": ".tryPlaceAt()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryplaceat",
+      "community": 14,
+      "norm_label": ".tryplaceat()"
+    },
+    {
+      "label": ".placeCrystalWithBedrock()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalwithbedrock",
+      "community": 14,
+      "norm_label": ".placecrystalwithbedrock()"
     },
     {
       "label": "OutpostZeroCompat.java",
@@ -1456,7 +1476,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "accessorabstractcontainerscreen.java"
     },
     {
@@ -1466,7 +1486,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "accessorabstractcontainerscreen"
     },
     {
@@ -1476,7 +1496,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_java_mixin",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixin"
     },
     {
@@ -1486,7 +1506,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen_utility_core_getleftpos",
-      "community": 18,
+      "community": 1,
       "norm_label": ".utility_core$getleftpos()"
     },
     {
@@ -1496,7 +1516,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_java_accessor",
-      "community": 18,
+      "community": 1,
       "norm_label": "accessor"
     },
     {
@@ -1506,7 +1526,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen_utility_core_gettoppos",
-      "community": 18,
+      "community": 1,
       "norm_label": ".utility_core$gettoppos()"
     },
     {
@@ -1766,7 +1786,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixincraftingscreen.java"
     },
     {
@@ -1776,7 +1796,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_mixincraftingscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixincraftingscreen"
     },
     {
@@ -1786,7 +1806,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_mixin",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixin"
     },
     {
@@ -1796,7 +1816,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_mixincraftingscreen_onextractbackground",
-      "community": 18,
+      "community": 1,
       "norm_label": ".onextractbackground()"
     },
     {
@@ -1806,7 +1826,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_guigraphicsextractor",
-      "community": 18,
+      "community": 1,
       "norm_label": "guigraphicsextractor"
     },
     {
@@ -1816,7 +1836,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_callbackinfo",
-      "community": 18,
+      "community": 1,
       "norm_label": "callbackinfo"
     },
     {
@@ -1826,7 +1846,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_inject",
-      "community": 18,
+      "community": 1,
       "norm_label": "inject"
     },
     {
@@ -1886,7 +1906,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixininventoryscreen.java"
     },
     {
@@ -1896,7 +1916,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixininventoryscreen"
     },
     {
@@ -1906,7 +1926,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java_mixin",
-      "community": 18,
+      "community": 1,
       "norm_label": "mixin"
     },
     {
@@ -1916,7 +1936,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen_onextractrenderstate",
-      "community": 18,
+      "community": 1,
       "norm_label": ".onextractrenderstate()"
     },
     {
@@ -1926,7 +1946,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java_guigraphicsextractor",
-      "community": 18,
+      "community": 1,
       "norm_label": "guigraphicsextractor"
     },
     {
@@ -1936,7 +1956,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java_callbackinfo",
-      "community": 18,
+      "community": 1,
       "norm_label": "callbackinfo"
     },
     {
@@ -1946,7 +1966,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java_inject",
-      "community": 18,
+      "community": 1,
       "norm_label": "inject"
     },
     {
@@ -1956,7 +1976,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput",
-      "community": 9,
+      "community": 18,
       "norm_label": "mixiniteminput.java"
     },
     {
@@ -1966,7 +1986,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput_mixiniteminput",
-      "community": 9,
+      "community": 18,
       "norm_label": "mixiniteminput"
     },
     {
@@ -1976,7 +1996,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput_java_mixin",
-      "community": 9,
+      "community": 18,
       "norm_label": "mixin"
     },
     {
@@ -1986,7 +2006,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "method",
-      "community": 9,
+      "community": 18,
       "norm_label": "method"
     },
     {
@@ -1996,7 +2016,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput_mixiniteminput_oncreateitemstack",
-      "community": 9,
+      "community": 18,
       "norm_label": ".oncreateitemstack()"
     },
     {
@@ -2006,7 +2026,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "callbackinforeturnable",
-      "community": 9,
+      "community": 18,
       "norm_label": "callbackinforeturnable"
     },
     {
@@ -2016,7 +2036,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput_java_itemstack",
-      "community": 9,
+      "community": 18,
       "norm_label": "itemstack"
     },
     {
@@ -2026,7 +2046,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixiniteminput_java_inject",
-      "community": 9,
+      "community": 18,
       "norm_label": "inject"
     },
     {
@@ -2266,7 +2286,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_selectrecipepacket_handle",
-      "community": 6,
+      "community": 2,
       "norm_label": ".handle()"
     },
     {
@@ -2276,7 +2296,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_java_ipayloadcontext",
-      "community": 6,
+      "community": 2,
       "norm_label": "ipayloadcontext"
     },
     {
@@ -2476,7 +2496,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_polymorph_playerrecipedata_playerrecipedata_setselectedindex",
-      "community": 6,
+      "community": 2,
       "norm_label": ".setselectedindex()"
     },
     {
@@ -2660,10 +2680,20 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
-      "label": "1.0.38",
+      "label": "1.0.39",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_1_0_39",
+      "community": 5,
+      "norm_label": "1.0.39"
+    },
+    {
+      "label": "1.0.38",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
       "_origin": "ast",
       "id": "changelog_1_0_38",
       "community": 5,
@@ -2673,7 +2703,7 @@
       "label": "1.0.37",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L6",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "changelog_1_0_37",
       "community": 5,
@@ -2683,7 +2713,7 @@
       "label": "1.0.36",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "changelog_1_0_36",
       "community": 5,
@@ -2693,7 +2723,7 @@
       "label": "1.0.35",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L14",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "changelog_1_0_35",
       "community": 5,
@@ -2703,7 +2733,7 @@
       "label": "1.0.34",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L19",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "changelog_1_0_34",
       "community": 5,
@@ -2713,7 +2743,7 @@
       "label": "1.0.33",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L23",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "changelog_1_0_33",
       "community": 5,
@@ -2723,7 +2753,7 @@
       "label": "1.0.32",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "changelog_1_0_32",
       "community": 5,
@@ -2733,7 +2763,7 @@
       "label": "1.0.25",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "changelog_1_0_25",
       "community": 5,
@@ -2743,7 +2773,7 @@
       "label": "1.0.24",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "changelog_1_0_24",
       "community": 5,
@@ -2753,7 +2783,7 @@
       "label": "1.0.23",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "changelog_1_0_23",
       "community": 5,
@@ -2763,7 +2793,7 @@
       "label": "1.0.22",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L56",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "changelog_1_0_22",
       "community": 5,
@@ -2773,7 +2803,7 @@
       "label": "1.0.21",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "changelog_1_0_21",
       "community": 5,
@@ -2783,7 +2813,7 @@
       "label": "1.0.20",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L66",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "changelog_1_0_20",
       "community": 5,
@@ -2793,7 +2823,7 @@
       "label": "1.0.19",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L69",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "changelog_1_0_19",
       "community": 5,
@@ -2803,7 +2833,7 @@
       "label": "1.0.17",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L76",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "changelog_1_0_17",
       "community": 5,
@@ -2813,7 +2843,7 @@
       "label": "1.0.16",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L82",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "changelog_1_0_16",
       "community": 5,
@@ -2823,7 +2853,7 @@
       "label": "1.0.15",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L86",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "changelog_1_0_15",
       "community": 5,
@@ -2833,7 +2863,7 @@
       "label": "1.0.14",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L90",
+      "source_location": "L93",
       "_origin": "ast",
       "id": "changelog_1_0_14",
       "community": 5,
@@ -2843,7 +2873,7 @@
       "label": "0.0.1-beta.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L94",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_6",
       "community": 5,
@@ -2853,7 +2883,7 @@
       "label": "0.0.1-beta.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L99",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_5",
       "community": 5,
@@ -2863,7 +2893,7 @@
       "label": "0.0.1-beta.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L104",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_4",
       "community": 5,
@@ -2873,7 +2903,7 @@
       "label": "0.0.1-beta.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L108",
+      "source_location": "L111",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_3",
       "community": 5,
@@ -2883,7 +2913,7 @@
       "label": "0.0.1-beta.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L112",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_2",
       "community": 5,
@@ -2893,7 +2923,7 @@
       "label": "0.0.1-beta.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L115",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "changelog_0_0_1_beta_1",
       "community": 5,
@@ -3728,6 +3758,16 @@
       "id": "docs_curseforge_versions_1_0_38",
       "community": 31,
       "norm_label": "1.0.38.md"
+    },
+    {
+      "label": "1.0.39.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.0.39.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_0_39",
+      "community": 33,
+      "norm_label": "1.0.39.md"
     }
   ],
   "links": [
@@ -6638,6 +6678,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
       "source_location": "L50",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler",
@@ -6658,10 +6708,20 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
-      "source_location": "L94",
+      "source_location": "L137",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler",
-      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalsat",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalwithbedrock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryplaceat",
       "confidence_score": 1.0
     },
     {
@@ -6767,9 +6827,9 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
-      "source_location": "L105",
+      "source_location": "L139",
       "weight": 1.0,
-      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalsat",
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalwithbedrock",
       "target": "blockpos",
       "confidence_score": 1.0
     },
@@ -6778,10 +6838,21 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
-      "source_location": "L69",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryplaceat",
+      "target": "blockpos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryrespawn",
-      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalsat",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
       "confidence_score": 1.0
     },
     {
@@ -6799,11 +6870,55 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
-      "source_location": "L94",
+      "source_location": "L84",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalsat",
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
       "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_java_serverlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L137",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalwithbedrock",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_java_serverlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L105",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryplaceat",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_java_serverlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_placecrystalwithbedrock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_forcecrystals",
+      "target": "src_main_java_com_skd_utilitycore_compat_enderdragonrespawnhandler_enderdragonrespawnhandler_tryplaceat",
       "confidence_score": 1.0
     },
     {
@@ -9173,7 +9288,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L115",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_1",
@@ -9183,7 +9298,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_2",
@@ -9193,7 +9308,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L108",
+      "source_location": "L111",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_3",
@@ -9203,7 +9318,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L104",
+      "source_location": "L107",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_4",
@@ -9213,7 +9328,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L99",
+      "source_location": "L102",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_5",
@@ -9223,7 +9338,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L94",
+      "source_location": "L97",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_1_beta_6",
@@ -9233,7 +9348,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L90",
+      "source_location": "L93",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_14",
@@ -9243,7 +9358,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L86",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_15",
@@ -9253,7 +9368,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L82",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_16",
@@ -9263,7 +9378,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L76",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_17",
@@ -9273,7 +9388,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L69",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_19",
@@ -9283,7 +9398,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L66",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_20",
@@ -9293,7 +9408,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_21",
@@ -9303,7 +9418,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L56",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_22",
@@ -9313,7 +9428,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_23",
@@ -9323,7 +9438,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_24",
@@ -9333,7 +9448,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_25",
@@ -9343,7 +9458,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_32",
@@ -9353,7 +9468,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_33",
@@ -9363,7 +9478,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_34",
@@ -9373,7 +9488,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L14",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_35",
@@ -9383,7 +9498,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_36",
@@ -9393,7 +9508,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_37",
@@ -9403,10 +9518,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_38",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_39",
       "confidence_score": 1.0
     },
     {
@@ -10071,5 +10196,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "82e33a6474236429659d338fa2c4f67db0154679"
+  "built_at_commit": "11efd97cf867ef67b15be160af9b68de60592155"
 }
