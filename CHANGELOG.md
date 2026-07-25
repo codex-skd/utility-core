@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.0.40
+- ChunkGen: keepAlive ahora escanea todos los long fields de MinecraftServer para encontrar el tick timer (compatible con cualquier versión)
+- ChunkGen: archivo de estado movido a la raíz del servidor (`utility_core_chunk_gen.json`)
+
 ## 1.0.39
 - Corregido respawn del Ender Dragon con YUNG BEI: coloca bedrock + cristal en la posición exacta donde YUNG busca (dist=7, Y=portalY+1) si no encuentra bedrock existente
 
