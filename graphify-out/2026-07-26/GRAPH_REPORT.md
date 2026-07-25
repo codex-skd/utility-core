@@ -1,16 +1,16 @@
-# Graph Report - utility_core  (2026-07-26)
+# Graph Report - utility_core  (2026-07-25)
 
 ## Corpus Check
-- 51 files · ~116,115 words
+- 50 files · ~115,980 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 380 nodes · 609 edges · 38 communities (37 shown, 1 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
+- 379 nodes · 605 edges · 37 communities (36 shown, 1 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b9a6eeda`
+- Built from commit: `926a8daa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -37,8 +37,8 @@
 - .onExtractBackground
 
 ## God Nodes (most connected - your core abstractions)
-1. `ChunkGenManager` - 30 edges
-2. `Utility Core — Registro de cambios` - 29 edges
+1. `ChunkGenManager` - 31 edges
+2. `Utility Core — Registro de cambios` - 28 edges
 3. `PolymorphClientHandler` - 18 edges
 4. `PlayerRecipeData` - 16 edges
 5. `Flujo de trabajo — Utility Core (NeoForge)` - 13 edges
@@ -61,7 +61,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (38 total, 1 thin omitted)
+## Communities (37 total, 1 thin omitted)
 
 ### Community 1 - "PolymorphClientHandler.java"
 Cohesion: 0.15
@@ -81,7 +81,7 @@ Nodes (43): 1. Desarrollo, 2. Copiar a instancia de pruebas, 3. Probar en instan
 
 ### Community 5 - "SelectRecipePacket.java"
 Cohesion: 0.07
-Nodes (29): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+21 more)
+Nodes (28): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+20 more)
 
 ### Community 6 - "SyncRecipesPacket"
 Cohesion: 0.16
@@ -89,7 +89,7 @@ Nodes (13): ByteBuf, CustomPacketPayload, RegistryFriendlyByteBuf, Override, Str
 
 ### Community 7 - "UtilityCore.java"
 Cohesion: 0.08
-Nodes (23): Field, Gson, MinecraftServer, PlayerLoggedInEvent, PlayerLoggedOutEvent, Post, RegisterCommandsEvent, ServerStoppingEvent (+15 more)
+Nodes (20): Field, Gson, MinecraftServer, PlayerLoggedInEvent, PlayerLoggedOutEvent, Post, RegisterCommandsEvent, ServerStoppingEvent (+12 more)
 
 ### Community 8 - "AccessorCraftingMenu.java"
 Cohesion: 0.43
@@ -97,7 +97,7 @@ Nodes (5): AccessorCraftingMenu, Accessor, CraftingContainer, Mixin, ResultConta
 
 ### Community 9 - "MixinDamageContainer.java"
 Cohesion: 0.15
-Nodes (14): BooleanValue, Builder, CallbackInfoReturnable, IntValue, Method, ModConfigSpec, Redirect, Config (+6 more)
+Nodes (14): BooleanValue, Builder, DamageType, IntValue, ModConfigSpec, Redirect, ResourceKey, EventBusSubscriber (+6 more)
 
 ### Community 10 - "UtilityCoreClient.java"
 Cohesion: 0.60
@@ -124,8 +124,8 @@ Cohesion: 0.36
 Nodes (7): Screen, CallbackInfo, Inject, Minecraft, Mixin, Unique, MixinTBScreen
 
 ### Community 18 - "MixinItemInput.java"
-Cohesion: 0.39
-Nodes (6): DamageType, EventBusSubscriber, Pre, ResourceKey, SubscribeEvent, OutpostZeroCompat
+Cohesion: 0.43
+Nodes (6): CallbackInfoReturnable, Method, Inject, ItemStack, Mixin, MixinItemInput
 
 ### Community 19 - "Utility Core"
 Cohesion: 0.33
@@ -140,7 +140,7 @@ Cohesion: 0.16
 Nodes (13): AccessorAbstractContainerScreen, Accessor, Mixin, CallbackInfo, GuiGraphicsExtractor, Inject, Mixin, MixinCraftingScreen (+5 more)
 
 ## Knowledge Gaps
-- **80 isolated node(s):** `1.1.0`, `1.0.41`, `1.0.40`, `1.0.39`, `1.0.38` (+75 more)
+- **79 isolated node(s):** `1.0.41`, `1.0.40`, `1.0.39`, `1.0.38`, `1.0.37` (+74 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -151,13 +151,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **Why does `PlayerRecipeData` connect `PlayerRecipeData` to `PolymorphApi.java`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **What connects `1.1.0`, `1.0.41`, `1.0.40` to the rest of the system?**
-  _80 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `1.0.41`, `1.0.40`, `1.0.39` to the rest of the system?**
+  _79 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
   _Cohesion score 0.0951219512195122 - nodes in this community are weakly interconnected._
 - **Should `MixinCraftingMenu.java` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `UtilityCore.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.08013468013468013 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07532467532467532 - nodes in this community are weakly interconnected._
