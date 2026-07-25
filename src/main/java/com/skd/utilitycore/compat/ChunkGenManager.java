@@ -21,7 +21,7 @@ public class ChunkGenManager {
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private static final Path STATE_FILE = Path.of("config", "utility_core_chunk_gen.json");
+    private static final Path STATE_FILE = Path.of("utility_core_chunk_gen.json");
 
     private State state;
     private boolean paused = false;
@@ -61,21 +61,32 @@ public class ChunkGenManager {
         loadState();
     }
 
-    private static Field nextTickTickField;
-    static {
-        try {
-            Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
-            f.setAccessible(true);
-            nextTickTickField = f;
-        } catch (Exception e) {
-            nextTickTickField = null;
-        }
-    }
+    private Field tickField;
+    private boolean tickFieldSearched = false;
 
     private void keepAlive(MinecraftServer server) {
-        if (nextTickTickField != null) {
+        if (!tickFieldSearched) {
+            tickFieldSearched = true;
+            long now = Util.getMillis();
+            for (Field f : MinecraftServer.class.getDeclaredFields()) {
+                if (f.getType() != long.class) continue;
+                try {
+                    f.setAccessible(true);
+                    long val = f.getLong(server);
+                    if (val >= now - 100_000 && val <= now + 100_000) {
+                        tickField = f;
+                        LOGGER.info("[ChunkGen] Found tick field: {} = {}", f.getName(), val);
+                        break;
+                    }
+                } catch (Exception ignored) {}
+            }
+            if (tickField == null) {
+                LOGGER.warn("[ChunkGen] No tick field found. Server may pause after 60s idle.");
+            }
+        }
+        if (tickField != null) {
             try {
-                nextTickTickField.setLong(server, Util.getMillis() + 50L);
+                tickField.setLong(server, Util.getMillis() + 50L);
             } catch (Exception ignored) {}
         }
     }
