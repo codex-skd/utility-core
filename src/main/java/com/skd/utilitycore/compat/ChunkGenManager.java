@@ -65,21 +65,38 @@ public class ChunkGenManager {
     private boolean tickFieldSearched = false;
 
     private void keepAlive(MinecraftServer server) {
+        if (!Config.CHUNK_GEN_KEEP_ALIVE.get()) return;
         if (!tickFieldSearched) {
             tickFieldSearched = true;
             long now = Util.getMillis();
-            for (Field f : MinecraftServer.class.getDeclaredFields()) {
-                if (f.getType() != long.class) continue;
-                try {
-                    f.setAccessible(true);
-                    long val = f.getLong(server);
-                    if (val >= now - 100_000 && val <= now + 100_000) {
-                        tickField = f;
-                        LOGGER.info("[ChunkGen] Found tick field: {} = {}", f.getName(), val);
-                        break;
-                    }
-                } catch (Exception ignored) {}
+
+            // Prefer exact name first (vanilla MinecraftServer field)
+            try {
+                Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
+                f.setAccessible(true);
+                long val = f.getLong(server);
+                if (val >= now - 100_000 && val <= now + 100_000) {
+                    tickField = f;
+                    LOGGER.info("[ChunkGen] Found tick field: nextTickTick = {}", val);
+                }
+            } catch (Exception ignored) {}
+
+            // Fallback: scan all long fields
+            if (tickField == null) {
+                for (Field f : MinecraftServer.class.getDeclaredFields()) {
+                    if (f.getType() != long.class) continue;
+                    try {
+                        f.setAccessible(true);
+                        long val = f.getLong(server);
+                        if (val >= now - 100_000 && val <= now + 100_000) {
+                            tickField = f;
+                            LOGGER.info("[ChunkGen] Found tick field (fallback): {} = {}", f.getName(), val);
+                            break;
+                        }
+                    } catch (Exception ignored) {}
+                }
             }
+
             if (tickField == null) {
                 LOGGER.warn("[ChunkGen] No tick field found. Server may pause after 60s idle.");
             }

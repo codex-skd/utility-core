@@ -58,7 +58,7 @@ public class Config {
     public static final ModConfigSpec.IntValue CHUNK_GEN_CHUNKS_PER_TICK = BUILDER
             .comment("EN: Number of chunks to generate per server tick. Higher values generate faster but may cause lag.",
                      "ES: N\u00famero de chunks a generar por tick del servidor. Valores m\u00e1s altos generan m\u00e1s r\u00e1pido pero pueden causar lag.")
-            .defineInRange("chunkGen.chunksPerTick", 1, 1, 64);
+            .defineInRange("chunkGen.chunksPerTick", 1, 1, 300);
 
     public static final ModConfigSpec.IntValue CHUNK_GEN_MAX_RADIUS = BUILDER
             .comment("EN: Maximum radius in chunks to generate (0 = unlimited). Stops when this radius is reached.",
@@ -69,6 +69,11 @@ public class Config {
             .comment("EN: If true, generation continues even with players online. If false, pauses when players join.",
                      "ES: Si es true, la generaci\u00f3n contin\u00faa aunque haya jugadores. Si es false, se pausa cuando entran jugadores.")
             .define("chunkGen.runWithPlayers", false);
+
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_KEEP_ALIVE = BUILDER
+            .comment("EN: Prevents the server from pausing (60s idle timeout) while ChunkGen is running. May cause higher CPU usage on empty servers.",
+                     "ES: Evita que el servidor se pause (timeout de 60s inactivo) mientras ChunkGen genera. Puede aumentar el uso de CPU en servidores vac\u00edos.")
+            .define("chunkGen.keepAlive", true);
 
     static final ModConfigSpec SPEC = BUILDER.build();
 }
