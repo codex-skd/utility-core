@@ -321,7 +321,10 @@ public class ChunkGenManager {
         if (state == null) return;
         saveStateToSpiral();
         try {
-            Files.createDirectories(STATE_FILE.getParent());
+            Path parent = STATE_FILE.getParent();
+            if (parent != null) {
+                Files.createDirectories(parent);
+            }
             Files.writeString(STATE_FILE, GSON.toJson(state));
         } catch (IOException e) {
             LOGGER.warn("[ChunkGen] Could not save state file: {}", e.getMessage());
