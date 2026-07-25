@@ -21,7 +21,7 @@ public class ChunkGenManager {
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private static final Path STATE_FILE = Path.of("utility_core_chunk_gen.json");
+    private static final Path STATE_FILE = Path.of("utility_core", "chunk_pregen", "utility_core_chunk_gen.json");
 
     private State state;
     private boolean paused = false;
