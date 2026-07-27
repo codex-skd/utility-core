@@ -64,11 +64,8 @@ public class EnderDragonRespawnHandler {
     private static void tryRespawn(EnderDragonFight fight, ServerLevel level) {
         BlockPos portal = getPortalCenter(fight);
         int py = portal.getY();
-
-        // YUNG searches for crystals at:
-        //   checkForBEIRespawnCrystals: dist=7 from portal.above(1)   → Y=py+1
-        //   checkForVanillaRespawnCrystals: dist=2 from portal.below(2) → Y=py-2
-        // If no bedrock exists at those positions, we PLACE bedrock there.
+        UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn: portal={}, hasWon={}, respawnStage={}",
+                portal, fight.hasPreviouslyKilledDragon(), getRespawnStage(fight));
 
         boolean placed = forceCrystals(level, portal.getX(), py, portal.getZ());
 
@@ -77,22 +74,62 @@ public class EnderDragonRespawnHandler {
             return;
         }
 
-        fight.tryRespawn();
-        UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated");
+        try {
+            fight.tryRespawn();
+            UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn initiated. Post-call state: hasWon={}, respawnStage={}",
+                    fight.hasPreviouslyKilledDragon(), getRespawnStage(fight));
+        } catch (Exception e) {
+            UtilityCore.LOGGER.error("[UtilityCore] Dragon respawn tryRespawn() threw: {}", e.getMessage(), e);
+        }
+
+        // Log all end crystals in the area for verification
+        BlockPos searchCenter = new BlockPos(0, 60, 0);
+        int crystalCount = 0;
+        for (EndCrystal crystal : level.getEntities().getAll().stream()
+                .filter(e -> e instanceof EndCrystal)
+                .map(e -> (EndCrystal) e).toList()) {
+            crystalCount++;
+            if (crystal.blockPosition().distSqr(searchCenter) < 10000) {
+                UtilityCore.LOGGER.info("[UtilityCore]   Crystal #{} at {} beam={} invuln={}",
+                        crystalCount, crystal.blockPosition(), crystal.getBeamTarget(), crystal.isInvulnerable());
+            }
+        }
+        UtilityCore.LOGGER.info("[UtilityCore] Total end crystals in End dimension: {}", crystalCount);
+    }
+
+    private static String getRespawnStage(EnderDragonFight fight) {
+        try {
+            for (java.lang.reflect.Field f : EnderDragonFight.class.getDeclaredFields()) {
+                if (f.getType().isEnum() || f.getName().contains("Stage") || f.getName().contains("stage") || f.getName().contains("respawn")) {
+                    f.setAccessible(true);
+                    Object val = f.get(fight);
+                    if (val != null) {
+                        return f.getName() + "=" + val;
+                    }
+                }
+            }
+        } catch (Exception ignored) {}
+        return "unknown";
     }
 
     private static boolean forceCrystals(ServerLevel level, int px, int py, int pz) {
+        UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: center=({},{},{}), moving=YUNG_BEI", px, py, pz);
         // Try YUNG BEI positions first: dist=7 at portal.above(1) height
         if (tryPlaceAt(level, px, py + 1, pz, 7)) {
+            UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: SUCCESS at YUNG BEI dist=7 Y={}", py + 1);
             return true;
         }
+        UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: YUNG BEI failed, trying vanilla dist=2 Y={}", py - 2);
         // Try vanilla positions: dist=2 at portal.below(2) height
         if (tryPlaceAt(level, px, py - 2, pz, 2)) {
+            UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: SUCCESS at vanilla dist=2 Y={}", py - 2);
             return true;
         }
         // Fallback: try distances 3-6 at portal Y
+        UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: vanilla failed, trying fallback dists 3-6 at Y={}", py);
         for (int d = 3; d <= 6; d++) {
             if (tryPlaceAt(level, px, py, pz, d)) {
+                UtilityCore.LOGGER.info("[UtilityCore] forceCrystals: SUCCESS at fallback dist={} Y={}", d, py);
                 return true;
             }
         }
@@ -111,16 +148,21 @@ public class EnderDragonRespawnHandler {
                 cy,
                 cz + dir.getStepZ() * dist
             );
-            // Scan Y around target to find existing bedrock with air above
             BlockPos found = null;
             for (int y = cy + 10; y >= cy - 10; y--) {
                 BlockPos check = new BlockPos(pos.getX(), y, pos.getZ());
-                if (level.getBlockState(check).is(Blocks.BEDROCK) && level.getBlockState(check.above()).isAir()) {
+                boolean isBedrock = level.getBlockState(check).is(Blocks.BEDROCK);
+                boolean hasAirAbove = level.getBlockState(check.above()).isAir();
+                UtilityCore.LOGGER.info("[UtilityCore]   tryPlaceAt scanning: pos={} bedrock={} airAbove={}", check, isBedrock, hasAirAbove);
+                if (isBedrock && hasAirAbove) {
                     found = check;
                     break;
                 }
             }
-            if (found == null) return false;
+            if (found == null) {
+                UtilityCore.LOGGER.info("[UtilityCore]   tryPlaceAt FAILED at dir={} pos=({},{},{}) — no bedrock+air found in range", dir, pos.getX(), cy, pos.getZ());
+                return false;
+            }
             positions[i++] = found;
         }
 
@@ -130,6 +172,7 @@ public class EnderDragonRespawnHandler {
             crystal.setBeamTarget(bedrock);
             crystal.setInvulnerable(true);
             level.addFreshEntity(crystal);
+            UtilityCore.LOGGER.info("[UtilityCore]   Placed crystal at ({},{},{}) beam={}", bedrock.getX(), bedrock.getY(), bedrock.getZ(), bedrock);
         }
         return true;
     }
