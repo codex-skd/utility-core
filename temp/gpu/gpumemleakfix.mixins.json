@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "package": "com.gpumemleakfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "gpumemleakfix.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "RenderTargetMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

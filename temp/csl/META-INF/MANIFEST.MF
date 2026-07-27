@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: customskinloader.bootstrap
+Specification-Title: CustomSkinLoader
+Specification-Vendor: xfl03
+Specification-Version: 1
+Implementation-Title: CustomSkinLoader
+Implementation-Version: 15.0.1
+Implementation-Vendor: xfl03
+Implementation-Timestamp: 2026-06-21T05:47:03+0000
+FMLCorePlugin: customskinloader.bootstrap.forge.v1.LoadingPlugin
+
