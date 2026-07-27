@@ -1,6 +1,6 @@
 # Flujo de trabajo — Utility Core (NeoForge)
 
-> **Versión del workflow**: 1.2.7 (codex-docs)
+> **Versión del workflow**: 1.4.0 (codex-docs)
 > Este archivo pertenece al proyecto **Utility Core**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -30,6 +30,42 @@ Reglas:
 - Las clases Java principales deben seguir el naming del `mod_id` pero en **PascalCase**:
   - `utility_core` → clase `UtilityCore`, no `Utility_core` ni `UtilityCoreMod`
 - Las config keys en camelCase: `utilityCore.enableFeature`
+
+## Organización en el workspace
+
+Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
+
+```
+<mod_id>/                    # Carpeta padre del mod (solo organizativa, sin .git)
+└── <minecraft_version>/     # Proyecto real con su propio .git y repositorio GitLab
+    ├── .git/
+    ├── build.gradle
+    ├── gradle.properties
+    ├── src/
+    ├── docs/
+    └── ...
+```
+
+Ejemplo real actual:
+
+```
+utility_core/                # Mod padre (una sola versión)
+└── 26.1.2/                  # Único repositorio
+    ├── .git/
+    └── ...
+
+info_tab/
+└── 26.1.2/                  # Repositorio independiente
+    ├── .git/
+    └── ...
+```
+
+**Reglas:**
+- La carpeta padre `<mod_id>/` es solo organizativa, **no tiene `.git`**
+- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente en GitLab
+- El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
+- La rama default del repo es `minecraft/<mc-version>/neoforge-<neo-version>/production`
+- El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` (ej: `WORKFLOW_UTILITY_CORE_26-1-2.md`)
 
 ## Tipografía
 
@@ -640,6 +676,8 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.4.0 | 2026-07-23 | Organización en workspace: `<mod_id>/<mc-version>/` |
+| 1.3.0 | 2026-07-23 | Nueva sección: organización multi-versión con estructura `<mod_id>/<mc-version>/` |
 | 1.2.7 | 2026-07-23 | Adaptado a utility_core: versión 1.2.7 del genérico |
 | 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |
 | 1.2.5 | 2026-07-23 | `*/main` es ahora la rama por defecto, `main` raíz eliminada |

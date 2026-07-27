@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.1.1
+- Fixed: ChunkGen no reanuda generación tras cargar estado guardado del JSON — `start()` no activaba `running=true` porque las dimensiones ya existían en el mapa
+- Workflow: actualizado a v1.4.0 (organización workspace `utility_core/26.1.2/`)
+- Workflow: añadida sección "Organización en el workspace"
+
 ## 1.1.0
 - ChunkGen: soporte multi-dimensión (Overworld, Nether, End) configurable individualmente
 - ChunkGen: keepAlive configurable (evita pausa del servidor mientras genera)
