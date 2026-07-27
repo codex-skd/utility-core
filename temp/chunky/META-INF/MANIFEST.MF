@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: chunky
-Implementation-Version: 1.5.4
-Implementation-Vendor: pop4959
-

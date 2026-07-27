@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: YungsBetterEndIsland
-Specification-Vendor: YUNGNICKYOUNG
-Specification-Version: 26.1.2-NeoForge-4.1.0
-Implementation-Title: NeoForge
-Implementation-Version: 26.1.2-NeoForge-4.1.0
-Implementation-Vendor: YUNGNICKYOUNG
-Built-On-Minecraft: 26.1.2
-

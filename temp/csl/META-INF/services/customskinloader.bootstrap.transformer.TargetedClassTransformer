@@ -1,4 +1,0 @@
-customskinloader.bootstrap.transformer.patch.InterfacePatch
-customskinloader.bootstrap.transformer.patch.RenderPatch
-customskinloader.bootstrap.transformer.patch.SkinManagerPatch
-customskinloader.bootstrap.transformer.patch.SkinTexturePatch

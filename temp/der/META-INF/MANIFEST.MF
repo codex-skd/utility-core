@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: EnderDragonEggRespawn
-Specification-Vendor: Block_Legend001
-Specification-Version: 26.1.2-0.1
-Implementation-Title: neoforge
-Implementation-Version: 26.1.2-0.1
-Implementation-Vendor: Block_Legend001
-Built-On-Minecraft: 26.1.2
-

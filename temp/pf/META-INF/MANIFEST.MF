@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: Packet Fixer
-Specification-Vendor: TonimatasDEV
-Implementation-Title: neoforge
-Implementation-Vendor: TonimatasDEV
-Built-On-Minecraft: 26.1
-
