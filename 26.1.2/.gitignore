@@ -42,3 +42,8 @@ repo/
 !**/src/**/repo/
 lib_ext/
 temp/
+
+# IDE and cache
+.eclipse/
+.gradle/
+.vscode/
