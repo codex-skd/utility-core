@@ -12,6 +12,7 @@ import net.minecraft.world.level.dimension.end.EnderDragonFight;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import java.util.stream.StreamSupport;
 
 @EventBusSubscriber(modid = UtilityCore.MODID)
 public class EnderDragonRespawnHandler {
@@ -85,7 +86,7 @@ public class EnderDragonRespawnHandler {
         // Log all end crystals in the area for verification
         BlockPos searchCenter = new BlockPos(0, 60, 0);
         int crystalCount = 0;
-        for (EndCrystal crystal : level.getEntities().getAll().stream()
+        for (EndCrystal crystal : StreamSupport.stream(level.getEntities().getAll().spliterator(), false)
                 .filter(e -> e instanceof EndCrystal)
                 .map(e -> (EndCrystal) e).toList()) {
             crystalCount++;

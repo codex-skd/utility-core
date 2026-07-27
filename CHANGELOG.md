@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.1.2
+- EnderDragonRespawnHandler: logging detallado de cada etapa (portal, escaneo bedrock, tryRespawn, estado del fight, posición de cristales)
+- ChunkGen: fix reanudación desde estado guardado (start() con dims pre-cargadas)
+- Workflow: actualizado a v1.6.0 (repositorio independiente por versión)
+- Limpieza: archivos IDE y cache eliminados del tracking (.eclipse, .gradle, .vscode)
+
 ## 1.1.1
 - Fixed: ChunkGen no reanuda generación tras cargar estado guardado del JSON — `start()` no activaba `running=true` porque las dimensiones ya existían en el mapa
 - Workflow: actualizado a v1.4.0 (organización workspace `utility_core/26.1.2/`)
