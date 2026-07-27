@@ -45,7 +45,7 @@ Ejemplo: `26.1.2-neoforge-1.0.25`
 | `displayName` | `Utility Core (1.0.25)` | Nombre visible: `display_name (version)` |
 | `changelog` | HTML (no Markdown) | Ver estructura abajo |
 | `changelogType` | `html` | Obligatorio para que se vea bien |
-| `releaseType` | `release` o `beta` | Según el tipo de versión |
+| `release_type` | `release` | No usar beta. utility_core usa versionado SemVer estable. |
 | `gameVersionNames` | `["Client", "Server", "26.1.2", "NeoForge"]` | Entorno + MC + modloader |
 
 ## Estructura del changelog (HTML)
