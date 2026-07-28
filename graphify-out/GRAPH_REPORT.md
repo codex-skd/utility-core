@@ -1,18 +1,13 @@
 # Graph Report - 26.1.2  (2026-07-28)
 
 ## Corpus Check
-- 54 files · ~117,272 words
+- 55 files · ~116,985 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 388 nodes · 392 edges · 123 communities (36 shown, 87 thin omitted)
+- 391 nodes · 400 edges · 124 communities (37 shown, 87 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `63a590df`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - .onExtractBackground
@@ -119,14 +114,14 @@
 - ModContainer
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 32 edges
+1. `Utility Core — Registro de cambios` - 33 edges
 2. `ChunkGenManager` - 30 edges
 3. `PolymorphClientHandler` - 15 edges
 4. `Flujo de trabajo — Utility Core (NeoForge)` - 14 edges
 5. `CurseForge — Variables del proyecto` - 13 edges
 6. `UtilityCore` - 10 edges
-7. `PlayerRecipeData` - 10 edges
-8. `EnderDragonRespawnHandler` - 9 edges
+7. `EnderDragonRespawnHandler` - 10 edges
+8. `PlayerRecipeData` - 10 edges
 9. `SyncRecipesPacket` - 8 edges
 10. `Formato de descripciones CurseForge` - 7 edges
 
@@ -137,7 +132,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (123 total, 87 thin omitted)
+## Communities (124 total, 87 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.14
@@ -161,7 +156,7 @@ Nodes (35): 1. Desarrollo, 2. Copiar a instancia de pruebas, 3. Probar en instan
 
 ### Community 5 - "SelectRecipePacket.java"
 Cohesion: 0.06
-Nodes (32): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+24 more)
+Nodes (33): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+25 more)
 
 ### Community 6 - "SyncRecipesPacket"
 Cohesion: 0.10
@@ -192,7 +187,7 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 14 - "EnderDragonRespawnHandler.java"
-Cohesion: 0.32
+Cohesion: 0.34
 Nodes (7): BlockPos, EnderDragonFight, EnderDragonRespawnHandler, EventBusSubscriber, ServerLevel, ServerStartedEvent, SubscribeEvent
 
 ### Community 16 - "TombstoneErrorHandler"
@@ -200,7 +195,7 @@ Cohesion: 0.39
 Nodes (5): ErrorAction, TombstoneErrorHandler, IMixinConfig, IMixinErrorHandler, IMixinInfo
 
 ## Knowledge Gaps
-- **84 isolated node(s):** `1.1.3`, `1.1.2`, `1.1.1`, `1.1.0`, `1.0.41` (+79 more)
+- **85 isolated node(s):** `1.1.4`, `1.1.3`, `1.1.2`, `1.1.1`, `1.1.0` (+80 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **87 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -211,8 +206,8 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **What connects `1.1.3`, `1.1.2`, `1.1.1` to the rest of the system?**
-  _84 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `1.1.4`, `1.1.3`, `1.1.2` to the rest of the system?**
+  _85 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
@@ -220,4 +215,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `MixinCraftingMenu.java` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
