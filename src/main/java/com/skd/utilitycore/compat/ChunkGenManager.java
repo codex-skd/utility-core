@@ -153,35 +153,26 @@ public class ChunkGenManager {
     }
 
     private void start(MinecraftServer server) {
-        if (!dims.isEmpty()) {
-            running = true;
-            paused = false;
-            dimIndex = 0;
-            LOGGER.info("[ChunkGen] Auto-starting. Dimensions: {}", String.join(", ", activeDimensions()));
-            return;
-        }
-
         boolean[] configs = {
             Config.CHUNK_GEN_DIMENSION_OVERWORLD.get(),
             Config.CHUNK_GEN_DIMENSION_NETHER.get(),
             Config.CHUNK_GEN_DIMENSION_END.get()
         };
 
-        boolean any = false;
+        // Add any new dimensions from config that aren't already in saved state
         for (int i = 0; i < 3; i++) {
-            if (configs[i]) {
+            if (configs[i] && !dims.containsKey(DIM_NAMES[i])) {
                 if (server.getLevel(DIM_KEYS[i]) != null) {
                     DimState s = new DimState();
                     s.dirX = 1; s.dirZ = 0;
                     s.segmentLen = 1;
                     s.firstStep = true;
                     dims.put(DIM_NAMES[i], s);
-                    any = true;
                 }
             }
         }
 
-        if (!any) {
+        if (dims.isEmpty()) {
             running = false;
             return;
         }

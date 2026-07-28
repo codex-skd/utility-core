@@ -1,11 +1,11 @@
-# Graph Report - 26.1.2  (2026-07-27)
+# Graph Report - 26.1.2  (2026-07-28)
 
 ## Corpus Check
-- 52 files · ~116,660 words
+- 53 files · ~117,002 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 383 nodes · 375 edges · 126 communities (34 shown, 92 thin omitted)
+- 386 nodes · 391 edges · 123 communities (35 shown, 88 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -47,10 +47,6 @@
 - Pre
 - RecipeHolder
 - RecipeManager
-- SubscribeEvent
-- EventBusSubscriber
-- ServerLevel
-- ServerStartedEvent
 - SubscribeEvent
 - EventBusSubscriber
 - Pre
@@ -119,15 +115,15 @@
 - ModContainer
 
 ## God Nodes (most connected - your core abstractions)
-1. `ChunkGenManager` - 30 edges
-2. `Utility Core — Registro de cambios` - 30 edges
+1. `Utility Core — Registro de cambios` - 31 edges
+2. `ChunkGenManager` - 30 edges
 3. `PolymorphClientHandler` - 15 edges
 4. `Flujo de trabajo — Utility Core (NeoForge)` - 14 edges
 5. `CurseForge — Variables del proyecto` - 13 edges
 6. `UtilityCore` - 10 edges
 7. `PlayerRecipeData` - 10 edges
-8. `SyncRecipesPacket` - 8 edges
-9. `EnderDragonRespawnHandler` - 7 edges
+8. `EnderDragonRespawnHandler` - 9 edges
+9. `SyncRecipesPacket` - 8 edges
 10. `Formato de descripciones CurseForge` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -137,7 +133,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (126 total, 92 thin omitted)
+## Communities (123 total, 88 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.14
@@ -161,10 +157,10 @@ Nodes (35): 1. Desarrollo, 2. Copiar a instancia de pruebas, 3. Probar en instan
 
 ### Community 5 - "SelectRecipePacket.java"
 Cohesion: 0.06
-Nodes (30): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+22 more)
+Nodes (31): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+23 more)
 
 ### Community 6 - "SyncRecipesPacket"
-Cohesion: 0.11
+Cohesion: 0.10
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
@@ -192,32 +188,32 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 14 - "EnderDragonRespawnHandler.java"
-Cohesion: 0.42
-Nodes (3): BlockPos, EnderDragonFight, EnderDragonRespawnHandler
+Cohesion: 0.32
+Nodes (7): BlockPos, EnderDragonFight, EnderDragonRespawnHandler, EventBusSubscriber, ServerLevel, ServerStartedEvent, SubscribeEvent
 
 ### Community 16 - "TombstoneErrorHandler"
 Cohesion: 0.39
 Nodes (5): ErrorAction, TombstoneErrorHandler, IMixinConfig, IMixinErrorHandler, IMixinInfo
 
 ## Knowledge Gaps
-- **82 isolated node(s):** `1.1.1`, `1.1.0`, `1.0.41`, `1.0.40`, `1.0.39` (+77 more)
+- **83 isolated node(s):** `1.1.2`, `1.1.1`, `1.1.0`, `1.0.41`, `1.0.40` (+78 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **92 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **88 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Flujo de trabajo — Utility Core (NeoForge)` connect `MixinCraftingMenu.java` to `PolymorphApi.java`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **What connects `1.1.1`, `1.1.0`, `1.0.41` to the rest of the system?**
-  _82 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **What connects `1.1.2`, `1.1.1`, `1.1.0` to the rest of the system?**
+  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.08870967741935484 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09247311827956989 - nodes in this community are weakly interconnected._
 - **Should `MixinCraftingMenu.java` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
-- **Should `SyncRecipesPacket` be split into smaller, more focused modules?**
-  _Cohesion score 0.10837438423645321 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0625 - nodes in this community are weakly interconnected._

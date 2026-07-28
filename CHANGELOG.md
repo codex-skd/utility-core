@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.1.3
+- Fixed: ChunkGen no agregaba dimensiones Nether/End si existía estado guardado de Overworld
+- Fixed: Dragon respawn fallback coloca cristales también en posición vanilla (dist=2) para que tryRespawn() los detecte
+- Fixed: Dragon respawn loguea fallos de colocación de bedrock/cristales
+
 ## 1.1.2
 - EnderDragonRespawnHandler: logging detallado de cada etapa (portal, escaneo bedrock, tryRespawn, estado del fight, posición de cristales)
 - ChunkGen: fix reanudación desde estado guardado (start() con dims pre-cargadas)

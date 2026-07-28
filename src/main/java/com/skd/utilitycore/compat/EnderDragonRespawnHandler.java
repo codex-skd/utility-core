@@ -185,17 +185,45 @@ public class EnderDragonRespawnHandler {
                 cy,
                 cz + dir.getStepZ() * dist
             );
-            // Clear area
+            UtilityCore.LOGGER.info("[UtilityCore] placeCrystalWithBedrock: placing at {}", pos);
             level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
             level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
             level.setBlock(pos.above(2), Blocks.AIR.defaultBlockState(), 3);
-            // Place bedrock
             level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), 3);
-            // Place crystal
+            if (!level.getBlockState(pos).is(Blocks.BEDROCK)) {
+                UtilityCore.LOGGER.warn("[UtilityCore]   Failed to place bedrock at {}", pos);
+            }
             EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
             crystal.setBeamTarget(pos);
             crystal.setInvulnerable(true);
-            level.addFreshEntity(crystal);
+            if (!level.addFreshEntity(crystal)) {
+                UtilityCore.LOGGER.warn("[UtilityCore]   Failed to spawn crystal at {}", pos.above());
+            }
+        }
+        // Also place vanilla-position crystals (dist=2, Y=cy-4) so fight.tryRespawn() can detect them
+        int vanillaY = cy - 4;
+        UtilityCore.LOGGER.info("[UtilityCore] placeCrystalWithBedrock: also placing vanilla crystals at dist=2 Y={}", vanillaY);
+        for (Direction dir : Direction.Plane.HORIZONTAL) {
+            BlockPos pos = new BlockPos(
+                cx + dir.getStepX() * 2,
+                vanillaY,
+                cz + dir.getStepZ() * 2
+            );
+            if (level.getBlockState(pos).is(Blocks.BEDROCK) && level.getBlockState(pos.above()).isAir()) {
+                EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
+                crystal.setBeamTarget(pos);
+                crystal.setInvulnerable(true);
+                level.addFreshEntity(crystal);
+            } else {
+                // Place bedrock ourselves, then crystal
+                level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+                level.setBlock(pos, Blocks.BEDROCK.defaultBlockState(), 3);
+                EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
+                crystal.setBeamTarget(pos);
+                crystal.setInvulnerable(true);
+                level.addFreshEntity(crystal);
+            }
         }
     }
 }
