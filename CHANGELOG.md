@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.1.4
+- Fixed: Dragon Respawn `tryRespawn()` no detectaba cristales — colocados a dist=7 pero vanilla busca a dist=2. Ahora se colocan en ambas posiciones.
+
 ## 1.1.3
 - Fixed: ChunkGen no agregaba dimensiones Nether/End si existía estado guardado de Overworld
 - Fixed: Dragon respawn fallback coloca cristales también en posición vanilla (dist=2) para que tryRespawn() los detecte
