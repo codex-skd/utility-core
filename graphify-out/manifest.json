@@ -1,0 +1,197 @@
+{
+  "build.gradle": {
+    "mtime": 1785361839.0700178,
+    "ast_hash": "04137e0596ce418c3fd3f2cc7d91094a",
+    "semantic_hash": ""
+  },
+  "gradlew": {
+    "mtime": 1785352060.515871,
+    "ast_hash": "794669d78aef1dd5c7d889ef618b311a",
+    "semantic_hash": ""
+  },
+  "settings.gradle": {
+    "mtime": 1785352060.8085904,
+    "ast_hash": "58a5df05c6546d7d2671a516793e02e7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/Config.java": {
+    "mtime": 1785360941.1454947,
+    "ast_hash": "f349779ce61d858c1e29ea8e080a3319",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
+    "mtime": 1785359554.1221142,
+    "ast_hash": "bf351a18b840302fea47ef3c1fe877a6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/UtilityCore.java": {
+    "mtime": 1785360940.9923997,
+    "ast_hash": "6fecde8ec8eb42834dea16f8ca285c40",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
+    "mtime": 1785360941.0814207,
+    "ast_hash": "6108d296ecec0180ea7ed8aa0a2d740f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/api/PolymorphApi.java": {
+    "mtime": 1785359554.237888,
+    "ast_hash": "52d239ed4d31893cb08bd62361645493",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/attachment/ModAttachments.java": {
+    "mtime": 1785359554.3580878,
+    "ast_hash": "c614c0bb0f514f7cf70435b903f710b1",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java": {
+    "mtime": 1785359554.4237318,
+    "ast_hash": "e3a38d0649bbb8a78cbd828add040307",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
+    "mtime": 1785359554.4777014,
+    "ast_hash": "f60dbf6562d647ef3d82251c3afe5741",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java": {
+    "mtime": 1785359554.5425303,
+    "ast_hash": "e4fdcabc3525ea36cc006530e0c71c72",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/AccessorAbstractContainerScreen.java": {
+    "mtime": 1785359554.602872,
+    "ast_hash": "6c0c77df36c3a8ad7c406ef035572e05",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/AccessorCraftingMenu.java": {
+    "mtime": 1785359554.6132457,
+    "ast_hash": "51ad2df095eaa3d840e4bb1bdcc9fe54",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinCraftingMenu.java": {
+    "mtime": 1785359554.6290843,
+    "ast_hash": "0ffc86eb9f3b96675ca29bc53134c6a4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinCraftingScreen.java": {
+    "mtime": 1785359554.6476524,
+    "ast_hash": "48eca5e9def2ea0bc2b1c014bfc43c6d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinDamageContainer.java": {
+    "mtime": 1785359554.660612,
+    "ast_hash": "bee17fc4ad165605e19b565f16c71714",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java": {
+    "mtime": 1785359554.6780078,
+    "ast_hash": "17668cbf8406428a71e84c47de8a506e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinItemInput.java": {
+    "mtime": 1785359554.6917324,
+    "ast_hash": "7752be0115b4396d9fb639acbdeca468",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinTBScreen.java": {
+    "mtime": 1785359554.7079153,
+    "ast_hash": "34e88e5b6e54783b3bb006d705c7cbe0",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/network/ModNetwork.java": {
+    "mtime": 1785359554.8047838,
+    "ast_hash": "b1c3d83d610cb07fd97d7ae7c7d26d05",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/network/SelectRecipePacket.java": {
+    "mtime": 1785359554.8211935,
+    "ast_hash": "5fcce349b9380e69784c1a6e72399f8e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/network/SyncRecipesPacket.java": {
+    "mtime": 1785359554.8419013,
+    "ast_hash": "64066ba00e8227f799e83dea2d804a04",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/polymorph/PlayerRecipeData.java": {
+    "mtime": 1785359554.9040616,
+    "ast_hash": "67d99e5d890c9bdbc269d61e109d30d4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/polymorph/RecipeFinder.java": {
+    "mtime": 1785359554.907597,
+    "ast_hash": "880a4ec244c278accc208da2926dac7c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/polymorph/RecipePair.java": {
+    "mtime": 1785359554.9241314,
+    "ast_hash": "b79339a57941e9ff2abca84436104244",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/utility_core/lang/en_us.json": {
+    "mtime": 1785360996.945462,
+    "ast_hash": "fbbc0b2d9939c08bca4dca257f2991f9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/utility_core.mixins.json": {
+    "mtime": 1785360982.7109637,
+    "ast_hash": "3ee435bc35c63c77c9c611807bb1d878",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785358973.2348695,
+    "ast_hash": "526267294ade6dd87bad503bb80b3a4f",
+    "semantic_hash": ""
+  },
+  ".gitlab-ci.yml": {
+    "mtime": 1785358850.3820465,
+    "ast_hash": "560448c117d9df9c94a5810ae4b1f6a5",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1785361898.227106,
+    "ast_hash": "79e598db1cc76de24aeda579dc6c8355",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785361885.7363515,
+    "ast_hash": "675756b518f55bfa457e503ca89d6304",
+    "semantic_hash": ""
+  },
+  "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
+    "mtime": 1785356898.1563516,
+    "ast_hash": "5ba6fb472861162fab014818d22f9603",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description.md": {
+    "mtime": 1785361904.1861231,
+    "ast_hash": "a3a89de1ae836de1cfee19e512261565",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_vars.md": {
+    "mtime": 1785358811.0393066,
+    "ast_hash": "887a284ca976d79381e2221637bedb2d",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1.md": {
+    "mtime": 1785362504.0497541,
+    "ast_hash": "4a92e1b77d47b73a388e13ab0305842f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/utility_core/icon.png": {
+    "mtime": 1785352467.501024,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/logo.png": {
+    "mtime": 1785352467.5810497,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/utility_core.png": {
+    "mtime": 1785352467.7396824,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  }
+}
