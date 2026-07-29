@@ -12,8 +12,6 @@
 
 <p>Utility Core is a Swiss Army knife for modded Minecraft servers. It started as a simple recipe conflict resolver and evolved into a collection of essential utilities that every modpack needs. All features are toggleable in the config.</p>
 
-<blockquote><strong>Note</strong>: this 26.2 port is a work in progress. Features listed below are being ported incrementally from the 26.1.2 version; check the mod's CHANGELOG for current status before publishing.</blockquote>
-
 <br>
 
 <h2>&#127919; Features</h2>

@@ -20,6 +20,9 @@ Features:
 - API for other mods to integrate
 '''
 
+[[mixins]]
+config="utility_core.mixins.json"
+
 [[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
