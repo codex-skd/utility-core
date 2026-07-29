@@ -45,11 +45,6 @@ public class Config {
                      "ES: Limita el da\u00f1o de infecci\u00f3n de OutpostZero a 10000 para evitar destrucci\u00f3n de armadura antes de que salten los eventos de muerte. Requiere que OutpostZero est\u00e9 presente.")
             .define("enableOutpostZeroDamageCap", true);
 
-    public static final ModConfigSpec.BooleanValue ENABLE_END_DRAGON_RESPAWN = BUILDER
-            .comment("EN: Automatically respawns the Ender Dragon with full vanilla animation (obsidian towers, crystals) on server start if it was previously killed.",
-                     "ES: Reaparece autom\u00e1ticamente al Ender Dragon con animaci\u00f3n vanilla completa (torres de obsidiana, cristales) al iniciar el servidor si fue asesinado previamente.")
-            .define("enableEndDragonRespawn", false);
-
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
                      "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")
