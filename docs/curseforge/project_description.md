@@ -1,6 +1,6 @@
 <h1 align="center">&#9881;&#65039; Utility Core</h1>
 
-<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, Ender Dragon respawn, automatic chunk pregeneration, and mod compatibility fixes.</strong></p>
+<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, and mod compatibility fixes.</strong></p>
 
 <br>
 
@@ -27,9 +27,6 @@
 <h3>&#128737;&#65039; Damage Safety</h3>
 <p>Negative damage values from mod interactions (e.g., Apothic Attributes + Tombstone) are clamped to zero, preventing <code>IllegalArgumentException: Damage cannot be negative</code> server crashes.</p>
 
-<h3>&#128123; Ender Dragon Auto-Respawn</h3>
-<p>Automatically respawns the Ender Dragon on server start if it was previously killed. Fully compatible with YUNG&#8217;s Better End Island — places crystals at the correct positions and uses YUNG&#8217;s native respawn system.</p>
-
 <h3>&#127758; Automatic Chunk Pregeneration (ChunkGen)</h3>
 <p>Pre-generates chunks in a spiral pattern when the server is empty, eliminating lag from world generation when players explore. Multi-dimension support (Overworld, Nether, End).</p>
 <ul>
@@ -51,7 +48,6 @@
 <h3>&#128299; Other Fixes</h3>
 <ul>
 <li><strong>OutpostZero Damage Cap</strong>: Limits infection damage to 10000 to prevent instant death</li>
-<li><strong>Ender Dragon compatibility</strong>: Works with YUNG&#8217;s Better End Island 4.x</li>
 </ul>
 
 <h3>&#9881;&#65039; Fully Configurable</h3>
@@ -61,7 +57,6 @@
 <tr><th>Config</th><th>Default</th><th>Mod</th><th>Why</th></tr>
 <tr><td><code>enableCraftingRecipeSelector</code></td><td>true</td><td>Any mod with recipe conflicts</td><td>Shows a selector UI when multiple crafting recipes match the same ingredients. Incompatible with Fast Workbench (fastbench).</td></tr>
 <tr><td><code>enableNegativeDamageFix</code></td><td>true</td><td>Apothic Attributes + Tombstone</td><td>Apothic critical strikes + Tombstone Decrepitude can produce negative damage values, crashing the server with <code>IllegalArgumentException: Damage cannot be negative</code>. This clamps damage to 0.</td></tr>
-<tr><td><code>enableEndDragonRespawn</code></td><td>false</td><td>YUNG&#8217;s Better End Island / Vanilla</td><td>Automatically respawns the Ender Dragon on server start. Works with or without YUNG&#8217;s BEI:<br>With YUNG: detects portal at Y=63, places crystals at dist=7 (BEI radius)<br>Without YUNG: assumes portal at (0,60,0), places crystals at dist=2 (vanilla radius)<br>Last resort: force-places bedrock + crystal at the exact positions YUNG checks.</td></tr>
 <tr><td><code>enableTombstoneGuiScaleFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone forces GUI scale to 4 when opening its screens. This restores the original scale when closing.</td></tr>
 <tr><td><code>enableTombstoneItemInitFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone items (lollipop, magic_scroll) obtained via <code>/give</code> lack proper NBT data. This initializes them correctly.</td></tr>
 <tr><td><code>enableTombstoneErrorHandler</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone 9.x has a mixin (<code>ItemInputMixin</code>) that fails to apply in certain NeoForge versions. Instead of crashing, this suppresses the error gracefully.</td></tr>
@@ -92,7 +87,6 @@
 <li>Install the mod on <strong>both client and server</strong>.</li>
 <li>Configure via <code>config/utility_core-common.toml</code> or the mod menu.</li>
 <li>For ChunkGen: set <code>chunkGen.enabled=true</code> and the generator will auto-start when the server is empty.</li>
-<li>For Ender Dragon: set <code>enableEndDragonRespawn=true</code> and the dragon will respawn on next server start.</li>
 <li>Use <code>/utilitycore chunkgen status</code> to monitor generation progress.</li>
 </ol>
 
