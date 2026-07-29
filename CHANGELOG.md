@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.1.6
+- Fixed: el respawn automático del Ender Dragon nunca disparaba `tryRespawn()` porque los cristales se colocaban a distancia 7-8 (piedra base de YUNG BEI) o 2 (versiones anteriores), pero vanilla (`EnderDragonFight#tryRespawn()`) solo detecta cristales exactamente a **distancia 3** de cada punto cardinal respecto al centro del portal. Confirmado descompilando `EnderDragonFight.java` (Minecraft 26.1.2).
+- Los cristales ya no dependen de un bloque de soporte (`EndCrystal` no tiene gravedad); se registra en el log si hay suelo sólido debajo para poder verificarlo visualmente.
+- Se mantiene la comprobación anti-duplicados de la versión 1.1.5.
+
 ## 1.1.5
 - Fixed: Dragon Respawn colocaba piedra base inventada cuando la torre real de YUNG BEI estaba a distancia 8 (no 7 exacto), ignorando la piedra base ya generada. Ahora se busca en un rango de distancias (6-9) con tolerancia lateral para encontrar la torre real y nunca se fabrica piedra base nueva.
 - Fixed: Se podían colocar cristales duplicados/superpuestos si `onServerStarted` se disparaba varias veces (reinicios sucesivos) antes de completar el respawn. Ahora se comprueba si ya existe un cristal cerca antes de colocar uno nuevo.
