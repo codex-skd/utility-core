@@ -9,6 +9,7 @@ import net.minecraft.world.entity.boss.enderdragon.EndCrystal;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.end.EnderDragonFight;
+import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -69,7 +70,6 @@ public class EnderDragonRespawnHandler {
                 portal, center, fight.hasPreviouslyKilledDragon(), getRespawnStage(fight));
 
         placeYungCrystals(level, center);
-        placeVanillaCrystals(level, center);
 
         try {
             fight.tryRespawn();
@@ -108,32 +108,49 @@ public class EnderDragonRespawnHandler {
         return "unknown";
     }
 
+    // YUNG's Better End Island generates its own bedrock pillars around the exit portal,
+    // but not at a perfectly uniform distance in every cardinal direction (observed 7-8 blocks).
+    private static final int MIN_TOWER_DISTANCE = 6;
+    private static final int MAX_TOWER_DISTANCE = 9;
+    private static final int LATERAL_TOLERANCE = 2;
+    private static final double CRYSTAL_DEDUPE_RADIUS = 2.0;
+
     private static void placeYungCrystals(ServerLevel level, BlockPos center) {
-        UtilityCore.LOGGER.info("[UtilityCore] Placing YUNG BEI crystals at dist=7 from {}", center);
+        UtilityCore.LOGGER.info("[UtilityCore] Placing crystals on existing YUNG BEI bedrock towers around {}", center);
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos target = center.relative(dir, 7);
-            BlockPos bedrock = findBedrockWithAirAbove(level, target);
+            BlockPos bedrock = findExistingBedrockTower(level, center, dir);
             if (bedrock == null) {
-                bedrock = target;
-                level.setBlock(bedrock, Blocks.BEDROCK.defaultBlockState(), 3);
-                level.setBlock(bedrock.above(), Blocks.AIR.defaultBlockState(), 3);
+                UtilityCore.LOGGER.warn("[UtilityCore] No existing bedrock tower found for direction {} around {} (searched dist {}-{}); skipping this crystal",
+                        dir, center, MIN_TOWER_DISTANCE, MAX_TOWER_DISTANCE);
+                continue;
+            }
+            if (hasNearbyCrystal(level, bedrock.above())) {
+                UtilityCore.LOGGER.info("[UtilityCore]   Skipping {} (dir={}): a crystal is already placed there", bedrock, dir);
+                continue;
             }
             spawnCrystal(level, bedrock);
         }
     }
 
-    private static void placeVanillaCrystals(ServerLevel level, BlockPos center) {
-        UtilityCore.LOGGER.info("[UtilityCore] Placing vanilla detection crystals at dist=2 from {}", center);
-        for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos target = center.relative(dir, 2);
-            BlockPos bedrock = findBedrockWithAirAbove(level, target);
-            if (bedrock == null) {
-                bedrock = target;
-                level.setBlock(bedrock, Blocks.BEDROCK.defaultBlockState(), 3);
-                level.setBlock(bedrock.above(), Blocks.AIR.defaultBlockState(), 3);
+    /**
+     * Searches for a bedrock block with air above it, already present in the world, near the
+     * expected cardinal offset from {@code center}. Scans a range of distances along {@code dir}
+     * plus a small lateral tolerance to account for YUNG's non-uniform tower placement, and never
+     * places new bedrock — the towers must already exist.
+     */
+    private static BlockPos findExistingBedrockTower(ServerLevel level, BlockPos center, Direction dir) {
+        Direction lateralDir = dir.getClockWise();
+        for (int dist = MIN_TOWER_DISTANCE; dist <= MAX_TOWER_DISTANCE; dist++) {
+            BlockPos onAxis = center.relative(dir, dist);
+            for (int lateral = -LATERAL_TOLERANCE; lateral <= LATERAL_TOLERANCE; lateral++) {
+                BlockPos column = onAxis.relative(lateralDir, lateral);
+                BlockPos bedrock = findBedrockWithAirAbove(level, column);
+                if (bedrock != null) {
+                    return bedrock;
+                }
             }
-            spawnCrystal(level, bedrock);
         }
+        return null;
     }
 
     private static BlockPos findBedrockWithAirAbove(ServerLevel level, BlockPos pos) {
@@ -144,6 +161,11 @@ public class EnderDragonRespawnHandler {
             }
         }
         return null;
+    }
+
+    private static boolean hasNearbyCrystal(ServerLevel level, BlockPos crystalPos) {
+        return !level.getEntitiesOfClass(EndCrystal.class,
+                new AABB(crystalPos).inflate(CRYSTAL_DEDUPE_RADIUS)).isEmpty();
     }
 
     private static void spawnCrystal(ServerLevel level, BlockPos bedrock) {
