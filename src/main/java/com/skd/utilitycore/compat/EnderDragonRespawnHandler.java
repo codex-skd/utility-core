@@ -7,7 +7,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.end.EnderDragonFight;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -69,7 +68,7 @@ public class EnderDragonRespawnHandler {
         UtilityCore.LOGGER.info("[UtilityCore] Dragon respawn: portal={}, center={}, hasWon={}, respawnStage={}",
                 portal, center, fight.hasPreviouslyKilledDragon(), getRespawnStage(fight));
 
-        placeYungCrystals(level, center);
+        placeRespawnCrystals(level, center);
 
         try {
             fight.tryRespawn();
@@ -108,59 +107,24 @@ public class EnderDragonRespawnHandler {
         return "unknown";
     }
 
-    // YUNG's Better End Island generates its own bedrock pillars around the exit portal,
-    // but not at a perfectly uniform distance in every cardinal direction (observed 7-8 blocks).
-    private static final int MIN_TOWER_DISTANCE = 6;
-    private static final int MAX_TOWER_DISTANCE = 9;
-    private static final int LATERAL_TOLERANCE = 2;
-    private static final double CRYSTAL_DEDUPE_RADIUS = 2.0;
+    // Vanilla EnderDragonFight#tryRespawn() only looks for an EndCrystal inside the exact
+    // 1x1x1 box at center.relative(direction, 3) for each horizontal direction — this distance
+    // is hardcoded in vanilla and is NOT related to YUNG BEI's own (larger) bedrock towers.
+    private static final int TRIGGER_DISTANCE = 3;
+    private static final double CRYSTAL_DEDUPE_RADIUS = 1.5;
 
-    private static void placeYungCrystals(ServerLevel level, BlockPos center) {
-        UtilityCore.LOGGER.info("[UtilityCore] Placing crystals on existing YUNG BEI bedrock towers around {}", center);
+    private static void placeRespawnCrystals(ServerLevel level, BlockPos center) {
+        UtilityCore.LOGGER.info("[UtilityCore] Placing respawn-trigger crystals at dist={} from {}", TRIGGER_DISTANCE, center);
         for (Direction dir : Direction.Plane.HORIZONTAL) {
-            BlockPos bedrock = findExistingBedrockTower(level, center, dir);
-            if (bedrock == null) {
-                UtilityCore.LOGGER.warn("[UtilityCore] No existing bedrock tower found for direction {} around {} (searched dist {}-{}); skipping this crystal",
-                        dir, center, MIN_TOWER_DISTANCE, MAX_TOWER_DISTANCE);
+            BlockPos target = center.relative(dir, TRIGGER_DISTANCE);
+            if (hasNearbyCrystal(level, target)) {
+                UtilityCore.LOGGER.info("[UtilityCore]   Skipping {} (dir={}): a crystal is already placed there", target, dir);
                 continue;
             }
-            if (hasNearbyCrystal(level, bedrock.above())) {
-                UtilityCore.LOGGER.info("[UtilityCore]   Skipping {} (dir={}): a crystal is already placed there", bedrock, dir);
-                continue;
-            }
-            spawnCrystal(level, bedrock);
+            boolean hasGround = !level.getBlockState(target.below()).isAir();
+            spawnCrystal(level, target);
+            UtilityCore.LOGGER.info("[UtilityCore]   Crystal placed at {} (dir={}, solid ground below={})", target, dir, hasGround);
         }
-    }
-
-    /**
-     * Searches for a bedrock block with air above it, already present in the world, near the
-     * expected cardinal offset from {@code center}. Scans a range of distances along {@code dir}
-     * plus a small lateral tolerance to account for YUNG's non-uniform tower placement, and never
-     * places new bedrock — the towers must already exist.
-     */
-    private static BlockPos findExistingBedrockTower(ServerLevel level, BlockPos center, Direction dir) {
-        Direction lateralDir = dir.getClockWise();
-        for (int dist = MIN_TOWER_DISTANCE; dist <= MAX_TOWER_DISTANCE; dist++) {
-            BlockPos onAxis = center.relative(dir, dist);
-            for (int lateral = -LATERAL_TOLERANCE; lateral <= LATERAL_TOLERANCE; lateral++) {
-                BlockPos column = onAxis.relative(lateralDir, lateral);
-                BlockPos bedrock = findBedrockWithAirAbove(level, column);
-                if (bedrock != null) {
-                    return bedrock;
-                }
-            }
-        }
-        return null;
-    }
-
-    private static BlockPos findBedrockWithAirAbove(ServerLevel level, BlockPos pos) {
-        for (int y = pos.getY() + 10; y >= pos.getY() - 10; y--) {
-            BlockPos check = new BlockPos(pos.getX(), y, pos.getZ());
-            if (level.getBlockState(check).is(Blocks.BEDROCK) && level.getBlockState(check.above()).isAir()) {
-                return check;
-            }
-        }
-        return null;
     }
 
     private static boolean hasNearbyCrystal(ServerLevel level, BlockPos crystalPos) {
@@ -168,11 +132,10 @@ public class EnderDragonRespawnHandler {
                 new AABB(crystalPos).inflate(CRYSTAL_DEDUPE_RADIUS)).isEmpty();
     }
 
-    private static void spawnCrystal(ServerLevel level, BlockPos bedrock) {
-        EndCrystal crystal = new EndCrystal(level, bedrock.getX() + 0.5, bedrock.getY() + 1.0, bedrock.getZ() + 0.5);
-        crystal.setBeamTarget(bedrock);
+    private static void spawnCrystal(ServerLevel level, BlockPos pos) {
+        EndCrystal crystal = new EndCrystal(level, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+        crystal.setBeamTarget(pos.below());
         crystal.setInvulnerable(true);
         level.addFreshEntity(crystal);
-        UtilityCore.LOGGER.info("[UtilityCore]   Crystal placed at {} (bedrock={})", bedrock.above(), bedrock);
     }
 }
