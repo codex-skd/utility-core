@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.1.7
+- Removed: funcionalidad de respawn automático del Ender Dragon (`EnderDragonRespawnHandler`, config `enableEndDragonRespawn`). El resultado visual con YUNG's Better End Island no era el esperado (cristales flotando sin apoyo real) y no compensaba mantener la lógica. Se retira por completo en lugar de seguir parcheando.
+
 ## 1.1.6
 - Fixed: el respawn automático del Ender Dragon nunca disparaba `tryRespawn()` porque los cristales se colocaban a distancia 7-8 (piedra base de YUNG BEI) o 2 (versiones anteriores), pero vanilla (`EnderDragonFight#tryRespawn()`) solo detecta cristales exactamente a **distancia 3** de cada punto cardinal respecto al centro del portal. Confirmado descompilando `EnderDragonFight.java` (Minecraft 26.1.2).
 - Los cristales ya no dependen de un bloque de soporte (`EndCrystal` no tiene gravedad); se registra en el log si hay suelo sólido debajo para poder verificarlo visualmente.
