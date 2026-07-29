@@ -1,5 +1,10 @@
 # Utility Core — Registro de cambios
 
+## 1.1.5
+- Fixed: Dragon Respawn colocaba piedra base inventada cuando la torre real de YUNG BEI estaba a distancia 8 (no 7 exacto), ignorando la piedra base ya generada. Ahora se busca en un rango de distancias (6-9) con tolerancia lateral para encontrar la torre real y nunca se fabrica piedra base nueva.
+- Fixed: Se podían colocar cristales duplicados/superpuestos si `onServerStarted` se disparaba varias veces (reinicios sucesivos) antes de completar el respawn. Ahora se comprueba si ya existe un cristal cerca antes de colocar uno nuevo.
+- Removed: `placeVanillaCrystals()` (distancia 2) ya no se usa — fabricaba piedra base y cristales falsos que no correspondían a la estructura real de YUNG BEI.
+
 ## 1.1.4
 - Fixed: Dragon Respawn `tryRespawn()` no detectaba cristales — colocados a dist=7 pero vanilla busca a dist=2. Ahora se colocan en ambas posiciones.
 
