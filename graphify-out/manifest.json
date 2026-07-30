@@ -1,6 +1,6 @@
 {
   "build.gradle": {
-    "mtime": 1785361839.0700178,
+    "mtime": 1785453222.3796415,
     "ast_hash": "04137e0596ce418c3fd3f2cc7d91094a",
     "semantic_hash": ""
   },
@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785432474.1697862,
-    "ast_hash": "a814f8d7499968f2e2a1ecc1c2b0c235",
+    "mtime": 1785453063.6365442,
+    "ast_hash": "a6d713510f999d082ced9a8b98c4486c",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785360940.9923997,
-    "ast_hash": "6fecde8ec8eb42834dea16f8ca285c40",
+    "mtime": 1785453084.5157015,
+    "ast_hash": "89da12b264ffcfc79b57f6e83fbcffec",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
-    "mtime": 1785432477.942474,
-    "ast_hash": "208545250148e66cb663c78123717cdf",
+    "mtime": 1785453088.3673036,
+    "ast_hash": "64c11a1760f7adf82771a8c95607bc56",
     "semantic_hash": ""
   },
   "src/main/resources/utility_core.mixins.json": {
@@ -150,23 +150,23 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785432608.691644,
-    "ast_hash": "95fd6452241b3e848591dbbb6e9083a4",
+    "mtime": 1785453238.8777566,
+    "ast_hash": "0ab7ab2ed744f6482dad3b8c8d967fc6",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785432599.1639383,
-    "ast_hash": "32f4ee915fcec66ee03cae2574ea116f",
+    "mtime": 1785453234.065841,
+    "ast_hash": "60b150c3d56f667fd022d280bec1b568",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
-    "mtime": 1785356898.1563516,
-    "ast_hash": "5ba6fb472861162fab014818d22f9603",
+    "mtime": 1785434383.803578,
+    "ast_hash": "589302f45b58e9279029d7992a951786",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785433918.0372808,
-    "ast_hash": "99f55efc9a033031e7305603ee1db655",
+    "mtime": 1785453256.758062,
+    "ast_hash": "929e7631decec5e41b8faba4bf60ee47",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -207,6 +207,21 @@
   "docs/curseforge/versions/1.1.0.md": {
     "mtime": 1785432659.8920522,
     "ast_hash": "f14f7210649700fa66e22ac5d614e1b3",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java": {
+    "mtime": 1785453393.657444,
+    "ast_hash": "8142e576575f07aab5ac88c084844397",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
+    "mtime": 1785453134.262182,
+    "ast_hash": "cecf1f64bf9a034a495c317d916d1523",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
+    "mtime": 1785453038.0509055,
+    "ast_hash": "2497da606b7886b1115502c6b81d2c62",
     "semantic_hash": ""
   }
 }

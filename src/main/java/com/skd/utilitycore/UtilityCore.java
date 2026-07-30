@@ -5,6 +5,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.attachment.ModAttachments;
 import com.skd.utilitycore.compat.ChunkGenManager;
+import com.skd.utilitycore.compat.schematic.SpawnSchematicManager;
 import com.skd.utilitycore.network.ModNetwork;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -31,6 +32,7 @@ public class UtilityCore {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     private static ChunkGenManager chunkGenManager;
+    private SpawnSchematicManager spawnSchematicManager;
 
     public UtilityCore(IEventBus modEventBus, ModContainer modContainer) {
         registerTombstoneErrorHandler();
@@ -40,6 +42,7 @@ public class UtilityCore {
 
         NeoForge.EVENT_BUS.register(this);
         chunkGenManager = new ChunkGenManager();
+        spawnSchematicManager = new SpawnSchematicManager();
     }
 
     @SubscribeEvent
@@ -72,6 +75,9 @@ public class UtilityCore {
             } else {
                 LOGGER.info("[ChunkGen] Ready. No previous state found, will start from (0, 0)");
             }
+        }
+        if (spawnSchematicManager != null) {
+            spawnSchematicManager.onServerStarted(event.getServer());
         }
     }
 

@@ -30,6 +30,17 @@
 <h3>&#128220; Biome/Dimension Titles</h3>
 <p>Shows a title on screen when entering a new biome or dimension. Logic ported from <a href="https://www.curseforge.com/minecraft/mc-mods/travelers-titles">Traveler's Titles</a> by YUNGNICKYOUNG (LGPLv3), rebuilt on vanilla's own title HUD.</p>
 
+<h3>&#127918; Spawn Schematic (Opt-in)</h3>
+<p>Pastes a WorldEdit/FAWE Sponge Schematic (<code>.schem</code>) at world creation, permanently protects the pasted area, and sets the world spawn point inside the structure. Place the file at <code>schematics/schematic_spawn.schem</code> in your server's game directory.</p>
+<blockquote><strong>Only works on a brand-new world save (no existing region files).</strong> To apply it to an existing world, you must delete the world save folder first, then start the server with <code>enableSpawnSchematic=true</code>. This is intentional and not a bug — it prevents the schematic from overriding already-generated terrain.</blockquote>
+<ul>
+<li>Parses Sponge Schematic v2/v3 with full palette/properties support</li>
+<li>Pastes at natural terrain height centered on the vanilla world spawn</li>
+<li>Sets world spawn inside the structure with safe-position detection</li>
+<li>Permanent area protection: prevents block breaking, block placing, and explosions inside the pasted area</li>
+<li>Per-world marker ensures one-time application even if the mod is later removed and reinstalled</li>
+</ul>
+
 <h3>&#127758; Automatic Chunk Pregeneration (ChunkGen)</h3>
 <p>Pre-generates chunks in a spiral pattern when the server is empty, eliminating lag from world generation when players explore. Multi-dimension support (Overworld, Nether, End).</p>
 <ul>
@@ -65,6 +76,7 @@
 <tr><td><code>enableTombstoneItemInitFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone items (lollipop, magic_scroll) obtained via <code>/give</code> lack proper NBT data. This initializes them correctly.</td></tr>
 <tr><td><code>enableTombstoneErrorHandler</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone 9.x has a mixin (<code>ItemInputMixin</code>) that fails to apply in certain NeoForge versions. Instead of crashing, this suppresses the error gracefully.</td></tr>
 <tr><td><code>enableOutpostZeroDamageCap</code></td><td>true</td><td>OutpostZero</td><td>OutpostZero infection damage can bypass death events and destroy armor before the player dies. Caps damage at 10000 to allow death events to fire first.</td></tr>
+<tr><td><code>enableSpawnSchematic</code></td><td>false</td><td>Vanilla / All</td><td>Pastes a .schem schematic at world creation and permanently protects the area. Only takes effect on brand-new worlds. Requires <code>schematics/schematic_spawn.schem</code> in the game directory.</td></tr>
 <tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
 <tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>
 <tr><td><code>chunkGen.dimensionOverworld</code></td><td>true</td><td>Vanilla / All</td><td>Generate chunks in the Overworld.</td></tr>
@@ -92,6 +104,7 @@
 <li>Configure via <code>config/utility_core-common.toml</code> or the mod menu.</li>
 <li>For ChunkGen: set <code>chunkGen.enabled=true</code> and the generator will auto-start when the server is empty.</li>
 <li>Use <code>/utilitycore chunkgen status</code> to monitor generation progress.</li>
+<li>For Spawn Schematic: set <code>enableSpawnSchematic=true</code>, place your schematic at <code>schematics/schematic_spawn.schem</code>, then create a <strong>new world</strong>. <blockquote><strong>To apply to an existing world, you must delete the world save folder first</strong> — this is intentional.</blockquote></li>
 </ol>
 
 <h3>Known Incompatibilities</h3>
