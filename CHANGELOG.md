@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.1.0
+- Nueva feature: títulos de bioma/dimensión. Muestra un título vanilla al entrar en un bioma o dimensión nuevos (`enableBiomeDimensionTitles`, default true). Lógica portada de [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) de YUNGNICKYOUNG (LGPLv3), reimplementada sobre el sistema de títulos vanilla (`Hud.setTitle/setSubtitle/setTimes`) en vez de un renderer propio, ya que la API de GUI cambió sustancialmente en 26.2.
+
 ## 1.0.0
 - Release estable. Puerto a 26.2 confirmado funcionando en servidor real. Sin cambios de código respecto a 0.0.0-beta.1.
 

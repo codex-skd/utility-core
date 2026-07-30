@@ -9,6 +9,7 @@ A library mod for NeoForge (MC 26.2) providing shared utilities and features.
 - **Corail Tombstone Compatibility**: GUI scale fix, item NBT init fix, and mixin error suppression.
 - **OutpostZero Damage Cap**: Limits infection damage to prevent instant death before death events fire.
 - **Automatic Chunk Pregeneration (ChunkGen)**: Pre-generates chunks in a spiral pattern when the server is empty.
+- **Biome/Dimension Titles**: Shows a title on screen when entering a new biome or dimension. Logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
 - **Configurable**: Enable/disable features and configure the maximum number of shown recipes from the in-game config menu or `config/utility_core-common.toml`.
 - **Developer API**: `PolymorphApi` for other mods to integrate with the recipe selection system.
 

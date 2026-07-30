@@ -45,6 +45,11 @@ public class Config {
                      "ES: Limita el da\u00f1o de infecci\u00f3n de OutpostZero a 10000 para evitar destrucci\u00f3n de armadura antes de que salten los eventos de muerte. Requiere que OutpostZero est\u00e9 presente.")
             .define("enableOutpostZeroDamageCap", true);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_BIOME_DIMENSION_TITLES = BUILDER
+            .comment("EN: Shows a title on screen when entering a new biome or dimension.",
+                     "ES: Muestra un título en pantalla al entrar en un bioma o dimensión nuevos.")
+            .define("enableBiomeDimensionTitles", true);
+
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
                      "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")
