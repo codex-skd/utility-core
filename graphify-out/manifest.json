@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785453063.6365442,
-    "ast_hash": "a6d713510f999d082ced9a8b98c4486c",
+    "mtime": 1785455559.3426213,
+    "ast_hash": "4d18fa83ca8307187f17e08549173003",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -130,13 +130,13 @@
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
-    "mtime": 1785453088.3673036,
-    "ast_hash": "64c11a1760f7adf82771a8c95607bc56",
+    "mtime": 1785455574.766516,
+    "ast_hash": "8a491df90cc490ed8af99c9327f4a87f",
     "semantic_hash": ""
   },
   "src/main/resources/utility_core.mixins.json": {
-    "mtime": 1785360982.7109637,
-    "ast_hash": "3ee435bc35c63c77c9c611807bb1d878",
+    "mtime": 1785455569.6304128,
+    "ast_hash": "e81b884f246e84da7eaa57017c27601e",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785453238.8777566,
-    "ast_hash": "0ab7ab2ed744f6482dad3b8c8d967fc6",
+    "mtime": 1785455586.2006984,
+    "ast_hash": "6a1921dead5839378ce6c45d747cd8f3",
     "semantic_hash": ""
   },
   "README.md": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785407185.9510686,
-    "ast_hash": "d2db54f5b5df3d1159639ecfbbaaa2c9",
+    "mtime": 1785454046.6228511,
+    "ast_hash": "40a951c6dd58b67a7bcbcc4ac89ec451",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -222,6 +222,16 @@
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
     "mtime": 1785453038.0509055,
     "ast_hash": "2497da606b7886b1115502c6b81d2c62",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
+    "mtime": 1785455564.671144,
+    "ast_hash": "b6bcd717844dc6a89c846369884fa991",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.2.0.md": {
+    "mtime": 1785453766.976838,
+    "ast_hash": "bef115f03f509149dd5d2fed5cccffbb",
     "semantic_hash": ""
   }
 }

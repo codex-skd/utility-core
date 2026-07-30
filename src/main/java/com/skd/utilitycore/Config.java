@@ -50,6 +50,11 @@ public class Config {
                      "ES: Muestra un título en pantalla al entrar en un bioma o dimensión nuevos.")
             .define("enableBiomeDimensionTitles", true);
 
+    public static final ModConfigSpec.IntValue TITLE_VERTICAL_OFFSET = BUILDER
+            .comment("EN: Shifts vanilla title/subtitle text vertically from screen center. Positive values move the text up (toward the top of the screen); negative values move it down.",
+                     "ES: Desplaza verticalmente el título/subtítulo vanilla desde el centro de la pantalla. Valores positivos mueven el texto hacia arriba; negativos hacia abajo.")
+            .defineInRange("titleVerticalOffset", 75, -200, 200);
+
     public static final ModConfigSpec.BooleanValue ENABLE_SPAWN_SCHEMATIC = BUILDER
             .comment("EN: Pastes a WorldEdit/FAWE Sponge Schematic (.schem) at world creation, protects the area permanently, and sets the world spawn inside the structure. This only takes effect on a brand-new world save (no existing region files). It does nothing on a world that already existed before this option was enabled. To apply to an already-existing world, the server operator must delete the world save folder first, then start the server with this enabled. Place the schematic at <game-dir>/schematics/schematic_spawn.schem.",
                      "ES: Pega un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Solo funciona en mundos nuevos sin archivos de región existentes. Para aplicar a un mundo ya existente, el operador debe eliminar la carpeta del mundo primero y luego iniciar el servidor con esta opción activada. Coloca el esquema en <game-dir>/schematics/schematic_spawn.schem.")

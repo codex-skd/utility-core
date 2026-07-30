@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-07-31)
 
 ## Corpus Check
-- 41 files · ~116,470 words
+- 43 files · ~116,711 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 395 nodes · 715 edges · 27 communities
+- 402 nodes · 723 edges · 27 communities
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 35 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6c7e7dac`
+- Built from commit: `e89c2a82`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,7 +27,6 @@
 - SyncRecipesPacket
 - TombstoneErrorHandler
 - MixinTBScreen.java
-- Formato de descripciones CurseForge
 - MixinItemInput.java
 - AccessorCraftingMenu.java
 - Utility Core
@@ -83,12 +82,12 @@ Cohesion: 0.10
 Nodes (22): AbstractContainerMenu, AttachmentType, DeferredRegister, ModAttachments, CallbackInfo, CraftingContainer, CraftingRecipe, Inject (+14 more)
 
 ### Community 4 - "UtilityCore.java"
-Cohesion: 0.14
-Nodes (14): Block, BlockState, CompoundTag, HolderLookup, BlockPos, Gson, Logger, MinecraftServer (+6 more)
+Cohesion: 0.10
+Nodes (22): Block, BlockEvent, BlockState, BreakBlockEvent, CompoundTag, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent (+14 more)
 
 ### Community 5 - "Config.java"
-Cohesion: 0.15
-Nodes (14): BooleanValue, Builder, DamageType, IntValue, ModConfigSpec, Redirect, EventBusSubscriber, Pre (+6 more)
+Cohesion: 0.12
+Nodes (17): BooleanValue, Builder, DamageType, IntValue, ModConfigSpec, ModifyArg, Redirect, EventBusSubscriber (+9 more)
 
 ### Community 6 - "PolymorphApi.java"
 Cohesion: 0.18
@@ -103,7 +102,7 @@ Cohesion: 0.14
 Nodes (13): Changelog, CurseForge — Variables del proyecto, Descripcion del proyecto, Estructura del changelog (HTML), Flujo completo, Parámetros del upload, Proyecto, Rama (+5 more)
 
 ### Community 9 - "SyncRecipesPacket"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (13): ByteBuf, CustomPacketPayload, RegistryFriendlyByteBuf, Override, StreamCodec, Type, SelectRecipePacket, IPayloadContext (+5 more)
 
 ### Community 11 - "TombstoneErrorHandler"
@@ -113,10 +112,6 @@ Nodes (7): ErrorAction, IMixinConfig, IMixinErrorHandler, IMixinInfo, Logger, Ov
 ### Community 12 - "MixinTBScreen.java"
 Cohesion: 0.36
 Nodes (7): Screen, CallbackInfo, Inject, Minecraft, Mixin, Unique, MixinTBScreen
-
-### Community 13 - "Formato de descripciones CurseForge"
-Cohesion: 0.26
-Nodes (8): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, EventBusSubscriber, SubscribeEvent, SpawnProtectionHandler
 
 ### Community 14 - "MixinItemInput.java"
 Cohesion: 0.43
@@ -143,31 +138,31 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 20 - "Utility Core — Registro de cambios"
-Cohesion: 0.33
-Nodes (5): 0.0.0-beta.1, 1.0.0, 1.1.0, 1.2.0, Utility Core — Registro de cambios
+Cohesion: 0.29
+Nodes (6): 0.0.0-beta.1, 1.0.0, 1.1.0, 1.2.0, 1.3.0, Utility Core — Registro de cambios
 
 ### Community 26 - "Publicación a GitHub (CI/CD)"
 Cohesion: 0.17
 Nodes (12): 0. Determinar alcance de versión, 1. Desarrollo, 2. Probar en local, 3. Preparar versión para CurseForge, 4. Release estable, 5. Actualizar Knowledge Graph (Graphify), Archivos que pasan a GitHub, Backend LLM: Ollama local (+4 more)
 
 ## Knowledge Gaps
-- **57 isolated node(s):** `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.2.0`, `1.1.0`, `1.0.0` (+52 more)
+- **58 isolated node(s):** `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.3.0`, `1.2.0`, `1.1.0` (+53 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `ChunkGenManager`, `Formato de descripciones CurseForge`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
-- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `PlayerRecipeData`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **What connects `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.2.0` to the rest of the system?**
-  _57 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `ChunkGenManager`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`, `PlayerRecipeData`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **What connects `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.3.0` to the rest of the system?**
+  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Flujo de trabajo — Utility Core (NeoForge)` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.08140610545790934 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08048103607770583 - nodes in this community are weakly interconnected._
 - **Should `ChunkGenManager` be split into smaller, more focused modules?**
   _Cohesion score 0.08013468013468013 - nodes in this community are weakly interconnected._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
-  _Cohesion score 0.0951219512195122 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09871794871794871 - nodes in this community are weakly interconnected._

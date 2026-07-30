@@ -13,7 +13,8 @@
     "AccessorAbstractContainerScreen",
     "MixinCraftingScreen",
     "MixinInventoryScreen",
-    "MixinTBScreen"
+    "MixinTBScreen",
+    "MixinHud"
   ],
   "server": [],
   "injectors": {

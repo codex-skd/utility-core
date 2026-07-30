@@ -826,7 +826,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_receiveserverrecipes",
-      "community": 1,
+      "community": 9,
       "norm_label": ".receiveserverrecipes()"
     },
     {
@@ -876,7 +876,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_getcachedrecipes",
-      "community": 3,
+      "community": 1,
       "norm_label": ".getcachedrecipes()"
     },
     {
@@ -1486,7 +1486,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler",
-      "community": 13,
+      "community": 4,
       "norm_label": "spawnprotectionhandler.java"
     },
     {
@@ -1496,7 +1496,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler",
-      "community": 13,
+      "community": 4,
       "norm_label": "spawnprotectionhandler"
     },
     {
@@ -1506,7 +1506,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_java_eventbussubscriber",
-      "community": 13,
+      "community": 4,
       "norm_label": "eventbussubscriber"
     },
     {
@@ -1516,7 +1516,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler_isoverworld",
-      "community": 13,
+      "community": 4,
       "norm_label": ".isoverworld()"
     },
     {
@@ -1526,7 +1526,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "blockevent",
-      "community": 13,
+      "community": 4,
       "norm_label": "blockevent"
     },
     {
@@ -1536,7 +1536,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler_onblockbreak",
-      "community": 13,
+      "community": 4,
       "norm_label": ".onblockbreak()"
     },
     {
@@ -1546,7 +1546,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "breakblockevent",
-      "community": 13,
+      "community": 4,
       "norm_label": "breakblockevent"
     },
     {
@@ -1556,7 +1556,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_java_subscribeevent",
-      "community": 13,
+      "community": 4,
       "norm_label": "subscribeevent"
     },
     {
@@ -1566,7 +1566,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler_onblockplace",
-      "community": 13,
+      "community": 4,
       "norm_label": ".onblockplace()"
     },
     {
@@ -1576,7 +1576,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entityplaceevent",
-      "community": 13,
+      "community": 4,
       "norm_label": "entityplaceevent"
     },
     {
@@ -1586,7 +1586,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler_onmultiplace",
-      "community": 13,
+      "community": 4,
       "norm_label": ".onmultiplace()"
     },
     {
@@ -1596,7 +1596,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entitymultiplaceevent",
-      "community": 13,
+      "community": 4,
       "norm_label": "entitymultiplaceevent"
     },
     {
@@ -1606,7 +1606,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_spawnprotectionhandler_onexplosion",
-      "community": 13,
+      "community": 4,
       "norm_label": ".onexplosion()"
     },
     {
@@ -1616,7 +1616,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "detonate",
-      "community": 13,
+      "community": 4,
       "norm_label": "detonate"
     },
     {
@@ -1696,7 +1696,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager_getinstance",
-      "community": 13,
+      "community": 4,
       "norm_label": ".getinstance()"
     },
     {
@@ -2408,6 +2408,56 @@
       "id": "redirect",
       "community": 5,
       "norm_label": "redirect"
+    },
+    {
+      "label": "MixinHud.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "community": 5,
+      "norm_label": "mixinhud.java"
+    },
+    {
+      "label": "MixinHud",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "community": 5,
+      "norm_label": "mixinhud"
+    },
+    {
+      "label": "Mixin",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "community": 5,
+      "norm_label": "mixin"
+    },
+    {
+      "label": ".modifyTitleTranslateY()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "community": 5,
+      "norm_label": ".modifytitletranslatey()"
+    },
+    {
+      "label": "ModifyArg",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "modifyarg",
+      "community": 5,
+      "norm_label": "modifyarg"
     },
     {
       "label": "MixinInventoryScreen.java",
@@ -3230,10 +3280,20 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
-      "label": "1.2.0",
+      "label": "1.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_1_3_0",
+      "community": 20,
+      "norm_label": "1.3.0"
+    },
+    {
+      "label": "1.2.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
       "_origin": "ast",
       "id": "changelog_1_2_0",
       "community": 20,
@@ -3243,7 +3303,7 @@
       "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L7",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "changelog_1_1_0",
       "community": 20,
@@ -3253,7 +3313,7 @@
       "label": "1.0.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "changelog_1_0_0",
       "community": 20,
@@ -3263,7 +3323,7 @@
       "label": "0.0.0-beta.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1",
       "community": 20,
@@ -3968,6 +4028,16 @@
       "id": "docs_curseforge_versions_1_1_0",
       "community": 25,
       "norm_label": "1.1.0.md"
+    },
+    {
+      "label": "1.2.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.2.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_2_0",
+      "community": 13,
+      "norm_label": "1.2.0.md"
     }
   ],
   "links": [
@@ -4136,6 +4206,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
       "source_location": "L3",
       "weight": 1.0,
@@ -4169,7 +4250,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4191,7 +4272,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L68",
+      "source_location": "L73",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4202,7 +4283,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L98",
+      "source_location": "L103",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -9605,6 +9686,70 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "modifyarg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "target": "modifyarg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
       "source_location": "L15",
       "weight": 1.0,
@@ -10958,7 +11103,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_0_beta_1",
@@ -10968,7 +11113,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_0",
@@ -10978,7 +11123,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L7",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_1_0",
@@ -10988,10 +11133,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_2_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_3_0",
       "confidence_score": 1.0
     },
     {
@@ -11626,5 +11781,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6c7e7dac9d97d4b2716c94ccc3e79bc408b8c02e"
+  "built_at_commit": "e89c2a82b9d1e74769dae71bf8a80671e347b484"
 }

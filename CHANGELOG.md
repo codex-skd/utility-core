@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.3.0
+- Mejora: los títulos vanilla (bioma/dimensión, `/title`, etc.) ahora se renderizan más arriba, fuera del área central de la pantalla. Nueva opción `titleVerticalOffset` (default: 75px, rango -200..200, positivo = hacia arriba) para ajustar el desplazamiento vertical desde el centro.
+
 ## 1.2.0
 - Nueva feature: Spawn Schematic (opt-in). Coloca un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Configurable mediante `enableSpawnSchematic` (default: false). El archivo .schem debe colocarse en `<game-dir>/schematics/schematic_spawn.schem`.
   > **IMPORTANTE:** Solo funciona en mundos nuevos. Para aplicar a un mundo existente, el operador debe eliminar la carpeta del mundo primero.
