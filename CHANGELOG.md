@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.0.0
+- Release estable. Puerto a 26.2 confirmado funcionando en servidor real. Sin cambios de código respecto a 0.0.0-beta.1.
+
 ## 0.0.0-beta.1
 - Puerto completo a Minecraft 26.2 / NeoForge 26.2.0.32-beta desde la rama `26.1.2` (v1.1.7). Todas las clases fuente compilan sin cambios de API entre ambas versiones. Incluye:
   - Selector de recetas en conflicto (recipe selector): red, attachments, PolymorphApi, RecipeFinder
