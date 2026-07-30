@@ -11,11 +11,13 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 logoFile="assets/utility_core/icon.png"
+credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)"
 description='''
 Utility Core - A library mod providing useful utilities for Minecraft.
 
 Features:
 - Recipe conflict resolution: choose between multiple crafting outputs when recipes overlap
+- Biome/Dimension Titles: shows a title when entering a new biome or dimension
 - Configurable settings for all features
 - API for other mods to integrate
 '''

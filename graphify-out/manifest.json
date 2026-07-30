@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785360941.1454947,
-    "ast_hash": "f349779ce61d858c1e29ea8e080a3319",
+    "mtime": 1785432474.1697862,
+    "ast_hash": "a814f8d7499968f2e2a1ecc1c2b0c235",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
-    "mtime": 1785360996.945462,
-    "ast_hash": "fbbc0b2d9939c08bca4dca257f2991f9",
+    "mtime": 1785432477.942474,
+    "ast_hash": "208545250148e66cb663c78123717cdf",
     "semantic_hash": ""
   },
   "src/main/resources/utility_core.mixins.json": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785361898.227106,
-    "ast_hash": "79e598db1cc76de24aeda579dc6c8355",
+    "mtime": 1785432608.691644,
+    "ast_hash": "95fd6452241b3e848591dbbb6e9083a4",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785361885.7363515,
-    "ast_hash": "675756b518f55bfa457e503ca89d6304",
+    "mtime": 1785432599.1639383,
+    "ast_hash": "32f4ee915fcec66ee03cae2574ea116f",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
@@ -165,13 +165,13 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785361904.1861231,
-    "ast_hash": "a3a89de1ae836de1cfee19e512261565",
+    "mtime": 1785433918.0372808,
+    "ast_hash": "99f55efc9a033031e7305603ee1db655",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785358811.0393066,
-    "ast_hash": "887a284ca976d79381e2221637bedb2d",
+    "mtime": 1785407185.9510686,
+    "ast_hash": "d2db54f5b5df3d1159639ecfbbaaa2c9",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -192,6 +192,21 @@
   "src/main/resources/utility_core.png": {
     "mtime": 1785352467.7396824,
     "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java": {
+    "mtime": 1785432570.1793592,
+    "ast_hash": "a282ea863b8cff6312c08771f17db04f",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.0.md": {
+    "mtime": 1785407254.235788,
+    "ast_hash": "fbbede5ad268ca569a3f96aeaea7bd5c",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.1.0.md": {
+    "mtime": 1785432659.8920522,
+    "ast_hash": "f14f7210649700fa66e22ac5d614e1b3",
     "semantic_hash": ""
   }
 }

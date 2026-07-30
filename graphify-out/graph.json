@@ -256,7 +256,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore",
-      "community": 4,
+      "community": 2,
       "norm_label": "utilitycore.java"
     },
     {
@@ -266,7 +266,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "community": 4,
+      "community": 2,
       "norm_label": "utilitycore"
     },
     {
@@ -276,7 +276,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_java_mod",
-      "community": 4,
+      "community": 2,
       "norm_label": "mod"
     },
     {
@@ -286,7 +286,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_java_logger",
-      "community": 4,
+      "community": 2,
       "norm_label": "logger"
     },
     {
@@ -296,7 +296,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
-      "community": 4,
+      "community": 2,
       "norm_label": ".utilitycore()"
     },
     {
@@ -306,7 +306,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_java_ieventbus",
-      "community": 4,
+      "community": 2,
       "norm_label": "ieventbus"
     },
     {
@@ -316,7 +316,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_java_modcontainer",
-      "community": 4,
+      "community": 2,
       "norm_label": "modcontainer"
     },
     {
@@ -326,7 +326,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "community": 4,
+      "community": 2,
       "norm_label": ".onservertick()"
     },
     {
@@ -335,8 +335,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "post",
-      "community": 4,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_post",
+      "community": 2,
       "norm_label": "post"
     },
     {
@@ -346,7 +346,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
-      "community": 4,
+      "community": 2,
       "norm_label": "subscribeevent"
     },
     {
@@ -356,7 +356,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
-      "community": 4,
+      "community": 2,
       "norm_label": ".onplayerjoin()"
     },
     {
@@ -366,7 +366,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "playerloggedinevent",
-      "community": 4,
+      "community": 2,
       "norm_label": "playerloggedinevent"
     },
     {
@@ -376,7 +376,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
-      "community": 4,
+      "community": 2,
       "norm_label": ".onplayerleave()"
     },
     {
@@ -386,7 +386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "playerloggedoutevent",
-      "community": 4,
+      "community": 2,
       "norm_label": "playerloggedoutevent"
     },
     {
@@ -396,7 +396,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
-      "community": 4,
+      "community": 2,
       "norm_label": ".onserverstarted()"
     },
     {
@@ -406,7 +406,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstartedevent",
-      "community": 4,
+      "community": 2,
       "norm_label": "serverstartedevent"
     },
     {
@@ -416,7 +416,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
-      "community": 4,
+      "community": 2,
       "norm_label": ".onserverstopping()"
     },
     {
@@ -426,7 +426,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstoppingevent",
-      "community": 4,
+      "community": 2,
       "norm_label": "serverstoppingevent"
     },
     {
@@ -456,7 +456,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
-      "community": 4,
+      "community": 2,
       "norm_label": ".registertombstoneerrorhandler()"
     },
     {
@@ -876,7 +876,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_getcachedrecipes",
-      "community": 1,
+      "community": 3,
       "norm_label": ".getcachedrecipes()"
     },
     {
@@ -938,6 +938,166 @@
       "id": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_inputschanged",
       "community": 1,
       "norm_label": ".inputschanged()"
+    },
+    {
+      "label": "BiomeDimensionTitleHandler.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "community": 7,
+      "norm_label": "biomedimensiontitlehandler.java"
+    },
+    {
+      "label": "BiomeDimensionTitleHandler",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "community": 7,
+      "norm_label": "biomedimensiontitlehandler"
+    },
+    {
+      "label": "EventBusSubscriber",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "community": 7,
+      "norm_label": "eventbussubscriber"
+    },
+    {
+      "label": "ResourceKey",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "community": 7,
+      "norm_label": "resourcekey"
+    },
+    {
+      "label": "Biome",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "biome",
+      "community": 7,
+      "norm_label": "biome"
+    },
+    {
+      "label": "Level",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "community": 7,
+      "norm_label": "level"
+    },
+    {
+      "label": ".onClientTick()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "community": 7,
+      "norm_label": ".onclienttick()"
+    },
+    {
+      "label": "Post",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_post",
+      "community": 7,
+      "norm_label": "post"
+    },
+    {
+      "label": "SubscribeEvent",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "community": 7,
+      "norm_label": "subscribeevent"
+    },
+    {
+      "label": ".biomeKey()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "community": 7,
+      "norm_label": ".biomekey()"
+    },
+    {
+      "label": "LocalPlayer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "localplayer",
+      "community": 7,
+      "norm_label": "localplayer"
+    },
+    {
+      "label": "Minecraft",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "community": 7,
+      "norm_label": "minecraft"
+    },
+    {
+      "label": ".biomeName()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "community": 7,
+      "norm_label": ".biomename()"
+    },
+    {
+      "label": "Component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "component",
+      "community": 7,
+      "norm_label": "component"
+    },
+    {
+      "label": ".dimensionName()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "community": 7,
+      "norm_label": ".dimensionname()"
+    },
+    {
+      "label": ".showTitle()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "community": 7,
+      "norm_label": ".showtitle()"
     },
     {
       "label": "ChunkGenManager.java",
@@ -1326,7 +1486,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen",
-      "community": 10,
+      "community": 1,
       "norm_label": "accessorabstractcontainerscreen.java"
     },
     {
@@ -1336,7 +1496,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen",
-      "community": 10,
+      "community": 1,
       "norm_label": "accessorabstractcontainerscreen"
     },
     {
@@ -1346,7 +1506,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_java_mixin",
-      "community": 10,
+      "community": 1,
       "norm_label": "mixin"
     },
     {
@@ -1356,7 +1516,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen_utility_core_getleftpos",
-      "community": 10,
+      "community": 1,
       "norm_label": ".utility_core$getleftpos()"
     },
     {
@@ -1366,7 +1526,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_java_accessor",
-      "community": 10,
+      "community": 1,
       "norm_label": "accessor"
     },
     {
@@ -1376,7 +1536,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_accessorabstractcontainerscreen_accessorabstractcontainerscreen_utility_core_gettoppos",
-      "community": 10,
+      "community": 1,
       "norm_label": ".utility_core$gettoppos()"
     },
     {
@@ -1466,7 +1626,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu",
-      "community": 7,
+      "community": 3,
       "norm_label": "mixincraftingmenu.java"
     },
     {
@@ -1476,7 +1636,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_mixincraftingmenu",
-      "community": 7,
+      "community": 3,
       "norm_label": "mixincraftingmenu"
     },
     {
@@ -1486,7 +1646,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_mixin",
-      "community": 7,
+      "community": 3,
       "norm_label": "mixin"
     },
     {
@@ -1496,7 +1656,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_mixincraftingmenu_onslotchangedcraftinggrid",
-      "community": 7,
+      "community": 3,
       "norm_label": ".onslotchangedcraftinggrid()"
     },
     {
@@ -1506,7 +1666,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "abstractcontainermenu",
-      "community": 7,
+      "community": 3,
       "norm_label": "abstractcontainermenu"
     },
     {
@@ -1516,7 +1676,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverlevel",
-      "community": 7,
+      "community": 3,
       "norm_label": "serverlevel"
     },
     {
@@ -1526,7 +1686,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_player",
-      "community": 7,
+      "community": 3,
       "norm_label": "player"
     },
     {
@@ -1536,7 +1696,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_craftingcontainer",
-      "community": 7,
+      "community": 3,
       "norm_label": "craftingcontainer"
     },
     {
@@ -1546,7 +1706,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_resultcontainer",
-      "community": 7,
+      "community": 3,
       "norm_label": "resultcontainer"
     },
     {
@@ -1556,7 +1716,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_recipeholder",
-      "community": 7,
+      "community": 3,
       "norm_label": "recipeholder"
     },
     {
@@ -1566,7 +1726,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_craftingrecipe",
-      "community": 7,
+      "community": 3,
       "norm_label": "craftingrecipe"
     },
     {
@@ -1576,7 +1736,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_callbackinfo",
-      "community": 7,
+      "community": 3,
       "norm_label": "callbackinfo"
     },
     {
@@ -1586,7 +1746,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_inject",
-      "community": 7,
+      "community": 3,
       "norm_label": "inject"
     },
     {
@@ -1596,7 +1756,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_mixincraftingmenu_captureinputs",
-      "community": 7,
+      "community": 3,
       "norm_label": ".captureinputs()"
     },
     {
@@ -1606,7 +1766,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_itemstack",
-      "community": 7,
+      "community": 3,
       "norm_label": "itemstack"
     },
     {
@@ -1616,7 +1776,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java_unique",
-      "community": 7,
+      "community": 3,
       "norm_label": "unique"
     },
     {
@@ -1626,7 +1786,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_mixincraftingmenu_sendsyncpacket",
-      "community": 7,
+      "community": 3,
       "norm_label": ".sendsyncpacket()"
     },
     {
@@ -1636,7 +1796,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen",
-      "community": 10,
+      "community": 1,
       "norm_label": "mixincraftingscreen.java"
     },
     {
@@ -1646,7 +1806,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_mixincraftingscreen",
-      "community": 10,
+      "community": 1,
       "norm_label": "mixincraftingscreen"
     },
     {
@@ -1656,7 +1816,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_mixin",
-      "community": 10,
+      "community": 1,
       "norm_label": "mixin"
     },
     {
@@ -1666,7 +1826,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_mixincraftingscreen_onextractbackground",
-      "community": 10,
+      "community": 1,
       "norm_label": ".onextractbackground()"
     },
     {
@@ -1676,7 +1836,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_guigraphicsextractor",
-      "community": 10,
+      "community": 1,
       "norm_label": "guigraphicsextractor"
     },
     {
@@ -1686,7 +1846,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_callbackinfo",
-      "community": 10,
+      "community": 1,
       "norm_label": "callbackinfo"
     },
     {
@@ -1696,7 +1856,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java_inject",
-      "community": 10,
+      "community": 1,
       "norm_label": "inject"
     },
     {
@@ -2056,7 +2216,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket",
-      "community": 3,
+      "community": 9,
       "norm_label": "selectrecipepacket.java"
     },
     {
@@ -2066,7 +2226,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_selectrecipepacket",
-      "community": 3,
+      "community": 9,
       "norm_label": "selectrecipepacket"
     },
     {
@@ -2076,7 +2236,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "custompacketpayload",
-      "community": 3,
+      "community": 9,
       "norm_label": "custompacketpayload"
     },
     {
@@ -2086,7 +2246,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_java_type",
-      "community": 3,
+      "community": 9,
       "norm_label": "type"
     },
     {
@@ -2096,7 +2256,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_java_streamcodec",
-      "community": 3,
+      "community": 9,
       "norm_label": "streamcodec"
     },
     {
@@ -2106,7 +2266,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "bytebuf",
-      "community": 3,
+      "community": 9,
       "norm_label": "bytebuf"
     },
     {
@@ -2116,7 +2276,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_selectrecipepacket_type",
-      "community": 3,
+      "community": 9,
       "norm_label": ".type()"
     },
     {
@@ -2126,7 +2286,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_network_selectrecipepacket_java_override",
-      "community": 3,
+      "community": 9,
       "norm_label": "override"
     },
     {
@@ -2570,10 +2730,30 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
-      "label": "0.0.0-beta.1",
+      "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_1_1_0",
+      "community": 20,
+      "norm_label": "1.1.0"
+    },
+    {
+      "label": "1.0.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "changelog_1_0_0",
+      "community": 20,
+      "norm_label": "1.0.0"
+    },
+    {
+      "label": "0.0.0-beta.1",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1",
       "community": 20,
@@ -2613,7 +2793,7 @@
       "label": "Requirements",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "readme_requirements",
       "community": 16,
@@ -2623,7 +2803,7 @@
       "label": "Known Incompatibilities",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "readme_known_incompatibilities",
       "community": 16,
@@ -2633,7 +2813,7 @@
       "label": "Build",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "readme_build",
       "community": 16,
@@ -3248,6 +3428,26 @@
       "id": "docs_curseforge_versions_0_0_0_beta_1",
       "community": 23,
       "norm_label": "0.0.0-beta.1.md"
+    },
+    {
+      "label": "1.0.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.0.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_0_0",
+      "community": 10,
+      "norm_label": "1.0.0.md"
+    },
+    {
+      "label": "1.1.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.1.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_1_0",
+      "community": 25,
+      "norm_label": "1.1.0.md"
     }
   ],
   "links": [
@@ -3311,6 +3511,17 @@
       "source_location": "L3",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
       "target": "src_main_java_com_skd_utilitycore_config",
       "confidence_score": 1.0
     },
@@ -3427,7 +3638,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L83",
+      "source_location": "L88",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -3449,7 +3660,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -3460,7 +3671,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L88",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -3686,6 +3897,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java",
       "source_location": "L4",
       "weight": 1.0,
@@ -3713,6 +3935,17 @@
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_network_syncrecipespacket",
       "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "component",
       "confidence_score": 1.0
     },
     {
@@ -4004,17 +4237,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L45",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "target": "post",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -4024,6 +4246,17 @@
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
       "target": "src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_tick"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_post",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -5388,6 +5621,396 @@
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen_onextractrenderstate",
       "target": "src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_renderrecipeselector"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "localplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "localplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "target": "component",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8500,10 +9123,30 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_0_0_0_beta_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_0",
       "confidence_score": 1.0
     },
     {
@@ -8520,7 +9163,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_build",
@@ -8540,7 +9183,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_known_incompatibilities",
@@ -8550,7 +9193,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_requirements",
@@ -9128,5 +9771,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e512245b10601f4400436f35d28e51ffac37338d"
+  "built_at_commit": "1add5b5dfa9e9897b2ad17e95260731f96f7827e"
 }
