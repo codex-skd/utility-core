@@ -58,6 +58,7 @@
   "56": "SubscribeEvent",
   "57": "EventBusSubscriber",
   "58": "1.1.4.md",
+  "59": "1.1.7.md",
   "61": "EventBusSubscriber",
   "62": "Pre",
   "63": "ResourceKey",
@@ -115,12 +116,6 @@
   "115": "RecipeHolder",
   "116": "Logger",
   "117": "Override",
-  "118": "IEventBus",
-  "119": "Logger",
-  "120": "Mod",
-  "121": "ModContainer",
-  "122": "ServerStartedEvent",
-  "123": "SubscribeEvent",
   "124": "Mod",
   "125": "ModContainer"
 }

@@ -45,6 +45,11 @@ public class Config {
                      "ES: Limita el da\u00f1o de infecci\u00f3n de OutpostZero a 10000 para evitar destrucci\u00f3n de armadura antes de que salten los eventos de muerte. Requiere que OutpostZero est\u00e9 presente.")
             .define("enableOutpostZeroDamageCap", true);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_SPAWN_SCHEMATIC = BUILDER
+            .comment("EN: Pastes a WorldEdit/FAWE Sponge Schematic (.schem) at world creation, protects the area permanently, and sets the world spawn inside the structure. This only takes effect on a brand-new world save (no existing region files). It does nothing on a world that already existed before this option was enabled. To apply to an already-existing world, the server operator must delete the world save folder first, then start the server with this enabled. Place the schematic at <game-dir>/schematics/schematic_spawn.schem.",
+                     "ES: Pega un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Solo funciona en mundos nuevos sin archivos de región existentes. Para aplicar a un mundo ya existente, el operador debe eliminar la carpeta del mundo primero y luego iniciar el servidor con esta opción activada. Coloca el esquema en <game-dir>/schematics/schematic_spawn.schem.")
+            .define("enableSpawnSchematic", false);
+
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
                      "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")

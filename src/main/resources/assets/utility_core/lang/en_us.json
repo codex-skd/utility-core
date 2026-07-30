@@ -5,5 +5,6 @@
   "utility_core.configuration.enableCraftingRecipeSelector": "Enable Crafting Recipe Selector",
   "utility_core.configuration.maxRecipesDisplayed": "Max Recipes Displayed",
   "utility_core.configuration.logDetectedConflicts": "Log Recipe Conflicts",
+  "utility_core.configuration.enableSpawnSchematic": "Enable Spawn Schematic",
   "polymorph.selector.title": "Select Recipe"
 }

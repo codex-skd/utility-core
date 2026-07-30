@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785150517.0703247,
-    "ast_hash": "9a22eb10c9aa768d44c76c2695fa36ca",
+    "mtime": 1785453453.5626526,
+    "ast_hash": "0960b0dca83b081009e11a481045e8a0",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785150517.0708506,
-    "ast_hash": "6fecde8ec8eb42834dea16f8ca285c40",
+    "mtime": 1785453472.4268444,
+    "ast_hash": "89da12b264ffcfc79b57f6e83fbcffec",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
-    "mtime": 1785150517.0847647,
-    "ast_hash": "fbbc0b2d9939c08bca4dca257f2991f9",
+    "mtime": 1785453482.9381025,
+    "ast_hash": "87c1cc0c5f3609b79e311907942535cb",
     "semantic_hash": ""
   },
   "src/main/resources/utility_core.mixins.json": {
@@ -117,11 +117,6 @@
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
     "mtime": 1785150517.0703247,
     "ast_hash": "bf351a18b840302fea47ef3c1fe877a6",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/EnderDragonRespawnHandler.java": {
-    "mtime": 1785204175.9994814,
-    "ast_hash": "b36f96546158900a9f3b5681fa1be311",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java": {
@@ -145,23 +140,23 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785204204.481191,
-    "ast_hash": "560c0efacae69d4b697dbdf1a84965b9",
+    "mtime": 1785453540.1393602,
+    "ast_hash": "013c40e0ddcb34d358924ea4a7fcc7f6",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785150516.984749,
-    "ast_hash": "c2f116b58be69f9bb28193d1e3db0ab7",
+    "mtime": 1785453531.1463075,
+    "ast_hash": "70419d007329384349d535f9cd9dd9d1",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
-    "mtime": 1785150573.3715208,
-    "ast_hash": "0623d7962af2029dd6a7501edd3d20b0",
+    "mtime": 1785434366.8679876,
+    "ast_hash": "56606b538519abe4f75b856ccfeeae23",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785150516.9863462,
-    "ast_hash": "79c676b968546aeb503e5085a949a6d6",
+    "mtime": 1785453565.0584416,
+    "ast_hash": "81e65db7a870f9cbfeb31f807d07841b",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -287,6 +282,46 @@
   "docs/curseforge/versions/1.1.3.md": {
     "mtime": 1785204206.78108,
     "ast_hash": "bece3c717c06e2d1ebc6831e9dc5f1c2",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java": {
+    "mtime": 1785453440.6242955,
+    "ast_hash": "8142e576575f07aab5ac88c084844397",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
+    "mtime": 1785453440.639879,
+    "ast_hash": "cecf1f64bf9a034a495c317d916d1523",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
+    "mtime": 1785453440.6577964,
+    "ast_hash": "2497da606b7886b1115502c6b81d2c62",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785251972.646136,
+    "ast_hash": "36492b124d3beeebfe417ee2fa5230e7",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.1.4.md": {
+    "mtime": 1785227671.8568907,
+    "ast_hash": "6fb9bfc1f519c3573d3804a21d510648",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.1.5.md": {
+    "mtime": 1785328313.323627,
+    "ast_hash": "6f40f6e07f462fddcc0a7ac57b0a1357",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.1.6.md": {
+    "mtime": 1785336723.1703815,
+    "ast_hash": "3310cd1749228c96045643052f8b8412",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.1.7.md": {
+    "mtime": 1785350975.6646843,
+    "ast_hash": "45f30eb6e06b9dc1fed4ad51cd4a6ded",
     "semantic_hash": ""
   }
 }
