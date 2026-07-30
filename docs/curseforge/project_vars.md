@@ -85,7 +85,7 @@ metadata = {
     "changelog": "<h2>v{version} - Ver documentacion docs/curseforge/versions/{version}.md</h2>",
     "changelogType": "html",
     "gameVersionNames": ["Client", "Server", "26.2", "NeoForge"],
-    "releaseType": "beta"
+    "releaseType": "release"
 }
 
 with open(f"build/libs/utility_core-26.2-neoforge-{version}.jar", "rb") as f:
