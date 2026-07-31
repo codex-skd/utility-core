@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.3.1
+- Fix crítico: v1.3.0 crasheaba el cliente al arrancar (`MixinTransformerError` / `InjectionError` en `MixinHud`). El target del `@ModifyArg` tenía el descriptor de retorno mal (`(FF)V` en vez de `(FF)Lorg/joml/Matrix3x2f;`), por lo que el injection point nunca encontraba el método real y Mixin lo trataba como error fatal. Verificado contra el bytecode real de `Hud.class` con `javap`.
+
 ## 1.3.0
 - Mejora: los títulos vanilla (bioma/dimensión, `/title`, etc.) ahora se renderizan más arriba, fuera del área central de la pantalla. Nueva opción `titleVerticalOffset` (default: 75px, rango -200..200, positivo = hacia arriba) para ajustar el desplazamiento vertical desde el centro.
 
