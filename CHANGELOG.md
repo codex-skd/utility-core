@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.4.0
+- Mejora: Spawn Schematic ahora se ancla en las coordenadas del mundo X=0, Z=0 (antes se centraba en el spawn vanilla), con la altura calculada del terreno en ese punto. La ruta del esquema externo cambia a `<game-dir>/utility_core/spawn_schem/schematic_spawn.schem` (mismo patrón de carpeta que ChunkGen). El mod incluye un esquema de ejemplo empaquetado que se extrae automáticamente en el primer arranque si el archivo no existe, de modo que la feature funciona "out of the box". Para usar un esquema propio, basta con sustituir `schematic_spawn.schem` por el suyo (mismo nombre) antes de borrar/regenerar el mundo.
+
 ## 1.3.1
 - Fix crítico: v1.3.0 crasheaba el cliente al arrancar (`MixinTransformerError` / `InjectionError` en `MixinHud`). El target del `@ModifyArg` tenía el descriptor de retorno mal (`(FF)V` en vez de `(FF)Lorg/joml/Matrix3x2f;`), por lo que el injection point nunca encontraba el método real y Mixin lo trataba como error fatal. Verificado contra el bytecode real de `Hud.class` con `javap`.
 
