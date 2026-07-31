@@ -11,7 +11,7 @@ public class MixinHud {
 
     @ModifyArg(
         method = "extractTitle(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/DeltaTracker;)V",
-        at = @At(value = "INVOKE", target = "Lorg/joml/Matrix3x2fStack;translate(FF)V", ordinal = 0),
+        at = @At(value = "INVOKE", target = "Lorg/joml/Matrix3x2fStack;translate(FF)Lorg/joml/Matrix3x2f;", ordinal = 0),
         index = 1
     )
     private float modifyTitleTranslateY(float y) {
