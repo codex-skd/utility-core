@@ -1,16 +1,16 @@
-# Graph Report - 26.2  (2026-07-31)
+# Graph Report - 26.2  (2026-08-01)
 
 ## Corpus Check
-- 43 files · ~116,711 words
+- 47 files · ~114,784 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 402 nodes · 723 edges · 27 communities
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 35 edges (avg confidence: 0.8)
+- 383 nodes · 709 edges · 32 communities
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e89c2a82`
+- Built from commit: `356d4564`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,18 +35,19 @@
 - gradlew
 - Utility Core — Registro de cambios
 - Publicación a GitHub (CI/CD)
+- OutpostZeroCompat.java
 
 ## God Nodes (most connected - your core abstractions)
 1. `ChunkGenManager` - 30 edges
-2. `PolymorphClientHandler` - 18 edges
-3. `SpongeSchematicReader` - 17 edges
-4. `SpawnSchematicManager` - 16 edges
+2. `SpawnSchematicManager` - 19 edges
+3. `PolymorphClientHandler` - 18 edges
+4. `SpongeSchematicReader` - 18 edges
 5. `PlayerRecipeData` - 16 edges
 6. `UtilityCore` - 13 edges
-7. `Flujo de trabajo — Utility Core (NeoForge)` - 13 edges
-8. `CurseForge — Variables del proyecto` - 13 edges
-9. `SyncRecipesPacket` - 11 edges
-10. `RecipePair` - 11 edges
+7. `CurseForge — Variables del proyecto` - 13 edges
+8. `SyncRecipesPacket` - 11 edges
+9. `RecipePair` - 11 edges
+10. `Flujo de trabajo — Utility Core (NeoForge)` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UtilityCore` --references--> `SpawnSchematicManager`  [EXTRACTED]
@@ -63,11 +64,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (27 total, 0 thin omitted)
+## Communities (32 total, 0 thin omitted)
 
 ### Community 0 - "Flujo de trabajo — Utility Core (NeoForge)"
-Cohesion: 0.06
-Nodes (32): Archivos de CurseForge, Buenas prácticas, Buenas prácticas, Commits (Conventional Commits), Convenciones de nomenclatura, ¿Cuándo incrementar versión?, Ejemplo de estructura HTML para release notes, Ejemplos (+24 more)
+Cohesion: 0.17
+Nodes (11): Buenas prácticas, Commits (Conventional Commits), Convenciones de nomenclatura, Específico del mod, Estructura del proyecto, Flujo de trabajo — Utility Core (NeoForge), Flujo por tarea, Idioma (+3 more)
 
 ### Community 1 - "PolymorphClientHandler.java"
 Cohesion: 0.08
@@ -82,12 +83,12 @@ Cohesion: 0.10
 Nodes (22): AbstractContainerMenu, AttachmentType, DeferredRegister, ModAttachments, CallbackInfo, CraftingContainer, CraftingRecipe, Inject (+14 more)
 
 ### Community 4 - "UtilityCore.java"
-Cohesion: 0.10
-Nodes (22): Block, BlockEvent, BlockState, BreakBlockEvent, CompoundTag, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent (+14 more)
+Cohesion: 0.14
+Nodes (14): Block, BlockState, CompoundTag, HolderLookup, BlockPos, Gson, Logger, MinecraftServer (+6 more)
 
 ### Community 5 - "Config.java"
-Cohesion: 0.12
-Nodes (17): BooleanValue, Builder, DamageType, IntValue, ModConfigSpec, ModifyArg, Redirect, EventBusSubscriber (+9 more)
+Cohesion: 0.13
+Nodes (15): BooleanValue, Builder, EnumValue, IntValue, ModConfigSpec, ModifyArg, Redirect, Config (+7 more)
 
 ### Community 6 - "PolymorphApi.java"
 Cohesion: 0.18
@@ -131,38 +132,42 @@ Nodes (3): Mod, ModContainer, UtilityCoreClient
 
 ### Community 18 - "CLAUDE.md — utility_core (26.2)"
 Cohesion: 0.50
-Nodes (3): CLAUDE.md — utility_core (26.2), Paso 0 obligatorio, Prioridad de instrucciones
+Nodes (3): CLAUDE.md — utility_core (26.2), Prioridad de instrucciones, Workflow del mod
 
 ### Community 19 - "gradlew"
 Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 20 - "Utility Core — Registro de cambios"
-Cohesion: 0.29
-Nodes (6): 0.0.0-beta.1, 1.0.0, 1.1.0, 1.2.0, 1.3.0, Utility Core — Registro de cambios
+Cohesion: 0.20
+Nodes (9): 0.0.0-beta.1, 1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.3.1, 1.4.0, 1.5.0 (+1 more)
 
 ### Community 26 - "Publicación a GitHub (CI/CD)"
-Cohesion: 0.17
-Nodes (12): 0. Determinar alcance de versión, 1. Desarrollo, 2. Probar en local, 3. Preparar versión para CurseForge, 4. Release estable, 5. Actualizar Knowledge Graph (Graphify), Archivos que pasan a GitHub, Backend LLM: Ollama local (+4 more)
+Cohesion: 0.26
+Nodes (8): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, EventBusSubscriber, SubscribeEvent, SpawnProtectionHandler
+
+### Community 27 - "OutpostZeroCompat.java"
+Cohesion: 0.39
+Nodes (6): DamageType, EventBusSubscriber, Pre, ResourceKey, SubscribeEvent, OutpostZeroCompat
 
 ## Knowledge Gaps
-- **58 isolated node(s):** `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.3.0`, `1.2.0`, `1.1.0` (+53 more)
+- **39 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.5.0` (+34 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `ChunkGenManager`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `Publicación a GitHub (CI/CD)`, `ChunkGenManager`?**
+  _High betweenness centrality (0.094) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`, `PlayerRecipeData`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **What connects `Paso 0 obligatorio`, `Prioridad de instrucciones`, `1.3.0` to the rest of the system?**
-  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Flujo de trabajo — Utility Core (NeoForge)` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
+  _39 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.08048103607770583 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08309178743961353 - nodes in this community are weakly interconnected._
 - **Should `ChunkGenManager` be split into smaller, more focused modules?**
   _Cohesion score 0.08013468013468013 - nodes in this community are weakly interconnected._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
-  _Cohesion score 0.09871794871794871 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0951219512195122 - nodes in this community are weakly interconnected._
+- **Should `UtilityCore.java` be split into smaller, more focused modules?**
+  _Cohesion score 0.13655761024182078 - nodes in this community are weakly interconnected._

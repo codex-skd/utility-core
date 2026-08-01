@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785455559.3426213,
-    "ast_hash": "4d18fa83ca8307187f17e08549173003",
+    "mtime": 1785542216.3137558,
+    "ast_hash": "d3ccbb3a5d441aa89e54859deda906aa",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
-    "mtime": 1785358973.2348695,
-    "ast_hash": "526267294ade6dd87bad503bb80b3a4f",
+    "mtime": 1785489193.8494623,
+    "ast_hash": "a517ca54ddc702023e42520dc95cf404",
     "semantic_hash": ""
   },
   ".gitlab-ci.yml": {
@@ -150,28 +150,28 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785455586.2006984,
-    "ast_hash": "6a1921dead5839378ce6c45d747cd8f3",
+    "mtime": 1785543216.226562,
+    "ast_hash": "fb34121f98e2f0ef95a4e0db0b2e8d4b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785453234.065841,
-    "ast_hash": "60b150c3d56f667fd022d280bec1b568",
+    "mtime": 1785542792.6271787,
+    "ast_hash": "4a519cb5d4c2315263b9c0dbc33bbf8e",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
-    "mtime": 1785434383.803578,
-    "ast_hash": "589302f45b58e9279029d7992a951786",
+    "mtime": 1785489193.8044796,
+    "ast_hash": "d61296b8e19fb6a57764281f015eded5",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785453256.758062,
-    "ast_hash": "929e7631decec5e41b8faba4bf60ee47",
+    "mtime": 1785542812.1671488,
+    "ast_hash": "61c93e825fe55bab3af123e54c942617",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785454046.6228511,
-    "ast_hash": "40a951c6dd58b67a7bcbcc4ac89ec451",
+    "mtime": 1785543219.496933,
+    "ast_hash": "104f5f685e5a322c0522a0a86d9ed7e5",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
-    "mtime": 1785453134.262182,
-    "ast_hash": "cecf1f64bf9a034a495c317d916d1523",
+    "mtime": 1785542323.1498468,
+    "ast_hash": "3aa730b3014871aa08ee2f05bdddcced",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
@@ -225,13 +225,33 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
-    "mtime": 1785455564.671144,
-    "ast_hash": "b6bcd717844dc6a89c846369884fa991",
+    "mtime": 1785490452.0162358,
+    "ast_hash": "621368816b0d1f04be93292e1679e03c",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.2.0.md": {
     "mtime": 1785453766.976838,
     "ast_hash": "bef115f03f509149dd5d2fed5cccffbb",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.3.0.md": {
+    "mtime": 1785455791.2531483,
+    "ast_hash": "8c4268fd4fef54a96f27f63944ced8be",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.3.1.md": {
+    "mtime": 1785490813.619419,
+    "ast_hash": "9463b89db1ece8389075d95fad9e7ee8",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.4.0.md": {
+    "mtime": 1785500720.9017944,
+    "ast_hash": "5f68907b762102a85f2cd8f84fbf65b3",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.5.0.md": {
+    "mtime": 1785543212.276456,
+    "ast_hash": "67ee0b2de338c9f7b61da7f0e5040586",
     "semantic_hash": ""
   }
 }
