@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785542220.5793989,
-    "ast_hash": "04325b47e06507056d61ca85a8a2d24c",
+    "mtime": 1785623016.9791825,
+    "ast_hash": "aac1f7bfc0ff9352ac042778147fe5e1",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
@@ -140,13 +140,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785543607.468092,
-    "ast_hash": "1428bcdf47859513283eb41c8b6c57d7",
+    "mtime": 1785623495.6309083,
+    "ast_hash": "cc4aba990e29b93fe04c7d5ae6b6a80b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785542796.6554291,
-    "ast_hash": "dd42e9f1f2f8acfa35c16739159072ea",
+    "mtime": 1785623347.1892521,
+    "ast_hash": "c1788ed15cbe20a13655204c09e7d169",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785542819.4084566,
-    "ast_hash": "d7ef886aedcf3bef4ac3e443f3994578",
+    "mtime": 1785623385.8277326,
+    "ast_hash": "f4477c7025c2cc674c6c473e1fd51d53",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -290,13 +290,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
-    "mtime": 1785542325.48161,
-    "ast_hash": "938c4c510c8d5c1f8f9f9d9fafa1b6a4",
+    "mtime": 1785623039.730841,
+    "ast_hash": "e9b3cf6c7b872164035ea4fcd36e6a48",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
-    "mtime": 1785453440.6577964,
-    "ast_hash": "2497da606b7886b1115502c6b81d2c62",
+    "mtime": 1785623232.3583627,
+    "ast_hash": "f983a50c42eeeede77b52cf669ff6265",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -337,6 +337,16 @@
   "docs/curseforge/versions/1.5.1.md": {
     "mtime": 1785543604.035086,
     "ast_hash": "79a65c79f4ff03649e38e92f3f9145b4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/LegacyBlockMap.java": {
+    "mtime": 1785623159.0145943,
+    "ast_hash": "c72b6cf1dc702bb0e5ac6efe5b777078",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.6.0.md": {
+    "mtime": 1785623490.7596676,
+    "ast_hash": "8386a989d84a9f65a19fc661a892f6bd",
     "semantic_hash": ""
   }
 }

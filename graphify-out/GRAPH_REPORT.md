@@ -1,16 +1,16 @@
-# Graph Report - 26.1.2  (2026-08-01)
+# Graph Report - 26.1.2  (2026-08-02)
 
 ## Corpus Check
-- 64 files · ~117,093 words
+- 66 files · ~119,558 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 414 nodes · 521 edges · 115 communities (43 shown, 72 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
+- 438 nodes · 584 edges · 117 communities (45 shown, 72 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cf69ce96`
+- Built from commit: `a80b6380`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,6 +44,7 @@
 - EventBusSubscriber
 - GuiGraphicsExtractor
 - ItemStack
+- LegacyBlockMap
 - Pre
 - RecipeHolder
 - RecipeManager
@@ -104,16 +105,16 @@
 - ModContainer
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 39 edges
+1. `Utility Core — Registro de cambios` - 40 edges
 2. `ChunkGenManager` - 30 edges
-3. `SpawnSchematicManager` - 18 edges
-4. `SpongeSchematicReader` - 18 edges
-5. `PolymorphClientHandler` - 15 edges
-6. `UtilityCore` - 13 edges
-7. `CurseForge — Variables del proyecto` - 13 edges
-8. `Flujo de trabajo — Utility Core (NeoForge)` - 11 edges
-9. `PlayerRecipeData` - 10 edges
-10. `SyncRecipesPacket` - 8 edges
+3. `SpawnSchematicManager` - 19 edges
+4. `SpongeSchematicReader` - 19 edges
+5. `LegacyBlockMap` - 18 edges
+6. `PolymorphClientHandler` - 15 edges
+7. `UtilityCore` - 13 edges
+8. `CurseForge — Variables del proyecto` - 13 edges
+9. `Flujo de trabajo — Utility Core (NeoForge)` - 11 edges
+10. `PlayerRecipeData` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UtilityCore` --references--> `SpawnSchematicManager`  [EXTRACTED]
@@ -124,7 +125,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (115 total, 72 thin omitted)
+## Communities (117 total, 72 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.14
@@ -132,11 +133,11 @@ Nodes (13): Changelog, CurseForge — Variables del proyecto, Descripcion del pr
 
 ### Community 1 - "PolymorphClientHandler.java"
 Cohesion: 0.10
-Nodes (8): Closing, CraftingInput, PolymorphClientHandler, AccessorAbstractContainerScreen, MixinCraftingScreen, MixinInventoryScreen, RecipePair, Minecraft
+Nodes (7): Closing, PolymorphClientHandler, AccessorAbstractContainerScreen, MixinCraftingScreen, MixinInventoryScreen, RecipePair, Minecraft
 
 ### Community 2 - "PlayerRecipeData"
-Cohesion: 0.14
-Nodes (14): Block, BlockState, CompoundTag, HolderLookup, BlockPos, Gson, Logger, MinecraftServer (+6 more)
+Cohesion: 0.13
+Nodes (14): CompoundTag, HolderLookup, BlockPos, Gson, Logger, MinecraftServer, ServerLevel, MarkerData (+6 more)
 
 ### Community 3 - "PolymorphApi.java"
 Cohesion: 0.26
@@ -148,10 +149,10 @@ Nodes (11): Buenas prácticas, Commits (Conventional Commits), Convenciones de n
 
 ### Community 5 - "SelectRecipePacket.java"
 Cohesion: 0.05
-Nodes (39): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+31 more)
+Nodes (40): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+32 more)
 
 ### Community 6 - "SyncRecipesPacket"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
@@ -163,8 +164,8 @@ Cohesion: 0.29
 Nodes (6): Build, Features, Known Incompatibilities, Requirements, Spawn Schematic (opt-in), Utility Core
 
 ### Community 11 - "gradlew"
-Cohesion: 0.11
-Nodes (16): BooleanValue, Builder, CallbackInfoReturnable, DamageType, EnumValue, OutpostZeroCompat, MixinDamageContainer, MixinItemInput (+8 more)
+Cohesion: 0.10
+Nodes (17): BooleanValue, Builder, CallbackInfoReturnable, CraftingInput, DamageType, EnumValue, OutpostZeroCompat, MixinDamageContainer (+9 more)
 
 ### Community 12 - "build.gradle"
 Cohesion: 0.50
@@ -186,8 +187,12 @@ Nodes (5): ErrorAction, TombstoneErrorHandler, IMixinConfig, IMixinErrorHandler,
 Cohesion: 0.40
 Nodes (6): Screen, CallbackInfo, Inject, Mixin, Unique, MixinTBScreen
 
+### Community 52 - "LegacyBlockMap"
+Cohesion: 0.29
+Nodes (3): Block, BlockState, LegacyBlockMap
+
 ## Knowledge Gaps
-- **72 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.5.1` (+67 more)
+- **73 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.6.0` (+68 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **72 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -195,16 +200,16 @@ Nodes (6): Screen, CallbackInfo, Inject, Mixin, Unique, MixinTBScreen
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnSchematicManager` connect `PlayerRecipeData` to `PolymorphApi.java`, `UtilityCore.java`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
+- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `gradlew`, `SyncRecipesPacket`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
-  _72 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _73 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.09879032258064516 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10344827586206896 - nodes in this community are weakly interconnected._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
-  _Cohesion score 0.14114114114114115 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13360323886639677 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
