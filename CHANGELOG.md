@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.6.0
+- Nueva feature: el esquema de spawn por defecto es ahora un lobby que flota **70 bloques por encima del terreno** (`spawnSchematic.surfaceOffset` default 0 → 70). La rama 26.1.2 también extrae ahora el esquema empaquetado automáticamente cuando falta el archivo.
+- Mejora: el lector ahora auto-detecta y parsea el formato legacy WorldEdit/MCEdit `.schematic` (`Materials=Alpha`: arrays `Blocks`/`Data`/`AddBlocks` + `TileEntities`), además de Sponge v2/v3. Nueva `LegacyBlockMap` traduce los IDs numéricos pre-1.13 + metadata a `BlockState` modernos (colores, losas, escaleras, troncos, raíles, etc.).
+
 ## 1.5.1
 - Fix: `MixinTBScreen` fallaba en el cliente (rompía el fix de escala de GUI de Tombstone). Inyectaba en `Screen.init(Minecraft, int, int)`, método que ya no existe en esta versión de Minecraft — el punto real es el método `final` `init(int, int)`. La inyección ahora targetea `init(II)V` (se ejecuta en todas las pantallas y en resize), de modo que el fix vuelve a aplicarse.
 
