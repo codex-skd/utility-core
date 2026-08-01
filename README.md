@@ -16,9 +16,15 @@ A library mod for NeoForge (MC 26.1.2) providing shared utilities and features.
 
 ## Spawn Schematic (opt-in)
 
-This feature pastes a WorldEdit/FAWE Sponge Schematic (`.schem`) at world creation, permanently protects the pasted area, and sets the world spawn inside the structure.
+This feature pastes a WorldEdit/FAWE Sponge Schematic (`.schem`) at world creation, permanently protects the pasted area, and sets the world spawn inside the structure. The structure is centered on the vanilla world spawn.
 
 **Placement:** `<game-directory>/schematics/schematic_spawn.schem`
+
+**Height placement:** controlled by three config options:
+
+- `spawnSchematic.heightMode = SURFACE` (default): aligns the **bottom** of the schematic to the highest ground block under its footprint, so it sits on the terrain instead of being buried at the world's minimum Y (-64).
+- `spawnSchematic.surfaceOffset = 0`: extra blocks **above the ground** where the bottom is placed. `0` = flush with the ground, positive = raised, negative = buried.
+- `spawnSchematic.heightMode = FIXED` + `spawnSchematic.fixedY = 64`: places the bottom at an **absolute Y coordinate** instead of following the terrain.
 
 > **IMPORTANT:** This only works on a brand-new world save (no existing region files). To apply it to a world that already exists, you **must delete the world save folder** first, then start the server with `enableSpawnSchematic=true`. This is intentional — it prevents the schematic from being applied to a world that has already generated terrain.
 

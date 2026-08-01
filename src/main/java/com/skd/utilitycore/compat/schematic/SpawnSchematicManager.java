@@ -15,6 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.storage.ServerLevelData;
@@ -102,7 +103,7 @@ public class SpawnSchematicManager {
 
         int originX = currentSpawn.getX() - reader.getWidth() / 2;
         int originZ = currentSpawn.getZ() - reader.getLength() / 2;
-        int originY = overworld.getHeight(Heightmap.Types.WORLD_SURFACE, originX + reader.getWidth() / 2, originZ + reader.getLength() / 2);
+        int originY = resolveOriginY(overworld, reader, originX, originZ);
 
         BlockPos origin = new BlockPos(originX, originY, originZ);
         BlockPos min = new BlockPos(
@@ -162,6 +163,44 @@ public class SpawnSchematicManager {
         this.hasBounds = true;
 
         LOGGER.info("[SpawnSchematic] Schematic placed at origin {} (bounds: {} to {})", origin, min, max);
+    }
+
+    private int resolveOriginY(ServerLevel level, SpongeSchematicReader reader, int originX, int originZ) {
+        forceLoadChunks(level, originX, originZ, reader.getWidth(), reader.getLength());
+
+        int raw;
+        switch (Config.SPAWN_SCHEMATIC_HEIGHT_MODE.get()) {
+            case FIXED:
+                raw = Config.SPAWN_SCHEMATIC_FIXED_Y.get();
+                break;
+            case SURFACE:
+            default:
+                int surface = level.getHeight(Heightmap.Types.WORLD_SURFACE, originX, originZ);
+                for (int z = 0; z < reader.getLength(); z++) {
+                    for (int x = 0; x < reader.getWidth(); x++) {
+                        int h = level.getHeight(Heightmap.Types.WORLD_SURFACE, originX + x, originZ + z);
+                        if (h > surface) surface = h;
+                    }
+                }
+                raw = surface + Config.SPAWN_SCHEMATIC_SURFACE_OFFSET.get();
+                break;
+        }
+
+        int minY = level.getMinY();
+        int maxY = level.getMaxY() - 1;
+        return Math.max(minY, Math.min(maxY, raw));
+    }
+
+    private void forceLoadChunks(ServerLevel level, int minX, int minZ, int width, int length) {
+        int minChunkX = (minX >> 4) - 1;
+        int minChunkZ = (minZ >> 4) - 1;
+        int maxChunkX = ((minX + width - 1) >> 4) + 1;
+        int maxChunkZ = ((minZ + length - 1) >> 4) + 1;
+        for (int cx = minChunkX; cx <= maxChunkX; cx++) {
+            for (int cz = minChunkZ; cz <= maxChunkZ; cz++) {
+                level.getChunk(cx, cz, ChunkStatus.FULL, true);
+            }
+        }
     }
 
     private BlockPos findSafeSpawn(ServerLevel level, BlockPos origin, SpongeSchematicReader reader) {

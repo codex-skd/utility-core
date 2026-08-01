@@ -50,6 +50,26 @@ public class Config {
                      "ES: Pega un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Solo funciona en mundos nuevos sin archivos de región existentes. Para aplicar a un mundo ya existente, el operador debe eliminar la carpeta del mundo primero y luego iniciar el servidor con esta opción activada. Coloca el esquema en <game-dir>/schematics/schematic_spawn.schem.")
             .define("enableSpawnSchematic", false);
 
+    public enum SpawnHeightMode {
+        SURFACE,
+        FIXED
+    }
+
+    public static final ModConfigSpec.EnumValue<SpawnHeightMode> SPAWN_SCHEMATIC_HEIGHT_MODE = BUILDER
+            .comment("EN: How to determine the Y position when pasting the spawn schematic. SURFACE aligns the bottom of the schematic to the highest ground block under its footprint (plus spawnSchematic.surfaceOffset); FIXED places the bottom at the absolute coordinate spawnSchematic.fixedY.",
+                     "ES: Cómo determinar la posición Y al pegar el esquema de spawn. SURFACE alinea la base del esquema con el bloque de suelo más alto bajo su huella (más spawnSchematic.surfaceOffset); FIXED coloca la base en la coordenada absoluta spawnSchematic.fixedY.")
+            .defineEnum("spawnSchematic.heightMode", SpawnHeightMode.SURFACE);
+
+    public static final ModConfigSpec.IntValue SPAWN_SCHEMATIC_SURFACE_OFFSET = BUILDER
+            .comment("EN: Only used when spawnSchematic.heightMode=SURFACE. Extra blocks above the ground where the bottom of the schematic is placed. 0 = flush on the ground, positive = raised above the ground, negative = buried.",
+                     "ES: Solo se usa cuando spawnSchematic.heightMode=SURFACE. Bloques extra sobre el suelo donde se coloca la base del esquema. 0 = a ras del suelo, positivo = elevado sobre el suelo, negativo = enterrado.")
+            .defineInRange("spawnSchematic.surfaceOffset", 0, -2048, 2048);
+
+    public static final ModConfigSpec.IntValue SPAWN_SCHEMATIC_FIXED_Y = BUILDER
+            .comment("EN: Only used when spawnSchematic.heightMode=FIXED. Absolute Y coordinate where the bottom of the schematic is placed.",
+                     "ES: Solo se usa cuando spawnSchematic.heightMode=FIXED. Coordenada Y absoluta donde se coloca la base del esquema.")
+            .defineInRange("spawnSchematic.fixedY", 64, -64, 320);
+
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
                      "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")
