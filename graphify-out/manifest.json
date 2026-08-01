@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785453453.5626526,
-    "ast_hash": "0960b0dca83b081009e11a481045e8a0",
+    "mtime": 1785542220.5793989,
+    "ast_hash": "04325b47e06507056d61ca85a8a2d24c",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
@@ -140,28 +140,28 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785453540.1393602,
-    "ast_hash": "013c40e0ddcb34d358924ea4a7fcc7f6",
+    "mtime": 1785543230.8996046,
+    "ast_hash": "1e5369d16f8bfa022ffe578919a9ab3d",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785453531.1463075,
-    "ast_hash": "70419d007329384349d535f9cd9dd9d1",
+    "mtime": 1785542796.6554291,
+    "ast_hash": "dd42e9f1f2f8acfa35c16739159072ea",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
-    "mtime": 1785434366.8679876,
-    "ast_hash": "56606b538519abe4f75b856ccfeeae23",
+    "mtime": 1785489193.4979608,
+    "ast_hash": "9f8f0a336b00592fd04474e6da75e78d",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785453565.0584416,
-    "ast_hash": "81e65db7a870f9cbfeb31f807d07841b",
+    "mtime": 1785542819.4084566,
+    "ast_hash": "d7ef886aedcf3bef4ac3e443f3994578",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785193142.1486995,
-    "ast_hash": "069eaca93ddd1810c0c4e0286f3e9c5f",
+    "mtime": 1785543237.0193806,
+    "ast_hash": "2d719f1b1646304d60be7aaaf48cf5bd",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.0.20.md": {
@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
-    "mtime": 1785453440.639879,
-    "ast_hash": "cecf1f64bf9a034a495c317d916d1523",
+    "mtime": 1785542325.48161,
+    "ast_hash": "938c4c510c8d5c1f8f9f9d9fafa1b6a4",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
-    "mtime": 1785251972.646136,
-    "ast_hash": "36492b124d3beeebfe417ee2fa5230e7",
+    "mtime": 1785489193.5399785,
+    "ast_hash": "9a090fda678a69d0557cc94dc1d33fdc",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.1.4.md": {
@@ -322,6 +322,16 @@
   "docs/curseforge/versions/1.1.7.md": {
     "mtime": 1785350975.6646843,
     "ast_hash": "45f30eb6e06b9dc1fed4ad51cd4a6ded",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.2.0.md": {
+    "mtime": 1785453771.9536884,
+    "ast_hash": "e9ad0a1c04192d24e0155da6b48ac417",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.5.0.md": {
+    "mtime": 1785543226.8294308,
+    "ast_hash": "27d043ac9532aadc9ecd0044f7bbeb8d",
     "semantic_hash": ""
   }
 }
