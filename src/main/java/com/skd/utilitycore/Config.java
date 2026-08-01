@@ -71,9 +71,9 @@ public class Config {
             .defineEnum("spawnSchematic.heightMode", SpawnHeightMode.SURFACE);
 
     public static final ModConfigSpec.IntValue SPAWN_SCHEMATIC_SURFACE_OFFSET = BUILDER
-            .comment("EN: Only used when spawnSchematic.heightMode=SURFACE. Extra blocks above the ground where the bottom of the schematic is placed. 0 = flush on the ground, positive = raised above the ground, negative = buried.",
-                     "ES: Solo se usa cuando spawnSchematic.heightMode=SURFACE. Bloques extra sobre el suelo donde se coloca la base del esquema. 0 = a ras del suelo, positivo = elevado sobre el suelo, negativo = enterrado.")
-            .defineInRange("spawnSchematic.surfaceOffset", 0, -2048, 2048);
+            .comment("EN: Only used when spawnSchematic.heightMode=SURFACE. Extra blocks above the ground where the bottom of the schematic is placed. 0 = flush on the ground, positive = raised above the ground, negative = buried. The bundled default lobby schematic is designed to float 70 blocks above the surface.",
+                     "ES: Solo se usa cuando spawnSchematic.heightMode=SURFACE. Bloques extra sobre el suelo donde se coloca la base del esquema. 0 = a ras del suelo, positivo = elevado sobre el suelo, negativo = enterrado. El esquema de lobby incluido por defecto está diseñado para flotar 70 bloques por encima de la superficie.")
+            .defineInRange("spawnSchematic.surfaceOffset", 70, -2048, 2048);
 
     public static final ModConfigSpec.IntValue SPAWN_SCHEMATIC_FIXED_Y = BUILDER
             .comment("EN: Only used when spawnSchematic.heightMode=FIXED. Absolute Y coordinate where the bottom of the schematic is placed.",

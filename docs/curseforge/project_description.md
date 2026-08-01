@@ -31,12 +31,12 @@
 <p>Shows a title on screen when entering a new biome or dimension. Logic ported from <a href="https://www.curseforge.com/minecraft/mc-mods/travelers-titles">Traveler's Titles</a> by YUNGNICKYOUNG (LGPLv3), rebuilt on vanilla's own title HUD.</p>
 
 <h3>&#127918; Spawn Schematic (Opt-in)</h3>
-<p>Pastes a WorldEdit/FAWE Sponge Schematic (<code>.schem</code>) at world creation, permanently protects the pasted area, and sets the world spawn point inside the structure. The structure is centered on world coordinates <strong>X=0, Z=0</strong>. Place the file at <code>utility_core/spawn_schem/schematic_spawn.schem</code> in your server's game directory.</p>
+<p>Pastes a WorldEdit/FAWE schematic at world creation, permanently protects the pasted area, and sets the world spawn point inside the structure. The structure is centered on world coordinates <strong>X=0, Z=0</strong>. Place the file at <code>utility_core/spawn_schem/schematic_spawn.schem</code> in your server's game directory.</p>
 <blockquote><strong>Only works on a brand-new world save (no existing region files).</strong> To apply it to an existing world, you must delete the world save folder first, then start the server with <code>enableSpawnSchematic=true</code>. This is intentional and not a bug — it prevents the schematic from overriding already-generated terrain.</blockquote>
 <ul>
-<li>Parses Sponge Schematic v2/v3 with full palette/properties support</li>
-<li>Pastes centered on world X=0, Z=0 with fully configurable height placement: <code>SURFACE</code> aligns the bottom to the highest ground block under the footprint, an optional <code>surfaceOffset</code> raises/buries it, and <code>FIXED</code> mode uses an absolute Y coordinate</li>
-<li>Bundled example schematic extracted automatically on first start if the file is missing — replace <code>schematic_spawn.schem</code> with your own file (same filename) before creating a new world to use a custom one</li>
+<li>Parses Sponge Schematic v2/v3 and the legacy WorldEdit/MCEdit <code>.schematic</code> format (auto-detected)</li>
+<li>Pastes centered on world X=0, Z=0 with fully configurable height placement: <code>SURFACE</code> aligns the bottom to the highest ground block under the footprint plus <code>surfaceOffset</code> (default 70), and <code>FIXED</code> mode uses an absolute Y coordinate</li>
+<li>Bundled lobby schematic extracted automatically on first start if the file is missing — replace <code>schematic_spawn.schem</code> with your own file (same filename) before creating a new world to use a custom one</li>
 <li>Sets world spawn inside the structure with safe-position detection</li>
 <li>Permanent area protection: prevents block breaking, block placing, and explosions inside the pasted area</li>
 <li>Per-world marker ensures one-time application even if the mod is later removed and reinstalled</li>
@@ -79,7 +79,7 @@
 <tr><td><code>enableOutpostZeroDamageCap</code></td><td>true</td><td>OutpostZero</td><td>OutpostZero infection damage can bypass death events and destroy armor before the player dies. Caps damage at 10000 to allow death events to fire first.</td></tr>
 <tr><td><code>enableSpawnSchematic</code></td><td>false</td><td>Vanilla / All</td><td>Pastes a .schem schematic at world creation and permanently protects the area. Only takes effect on brand-new worlds. Reads <code>utility_core/spawn_schem/schematic_spawn.schem</code>; a bundled example is extracted automatically if missing.</td></tr>
 <tr><td><code>spawnSchematic.heightMode</code></td><td>SURFACE</td><td>Vanilla / All</td><td>Height placement for the spawn schematic. <code>SURFACE</code> aligns the bottom to the highest ground block under its footprint (default); <code>FIXED</code> places it at the absolute coordinate <code>spawnSchematic.fixedY</code>.</td></tr>
-<tr><td><code>spawnSchematic.surfaceOffset</code></td><td>0</td><td>Vanilla / All</td><td>Extra blocks above the ground where the bottom of the schematic is placed (only in <code>SURFACE</code> mode). 0 = flush, positive = raised, negative = buried.</td></tr>
+<tr><td><code>spawnSchematic.surfaceOffset</code></td><td>70</td><td>Vanilla / All</td><td>Extra blocks above the ground where the bottom of the schematic is placed (only in <code>SURFACE</code> mode). 0 = flush, positive = raised, negative = buried. The bundled lobby default is designed for 70.</td></tr>
 <tr><td><code>spawnSchematic.fixedY</code></td><td>64</td><td>Vanilla / All</td><td>Absolute Y coordinate for the bottom of the schematic (only in <code>FIXED</code> mode).</td></tr>
 <tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
 <tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>

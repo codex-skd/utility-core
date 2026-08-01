@@ -41,6 +41,11 @@ public class SpongeSchematicReader {
     public static SpongeSchematicReader parse(Path path, HolderLookup<Block> blockLookup) throws IOException {
         CompoundTag root = NbtIo.readCompressed(path, NbtAccounter.unlimitedHeap());
 
+        boolean isLegacy = !root.contains("Schematic") && root.contains("Blocks");
+        if (isLegacy) {
+            return parseLegacy(root);
+        }
+
         boolean isV3 = root.contains("Schematic");
         CompoundTag schematic = isV3 ? root.getCompoundOrEmpty("Schematic") : root;
 
@@ -101,6 +106,63 @@ public class SpongeSchematicReader {
         }
 
         LOGGER.info("[SpawnSchematic] Parsed {} blocks, {} block entities", totalBlocks, blockEntities.size());
+
+        return new SpongeSchematicReader(width, height, length, blocks, blockEntities);
+    }
+
+    /**
+     * Parses the legacy WorldEdit/MCEdit ".schematic" format (Materials=Alpha):
+     * Width/Height/Length shorts, a "Blocks" byte array with pre-1.13 numeric block
+     * IDs, an optional "Data" byte array with block metadata, and an optional
+     * "AddBlocks" nibble array extending the IDs to 16 bits.
+     */
+    private static SpongeSchematicReader parseLegacy(CompoundTag root) {
+        short width = root.getShortOr("Width", (short) 0);
+        short height = root.getShortOr("Height", (short) 0);
+        short length = root.getShortOr("Length", (short) 0);
+        int totalBlocks = width * height * length;
+
+        byte[] blockIds = root.getByteArray("Blocks").orElse(new byte[0]);
+        byte[] blockData = root.getByteArray("Data").orElse(new byte[0]);
+        byte[] addBlocks = root.getByteArray("AddBlocks").orElse(new byte[0]);
+
+        BlockState[] blocks = new BlockState[totalBlocks];
+        Map<Integer, BlockState> paletteMap = new HashMap<>();
+        for (int idx = 0; idx < totalBlocks; idx++) {
+            int id = idx < blockIds.length ? (blockIds[idx] & 0xFF) : 0;
+            if (addBlocks.length > 0 && idx / 2 < addBlocks.length) {
+                int nibble = (idx & 1) == 0 ? (addBlocks[idx / 2] & 0x0F) : ((addBlocks[idx / 2] >> 4) & 0x0F);
+                id |= nibble << 8;
+            }
+            int data = idx < blockData.length ? (blockData[idx] & 0xFF) : 0;
+            int key = (id << 8) | data;
+            BlockState state = paletteMap.get(key);
+            if (state == null) {
+                state = LegacyBlockMap.toState(id, data);
+                paletteMap.put(key, state);
+            }
+            blocks[idx] = state != null ? state : Blocks.AIR.defaultBlockState();
+        }
+
+        Map<BlockPos, CompoundTag> blockEntities = new HashMap<>();
+        ListTag tileEntities = root.getListOrEmpty("TileEntities");
+        for (int i = 0; i < tileEntities.size(); i++) {
+            CompoundTag be = tileEntities.getCompoundOrEmpty(i);
+            int[] pos = be.getIntArray("pos").orElseGet(() -> new int[]{
+                    be.getIntOr("x", 0), be.getIntOr("y", 0), be.getIntOr("z", 0)
+            });
+            if (pos.length == 3) {
+                CompoundTag clean = be.copy();
+                clean.remove("id");
+                clean.remove("x");
+                clean.remove("y");
+                clean.remove("z");
+                clean.remove("pos");
+                blockEntities.put(new BlockPos(pos[0], pos[1], pos[2]), clean);
+            }
+        }
+
+        LOGGER.info("[SpawnSchematic] Parsed legacy WorldEdit schematic (Materials=Alpha): {}x{}x{} with {} blocks, {} block entities", width, height, length, totalBlocks, blockEntities.size());
 
         return new SpongeSchematicReader(width, height, length, blocks, blockEntities);
     }
