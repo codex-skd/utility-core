@@ -1,5 +1,13 @@
 # Utility Core — Registro de cambios
 
+## 1.5.0
+- Fix: Spawn Schematic se pegaba en Y=-64 al crear un mundo nuevo. El chunk bajo la zona de spawn aún no estaba generado al calcular la altura, así que el heightmap devolvía el mínimo de construcción (-64). Ahora el mod fuerza la generación de todos los chunks bajo la huella del esquema antes de calcular la colocación.
+- Mejora: nueva configuración de altura para el esquema de spawn:
+  - `spawnSchematic.heightMode` (default `SURFACE`): alinea la base del esquema con el bloque de suelo más alto bajo su huella, asentándolo en el terreno.
+  - `spawnSchematic.surfaceOffset` (default 0): bloques extra sobre el suelo en modo `SURFACE`. 0 = a ras del suelo, positivo = elevado, negativo = enterrado.
+  - `spawnSchematic.fixedY` (default 64): coordenada Y absoluta cuando `heightMode=FIXED`.
+- Mejora: en modo `SURFACE` se usa la superficie más alta bajo toda la huella del esquema (no una sola columna), evitando que quede enterrado en terrenos irregulares.
+
 ## 1.4.0
 - Mejora: Spawn Schematic ahora se ancla en las coordenadas del mundo X=0, Z=0 (antes se centraba en el spawn vanilla), con la altura calculada del terreno en ese punto. La ruta del esquema externo cambia a `<game-dir>/utility_core/spawn_schem/schematic_spawn.schem` (mismo patrón de carpeta que ChunkGen). El mod incluye un esquema de ejemplo empaquetado que se extrae automáticamente en el primer arranque si el archivo no existe, de modo que la feature funciona "out of the box". Para usar un esquema propio, basta con sustituir `schematic_spawn.schem` por el suyo (mismo nombre) antes de borrar/regenerar el mundo.
 
