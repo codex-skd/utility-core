@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.5.1
+- Fix: `MixinTBScreen` fallaba en el cliente (rompía el fix de escala de GUI de Tombstone). Inyectaba en `Screen.init(Minecraft, int, int)`, método que ya no existe en esta versión de Minecraft — el punto real es el método `final` `init(int, int)`. La inyección ahora targetea `init(II)V` (se ejecuta en todas las pantallas y en resize), de modo que el fix vuelve a aplicarse.
+
 ## 1.5.0
 - Fix: Spawn Schematic se pegaba en Y=-64 al crear un mundo nuevo. El chunk bajo la zona de spawn aún no estaba generado al calcular la altura, así que el heightmap devolvía el mínimo de construcción (-64). Ahora el mod fuerza la generación de todos los chunks bajo la huella del esquema antes de calcular la colocación.
 - Mejora: nueva configuración de altura para el esquema de spawn:
