@@ -26,9 +26,10 @@ public class MixinTBScreen {
         return false;
     }
 
-    @Inject(method = "init(Lnet/minecraft/client/Minecraft;II)V", at = @At("HEAD"))
-    private void onScreenInit(Minecraft mc, int width, int height, CallbackInfo ci) {
+    @Inject(method = "init(II)V", at = @At("HEAD"))
+    private void onScreenInit(int width, int height, CallbackInfo ci) {
         if (!Config.ENABLE_TOMBSTONE_GUI_SCALE_FIX.get()) return;
+        Minecraft mc = Minecraft.getInstance();
         Screen self = (Screen) (Object) this;
         if (utilityCore$isTombstoneScreen(self)) {
             utilityCore$savedGuiScale = mc.options.guiScale().get();
