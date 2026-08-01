@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785542216.3137558,
-    "ast_hash": "d3ccbb3a5d441aa89e54859deda906aa",
+    "mtime": 1785623012.3854218,
+    "ast_hash": "2b8d4d997d604a4d1ed19d42fa412ada",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785543597.2789555,
-    "ast_hash": "168325504ea555cc4c600015137cb45f",
+    "mtime": 1785623481.5694127,
+    "ast_hash": "bf7447869a29870d4cd997981fdbe66b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785542792.6271787,
-    "ast_hash": "4a519cb5d4c2315263b9c0dbc33bbf8e",
+    "mtime": 1785623338.8545935,
+    "ast_hash": "513470fa08b573b34b5397a8185bdd9b",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785542812.1671488,
-    "ast_hash": "61c93e825fe55bab3af123e54c942617",
+    "mtime": 1785623370.9030955,
+    "ast_hash": "36c732774337f6717d13b27c89d5404e",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -220,8 +220,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
-    "mtime": 1785453038.0509055,
-    "ast_hash": "2497da606b7886b1115502c6b81d2c62",
+    "mtime": 1785623228.9647346,
+    "ast_hash": "f983a50c42eeeede77b52cf669ff6265",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
@@ -257,6 +257,16 @@
   "docs/curseforge/versions/1.5.1.md": {
     "mtime": 1785543593.6077774,
     "ast_hash": "d7fc79a02265fe2020fcefbd651150da",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/schematic/LegacyBlockMap.java": {
+    "mtime": 1785622995.056484,
+    "ast_hash": "75419372fdcd3ebc8c9767631c383e8f",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.6.0.md": {
+    "mtime": 1785623476.948252,
+    "ast_hash": "7861a4980faa8e157428f76de6c7918d",
     "semantic_hash": ""
   }
 }
