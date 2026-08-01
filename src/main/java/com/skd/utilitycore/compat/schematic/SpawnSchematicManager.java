@@ -25,6 +25,7 @@ import net.minecraft.util.ProblemReporter;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
@@ -34,6 +35,7 @@ public class SpawnSchematicManager {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path SCHEMATIC_FILE = Path.of("schematics", "schematic_spawn.schem");
+    private static final String DEFAULT_SCHEMATIC_RESOURCE = "/utility_core/default_spawn_schematic.schem";
 
     private static SpawnSchematicManager instance;
 
@@ -81,8 +83,8 @@ public class SpawnSchematicManager {
             return;
         }
 
-        if (!Files.exists(SCHEMATIC_FILE)) {
-            LOGGER.error("[SpawnSchematic] Schematic file not found at {}! Place a schematic at this path and delete the world save to try again.", SCHEMATIC_FILE.toAbsolutePath().normalize());
+        if (!Files.exists(SCHEMATIC_FILE) && !extractDefaultSchematic()) {
+            LOGGER.error("[SpawnSchematic] Schematic file not found at {} and no bundled default could be extracted! Place a schematic at this path and delete the world save to try again.", SCHEMATIC_FILE.toAbsolutePath().normalize());
             writeNotPlaced(markerFile);
             return;
         }
@@ -163,6 +165,22 @@ public class SpawnSchematicManager {
         this.hasBounds = true;
 
         LOGGER.info("[SpawnSchematic] Schematic placed at origin {} (bounds: {} to {})", origin, min, max);
+    }
+
+    private boolean extractDefaultSchematic() {
+        try (InputStream in = SpawnSchematicManager.class.getResourceAsStream(DEFAULT_SCHEMATIC_RESOURCE)) {
+            if (in == null) {
+                LOGGER.error("[SpawnSchematic] Bundled default schematic resource not found in mod jar");
+                return false;
+            }
+            Files.createDirectories(SCHEMATIC_FILE.getParent());
+            Files.copy(in, SCHEMATIC_FILE);
+            LOGGER.info("[SpawnSchematic] Extracted bundled default schematic to {}", SCHEMATIC_FILE.toAbsolutePath().normalize());
+            return true;
+        } catch (IOException e) {
+            LOGGER.error("[SpawnSchematic] Failed to extract bundled default schematic: {}", e.getMessage());
+            return false;
+        }
     }
 
     private int resolveOriginY(ServerLevel level, SpongeSchematicReader reader, int originX, int originZ) {
