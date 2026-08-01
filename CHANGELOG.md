@@ -1,5 +1,13 @@
 # Utility Core — Registro de cambios
 
+## 1.5.0
+- Fix: Spawn Schematic se pegaba en Y=-64 al crear un mundo nuevo. El chunk bajo la zona de spawn aún no estaba generado al calcular la altura, así que el heightmap devolvía el mínimo de construcción (-64). Ahora el mod fuerza la generación de todos los chunks bajo la huella del esquema antes de calcular la colocación.
+- Mejora: nueva configuración de altura para el esquema de spawn:
+  - `spawnSchematic.heightMode` (default `SURFACE`): alinea la base del esquema con el bloque de suelo más alto bajo su huella, asentándolo en el terreno.
+  - `spawnSchematic.surfaceOffset` (default 0): bloques extra sobre el suelo en modo `SURFACE`. 0 = a ras del suelo, positivo = elevado, negativo = enterrado.
+  - `spawnSchematic.fixedY` (default 64): coordenada Y absoluta cuando `heightMode=FIXED`.
+- Mejora: en modo `SURFACE` se usa la superficie más alta bajo toda la huella del esquema (no una sola columna), evitando que quede enterrado en terrenos irregulares.
+
 ## 1.2.0
 - Nueva feature: Spawn Schematic (opt-in). Coloca un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Configurable mediante `enableSpawnSchematic` (default: false). El archivo .schem debe colocarse en `<game-dir>/schematics/schematic_spawn.schem`.
   > **IMPORTANTE:** Solo funciona en mundos nuevos. Para aplicar a un mundo existente, el operador debe eliminar la carpeta del mundo primero.
