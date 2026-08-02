@@ -317,9 +317,9 @@ public final class LegacyBlockMap {
     public static BlockState toState(int id, int data) {
         switch (id) {
             case 5:
-                return pick(PLANKS, data).defaultBlockState();
+                return pick(PLANKS, data & 7).defaultBlockState();
             case 6:
-                return pick(SAPLINGS, data).defaultBlockState();
+                return pick(SAPLINGS, data & 7).defaultBlockState();
             case 8:
             case 9:
                 return Blocks.WATER.defaultBlockState();
@@ -329,9 +329,9 @@ public final class LegacyBlockMap {
             case 12:
                 return (data & 1) == 1 ? Blocks.RED_SAND.defaultBlockState() : Blocks.SAND.defaultBlockState();
             case 17:
-                return log(pick(LOGS, data), data);
+                return log(pick(LOGS, data & 3), data);
             case 18:
-                return pick(LEAVES, data).defaultBlockState();
+                return pick(LEAVES, data & 3).defaultBlockState();
             case 19:
                 return (data & 1) == 1 ? Blocks.WET_SPONGE.defaultBlockState() : Blocks.SPONGE.defaultBlockState();
             case 24:
@@ -347,9 +347,9 @@ public final class LegacyBlockMap {
             case 35:
                 return pick(WOOL, data & 15).defaultBlockState();
             case 43:
-                return slab(pick(STONE_SLABS, data), data, true);
+                return slab(pick(STONE_SLABS, data & 7), data, true);
             case 44:
-                return slab(pick(STONE_SLABS, data), data, false);
+                return slab(pick(STONE_SLABS, data & 7), data, false);
             case 50:
             case 75:
             case 76:
@@ -365,7 +365,7 @@ public final class LegacyBlockMap {
             case 96:
                 return Blocks.OAK_TRAPDOOR.defaultBlockState();
             case 97:
-                return pick(MONSTER_EGGS, data).defaultBlockState();
+                return pick(MONSTER_EGGS, data & 7).defaultBlockState();
             case 98:
                 return stoneBricks(data);
             case 99:
@@ -382,9 +382,9 @@ public final class LegacyBlockMap {
             case 124:
                 return Blocks.REDSTONE_LAMP.defaultBlockState();
             case 125:
-                return slab(pick(WOOD_SLABS, data), data, true);
+                return slab(pick(WOOD_SLABS, data & 7), data, true);
             case 126:
-                return slab(pick(WOOD_SLABS, data), data, false);
+                return slab(pick(WOOD_SLABS, data & 7), data, false);
             case 128:
                 return stairs(Blocks.SANDSTONE_STAIRS, data);
             case 134:
@@ -394,7 +394,7 @@ public final class LegacyBlockMap {
             case 136:
                 return stairs(Blocks.JUNGLE_STAIRS, data);
             case 144:
-                return pick(SKULLS, data).defaultBlockState();
+                return pick(SKULLS, data & 7).defaultBlockState();
             case 145:
                 return Blocks.ANVIL.defaultBlockState();
             case 151:
@@ -411,7 +411,7 @@ public final class LegacyBlockMap {
             case 161:
                 return (data & 1) == 1 ? Blocks.DARK_OAK_LEAVES.defaultBlockState() : Blocks.ACACIA_LEAVES.defaultBlockState();
             case 162:
-                return log(pick(LOGS2, data), data);
+                return log(pick(LOGS2, data & 1), data);
             case 163:
                 return stairs(Blocks.ACACIA_STAIRS, data);
             case 164:
@@ -580,7 +580,7 @@ public final class LegacyBlockMap {
     }
 
     private static BlockState doublePlant(int data) {
-        BlockState state = pick(DOUBLE_PLANTS, data).defaultBlockState();
+        BlockState state = pick(DOUBLE_PLANTS, data & 7).defaultBlockState();
         if (state.hasProperty(BlockStateProperties.HALF)) {
             state = state.setValue(BlockStateProperties.HALF, (data & 8) != 0 ? Half.TOP : Half.BOTTOM);
         }
