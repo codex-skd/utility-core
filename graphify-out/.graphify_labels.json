@@ -22,7 +22,6 @@
   "20": "Utility Core — Registro de cambios",
   "21": "build.gradle",
   "22": "project_description.md",
-  "23": "0.0.0-beta.1.md",
   "24": "settings.gradle",
   "25": "1.1.0.md",
   "26": "Publicación a GitHub (CI/CD)",
@@ -31,7 +30,6 @@
   "29": "1.3.1.md",
   "30": "1.4.0.md",
   "31": "1.5.0.md",
-  "32": "MixinItemInput.java",
   "33": "1.6.0.md",
   "34": "1.5.0.md",
   "35": "1.5.1.md",
@@ -131,12 +129,6 @@
   "129": "RecipeHolder",
   "130": "Logger",
   "131": "Override",
-  "132": "IEventBus",
-  "133": "Logger",
-  "134": "Mod",
-  "135": "ModContainer",
-  "136": "Post",
-  "137": "SubscribeEvent",
   "138": "Mod",
   "139": "ModContainer"
 }

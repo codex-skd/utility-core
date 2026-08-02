@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785623012.3854218,
-    "ast_hash": "2b8d4d997d604a4d1ed19d42fa412ada",
+    "mtime": 1785675071.632158,
+    "ast_hash": "2d0f0a0a246aff878405a4d5fdf723a4",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785453084.5157015,
-    "ast_hash": "89da12b264ffcfc79b57f6e83fbcffec",
+    "mtime": 1785675085.250709,
+    "ast_hash": "596a1843e3258b7c9e9724fc977e28c0",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785671419.9532335,
-    "ast_hash": "96d396d37c749fada64bde833dcfd446",
+    "mtime": 1785679564.0649369,
+    "ast_hash": "442e22271cc19314c619c8f2086ba552",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785623338.8545935,
-    "ast_hash": "513470fa08b573b34b5397a8185bdd9b",
+    "mtime": 1785675142.1609235,
+    "ast_hash": "4bf0587bdd2a6c6511aceeebfafaf6cb",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785623370.9030955,
-    "ast_hash": "36c732774337f6717d13b27c89d5404e",
+    "mtime": 1785675188.1902914,
+    "ast_hash": "bdb647866aa9b553cf7263b571dc2f2b",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -272,6 +272,16 @@
   "docs/curseforge/versions/1.6.1.md": {
     "mtime": 1785671414.4096932,
     "ast_hash": "f9fce173ca05ad992f1bcf5cce3acf02",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java": {
+    "mtime": 1785675080.3407524,
+    "ast_hash": "7bd2f4eadc97032bf7e2e6f04fa7d6bf",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.7.0.md": {
+    "mtime": 1785679558.3898413,
+    "ast_hash": "da61558af4ff487d2065ab19bce5c494",
     "semantic_hash": ""
   }
 }
