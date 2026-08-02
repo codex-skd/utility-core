@@ -120,6 +120,16 @@ public class Config {
                      "ES: Pregenerar chunks en el End.")
             .define("chunkGen.dimensionEnd", false);
 
+    public static final ModConfigSpec.IntValue CHUNK_GEN_LOAD_SECONDS = BUILDER
+            .comment("EN: Duty cycle: seconds of chunk generation before a rest period. Default 600 = 10 minutes.",
+                     "ES: Ciclo de trabajo: segundos de generaci\u00f3n de chunks antes de un periodo de descanso. Por defecto 600 = 10 minutos.")
+            .defineInRange("chunkGen.loadSeconds", 600, 60, 86400);
+
+    public static final ModConfigSpec.IntValue CHUNK_GEN_REST_SECONDS = BUILDER
+            .comment("EN: Duty cycle: seconds of rest (no generation) after each load period, to give the server a break. Default 300 = 5 minutes.",
+                     "ES: Ciclo de trabajo: segundos de descanso (sin generaci\u00f3n) tras cada periodo de carga, para dar un respiro al servidor. Por defecto 300 = 5 minutos.")
+            .defineInRange("chunkGen.restSeconds", 300, 0, 86400);
+
     public static final ModConfigSpec.BooleanValue DATA_PACK_FOLDER_ENABLED = BUILDER
             .comment("EN: Loads every datapack (.zip or folder) found in <game-dir>/<dataPackFolder.path> into every world automatically, without enabling it per world. Works on dedicated servers and single-player worlds.",
                      "ES: Carga autom\u00e1ticamente todos los datapacks (.zip o carpeta) encontrados en <game-dir>/<dataPackFolder.path> en todos los mundos, sin necesidad de activarlos mundo a mundo. Funciona en servidores dedicados y mundos de un solo jugador.")
