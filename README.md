@@ -11,6 +11,7 @@ A library mod for NeoForge (MC 26.2) providing shared utilities and features.
 - **Automatic Chunk Pregeneration (ChunkGen)**: Pre-generates chunks in a spiral pattern when the server is empty.
 - **Biome/Dimension Titles**: Shows a title on screen when entering a new biome or dimension. Logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
 - **Spawn Schematic (opt-in)**: Pastes a WorldEdit/FAWE `.schem` file at world creation centered on world coordinates (0,0), protects the area permanently, and sets the world spawn point inside the structure. A bundled example schematic is extracted automatically on first start.
+- **Data Pack Folder (opt-in)**: Loads every datapack (`.zip` or folder) placed in `<game-directory>/datapacks` into every world automatically (dedicated servers and single-player), like the Global Packs mod. Packs are always enabled, no per-world toggle needed.
 - **Configurable**: Enable/disable features and configure the maximum number of shown recipes from the in-game config menu or `config/utility_core-common.toml`.
 - **Developer API**: `PolymorphApi` for other mods to integrate with the recipe selection system.
 
@@ -33,6 +34,14 @@ This feature pastes a WorldEdit/FAWE schematic at world creation, permanently pr
 - `spawnSchematic.heightMode = FIXED` + `spawnSchematic.fixedY = 64`: places the bottom at an **absolute Y coordinate** instead of following the terrain.
 
 > **IMPORTANT:** This only works on a brand-new world save (no existing region files). To apply it to a world that already exists, you **must delete the world save folder** first, then start the server with `enableSpawnSchematic=true`. This is intentional — it prevents the schematic from being applied to a world that has already generated terrain.
+
+## Data Pack Folder (opt-in)
+
+Loads every datapack (`.zip` file or folder containing a `pack.mcmeta`) placed in `<game-directory>/datapacks` into every world automatically — no per-world toggle. Works on dedicated servers and in single-player (the integrated server picks it up too). A client connecting to a dedicated server receives the datapacks from the server, as usual.
+
+- `dataPackFolder.enabled = true` enables the loader.
+- `dataPackFolder.path = "datapacks"` is the folder scanned, relative to the game directory.
+- Invalid datapacks (missing/broken `pack.mcmeta`) are skipped.
 
 ## Known Incompatibilities
 

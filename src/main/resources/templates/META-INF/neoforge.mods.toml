@@ -19,6 +19,7 @@ Features:
 - Recipe conflict resolution: choose between multiple crafting outputs when recipes overlap
 - Biome/Dimension Titles: shows a title when entering a new biome or dimension
 - Spawn Schematic: pastes a .schem/.schematic structure at world creation with configurable height placement (align to ground, surface offset, or fixed absolute Y); bundled lobby default floats 70 blocks above the terrain
+- Data Pack Folder: auto-loads all datapacks from a folder into every world (dedicated servers and single-player)
 - Automatic chunk pregeneration, damage safety, and mod compatibility fixes
 - Configurable settings for all features
 - API for other mods to integrate
