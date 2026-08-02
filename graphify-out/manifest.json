@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785623016.9791825,
-    "ast_hash": "aac1f7bfc0ff9352ac042778147fe5e1",
+    "mtime": 1785675107.2339523,
+    "ast_hash": "6f6efb44cecd556110eaec2ebe6c8b10",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785453472.4268444,
-    "ast_hash": "89da12b264ffcfc79b57f6e83fbcffec",
+    "mtime": 1785675112.1433668,
+    "ast_hash": "596a1843e3258b7c9e9724fc977e28c0",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
@@ -140,13 +140,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785623495.6309083,
-    "ast_hash": "cc4aba990e29b93fe04c7d5ae6b6a80b",
+    "mtime": 1785679582.391736,
+    "ast_hash": "d9221509dd1e0bbbd93bd9f628be433a",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785623347.1892521,
-    "ast_hash": "c1788ed15cbe20a13655204c09e7d169",
+    "mtime": 1785675152.0630958,
+    "ast_hash": "ab348a4487bec4c92af313c276f621fa",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785623385.8277326,
-    "ast_hash": "f4477c7025c2cc674c6c473e1fd51d53",
+    "mtime": 1785675224.287447,
+    "ast_hash": "814fc091df68c62cc9d0c34d28904b4c",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -347,6 +347,16 @@
   "docs/curseforge/versions/1.6.0.md": {
     "mtime": 1785623490.7596676,
     "ast_hash": "8386a989d84a9f65a19fc661a892f6bd",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java": {
+    "mtime": 1785675100.839651,
+    "ast_hash": "7bd2f4eadc97032bf7e2e6f04fa7d6bf",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.7.0.md": {
+    "mtime": 1785679575.7359147,
+    "ast_hash": "8370b9a29eba950093acc8463e562fcb",
     "semantic_hash": ""
   }
 }

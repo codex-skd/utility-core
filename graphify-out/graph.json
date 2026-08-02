@@ -85,8 +85,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_java",
-      "community": 11,
+      "id": "src_main_java_com_skd_utilitycore_config",
+      "community": 10,
       "norm_label": "config.java"
     },
     {
@@ -95,8 +95,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
-      "community": 11,
+      "id": "src_main_java_com_skd_utilitycore_config_config",
+      "community": 10,
       "norm_label": "config"
     },
     {
@@ -106,7 +106,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "builder",
-      "community": 11,
+      "community": 10,
       "norm_label": "builder"
     },
     {
@@ -116,7 +116,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "booleanvalue",
-      "community": 11,
+      "community": 10,
       "norm_label": "booleanvalue"
     },
     {
@@ -126,7 +126,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "intvalue",
-      "community": 11,
+      "community": 10,
       "norm_label": "intvalue"
     },
     {
@@ -135,8 +135,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode",
-      "community": 11,
+      "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
+      "community": 10,
       "norm_label": "spawnheightmode"
     },
     {
@@ -145,8 +145,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L54",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
-      "community": 11,
+      "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
+      "community": 10,
       "norm_label": "surface"
     },
     {
@@ -155,8 +155,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
-      "community": 11,
+      "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
+      "community": 10,
       "norm_label": "fixed"
     },
     {
@@ -166,8 +166,18 @@
       "source_location": "",
       "_origin": "ast",
       "id": "enumvalue",
-      "community": 11,
+      "community": 10,
       "norm_label": "enumvalue"
+    },
+    {
+      "label": "ConfigValue",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "configvalue",
+      "community": 10,
+      "norm_label": "configvalue"
     },
     {
       "label": "ModConfigSpec",
@@ -176,7 +186,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "modconfigspec",
-      "community": 11,
+      "community": 10,
       "norm_label": "modconfigspec"
     },
     {
@@ -295,8 +305,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore",
+      "community": 14,
       "norm_label": "utilitycore.java"
     },
     {
@@ -305,8 +315,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "community": 14,
       "norm_label": "utilitycore"
     },
     {
@@ -315,8 +325,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java_mod",
-      "community": 143,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_mod",
+      "community": 14,
       "norm_label": "mod"
     },
     {
@@ -325,8 +335,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java_logger",
-      "community": 142,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_logger",
+      "community": 14,
       "norm_label": "logger"
     },
     {
@@ -335,8 +345,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "community": 14,
       "norm_label": ".utilitycore()"
     },
     {
@@ -345,8 +355,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java_ieventbus",
-      "community": 141,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_ieventbus",
+      "community": 14,
       "norm_label": "ieventbus"
     },
     {
@@ -355,18 +365,18 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java_modcontainer",
-      "community": 144,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_modcontainer",
+      "community": 14,
       "norm_label": "modcontainer"
     },
     {
       "label": ".onServerTick()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L48",
+      "source_location": "L50",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "community": 14,
       "norm_label": ".onservertick()"
     },
     {
@@ -376,7 +386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "post",
-      "community": 7,
+      "community": 14,
       "norm_label": "post"
     },
     {
@@ -385,18 +395,18 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
-      "community": 145,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "community": 14,
       "norm_label": "subscribeevent"
     },
     {
       "label": ".onPlayerJoin()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L55",
+      "source_location": "L57",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
+      "community": 14,
       "norm_label": ".onplayerjoin()"
     },
     {
@@ -406,17 +416,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "playerloggedinevent",
-      "community": 7,
+      "community": 14,
       "norm_label": "playerloggedinevent"
     },
     {
       "label": ".onPlayerLeave()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L62",
+      "source_location": "L64",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
+      "community": 14,
       "norm_label": ".onplayerleave()"
     },
     {
@@ -426,17 +436,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "playerloggedoutevent",
-      "community": 7,
+      "community": 14,
       "norm_label": "playerloggedoutevent"
     },
     {
       "label": ".onServerStarted()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L69",
+      "source_location": "L71",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "community": 14,
       "norm_label": ".onserverstarted()"
     },
     {
@@ -446,17 +456,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstartedevent",
-      "community": 7,
+      "community": 14,
       "norm_label": "serverstartedevent"
     },
     {
       "label": ".onServerStopping()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L84",
+      "source_location": "L86",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
+      "community": 14,
       "norm_label": ".onserverstopping()"
     },
     {
@@ -466,16 +476,16 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstoppingevent",
-      "community": 7,
+      "community": 14,
       "norm_label": "serverstoppingevent"
     },
     {
       "label": ".onRegisterCommands()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L91",
+      "source_location": "L93",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
       "community": 7,
       "norm_label": ".onregistercommands()"
     },
@@ -486,17 +496,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "registercommandsevent",
-      "community": 7,
+      "community": 14,
       "norm_label": "registercommandsevent"
     },
     {
       "label": ".registerTombstoneErrorHandler()",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L157",
+      "source_location": "L159",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
-      "community": 7,
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
+      "community": 14,
       "norm_label": ".registertombstoneerrorhandler()"
     },
     {
@@ -776,7 +786,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_onmousepressed",
-      "community": 1,
+      "community": 6,
       "norm_label": ".onmousepressed()"
     },
     {
@@ -866,7 +876,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_receiveserverrecipes",
-      "community": 6,
+      "community": 1,
       "norm_label": ".receiveserverrecipes()"
     },
     {
@@ -1280,13 +1290,93 @@
       "norm_label": ".savestate()"
     },
     {
+      "label": "DataPackFolderLoader.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "community": 9,
+      "norm_label": "datapackfolderloader.java"
+    },
+    {
+      "label": "DataPackFolderLoader",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "community": 9,
+      "norm_label": "datapackfolderloader"
+    },
+    {
+      "label": "Logger",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_java_logger",
+      "community": 9,
+      "norm_label": "logger"
+    },
+    {
+      "label": ".DataPackFolderLoader()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_datapackfolderloader",
+      "community": 9,
+      "norm_label": ".datapackfolderloader()"
+    },
+    {
+      "label": ".onAddPackFinders()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_onaddpackfinders",
+      "community": 9,
+      "norm_label": ".onaddpackfinders()"
+    },
+    {
+      "label": "AddPackFindersEvent",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "addpackfindersevent",
+      "community": 9,
+      "norm_label": "addpackfindersevent"
+    },
+    {
+      "label": ".loadPacks()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_loadpacks",
+      "community": 9,
+      "norm_label": ".loadpacks()"
+    },
+    {
+      "label": "Pack",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "pack",
+      "community": 9,
+      "norm_label": "pack"
+    },
+    {
       "label": "OutpostZeroCompat.java",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java",
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_compat_outpostzerocompat_java",
-      "community": 18,
+      "community": 10,
       "norm_label": "outpostzerocompat.java"
     },
     {
@@ -1296,7 +1386,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_compat_outpostzerocompat_outpostzerocompat",
-      "community": 18,
+      "community": 10,
       "norm_label": "outpostzerocompat"
     },
     {
@@ -1326,7 +1416,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "damagetype",
-      "community": 18,
+      "community": 10,
       "norm_label": "damagetype"
     },
     {
@@ -1336,7 +1426,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_compat_outpostzerocompat_outpostzerocompat_onlivingdamagepre",
-      "community": 18,
+      "community": 10,
       "norm_label": ".onlivingdamagepre()"
     },
     {
@@ -1886,7 +1976,7 @@
       "source_location": "L285",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager_hasprotectionenabled",
-      "community": 3,
+      "community": 2,
       "norm_label": ".hasprotectionenabled()"
     },
     {
@@ -2486,7 +2576,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixindamagecontainer_java",
-      "community": 21,
+      "community": 10,
       "norm_label": "mixindamagecontainer.java"
     },
     {
@@ -2496,7 +2586,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixindamagecontainer_mixindamagecontainer",
-      "community": 21,
+      "community": 10,
       "norm_label": "mixindamagecontainer"
     },
     {
@@ -2516,7 +2606,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixindamagecontainer_mixindamagecontainer_utility_core_bypassnegativedamagecheck",
-      "community": 21,
+      "community": 10,
       "norm_label": ".utility_core$bypassnegativedamagecheck()"
     },
     {
@@ -2526,7 +2616,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "redirect",
-      "community": 21,
+      "community": 10,
       "norm_label": "redirect"
     },
     {
@@ -2786,7 +2876,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_modnetwork_java",
-      "community": 7,
+      "community": 14,
       "norm_label": "modnetwork.java"
     },
     {
@@ -2796,7 +2886,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_modnetwork_modnetwork",
-      "community": 7,
+      "community": 14,
       "norm_label": "modnetwork"
     },
     {
@@ -2806,7 +2896,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_modnetwork_modnetwork_register",
-      "community": 7,
+      "community": 14,
       "norm_label": ".register()"
     },
     {
@@ -3026,7 +3116,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_syncrecipespacket_syncrecipespacket_handle",
-      "community": 6,
+      "community": 1,
       "norm_label": ".handle()"
     },
     {
@@ -3236,7 +3326,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_polymorph_recipepair_java",
-      "community": 6,
+      "community": 1,
       "norm_label": "recipepair.java"
     },
     {
@@ -3246,7 +3336,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_polymorph_recipepair_recipepair",
-      "community": 6,
+      "community": 1,
       "norm_label": "recipepair"
     },
     {
@@ -3276,7 +3366,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_polymorph_recipepair_recipepair_of",
-      "community": 6,
+      "community": 1,
       "norm_label": ".of()"
     },
     {
@@ -3325,7 +3415,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_md",
+      "id": "changelog",
       "community": 0,
       "norm_label": "changelog.md"
     },
@@ -3335,17 +3425,27 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
+      "id": "changelog_utility_core_registro_de_cambios",
       "community": 0,
       "norm_label": "utility core \u2014 registro de cambios"
+    },
+    {
+      "label": "1.7.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_1_7_0",
+      "community": 0,
+      "norm_label": "1.7.0"
     },
     {
       "label": "1.6.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L3",
+      "source_location": "L7",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_6_0",
+      "id": "changelog_1_6_0",
       "community": 0,
       "norm_label": "1.6.0"
     },
@@ -3353,9 +3453,9 @@
       "label": "1.5.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L7",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_5_1",
+      "id": "changelog_1_5_1",
       "community": 0,
       "norm_label": "1.5.1"
     },
@@ -3363,9 +3463,9 @@
       "label": "1.5.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_5_0",
+      "id": "changelog_1_5_0",
       "community": 0,
       "norm_label": "1.5.0"
     },
@@ -3373,9 +3473,9 @@
       "label": "1.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_2_0",
+      "id": "changelog_1_2_0",
       "community": 0,
       "norm_label": "1.2.0"
     },
@@ -3383,9 +3483,9 @@
       "label": "1.1.7",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L22",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_7",
+      "id": "changelog_1_1_7",
       "community": 0,
       "norm_label": "1.1.7"
     },
@@ -3393,9 +3493,9 @@
       "label": "1.1.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_6",
+      "id": "changelog_1_1_6",
       "community": 0,
       "norm_label": "1.1.6"
     },
@@ -3403,9 +3503,9 @@
       "label": "1.1.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L30",
+      "source_location": "L34",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_5",
+      "id": "changelog_1_1_5",
       "community": 0,
       "norm_label": "1.1.5"
     },
@@ -3413,9 +3513,9 @@
       "label": "1.1.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_4",
+      "id": "changelog_1_1_4",
       "community": 0,
       "norm_label": "1.1.4"
     },
@@ -3423,9 +3523,9 @@
       "label": "1.1.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L42",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_3",
+      "id": "changelog_1_1_3",
       "community": 0,
       "norm_label": "1.1.3"
     },
@@ -3433,9 +3533,9 @@
       "label": "1.1.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L47",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_2",
+      "id": "changelog_1_1_2",
       "community": 0,
       "norm_label": "1.1.2"
     },
@@ -3443,9 +3543,9 @@
       "label": "1.1.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L49",
+      "source_location": "L53",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_1",
+      "id": "changelog_1_1_1",
       "community": 0,
       "norm_label": "1.1.1"
     },
@@ -3453,9 +3553,9 @@
       "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_0",
+      "id": "changelog_1_1_0",
       "community": 0,
       "norm_label": "1.1.0"
     },
@@ -3463,9 +3563,9 @@
       "label": "1.0.41",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L60",
+      "source_location": "L64",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_41",
+      "id": "changelog_1_0_41",
       "community": 0,
       "norm_label": "1.0.41"
     },
@@ -3473,9 +3573,9 @@
       "label": "1.0.40",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L63",
+      "source_location": "L67",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_40",
+      "id": "changelog_1_0_40",
       "community": 0,
       "norm_label": "1.0.40"
     },
@@ -3483,9 +3583,9 @@
       "label": "1.0.39",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L67",
+      "source_location": "L71",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_39",
+      "id": "changelog_1_0_39",
       "community": 0,
       "norm_label": "1.0.39"
     },
@@ -3493,9 +3593,9 @@
       "label": "1.0.38",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L70",
+      "source_location": "L74",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_38",
+      "id": "changelog_1_0_38",
       "community": 0,
       "norm_label": "1.0.38"
     },
@@ -3503,9 +3603,9 @@
       "label": "1.0.37",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L73",
+      "source_location": "L77",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_37",
+      "id": "changelog_1_0_37",
       "community": 0,
       "norm_label": "1.0.37"
     },
@@ -3513,9 +3613,9 @@
       "label": "1.0.36",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L77",
+      "source_location": "L81",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_36",
+      "id": "changelog_1_0_36",
       "community": 0,
       "norm_label": "1.0.36"
     },
@@ -3523,9 +3623,9 @@
       "label": "1.0.35",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L81",
+      "source_location": "L85",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_35",
+      "id": "changelog_1_0_35",
       "community": 0,
       "norm_label": "1.0.35"
     },
@@ -3533,9 +3633,9 @@
       "label": "1.0.34",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L86",
+      "source_location": "L90",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_34",
+      "id": "changelog_1_0_34",
       "community": 0,
       "norm_label": "1.0.34"
     },
@@ -3543,9 +3643,9 @@
       "label": "1.0.33",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L90",
+      "source_location": "L94",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_33",
+      "id": "changelog_1_0_33",
       "community": 0,
       "norm_label": "1.0.33"
     },
@@ -3553,9 +3653,9 @@
       "label": "1.0.32",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L98",
+      "source_location": "L102",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_32",
+      "id": "changelog_1_0_32",
       "community": 0,
       "norm_label": "1.0.32"
     },
@@ -3563,9 +3663,9 @@
       "label": "1.0.25",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L104",
+      "source_location": "L108",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_25",
+      "id": "changelog_1_0_25",
       "community": 0,
       "norm_label": "1.0.25"
     },
@@ -3573,9 +3673,9 @@
       "label": "1.0.24",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L111",
+      "source_location": "L115",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_24",
+      "id": "changelog_1_0_24",
       "community": 0,
       "norm_label": "1.0.24"
     },
@@ -3583,9 +3683,9 @@
       "label": "1.0.23",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L117",
+      "source_location": "L121",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_23",
+      "id": "changelog_1_0_23",
       "community": 0,
       "norm_label": "1.0.23"
     },
@@ -3593,9 +3693,9 @@
       "label": "1.0.22",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L123",
+      "source_location": "L127",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_22",
+      "id": "changelog_1_0_22",
       "community": 0,
       "norm_label": "1.0.22"
     },
@@ -3603,9 +3703,9 @@
       "label": "1.0.21",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L128",
+      "source_location": "L132",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_21",
+      "id": "changelog_1_0_21",
       "community": 0,
       "norm_label": "1.0.21"
     },
@@ -3613,9 +3713,9 @@
       "label": "1.0.20",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L137",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_20",
+      "id": "changelog_1_0_20",
       "community": 0,
       "norm_label": "1.0.20"
     },
@@ -3623,9 +3723,9 @@
       "label": "1.0.19",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L140",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_19",
+      "id": "changelog_1_0_19",
       "community": 0,
       "norm_label": "1.0.19"
     },
@@ -3633,9 +3733,9 @@
       "label": "1.0.17",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L143",
+      "source_location": "L147",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_17",
+      "id": "changelog_1_0_17",
       "community": 0,
       "norm_label": "1.0.17"
     },
@@ -3643,9 +3743,9 @@
       "label": "1.0.16",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L149",
+      "source_location": "L153",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_16",
+      "id": "changelog_1_0_16",
       "community": 0,
       "norm_label": "1.0.16"
     },
@@ -3653,9 +3753,9 @@
       "label": "1.0.15",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L153",
+      "source_location": "L157",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_15",
+      "id": "changelog_1_0_15",
       "community": 0,
       "norm_label": "1.0.15"
     },
@@ -3663,9 +3763,9 @@
       "label": "1.0.14",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L157",
+      "source_location": "L161",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_14",
+      "id": "changelog_1_0_14",
       "community": 0,
       "norm_label": "1.0.14"
     },
@@ -3673,9 +3773,9 @@
       "label": "0.0.1-beta.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L161",
+      "source_location": "L165",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_6",
+      "id": "changelog_0_0_1_beta_6",
       "community": 0,
       "norm_label": "0.0.1-beta.6"
     },
@@ -3683,9 +3783,9 @@
       "label": "0.0.1-beta.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L166",
+      "source_location": "L170",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_5",
+      "id": "changelog_0_0_1_beta_5",
       "community": 0,
       "norm_label": "0.0.1-beta.5"
     },
@@ -3693,9 +3793,9 @@
       "label": "0.0.1-beta.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L171",
+      "source_location": "L175",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_4",
+      "id": "changelog_0_0_1_beta_4",
       "community": 0,
       "norm_label": "0.0.1-beta.4"
     },
@@ -3703,9 +3803,9 @@
       "label": "0.0.1-beta.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L175",
+      "source_location": "L179",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_3",
+      "id": "changelog_0_0_1_beta_3",
       "community": 0,
       "norm_label": "0.0.1-beta.3"
     },
@@ -3713,9 +3813,9 @@
       "label": "0.0.1-beta.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L179",
+      "source_location": "L183",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_2",
+      "id": "changelog_0_0_1_beta_2",
       "community": 0,
       "norm_label": "0.0.1-beta.2"
     },
@@ -3723,9 +3823,9 @@
       "label": "0.0.1-beta.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L182",
+      "source_location": "L186",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_1",
+      "id": "changelog_0_0_1_beta_1",
       "community": 0,
       "norm_label": "0.0.1-beta.1"
     },
@@ -3735,8 +3835,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_md",
-      "community": 9,
+      "id": "readme",
+      "community": 11,
       "norm_label": "readme.md"
     },
     {
@@ -3745,8 +3845,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "community": 9,
+      "id": "readme_utility_core",
+      "community": 11,
       "norm_label": "utility core"
     },
     {
@@ -3755,48 +3855,48 @@
       "source_file": "README.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_features",
-      "community": 9,
+      "id": "readme_features",
+      "community": 11,
       "norm_label": "features"
     },
     {
       "label": "Requirements",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_requirements",
-      "community": 9,
+      "id": "readme_requirements",
+      "community": 11,
       "norm_label": "requirements"
     },
     {
       "label": "Spawn Schematic (opt-in)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_spawn_schematic_opt_in",
-      "community": 9,
+      "id": "readme_spawn_schematic_opt_in",
+      "community": 11,
       "norm_label": "spawn schematic (opt-in)"
     },
     {
       "label": "Known Incompatibilities",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_known_incompatibilities",
-      "community": 9,
+      "id": "readme_known_incompatibilities",
+      "community": 11,
       "norm_label": "known incompatibilities"
     },
     {
       "label": "Build",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_build",
-      "community": 9,
+      "id": "readme_build",
+      "community": 11,
       "norm_label": "build"
     },
     {
@@ -3925,8 +4025,8 @@
       "source_file": "docs/curseforge/project_description.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_docs_curseforge_project_description_md",
-      "community": 22,
+      "id": "docs_curseforge_project_description",
+      "community": 18,
       "norm_label": "project_description.md"
     },
     {
@@ -4398,6 +4498,16 @@
       "id": "g_proyectos_mods_minecraft_utility_core_26_1_2_docs_curseforge_versions_1_6_0_md",
       "community": 118,
       "norm_label": "1.6.0.md"
+    },
+    {
+      "label": "1.7.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.7.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_7_0",
+      "community": 21,
+      "norm_label": "1.7.0.md"
     }
   ],
   "links": [
@@ -4454,23 +4564,124 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L5",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java",
+      "source_location": "L7",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_java",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L53",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java",
+      "source_location": "L7",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_java",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode",
+      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinTBScreen.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_mixin_mixintbscreen_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_compat_outpostzerocompat_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinCraftingMenu.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixincraftingmenu_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinCraftingScreen.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinDamageContainer.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixindamagecontainer_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinItemInput.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixiniteminput_java",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_config",
       "confidence_score": 1.0
     },
     {
@@ -4480,18 +4691,38 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_java",
+      "source": "src_main_java_com_skd_utilitycore_config",
       "target": "modconfigspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_config",
+      "target": "src_main_java_com_skd_utilitycore_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_config",
+      "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L108",
+      "source_location": "L113",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
       "target": "booleanvalue",
       "confidence_score": 1.0
     },
@@ -4502,8 +4733,19 @@
       "source_location": "L6",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
       "target": "builder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
+      "source_location": "L118",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
+      "target": "configvalue",
       "confidence_score": 1.0
     },
     {
@@ -4513,19 +4755,8 @@
       "source_location": "L58",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
       "target": "enumvalue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L58",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "confidence_score": 1.0
     },
     {
@@ -4535,7 +4766,7 @@
       "source_location": "L83",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
       "target": "intvalue",
       "confidence_score": 1.0
     },
@@ -4543,11 +4774,22 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L113",
+      "source_location": "L123",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_config",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
       "target": "modconfigspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/Config.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_config_config",
+      "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "confidence_score": 1.0
     },
     {
@@ -4556,8 +4798,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L55",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
+      "source": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
+      "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
       "confidence_score": 1.0
     },
     {
@@ -4566,8 +4808,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
       "source_location": "L54",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
+      "source": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
+      "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
       "confidence_score": 1.0
     },
     {
@@ -4723,10 +4965,76 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnprotectionhandler_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/attachment/ModAttachments.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_attachment_modattachments_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_compat_outpostzerocompat_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/network/SelectRecipePacket.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_selectrecipepacket_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/network/SyncRecipesPacket.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_syncrecipespacket_java",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager",
       "confidence_score": 1.0
     },
@@ -4737,18 +5045,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
       "confidence_score": 1.0
     },
     {
@@ -4758,7 +5056,7 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L19",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
       "target": "registercommandsevent",
       "confidence_score": 1.0
     },
@@ -4769,7 +5067,7 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L21",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
       "target": "serverstartedevent",
       "confidence_score": 1.0
     },
@@ -4780,8 +5078,73 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L22",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_java",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
       "target": "serverstoppingevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_ieventbus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_mod",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_modcontainer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
       "confidence_score": 1.0
     },
     {
@@ -4791,7 +5154,7 @@
       "source_location": "L34",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager",
       "confidence_score": 1.0
     },
@@ -4802,78 +5165,100 @@
       "source_location": "L35",
       "weight": 1.0,
       "context": "field",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager",
       "confidence_score": 1.0
     },
     {
-      "relation": "method",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L55",
+      "source_location": "L32",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
+      "context": "field",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_mod",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L62",
+      "source_location": "L57",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L91",
+      "source_location": "L64",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L69",
+      "source_location": "L93",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L84",
+      "source_location": "L71",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L48",
+      "source_location": "L86",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L157",
+      "source_location": "L50",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
       "confidence_score": 1.0
     },
     {
@@ -4882,8 +5267,8 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L37",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
       "confidence_score": 1.0
     },
     {
@@ -4891,9 +5276,9 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager",
       "confidence_score": 1.0
     },
@@ -4902,21 +5287,10 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L45",
+      "source_location": "L47",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
       "confidence_score": 1.0
     },
     {
@@ -4927,29 +5301,40 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L40",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
       "target": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_modnetwork_modnetwork_register"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_tick"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L48",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "target": "post",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_ieventbus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_modcontainer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_utilitycore",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_registertombstoneerrorhandler",
       "confidence_score": 1.0
     },
     {
@@ -4958,19 +5343,107 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L58",
+      "source_location": "L53",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_tick"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "target": "post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L86",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_onplayerjoin"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L55",
+      "source_location": "L57",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerjoin",
       "target": "playerloggedinevent",
       "confidence_score": 1.0
     },
@@ -4980,19 +5453,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L65",
+      "source_location": "L67",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_onplayerleave"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L62",
+      "source_location": "L64",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onplayerleave",
       "target": "playerloggedoutevent",
       "confidence_score": 1.0
     },
@@ -5002,9 +5475,9 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_totalgenerated"
     },
     {
@@ -5013,19 +5486,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L80",
+      "source_location": "L82",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_schematic_spawnschematicmanager_spawnschematicmanager_onserverstarted"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L69",
+      "source_location": "L71",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstarted",
       "target": "serverstartedevent",
       "confidence_score": 1.0
     },
@@ -5035,19 +5508,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L87",
+      "source_location": "L89",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_onserverstopping"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L84",
+      "source_location": "L86",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onserverstopping",
       "target": "serverstoppingevent",
       "confidence_score": 1.0
     },
@@ -5057,54 +5530,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L104",
+      "source_location": "L106",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_ispaused"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L103",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_isrunning"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L121",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_pause"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L139",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_reset"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L130",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_stop"
     },
     {
       "relation": "calls",
@@ -5114,17 +5543,61 @@
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
       "source_location": "L105",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_isrunning"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_pause"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_reset"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_stop"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_totalgenerated"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
-      "source_location": "L91",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
+      "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onregistercommands",
       "target": "registercommandsevent",
       "confidence_score": 1.0
     },
@@ -6258,6 +6731,123 @@
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_loadstate",
       "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_compat_chunkgenmanager_chunkgenmanager_totalgenerated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "addpackfindersevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "pack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_java_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_datapackfolderloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_loadpacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_onaddpackfinders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_java_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_onaddpackfinders",
+      "target": "addpackfindersevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_onaddpackfinders",
+      "target": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_loadpacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader_datapackfolderloader_loadpacks",
+      "target": "pack",
       "confidence_score": 1.0
     },
     {
@@ -8800,18 +9390,28 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_md",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
+      "source": "changelog",
+      "target": "changelog_utility_core_registro_de_cambios",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L182",
+      "source_location": "L186",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_1",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_2",
       "confidence_score": 1.0
     },
     {
@@ -8820,8 +9420,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L179",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_2",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_3",
       "confidence_score": 1.0
     },
     {
@@ -8830,28 +9430,28 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L175",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_3",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_4",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L171",
+      "source_location": "L170",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_4",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_5",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L166",
+      "source_location": "L165",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_5",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_0_0_1_beta_6",
       "confidence_score": 1.0
     },
     {
@@ -8860,8 +9460,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L161",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_0_0_1_beta_6",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_14",
       "confidence_score": 1.0
     },
     {
@@ -8870,8 +9470,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L157",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_14",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_15",
       "confidence_score": 1.0
     },
     {
@@ -8880,108 +9480,108 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L153",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_15",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_16",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L149",
+      "source_location": "L147",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_16",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_17",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L143",
+      "source_location": "L140",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_17",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_19",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L137",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_19",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_20",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L132",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_20",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_21",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L128",
+      "source_location": "L127",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_21",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_22",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L123",
+      "source_location": "L121",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_22",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_23",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L117",
+      "source_location": "L115",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_23",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_24",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L111",
+      "source_location": "L108",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_24",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_25",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L104",
+      "source_location": "L102",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_25",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_32",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L98",
+      "source_location": "L94",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_32",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_33",
       "confidence_score": 1.0
     },
     {
@@ -8990,18 +9590,18 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L90",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_33",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_34",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_34",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_35",
       "confidence_score": 1.0
     },
     {
@@ -9010,8 +9610,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L81",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_35",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_36",
       "confidence_score": 1.0
     },
     {
@@ -9020,28 +9620,28 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L77",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_36",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_37",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_37",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_38",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_38",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_39",
       "confidence_score": 1.0
     },
     {
@@ -9050,98 +9650,98 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L67",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_39",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_40",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L63",
+      "source_location": "L64",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_40",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_0_41",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L60",
+      "source_location": "L58",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_0_41",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_0",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L54",
+      "source_location": "L53",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_0",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_1",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L49",
+      "source_location": "L47",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_1",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_2",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_2",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_3",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_3",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_4",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L35",
+      "source_location": "L34",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_4",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_5",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_5",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_6",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_6",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_1_7",
       "confidence_score": 1.0
     },
     {
@@ -9150,28 +9750,28 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L22",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_1_7",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_2_0",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L14",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_2_0",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_5_0",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_5_0",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_5_1",
       "confidence_score": 1.0
     },
     {
@@ -9180,8 +9780,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_5_1",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_6_0",
       "confidence_score": 1.0
     },
     {
@@ -9190,8 +9790,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_utility_core_registro_de_cambios",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_changelog_1_6_0",
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_1_7_0",
       "confidence_score": 1.0
     },
     {
@@ -9200,18 +9800,18 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_md",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
+      "source": "readme",
+      "target": "readme_utility_core",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_build",
+      "source": "readme_utility_core",
+      "target": "readme_build",
       "confidence_score": 1.0
     },
     {
@@ -9220,38 +9820,38 @@
       "source_file": "README.md",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_features",
+      "source": "readme_utility_core",
+      "target": "readme_features",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_known_incompatibilities",
+      "source": "readme_utility_core",
+      "target": "readme_known_incompatibilities",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_requirements",
+      "source": "readme_utility_core",
+      "target": "readme_requirements",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_utility_core",
-      "target": "g_proyectos_mods_minecraft_utility_core_26_1_2_readme_spawn_schematic_opt_in",
+      "source": "readme_utility_core",
+      "target": "readme_spawn_schematic_opt_in",
       "confidence_score": 1.0
     },
     {
@@ -9546,5 +10146,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "19a981a1da31bc531d312d57c1050da4d937f103"
+  "built_at_commit": "4d178bf5bea1a963dab9fba825e6f27d1d937b04"
 }

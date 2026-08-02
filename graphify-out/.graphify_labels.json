@@ -21,7 +21,6 @@
   "19": "Utility Core",
   "20": "Utility Core 1.0.20",
   "21": "Utility Core 1.0.21",
-  "22": "project_description.md",
   "23": "1.0.22.md",
   "24": "1.0.23.md",
   "25": "1.0.24.md",
@@ -139,10 +138,5 @@
   "137": "CallbackInfo",
   "138": "Inject",
   "139": "Mixin",
-  "140": "Unique",
-  "141": "IEventBus",
-  "142": "Logger",
-  "143": "Mod",
-  "144": "ModContainer",
-  "145": "SubscribeEvent"
+  "140": "Unique"
 }
