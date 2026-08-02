@@ -5,9 +5,13 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.Config;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.network.ServerConfigurationPacketListenerImpl;
+import net.minecraft.server.network.ServerLoginPacketListenerImpl;
 import net.minecraft.util.Util;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
@@ -33,6 +37,8 @@ public class ChunkGenManager {
     private final Map<String, DimState> dims = new HashMap<>();
     private boolean running = false;
     private boolean paused = false;
+    private boolean restPhase = false;
+    private long phaseStartMillis = 0L;
     private int dimIndex = 0;
     private int ticksSinceLastLog = 0;
 
@@ -55,6 +61,8 @@ public class ChunkGenManager {
 
     private Field tickField;
     private boolean tickFieldSearched = false;
+    private Field listenerField;
+    private boolean listenerFieldSearched = false;
 
     public ChunkGenManager() {
         loadState();
@@ -64,24 +72,26 @@ public class ChunkGenManager {
         if (!Config.CHUNK_GEN_ENABLED.get()) return;
 
         int playerCount = server.getPlayerCount();
+        boolean joining = hasJoiningConnection(server);
 
         if (!running) {
-            if (playerCount == 0) {
+            if (playerCount == 0 && !joining) {
                 start(server);
             }
             return;
         }
 
-        if (playerCount > 0 && !Config.CHUNK_GEN_RUN_WITH_PLAYERS.get()) {
+        if ((playerCount > 0 || joining) && !Config.CHUNK_GEN_RUN_WITH_PLAYERS.get()) {
             if (!paused) {
                 paused = true;
-                LOGGER.info("[ChunkGen] Player joined, pausing generation");
+                LOGGER.info("[ChunkGen] Player detected, pausing generation");
             }
             return;
         }
 
         if (paused) {
             paused = false;
+            phaseStartMillis = Util.getMillis();
             LOGGER.info("[ChunkGen] No more players, resuming generation");
         }
 
@@ -89,10 +99,39 @@ public class ChunkGenManager {
             keepAlive(server);
         }
 
+        // Duty cycle: loadSeconds of generation, then restSeconds of rest (wall-clock).
+        long now = Util.getMillis();
+        int loadSecs = Math.max(1, Config.CHUNK_GEN_LOAD_SECONDS.get());
+        int restSecs = Math.max(0, Config.CHUNK_GEN_REST_SECONDS.get());
+
+        if (!restPhase) {
+            if (now - phaseStartMillis >= (long) loadSecs * 1000L) {
+                restPhase = true;
+                phaseStartMillis = now;
+                LOGGER.info("[ChunkGen] Duty cycle: loaded for {}s, entering {}s rest period", loadSecs, restSecs);
+                return;
+            }
+        } else if (restSecs <= 0 || now - phaseStartMillis >= (long) restSecs * 1000L) {
+            restPhase = false;
+            phaseStartMillis = now;
+            LOGGER.info("[ChunkGen] Duty cycle: rest period over, resuming loading for {}s", loadSecs);
+        } else {
+            return;
+        }
+
         int chunksPerTick = Config.CHUNK_GEN_CHUNKS_PER_TICK.get();
         int maxRadius = Config.CHUNK_GEN_MAX_RADIUS.get();
 
         for (int i = 0; i < chunksPerTick; i++) {
+            if (i % 5 == 0) {
+                int pc = server.getPlayerCount();
+                if (pc > 0 || hasJoiningConnection(server)) {
+                    paused = true;
+                    phaseStartMillis = 0L;
+                    LOGGER.info("[ChunkGen] Player detected mid-batch, aborting generation");
+                    return;
+                }
+            }
             String dim = nextDimension();
             if (dim == null) return;
 
@@ -152,6 +191,44 @@ public class ChunkGenManager {
         return list;
     }
 
+    // A player counts as "present" as soon as their connection reaches the
+    // login/config handshake, so chunk generation stops before the world download.
+    private boolean hasJoiningConnection(MinecraftServer server) {
+        if (server.getConnection() == null) return false;
+        try {
+            Connection[] conns = server.getConnection().getConnections().toArray(new Connection[0]);
+            for (Connection c : conns) {
+                if (c == null || !c.isConnected()) continue;
+                if (c.getReceiving() != PacketFlow.SERVERBOUND) continue;
+                Object listener = readPacketListener(c);
+                if (listener instanceof ServerConfigurationPacketListenerImpl
+                        || listener instanceof ServerLoginPacketListenerImpl) {
+                    return true;
+                }
+            }
+        } catch (Exception ignored) {}
+        return false;
+    }
+
+    private Object readPacketListener(Connection c) {
+        if (!listenerFieldSearched) {
+            listenerFieldSearched = true;
+            try {
+                Field f = Connection.class.getDeclaredField("packetListener");
+                f.setAccessible(true);
+                listenerField = f;
+            } catch (Exception ignored) {
+                listenerField = null;
+            }
+        }
+        if (listenerField == null) return null;
+        try {
+            return listenerField.get(c);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
     private void start(MinecraftServer server) {
         boolean[] configs = {
             Config.CHUNK_GEN_DIMENSION_OVERWORLD.get(),
@@ -179,14 +256,20 @@ public class ChunkGenManager {
 
         running = true;
         paused = false;
+        restPhase = false;
+        phaseStartMillis = Util.getMillis();
         dimIndex = 0;
-        LOGGER.info("[ChunkGen] Auto-starting. Dimensions: {}", String.join(", ", activeDimensions()));
+        LOGGER.info("[ChunkGen] Auto-starting. Duty cycle: {}s load / {}s rest. Dimensions: {}",
+                Config.CHUNK_GEN_LOAD_SECONDS.get(), Config.CHUNK_GEN_REST_SECONDS.get(),
+                String.join(", ", activeDimensions()));
         saveState();
     }
 
     private void stopAll() {
         running = false;
         paused = false;
+        restPhase = false;
+        phaseStartMillis = 0L;
         LOGGER.info("[ChunkGen] All dimensions completed");
         saveState();
     }
@@ -194,6 +277,7 @@ public class ChunkGenManager {
     public void pause() {
         if (!running) return;
         paused = true;
+        phaseStartMillis = Util.getMillis();
         LOGGER.info("[ChunkGen] Generation paused");
         saveState();
     }
@@ -202,6 +286,8 @@ public class ChunkGenManager {
         if (!running) return;
         running = false;
         paused = false;
+        restPhase = false;
+        phaseStartMillis = 0L;
         LOGGER.info("[ChunkGen] Generation stopped");
         saveState();
     }
@@ -210,12 +296,20 @@ public class ChunkGenManager {
         dims.clear();
         running = false;
         paused = false;
+        restPhase = false;
+        phaseStartMillis = 0L;
         LOGGER.info("[ChunkGen] Progress reset for all dimensions");
         saveState();
     }
 
     public void onPlayerJoin() {
-        LOGGER.info("[ChunkGen] Player joined. Total generated: {} chunks", totalGenerated());
+        if (running) {
+            paused = true;
+            phaseStartMillis = 0L;
+            LOGGER.info("[ChunkGen] Player joined. Total generated: {} chunks. Pausing generation", totalGenerated());
+        } else {
+            LOGGER.info("[ChunkGen] Player joined. Total generated: {} chunks", totalGenerated());
+        }
     }
 
     public void onPlayerLeave(MinecraftServer server) {
@@ -229,6 +323,7 @@ public class ChunkGenManager {
 
     public boolean isRunning() { return running; }
     public boolean isPaused() { return paused; }
+    public boolean isRestPhase() { return restPhase; }
     public long totalGenerated() {
         return dims.values().stream().mapToLong(s -> s.totalGenerated).sum();
     }

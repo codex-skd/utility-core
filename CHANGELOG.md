@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.8.0
+- Nueva feature: ChunkGen con **ciclo de trabajo por bloques**. Ahora la generación automática de chunks trabaja en bloques de tiempo real: `chunkGen.loadSeconds` (default 600 = 10 min) cargando chunks y `chunkGen.restSeconds` (default 300 = 5 min) de descanso sin generar, para dar respiros periódicos al servidor. El ciclo se mide por tiempo real (no por ticks), porque durante la generación el servidor va a TPS bajos.
+- Mejora: el ChunkGen ahora **pausa sí o sí cuando entra un jugador**. Antes solo miraba `server.getPlayerCount()`, que no cuenta al jugador hasta que termina el login; ahora detecta la conexión en cuanto empieza el *handshake* login/configuración (vía `ServerLoginPacketListenerImpl`/`ServerConfigurationPacketListenerImpl`) y aborta la generación incluso a mitad de un lote (`chunksPerTick`) de chunks. `onPlayerJoin` también fuerza la pausa directamente.
+
 ## 1.7.0
 - Nueva feature: Data Pack Folder. Carga automáticamente todos los datapacks (`.zip` o carpeta con `pack.mcmeta`) situados en `<game-dir>/datapacks` en todos los mundos, como el mod Global Packs. Los packs se registran con `required=true`, así que quedan siempre activos sin activarlos mundo a mundo. Funciona en servidores dedicados y en single-player. Config: `dataPackFolder.enabled` (default false) y `dataPackFolder.path` (default `datapacks`).
 
