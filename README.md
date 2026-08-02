@@ -47,7 +47,8 @@ Loads every datapack (`.zip` file or folder containing a `pack.mcmeta`) placed i
 
 Pre-generates chunks in a spiral pattern from (0,0) when the server is empty, so exploration doesn't lag. Multi-dimension support.
 
-- **Auto-pause**: stops when a player joins, resumes when they leave (unless `chunkGen.runWithPlayers`).
+- **Guaranteed auto-pause**: stops as soon as a player starts connecting (login/config handshake), not just after they fully join, so the world download is never starved. Resumes when they leave (unless `chunkGen.runWithPlayers`).
+- **Duty cycle**: generation works in wall-clock blocks — `chunkGen.loadSeconds` of loading followed by `chunkGen.restSeconds` of rest, giving the server periodic breaks.
 - **Progress persistence**: survives restarts and crashes.
 - **Commands**: `/utilitycore chunkgen status`, `start`, `pause`, `stop`, `reset`.
 
@@ -79,6 +80,8 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `chunkGen.dimensionEnd` | false | Pre-generate The End. |
 | `chunkGen.runWithPlayers` | false | Keep generating while players are online. |
 | `chunkGen.keepAlive` | true | Prevent the 60s idle pause while generating. |
+| `chunkGen.loadSeconds` | 600 | Duty cycle: seconds of generation before a rest period (60-86400). |
+| `chunkGen.restSeconds` | 300 | Duty cycle: seconds of rest with no generation (0-86400). |
 | `dataPackFolder.enabled` | false | Auto-load global datapacks into every world. |
 | `dataPackFolder.path` | datapacks | Datapack folder, relative to the game directory. |
 
