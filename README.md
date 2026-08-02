@@ -43,6 +43,45 @@ Loads every datapack (`.zip` file or folder containing a `pack.mcmeta`) placed i
 - `dataPackFolder.path = "datapacks"` is the folder scanned, relative to the game directory.
 - Invalid datapacks (missing/broken `pack.mcmeta`) are skipped.
 
+## Automatic Chunk Pregeneration (ChunkGen)
+
+Pre-generates chunks in a spiral pattern from (0,0) when the server is empty, so exploration doesn't lag. Multi-dimension support.
+
+- **Auto-pause**: stops when a player joins, resumes when they leave (unless `chunkGen.runWithPlayers`).
+- **Progress persistence**: survives restarts and crashes.
+- **Commands**: `/utilitycore chunkgen status`, `start`, `pause`, `stop`, `reset`.
+
+## Configuration
+
+All options live in `config/utility_core-common.toml` (also editable from the in-game mod menu). Every feature can be toggled individually.
+
+| Config | Default | Description |
+|---|---|---|
+| `enableCraftingRecipeSelector` | true | Recipe conflict selector in the crafting grid. Incompatible with Fast Workbench. |
+| `maxRecipesDisplayed` | 16 | Max alternative recipes shown in the selector (1-64). |
+| `logDetectedConflicts` | false | Log recipe conflicts to the console. |
+| `enableNegativeDamageFix` | true | Clamps negative damage to 0 (Apothic + Tombstone crash fix). |
+| `enableBiomeDimensionTitles` | true | Title when entering a new biome/dimension (client). |
+| `titleVerticalOffset` | 75 | Vertical shift of the title from screen center (-200..200). |
+| `enableTombstoneGuiScaleFix` | true | Restores GUI scale after Tombstone screens. |
+| `enableTombstoneItemInitFix` | true | Fixes NBT on Tombstone items given via `/give`. |
+| `enableTombstoneErrorHandler` | true | Suppresses Tombstone mixin errors at startup. |
+| `enableOutpostZeroDamageCap` | true | Caps OutpostZero infection damage to prevent instant death. |
+| `enableSpawnSchematic` | false | Paste + protect a spawn schematic on new worlds. |
+| `spawnSchematic.heightMode` | SURFACE | `SURFACE` = align to ground, `FIXED` = absolute Y. |
+| `spawnSchematic.surfaceOffset` | 70 | Blocks above the ground in `SURFACE` mode. |
+| `spawnSchematic.fixedY` | 64 | Absolute Y in `FIXED` mode. |
+| `chunkGen.enabled` | false | Enable automatic chunk pregeneration. |
+| `chunkGen.chunksPerTick` | 1 | Chunks generated per tick (1-300). |
+| `chunkGen.maxRadius` | 0 | Max radius in chunks (0 = unlimited). |
+| `chunkGen.dimensionOverworld` | true | Pre-generate the Overworld. |
+| `chunkGen.dimensionNether` | false | Pre-generate the Nether. |
+| `chunkGen.dimensionEnd` | false | Pre-generate The End. |
+| `chunkGen.runWithPlayers` | false | Keep generating while players are online. |
+| `chunkGen.keepAlive` | true | Prevent the 60s idle pause while generating. |
+| `dataPackFolder.enabled` | false | Auto-load global datapacks into every world. |
+| `dataPackFolder.path` | datapacks | Datapack folder, relative to the game directory. |
+
 ## Known Incompatibilities
 
 - **Fast Workbench (fastbench)**: Conflicts with the recipe selection system. Uninstall it to use this feature.
@@ -54,3 +93,8 @@ gradlew build
 ```
 
 The jar will be generated at `build/libs/utility_core-<minecraft_version>-neoforge-<version>.jar`.
+
+## Credits
+
+- Biome/Dimension Titles logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
+- Developed by **Stalking Dragons** — [https://codex.skdragons.com/](https://codex.skdragons.com/).
