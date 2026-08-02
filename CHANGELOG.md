@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.8.0
+- Nueva feature: ChunkGen con **ciclo de trabajo por bloques** (portado desde la rama 26.2). Ahora la generación automática de chunks trabaja en bloques de tiempo real: `chunkGen.loadSeconds` (default 600 = 10 min) cargando chunks y `chunkGen.restSeconds` (default 300 = 5 min) de descanso sin generar, para dar respiros periódicos al servidor. El ciclo se mide por tiempo real (no por ticks), porque durante la generación el servidor va a TPS bajos.
+- Mejora: el ChunkGen ahora **pausa sí o sí cuando entra un jugador**. Antes solo miraba `server.getPlayerCount()`, que no cuenta al jugador hasta que termina el login; ahora detecta la conexión en cuanto empieza el *handshake* login/configuración (vía `ServerLoginPacketListenerImpl`/`ServerConfigurationPacketListenerImpl`) y aborta la generación incluso a mitad de un lote (`chunksPerTick`) de chunks. `onPlayerJoin` también fuerza la pausa directamente.
+
 ## 1.7.1
 - Nueva feature: títulos de bioma/dimensión, portados desde la rama 26.2 (paridad de features). Muestra un título vanilla al entrar en un bioma o dimensión nuevos (`enableBiomeDimensionTitles`, default true; `titleVerticalOffset`, default 75). Lógica portada de [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) de YUNGNICKYOUNG (LGPLv3).
 
