@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
-    "mtime": 1785489193.4979608,
-    "ast_hash": "9f8f0a336b00592fd04474e6da75e78d",
+    "mtime": 1785626678.1467469,
+    "ast_hash": "a2ee8dd490548b77a8cec6756de0e509",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
@@ -340,8 +340,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/LegacyBlockMap.java": {
-    "mtime": 1785623159.0145943,
-    "ast_hash": "c72b6cf1dc702bb0e5ac6efe5b777078",
+    "mtime": 1785671375.3949738,
+    "ast_hash": "16f42fc03cab81d08a836379758657d9",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.6.0.md": {
