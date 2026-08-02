@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.7.0
+- Nueva feature: Data Pack Folder. Carga automáticamente todos los datapacks (`.zip` o carpeta con `pack.mcmeta`) situados en `<game-dir>/datapacks` en todos los mundos, como el mod Global Packs. Los packs se registran con `required=true`, así que quedan siempre activos sin activarlos mundo a mundo. Funciona en servidores dedicados y en single-player. Config: `dataPackFolder.enabled` (default false) y `dataPackFolder.path` (default `datapacks`).
+
 ## 1.6.1
 - Fix: bloques incorrectos al pegar esquemas legacy `.schematic`. `LegacyBlockMap` pasaba el metadata completo a los índices de variante sin enmascarar los bits — troncos/log2 (bits de eje), losas (bit de mitad superior), plantas dobles (bit de mitad), huevos de monstruo y cabezas (bits altos) resolvían al bloque equivocado (p. ej. una losa de piedra salía como cuarzo, o un tronco de roble como jungla). Ahora el índice de variante se enmascara correctamente (`data & 7` / `& 3` / `& 1`).
 
