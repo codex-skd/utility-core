@@ -53,6 +53,14 @@
 <li><strong>Commands</strong>: <code>/utilitycore chunkgen status</code>, <code>start</code>, <code>pause</code>, <code>stop</code>, <code>reset</code></li>
 </ul>
 
+<h3>&#128230; Data Pack Folder (Opt-in)</h3>
+<p>Loads every datapack (<code>.zip</code> or folder) placed in <code>&lt;game-dir&gt;/datapacks</code> into every world automatically, mirroring the Global Packs mod. Works on dedicated servers and in single-player; no per-world toggle needed (packs are always enabled).</p>
+<ul>
+<li><code>dataPackFolder.enabled</code> — master toggle (default false)</li>
+<li><code>dataPackFolder.path</code> — folder scanned, relative to the game directory (default <code>datapacks</code>)</li>
+<li>Invalid datapacks (missing/broken <code>pack.mcmeta</code>) are skipped</li>
+</ul>
+
 <h3>&#9762;&#65039; Corail Tombstone Compatibility</h3>
 <ul>
 <li>Suppresses incompatible mixin errors from Tombstone 9.x</li>
@@ -88,6 +96,8 @@
 <tr><td><code>chunkGen.dimensionEnd</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in The End.</td></tr>
 <tr><td><code>chunkGen.runWithPlayers</code></td><td>false</td><td>Vanilla / All</td><td>If true, generation continues even when players are online. If false, pauses on player join.</td></tr>
 <tr><td><code>chunkGen.keepAlive</code></td><td>true</td><td>Vanilla / All</td><td>Prevents the dedicated server from idling (60s timeout) while chunks are being generated.</td></tr>
+<tr><td><code>dataPackFolder.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Auto-loads every datapack from <code>&lt;game-dir&gt;/&lt;dataPackFolder.path&gt;</code> into all worlds (always enabled). Like Global Packs for datapacks.</td></tr>
+<tr><td><code>dataPackFolder.path</code></td><td>datapacks</td><td>Vanilla / All</td><td>Folder (relative to the game directory) scanned for datapacks when <code>dataPackFolder.enabled</code> is true.</td></tr>
 </table>
 
 <br>
