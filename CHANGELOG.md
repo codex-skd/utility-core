@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.7.0
+- Nueva feature: Data Pack Folder. Carga automáticamente todos los datapacks (`.zip` o carpeta con `pack.mcmeta`) situados en `<game-dir>/datapacks` en todos los mundos, como el mod Global Packs. Los packs se registran con `required=true`, así que quedan siempre activos sin activarlos mundo a mundo. Funciona en servidores dedicados y en single-player. Config: `dataPackFolder.enabled` (default false) y `dataPackFolder.path` (default `datapacks`).
+- Incluye el fix de 26.2 1.6.1 (no publicado en esta rama): `LegacyBlockMap` ahora enmascara los bits de variante de los esquemas legacy `.schematic`.
+
 ## 1.6.0
 - Nueva feature: el esquema de spawn por defecto es ahora un lobby que flota **70 bloques por encima del terreno** (`spawnSchematic.surfaceOffset` default 0 → 70). Esta rama también extrae ahora el esquema empaquetado automáticamente cuando falta el archivo.
 - Mejora: el lector ahora auto-detecta y parsea el formato legacy WorldEdit/MCEdit `.schematic` (`Materials=Alpha`: arrays `Blocks`/`Data`/`AddBlocks` + `TileEntities`), además de Sponge v2/v3. Nueva `LegacyBlockMap` traduce los IDs numéricos pre-1.13 + metadata a `BlockState` modernos (colores, losas, escaleras, troncos, raíles, etc.).
