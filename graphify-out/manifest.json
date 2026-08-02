@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785675071.632158,
-    "ast_hash": "2d0f0a0a246aff878405a4d5fdf723a4",
+    "mtime": 1785711372.9184375,
+    "ast_hash": "fe1cce5337edc04b4e32063edd4b04db",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
-    "mtime": 1785359554.4777014,
-    "ast_hash": "f60dbf6562d647ef3d82251c3afe5741",
+    "mtime": 1785711368.0669186,
+    "ast_hash": "3d5e5defb1d51624075ec576fb237bf0",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785679564.0649369,
-    "ast_hash": "442e22271cc19314c619c8f2086ba552",
+    "mtime": 1785711384.5736845,
+    "ast_hash": "389234e5febf842ef61da36809a41ebd",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785675142.1609235,
-    "ast_hash": "4bf0587bdd2a6c6511aceeebfafaf6cb",
+    "mtime": 1785711399.7863264,
+    "ast_hash": "9e6c96c53894f36e9e89a4c7289d911b",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785675188.1902914,
-    "ast_hash": "bdb647866aa9b553cf7263b571dc2f2b",
+    "mtime": 1785679878.3867192,
+    "ast_hash": "c46cf71cb2b07f3cfa89de574af1b6a6",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
