@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785679582.391736,
-    "ast_hash": "d9221509dd1e0bbbd93bd9f628be433a",
+    "mtime": 1785680663.541537,
+    "ast_hash": "6a80ca37ec383d0cb3d0017a23a969eb",
     "semantic_hash": ""
   },
   "README.md": {
@@ -367,6 +367,11 @@
   "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
     "mtime": 1785680287.8371785,
     "ast_hash": "52081ddce3d98ca6869acf590ec6fd95",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.7.1.md": {
+    "mtime": 1785680657.1154652,
+    "ast_hash": "2d950eef0e79aebaafa358885c9ed1e2",
     "semantic_hash": ""
   }
 }

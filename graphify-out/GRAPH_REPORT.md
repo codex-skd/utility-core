@@ -1,16 +1,16 @@
 # Graph Report - 26.1.2  (2026-08-02)
 
 ## Corpus Check
-- 70 files · ~121,426 words
+- 71 files · ~121,579 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 474 nodes · 578 edges · 142 communities (48 shown, 94 thin omitted)
+- 476 nodes · 579 edges · 143 communities (49 shown, 94 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `00297ff6`
+- Built from commit: `670712f8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -129,7 +129,7 @@
 - Minecraft
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 41 edges
+1. `Utility Core — Registro de cambios` - 42 edges
 2. `ChunkGenManager` - 26 edges
 3. `LegacyBlockMap` - 18 edges
 4. `SpawnSchematicManager` - 16 edges
@@ -149,11 +149,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (142 total, 94 thin omitted)
+## Communities (143 total, 94 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.05
-Nodes (41): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+33 more)
+Nodes (42): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+34 more)
 
 ### Community 1 - "PolymorphClientHandler.java"
 Cohesion: 0.11
@@ -164,7 +164,7 @@ Cohesion: 0.16
 Nodes (5): CompoundTag, MarkerData, SpawnSchematicManager, SpongeSchematicReader, HolderLookup
 
 ### Community 3 - "PolymorphApi.java"
-Cohesion: 0.26
+Cohesion: 0.24
 Nodes (6): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnProtectionHandler
 
 ### Community 4 - "MixinCraftingMenu.java"
@@ -180,8 +180,8 @@ Cohesion: 0.10
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
-Cohesion: 0.18
-Nodes (4): Field, ChunkGenManager, DimState, RootState
+Cohesion: 0.17
+Nodes (5): Field, ChunkGenManager, DimState, RootState, RegisterCommandsEvent
 
 ### Community 9 - "MixinDamageContainer.java"
 Cohesion: 0.39
@@ -204,8 +204,8 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 14 - "EnderDragonRespawnHandler.java"
-Cohesion: 0.11
-Nodes (16): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, RegisterCommandsEvent, ServerStartedEvent (+8 more)
+Cohesion: 0.12
+Nodes (15): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, ServerStartedEvent, ServerStoppingEvent (+7 more)
 
 ### Community 16 - "TombstoneErrorHandler"
 Cohesion: 0.39
@@ -224,7 +224,7 @@ Cohesion: 0.29
 Nodes (3): Block, BlockState, LegacyBlockMap
 
 ## Knowledge Gaps
-- **78 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.7.0` (+73 more)
+- **79 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.7.1` (+74 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **94 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -236,11 +236,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ChunkGenManager` connect `UtilityCore.java` to `EnderDragonRespawnHandler.java`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
-  _78 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _79 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
-  _Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
