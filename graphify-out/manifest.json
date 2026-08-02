@@ -373,5 +373,10 @@
     "mtime": 1785680657.1154652,
     "ast_hash": "2d950eef0e79aebaafa358885c9ed1e2",
     "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.8.0.md": {
+    "mtime": 1785712036.2524939,
+    "ast_hash": "c616d5710cd034bc9c017238d54922d9",
+    "semantic_hash": ""
   }
 }

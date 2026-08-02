@@ -4828,6 +4828,16 @@
       "id": "docs_curseforge_versions_1_7_1",
       "community": 142,
       "norm_label": "1.7.1.md"
+    },
+    {
+      "label": "1.8.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.8.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_8_0",
+      "community": 120,
+      "norm_label": "1.8.0.md"
     }
   ],
   "links": [
@@ -11186,5 +11196,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0184ea0631b9711981bbb4b71baf394e43657f87"
+  "built_at_commit": "0d61cfcb139823c852dd22ec07e86491d6dc43e6"
 }
