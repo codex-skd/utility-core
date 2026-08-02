@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.6.1
+- Fix: bloques incorrectos al pegar esquemas legacy `.schematic`. `LegacyBlockMap` pasaba el metadata completo a los índices de variante sin enmascarar los bits — troncos/log2 (bits de eje), losas (bit de mitad superior), plantas dobles (bit de mitad), huevos de monstruo y cabezas (bits altos) resolvían al bloque equivocado (p. ej. una losa de piedra salía como cuarzo, o un tronco de roble como jungla). Ahora el índice de variante se enmascara correctamente (`data & 7` / `& 3` / `& 1`).
+
 ## 1.6.0
 - Nueva feature: el esquema de spawn por defecto es ahora un lobby que flota **70 bloques por encima del terreno** (`spawnSchematic.surfaceOffset` default 0 → 70). La rama 26.1.2 también extrae ahora el esquema empaquetado automáticamente cuando falta el archivo.
 - Mejora: el lector ahora auto-detecta y parsea el formato legacy WorldEdit/MCEdit `.schematic` (`Materials=Alpha`: arrays `Blocks`/`Data`/`AddBlocks` + `TileEntities`), además de Sponge v2/v3. Nueva `LegacyBlockMap` traduce los IDs numéricos pre-1.13 + metadata a `BlockState` modernos (colores, losas, escaleras, troncos, raíles, etc.).
