@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.7.1
+- Nueva feature: títulos de bioma/dimensión, portados desde la rama 26.2 (paridad de features). Muestra un título vanilla al entrar en un bioma o dimensión nuevos (`enableBiomeDimensionTitles`, default true; `titleVerticalOffset`, default 75). Lógica portada de [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) de YUNGNICKYOUNG (LGPLv3).
+
 ## 1.7.0
 - Nueva feature: Data Pack Folder. Carga automáticamente todos los datapacks (`.zip` o carpeta con `pack.mcmeta`) situados en `<game-dir>/datapacks` en todos los mundos, como el mod Global Packs. Los packs se registran con `required=true`, así que quedan siempre activos sin activarlos mundo a mundo. Funciona en servidores dedicados y en single-player. Config: `dataPackFolder.enabled` (default false) y `dataPackFolder.path` (default `datapacks`).
 - Incluye el fix de 26.2 1.6.1 (no publicado en esta rama): `LegacyBlockMap` ahora enmascara los bits de variante de los esquemas legacy `.schematic`.
