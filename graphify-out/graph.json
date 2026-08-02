@@ -133,7 +133,7 @@
       "label": "SpawnHeightMode",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L53",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "community": 10,
@@ -143,7 +143,7 @@
       "label": "SURFACE",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L54",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
       "community": 10,
@@ -153,7 +153,7 @@
       "label": "FIXED",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L55",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
       "community": 10,
@@ -385,7 +385,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "post",
+      "id": "src_main_java_com_skd_utilitycore_utilitycore_java_post",
       "community": 14,
       "norm_label": "post"
     },
@@ -825,8 +825,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "minecraft",
-      "community": 1,
+      "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_java_minecraft",
+      "community": 141,
       "norm_label": "minecraft"
     },
     {
@@ -988,6 +988,166 @@
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_inputschanged",
       "community": 1,
       "norm_label": ".inputschanged()"
+    },
+    {
+      "label": "BiomeDimensionTitleHandler.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "community": 22,
+      "norm_label": "biomedimensiontitlehandler.java"
+    },
+    {
+      "label": "BiomeDimensionTitleHandler",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "community": 22,
+      "norm_label": "biomedimensiontitlehandler"
+    },
+    {
+      "label": "EventBusSubscriber",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "community": 22,
+      "norm_label": "eventbussubscriber"
+    },
+    {
+      "label": "ResourceKey",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "community": 22,
+      "norm_label": "resourcekey"
+    },
+    {
+      "label": "Biome",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "biome",
+      "community": 22,
+      "norm_label": "biome"
+    },
+    {
+      "label": "Level",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "community": 22,
+      "norm_label": "level"
+    },
+    {
+      "label": ".onClientTick()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "community": 22,
+      "norm_label": ".onclienttick()"
+    },
+    {
+      "label": "Post",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_post",
+      "community": 22,
+      "norm_label": "post"
+    },
+    {
+      "label": "SubscribeEvent",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "community": 22,
+      "norm_label": "subscribeevent"
+    },
+    {
+      "label": ".biomeKey()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "community": 22,
+      "norm_label": ".biomekey()"
+    },
+    {
+      "label": "LocalPlayer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "localplayer",
+      "community": 22,
+      "norm_label": "localplayer"
+    },
+    {
+      "label": "Minecraft",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "community": 22,
+      "norm_label": "minecraft"
+    },
+    {
+      "label": ".biomeName()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "community": 22,
+      "norm_label": ".biomename()"
+    },
+    {
+      "label": "Component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "component",
+      "community": 22,
+      "norm_label": "component"
+    },
+    {
+      "label": ".dimensionName()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "community": 22,
+      "norm_label": ".dimensionname()"
+    },
+    {
+      "label": ".showTitle()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "community": 22,
+      "norm_label": ".showtitle()"
     },
     {
       "label": "ChunkGenManager.java",
@@ -2506,7 +2666,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java",
-      "community": 1,
+      "community": 10,
       "norm_label": "mixincraftingscreen.java"
     },
     {
@@ -2516,7 +2676,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_mixincraftingscreen",
-      "community": 1,
+      "community": 10,
       "norm_label": "mixincraftingscreen"
     },
     {
@@ -2620,13 +2780,63 @@
       "norm_label": "redirect"
     },
     {
+      "label": "MixinHud.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "community": 10,
+      "norm_label": "mixinhud.java"
+    },
+    {
+      "label": "MixinHud",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "community": 10,
+      "norm_label": "mixinhud"
+    },
+    {
+      "label": "Mixin",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "community": 10,
+      "norm_label": "mixin"
+    },
+    {
+      "label": ".modifyTitleTranslateY()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "community": 10,
+      "norm_label": ".modifytitletranslatey()"
+    },
+    {
+      "label": "ModifyArg",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "modifyarg",
+      "community": 10,
+      "norm_label": "modifyarg"
+    },
+    {
       "label": "MixinInventoryScreen.java",
       "file_type": "code",
       "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
       "source_location": "L1",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java",
-      "community": 1,
+      "community": 10,
       "norm_label": "mixininventoryscreen.java"
     },
     {
@@ -2636,7 +2846,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen",
-      "community": 1,
+      "community": 10,
       "norm_label": "mixininventoryscreen"
     },
     {
@@ -3863,7 +4073,7 @@
       "label": "Requirements",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L14",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "readme_requirements",
       "community": 11,
@@ -3873,17 +4083,47 @@
       "label": "Spawn Schematic (opt-in)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L18",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "readme_spawn_schematic_opt_in",
       "community": 11,
       "norm_label": "spawn schematic (opt-in)"
     },
     {
+      "label": "Data Pack Folder (opt-in)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "readme_data_pack_folder_opt_in",
+      "community": 11,
+      "norm_label": "data pack folder (opt-in)"
+    },
+    {
+      "label": "Automatic Chunk Pregeneration (ChunkGen)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "readme_automatic_chunk_pregeneration_chunkgen",
+      "community": 11,
+      "norm_label": "automatic chunk pregeneration (chunkgen)"
+    },
+    {
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "readme_configuration",
+      "community": 11,
+      "norm_label": "configuration"
+    },
+    {
       "label": "Known Incompatibilities",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L34",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "readme_known_incompatibilities",
       "community": 11,
@@ -3893,11 +4133,21 @@
       "label": "Build",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L38",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "readme_build",
       "community": 11,
       "norm_label": "build"
+    },
+    {
+      "label": "Credits",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "readme_credits",
+      "community": 11,
+      "norm_label": "credits"
     },
     {
       "label": "WORKFLOW_UTILITY_CORE_26-1-2.md",
@@ -4677,6 +4927,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
       "source_location": "L4",
       "weight": 1.0,
@@ -4709,17 +4970,28 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L53",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_config",
       "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_config",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L113",
+      "source_location": "L123",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4741,7 +5013,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L118",
+      "source_location": "L128",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4752,7 +5024,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L58",
+      "source_location": "L68",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4763,7 +5035,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L83",
+      "source_location": "L93",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4774,7 +5046,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L123",
+      "source_location": "L133",
       "weight": 1.0,
       "context": "field",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4785,7 +5057,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L58",
+      "source_location": "L68",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "src_main_java_com_skd_utilitycore_config_config",
@@ -4796,7 +5068,7 @@
       "relation": "case_of",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L55",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode_fixed",
@@ -4806,7 +5078,7 @@
       "relation": "case_of",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/Config.java",
-      "source_location": "L54",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "src_main_java_com_skd_utilitycore_config_spawnheightmode",
       "target": "src_main_java_com_skd_utilitycore_config_spawnheightmode_surface",
@@ -5025,6 +5297,28 @@
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_network_syncrecipespacket_java",
       "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/UtilityCore.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_utilitycore",
+      "target": "component",
       "confidence_score": 1.0
     },
     {
@@ -5356,7 +5650,7 @@
       "weight": 1.0,
       "context": "parameter_type",
       "source": "src_main_java_com_skd_utilitycore_utilitycore_utilitycore_onservertick",
-      "target": "post",
+      "target": "src_main_java_com_skd_utilitycore_utilitycore_java_post",
       "confidence_score": 1.0
     },
     {
@@ -5759,17 +6053,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_java",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
@@ -5987,17 +6270,6 @@
       "target": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_polymorph_recipefinder_recipefinder_getrecipesfor"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
-      "source_location": "L69",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_updaterecipecache",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6018,61 +6290,6 @@
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen_onextractrenderstate",
       "target": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_updaterecipecache"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinTBScreen.java",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_26_1_2_src_main_java_com_skd_utilitycore_mixin_mixintbscreen_java",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
-      "source_location": "L125",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_getrecipemanager",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java",
-      "source_location": "L150",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_renderrecipeselector",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinCraftingScreen.java",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixincraftingscreen_java",
-      "target": "minecraft",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_java",
-      "target": "minecraft",
-      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -6172,6 +6389,407 @@
       "weight": 1.0,
       "source": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_mixin_mixininventoryscreen_mixininventoryscreen_onextractrenderstate",
       "target": "g_proyectos_mods_minecraft_utility_core_src_main_java_com_skd_utilitycore_client_polymorphclienthandler_polymorphclienthandler_renderrecipeselector"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "localplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_eventbussubscriber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_resourcekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_onclienttick",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_subscribeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "localplayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomekey",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "target": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_java_minecraft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_biomename",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_dimensionname",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "src_main_java_com_skd_utilitycore_client_titles_biomedimensiontitlehandler_biomedimensiontitlehandler_showtitle",
+      "target": "component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_compat_datapackfolderloader",
+      "target": "component",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8790,6 +9408,70 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "modifyarg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_java_mixin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud",
+      "target": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinHud.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "attribute",
+      "source": "src_main_java_com_skd_utilitycore_mixin_mixinhud_mixinhud_modifytitletranslatey",
+      "target": "modifyarg",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java",
@@ -9808,10 +10490,50 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L38",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "readme_utility_core",
+      "target": "readme_automatic_chunk_pregeneration_chunkgen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "readme_utility_core",
+      "target": "readme_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "readme_utility_core",
+      "target": "readme_credits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "readme_utility_core",
+      "target": "readme_data_pack_folder_opt_in",
       "confidence_score": 1.0
     },
     {
@@ -9828,7 +10550,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L34",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_known_incompatibilities",
@@ -9838,7 +10560,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L14",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_requirements",
@@ -9848,7 +10570,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L18",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_spawn_schematic_opt_in",
@@ -10146,5 +10868,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4d178bf5bea1a963dab9fba825e6f27d1d937b04"
+  "built_at_commit": "00297ff6d0834e22c3212e2c61ff87b85f3270e4"
 }

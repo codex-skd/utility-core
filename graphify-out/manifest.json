@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785675107.2339523,
-    "ast_hash": "6f6efb44cecd556110eaec2ebe6c8b10",
+    "mtime": 1785680271.5465188,
+    "ast_hash": "7637830887affcf15a57d18fafff2f4b",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
@@ -110,8 +110,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/utility_core.mixins.json": {
-    "mtime": 1785150517.0900905,
-    "ast_hash": "3ee435bc35c63c77c9c611807bb1d878",
+    "mtime": 1785680293.8231423,
+    "ast_hash": "e81b884f246e84da7eaa57017c27601e",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785675152.0630958,
-    "ast_hash": "ab348a4487bec4c92af313c276f621fa",
+    "mtime": 1785680328.2959647,
+    "ast_hash": "fa5dc63ea85cebb0610b2d28262518ee",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785675224.287447,
-    "ast_hash": "814fc091df68c62cc9d0c34d28904b4c",
+    "mtime": 1785680354.6306674,
+    "ast_hash": "95771d200650b3a98d67997b779930e0",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -357,6 +357,16 @@
   "docs/curseforge/versions/1.7.0.md": {
     "mtime": 1785679575.7359147,
     "ast_hash": "8370b9a29eba950093acc8463e562fcb",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java": {
+    "mtime": 1785680281.6303816,
+    "ast_hash": "77667389b17948cd595aaff21655a1d1",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
+    "mtime": 1785680287.8371785,
+    "ast_hash": "52081ddce3d98ca6869acf590ec6fd95",
     "semantic_hash": ""
   }
 }
