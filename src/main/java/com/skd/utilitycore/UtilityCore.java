@@ -40,6 +40,8 @@ public class UtilityCore {
         ModNetwork.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
+        modEventBus.addListener(com.skd.utilitycore.compat.DataPackFolderLoader::onAddPackFinders);
+
         NeoForge.EVENT_BUS.register(this);
         chunkGenManager = new ChunkGenManager();
         spawnSchematicManager = new SpawnSchematicManager();
