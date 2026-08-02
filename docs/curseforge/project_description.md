@@ -1,6 +1,6 @@
 <h1 align="center">&#9881;&#65039; Utility Core</h1>
 
-<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, and mod compatibility fixes.</strong></p>
+<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, spawn schematic, global data packs, and mod compatibility fixes.</strong></p>
 
 <br>
 
@@ -10,7 +10,16 @@
 
 <h2>&#10024; Overview</h2>
 
-<p>Utility Core is a Swiss Army knife for modded Minecraft servers. It started as a simple recipe conflict resolver and evolved into a collection of essential utilities that every modpack needs. All features are toggleable in the config.</p>
+<p>Utility Core is a Swiss Army knife for modded Minecraft servers. It started as a simple recipe conflict resolver and evolved into a collection of essential utilities that every modpack needs. All features are <strong>toggleable individually</strong> from <code>config/utility_core-common.toml</code> (or the in-game mod menu).</p>
+
+<p>What it covers:</p>
+<ul>
+<li><strong>Crafting</strong> — resolve recipe conflicts with an in-grid selector</li>
+<li><strong>Server safety</strong> — clamp negative damage, cap OutpostZero infection damage, pre-generate chunks</li>
+<li><strong>World creation</strong> — paste a spawn schematic and protect the area, or auto-load global datapacks</li>
+<li><strong>Client</strong> — Tombstone GUI fixes</li>
+<li><strong>Developer API</strong> — <code>PolymorphApi</code> for recipe integration</li>
+</ul>
 
 <br>
 
@@ -76,6 +85,8 @@
 <table>
 <tr><th>Config</th><th>Default</th><th>Mod</th><th>Why</th></tr>
 <tr><td><code>enableCraftingRecipeSelector</code></td><td>true</td><td>Any mod with recipe conflicts</td><td>Shows a selector UI when multiple crafting recipes match the same ingredients. Incompatible with Fast Workbench (fastbench).</td></tr>
+<tr><td><code>maxRecipesDisplayed</code></td><td>16</td><td>Any mod with recipe conflicts</td><td>Maximum number of alternative recipes shown in the selector (1-64).</td></tr>
+<tr><td><code>logDetectedConflicts</code></td><td>false</td><td>Any mod with recipe conflicts</td><td>Logs recipe conflicts to the console for debugging.</td></tr>
 <tr><td><code>enableNegativeDamageFix</code></td><td>true</td><td>Apothic Attributes + Tombstone</td><td>Apothic critical strikes + Tombstone Decrepitude can produce negative damage values, crashing the server with <code>IllegalArgumentException: Damage cannot be negative</code>. This clamps damage to 0.</td></tr>
 <tr><td><code>enableTombstoneGuiScaleFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone forces GUI scale to 4 when opening its screens. This restores the original scale when closing.</td></tr>
 <tr><td><code>enableTombstoneItemInitFix</code></td><td>true</td><td>Corail Tombstone</td><td>Tombstone items (lollipop, magic_scroll) obtained via <code>/give</code> lack proper NBT data. This initializes them correctly.</td></tr>
@@ -87,6 +98,7 @@
 <tr><td><code>spawnSchematic.fixedY</code></td><td>64</td><td>Vanilla / All</td><td>Absolute Y coordinate for the bottom of the schematic (only in <code>FIXED</code> mode).</td></tr>
 <tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
 <tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>
+<tr><td><code>chunkGen.maxRadius</code></td><td>0</td><td>Vanilla / All</td><td>Maximum generation radius in chunks (0 = unlimited).</td></tr>
 <tr><td><code>chunkGen.dimensionOverworld</code></td><td>true</td><td>Vanilla / All</td><td>Generate chunks in the Overworld.</td></tr>
 <tr><td><code>chunkGen.dimensionNether</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in the Nether.</td></tr>
 <tr><td><code>chunkGen.dimensionEnd</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in The End.</td></tr>
@@ -115,6 +127,7 @@
 <li>For ChunkGen: set <code>chunkGen.enabled=true</code> and the generator will auto-start when the server is empty.</li>
 <li>Use <code>/utilitycore chunkgen status</code> to monitor generation progress.</li>
 <li>For Spawn Schematic: set <code>enableSpawnSchematic=true</code>, place your schematic at <code>schematics/schematic_spawn.schem</code>, then create a <strong>new world</strong>. <blockquote><strong>To apply to an existing world, you must delete the world save folder first</strong> — this is intentional.</blockquote></li>
+<li>For Data Pack Folder: set <code>dataPackFolder.enabled=true</code>, drop your datapacks (<code>.zip</code> or folder) into <code>&lt;game-dir&gt;/datapacks</code> and start/restart the world. They load into every world automatically, always enabled.</li>
 </ol>
 
 <h3>Known Incompatibilities</h3>
