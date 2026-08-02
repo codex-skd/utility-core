@@ -6,6 +6,7 @@ A library mod for NeoForge (MC 26.1.2) providing shared utilities and features.
 
 - **Recipe Conflict Resolution**: When multiple crafting recipes match the same ingredients, a selector appears in the crafting table. Click an alternative to choose the desired result.
 - **Negative Damage Safety**: Negative damage from mod interactions (e.g. Apothic Attributes + Tombstone) is clamped to 0, preventing server crashes.
+- **Biome/Dimension Titles**: Shows a title on screen when entering a new biome or dimension. Logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
 - **Corail Tombstone Compatibility**: GUI scale fix, item NBT init fix, and mixin error suppression.
 - **OutpostZero Damage Cap**: Limits infection damage to prevent instant death before death events fire.
 - **Automatic Chunk Pregeneration (ChunkGen)**: Pre-generates chunks in a spiral pattern when the server is empty.
@@ -60,6 +61,8 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `maxRecipesDisplayed` | 16 | Max alternative recipes shown in the selector (1-64). |
 | `logDetectedConflicts` | false | Log recipe conflicts to the console. |
 | `enableNegativeDamageFix` | true | Clamps negative damage to 0 (Apothic + Tombstone crash fix). |
+| `enableBiomeDimensionTitles` | true | Title when entering a new biome/dimension (client). |
+| `titleVerticalOffset` | 75 | Vertical shift of the title from screen center (-200..200). |
 | `enableTombstoneGuiScaleFix` | true | Restores GUI scale after Tombstone screens. |
 | `enableTombstoneItemInitFix` | true | Fixes NBT on Tombstone items given via `/give`. |
 | `enableTombstoneErrorHandler` | true | Suppresses Tombstone mixin errors at startup. |
@@ -93,4 +96,5 @@ The jar will be generated at `build/libs/utility_core-<minecraft_version>-neofor
 
 ## Credits
 
+- Biome/Dimension Titles logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
 - Developed by **Stalking Dragons** — [https://codex.skdragons.com/](https://codex.skdragons.com/).
