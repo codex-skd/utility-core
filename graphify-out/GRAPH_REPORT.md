@@ -1,16 +1,16 @@
-# Graph Report - 26.1.2  (2026-08-02)
+# Graph Report - 26.1.2  (2026-08-03)
 
 ## Corpus Check
-- 71 files · ~121,579 words
+- 71 files · ~122,258 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 476 nodes · 579 edges · 143 communities (49 shown, 94 thin omitted)
+- 481 nodes · 601 edges · 139 communities (50 shown, 89 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `670712f8`
+- Built from commit: `0184ea06`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -105,10 +105,6 @@
 - Logger
 - Override
 - Gson
-- Level
-- Logger
-- MinecraftServer
-- ResourceKey
 - Mod
 - ModContainer
 - EventBusSubscriber
@@ -129,8 +125,8 @@
 - Minecraft
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 42 edges
-2. `ChunkGenManager` - 26 edges
+1. `Utility Core — Registro de cambios` - 43 edges
+2. `ChunkGenManager` - 33 edges
 3. `LegacyBlockMap` - 18 edges
 4. `SpawnSchematicManager` - 16 edges
 5. `SpongeSchematicReader` - 16 edges
@@ -141,19 +137,19 @@
 10. `BiomeDimensionTitleHandler` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
-  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 - `UtilityCore` --references--> `SpawnSchematicManager`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java
+- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
+  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (143 total, 94 thin omitted)
+## Communities (139 total, 89 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.05
-Nodes (42): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+34 more)
+Nodes (43): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+35 more)
 
 ### Community 1 - "PolymorphClientHandler.java"
 Cohesion: 0.11
@@ -164,7 +160,7 @@ Cohesion: 0.16
 Nodes (5): CompoundTag, MarkerData, SpawnSchematicManager, SpongeSchematicReader, HolderLookup
 
 ### Community 3 - "PolymorphApi.java"
-Cohesion: 0.24
+Cohesion: 0.26
 Nodes (6): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnProtectionHandler
 
 ### Community 4 - "MixinCraftingMenu.java"
@@ -180,16 +176,16 @@ Cohesion: 0.10
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
-Cohesion: 0.17
-Nodes (5): Field, ChunkGenManager, DimState, RootState, RegisterCommandsEvent
+Cohesion: 0.14
+Nodes (9): Connection, ChunkGenManager, DimState, Gson, Level, Logger, MinecraftServer, ResourceKey (+1 more)
 
 ### Community 9 - "MixinDamageContainer.java"
 Cohesion: 0.39
 Nodes (4): AddPackFindersEvent, Pack, DataPackFolderLoader, Logger
 
 ### Community 10 - "UtilityCoreClient.java"
-Cohesion: 0.08
-Nodes (22): BooleanValue, Builder, CallbackInfoReturnable, ConfigValue, DamageType, EnumValue, OutpostZeroCompat, MixinCraftingScreen (+14 more)
+Cohesion: 0.09
+Nodes (19): BooleanValue, Builder, ConfigValue, DamageType, EnumValue, OutpostZeroCompat, MixinCraftingScreen, MixinDamageContainer (+11 more)
 
 ### Community 11 - "gradlew"
 Cohesion: 0.18
@@ -204,8 +200,8 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 14 - "EnderDragonRespawnHandler.java"
-Cohesion: 0.12
-Nodes (15): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, ServerStartedEvent, ServerStoppingEvent (+7 more)
+Cohesion: 0.11
+Nodes (16): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, RegisterCommandsEvent, ServerStartedEvent (+8 more)
 
 ### Community 16 - "TombstoneErrorHandler"
 Cohesion: 0.39
@@ -223,24 +219,28 @@ Nodes (10): Biome, Component, LocalPlayer, BiomeDimensionTitleHandler, EventBusS
 Cohesion: 0.29
 Nodes (3): Block, BlockState, LegacyBlockMap
 
+### Community 119 - "Gson"
+Cohesion: 0.47
+Nodes (4): CallbackInfoReturnable, Field, MixinItemInput, Method
+
 ## Knowledge Gaps
-- **79 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.7.1` (+74 more)
+- **80 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.8.0` (+75 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **94 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **89 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnSchematicManager` connect `PlayerRecipeData` to `PolymorphApi.java`, `EnderDragonRespawnHandler.java`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
-- **Why does `ChunkGenManager` connect `UtilityCore.java` to `EnderDragonRespawnHandler.java`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+- **Why does `ChunkGenManager` connect `UtilityCore.java` to `EnderDragonRespawnHandler.java`, `Gson`?**
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
-  _79 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _80 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
-  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**

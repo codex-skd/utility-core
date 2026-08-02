@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785680271.5465188,
-    "ast_hash": "7637830887affcf15a57d18fafff2f4b",
+    "mtime": 1785711439.766909,
+    "ast_hash": "689ddf36447be4ee1f959d97481cb5ee",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
@@ -140,13 +140,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785680663.541537,
-    "ast_hash": "6a80ca37ec383d0cb3d0017a23a969eb",
+    "mtime": 1785711450.7174428,
+    "ast_hash": "2f5d37d7d433278b8c9d5a03c7efe77a",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785680328.2959647,
-    "ast_hash": "fa5dc63ea85cebb0610b2d28262518ee",
+    "mtime": 1785711466.386667,
+    "ast_hash": "54f058f89b22b1b5a126a6ce37b057b9",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
-    "mtime": 1785204162.723669,
-    "ast_hash": "f60dbf6562d647ef3d82251c3afe5741",
+    "mtime": 1785711427.9737453,
+    "ast_hash": "3d5e5defb1d51624075ec576fb237bf0",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.0.33.md": {
