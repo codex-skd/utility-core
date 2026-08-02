@@ -9,6 +9,7 @@ A library mod for NeoForge (MC 26.1.2) providing shared utilities and features.
 - **Configurable**: Enable/disable features and configure the maximum number of shown recipes from the in-game config menu or `config/utility_core-common.toml`.
 - **Developer API**: `PolymorphApi` for other mods to integrate with the recipe selection system.
 - **Spawn Schematic (opt-in)**: Pastes a WorldEdit/FAWE `.schem` file at world creation, protects the area permanently, and sets the world spawn point inside the structure.
+- **Data Pack Folder (opt-in)**: Loads every datapack (`.zip` or folder) placed in `<game-directory>/datapacks` into every world automatically (dedicated servers and single-player), like the Global Packs mod. Packs are always enabled, no per-world toggle needed.
 
 ## Requirements
 

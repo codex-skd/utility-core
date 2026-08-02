@@ -110,5 +110,15 @@ public class Config {
                      "ES: Pregenerar chunks en el End.")
             .define("chunkGen.dimensionEnd", false);
 
+    public static final ModConfigSpec.BooleanValue DATA_PACK_FOLDER_ENABLED = BUILDER
+            .comment("EN: Loads every datapack (.zip or folder) found in <game-dir>/<dataPackFolder.path> into every world automatically, without enabling it per world. Works on dedicated servers and single-player worlds.",
+                     "ES: Carga autom\u00e1ticamente todos los datapacks (.zip o carpeta) encontrados en <game-dir>/<dataPackFolder.path> en todos los mundos, sin necesidad de activarlos mundo a mundo. Funciona en servidores dedicados y mundos de un solo jugador.")
+            .define("dataPackFolder.enabled", false);
+
+    public static final ModConfigSpec.ConfigValue<String> DATA_PACK_FOLDER_PATH = BUILDER
+            .comment("EN: Folder scanned for datapacks (relative to the game directory) when dataPackFolder.enabled is true.",
+                     "ES: Carpeta que se escanea en busca de datapacks (relativa al directorio del juego) cuando dataPackFolder.enabled est\u00e1 activado.")
+            .define("dataPackFolder.path", "datapacks");
+
     static final ModConfigSpec SPEC = BUILDER.build();
 }
