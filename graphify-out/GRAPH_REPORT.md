@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-08-03)
 
 ## Corpus Check
-- 53 files · ~119,322 words
+- 54 files · ~119,543 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 429 nodes · 549 edges · 126 communities (32 shown, 94 thin omitted)
+- 430 nodes · 549 edges · 127 communities (33 shown, 94 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d4d62d1a`
+- Built from commit: `add0e3b9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,7 +148,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (126 total, 94 thin omitted)
+## Communities (127 total, 94 thin omitted)
 
 ### Community 0 - "Flujo de trabajo — Utility Core (NeoForge)"
 Cohesion: 0.17
@@ -227,7 +227,7 @@ Nodes (3): Block, BlockState, LegacyBlockMap
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `Publicación a GitHub (CI/CD)`, `PlayerRecipeData`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Why does `ChunkGenManager` connect `ChunkGenManager` to `.onExtractBackground`, `PlayerRecipeData`?**
   _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
