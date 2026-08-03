@@ -1,16 +1,16 @@
 # Graph Report - 26.1.2  (2026-08-03)
 
 ## Corpus Check
-- 75 files · ~124,297 words
+- 76 files · ~125,183 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 502 nodes · 648 edges · 139 communities (52 shown, 87 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 41 edges (avg confidence: 0.8)
+- 510 nodes · 683 edges · 135 communities (53 shown, 82 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dd9ac9ef`
+- Built from commit: `db5f4536`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -106,11 +106,6 @@
 - Override
 - Mod
 - ModContainer
-- BlockPos
-- Gson
-- Logger
-- MinecraftServer
-- ServerLevel
 - Block
 - BlockPos
 - BlockState
@@ -122,10 +117,10 @@
 - Minecraft
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 45 edges
+1. `Utility Core — Registro de cambios` - 46 edges
 2. `ChunkGenManager` - 32 edges
-3. `LegacyBlockMap` - 18 edges
-4. `SpawnSchematicManager` - 16 edges
+3. `SpawnSchematicManager` - 23 edges
+4. `LegacyBlockMap` - 18 edges
 5. `SpongeSchematicReader` - 16 edges
 6. `PolymorphClientHandler` - 15 edges
 7. `UtilityCore` - 14 edges
@@ -134,33 +129,33 @@
 10. `Utility Core` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
+  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 - `UtilityCore` --references--> `SpawnSchematicManager`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java
 - `UtilityCore` --references--> `ServerRulesManager`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ServerRulesManager.java
-- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
-  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (139 total, 87 thin omitted)
+## Communities (135 total, 82 thin omitted)
 
 ### Community 0 - ".onExtractBackground"
 Cohesion: 0.04
-Nodes (45): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+37 more)
+Nodes (46): 0.0.1-beta.1, 0.0.1-beta.2, 0.0.1-beta.3, 0.0.1-beta.4, 0.0.1-beta.5, 0.0.1-beta.6, 1.0.14, 1.0.15 (+38 more)
 
 ### Community 1 - "PolymorphClientHandler.java"
-Cohesion: 0.12
-Nodes (4): Closing, PolymorphClientHandler, AccessorAbstractContainerScreen, RecipePair
+Cohesion: 0.09
+Nodes (7): Closing, CraftingInput, PolymorphClientHandler, AccessorAbstractContainerScreen, MixinCraftingScreen, MixinInventoryScreen, RecipePair
 
 ### Community 2 - "PlayerRecipeData"
-Cohesion: 0.16
-Nodes (5): CompoundTag, MarkerData, SpawnSchematicManager, SpongeSchematicReader, HolderLookup
+Cohesion: 0.13
+Nodes (10): CompoundTag, SpongeSchematicReader, HolderLookup, BlockPos, Gson, Logger, MinecraftServer, ServerLevel (+2 more)
 
 ### Community 3 - "PolymorphApi.java"
-Cohesion: 0.22
-Nodes (9): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnPlacementCheck, EventBusSubscriber, SubscribeEvent (+1 more)
+Cohesion: 0.21
+Nodes (11): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnPlacementCheck, BlockPos, EventBusSubscriber (+3 more)
 
 ### Community 4 - "MixinCraftingMenu.java"
 Cohesion: 0.17
@@ -171,12 +166,12 @@ Cohesion: 0.14
 Nodes (13): Changelog, CurseForge — Variables del proyecto, Descripcion del proyecto, Estructura del changelog (HTML), Flujo completo, Parámetros del upload, Proyecto, Rama (+5 more)
 
 ### Community 6 - "SyncRecipesPacket"
-Cohesion: 0.11
+Cohesion: 0.10
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
-Cohesion: 0.07
-Nodes (26): AttachmentType, Connection, DeferredRegister, Field, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent (+18 more)
+Cohesion: 0.13
+Nodes (11): Connection, Field, RegisterCommandsEvent, ChunkGenManager, DimState, Gson, Level, Logger (+3 more)
 
 ### Community 9 - "MixinDamageContainer.java"
 Cohesion: 0.31
@@ -184,7 +179,7 @@ Nodes (8): GameRule, GameRules, JsonObject, Gson, Logger, MinecraftServer, Serve
 
 ### Community 10 - "UtilityCoreClient.java"
 Cohesion: 0.07
-Nodes (23): BooleanValue, Builder, CallbackInfoReturnable, ConfigValue, CraftingInput, DamageType, EnumValue, OutpostZeroCompat (+15 more)
+Nodes (24): AddPackFindersEvent, BooleanValue, Builder, CallbackInfoReturnable, ConfigValue, DamageType, EnumValue, OutpostZeroCompat (+16 more)
 
 ### Community 11 - "gradlew"
 Cohesion: 0.17
@@ -199,8 +194,8 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 14 - "EnderDragonRespawnHandler.java"
-Cohesion: 0.39
-Nodes (4): AddPackFindersEvent, Pack, DataPackFolderLoader, Logger
+Cohesion: 0.12
+Nodes (15): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, ServerStartedEvent, ServerStoppingEvent (+7 more)
 
 ### Community 16 - "TombstoneErrorHandler"
 Cohesion: 0.39
@@ -219,24 +214,24 @@ Cohesion: 0.29
 Nodes (3): Block, BlockState, LegacyBlockMap
 
 ## Knowledge Gaps
-- **83 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.10.0` (+78 more)
+- **84 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.11.0` (+79 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **87 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **82 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpawnSchematicManager` connect `PlayerRecipeData` to `PolymorphApi.java`, `UtilityCore.java`?**
-  _High betweenness centrality (0.055) - this node is a cross-community bridge._
-- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `UtilityCoreClient.java`, `SyncRecipesPacket`?**
+- **Why does `SpawnSchematicManager` connect `PlayerRecipeData` to `PolymorphApi.java`, `EnderDragonRespawnHandler.java`?**
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `ChunkGenManager` connect `UtilityCore.java` to `EnderDragonRespawnHandler.java`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
   _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
-  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _84 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.onExtractBackground` be split into smaller, more focused modules?**
-  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
-- **Should `SelectRecipePacket.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
-- **Should `SyncRecipesPacket` be split into smaller, more focused modules?**
-  _Cohesion score 0.10591133004926108 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09247311827956989 - nodes in this community are weakly interconnected._
+- **Should `PlayerRecipeData` be split into smaller, more focused modules?**
+  _Cohesion score 0.1251778093883357 - nodes in this community are weakly interconnected._
