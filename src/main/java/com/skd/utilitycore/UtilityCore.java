@@ -168,6 +168,26 @@ public class UtilityCore {
                                     return Command.SINGLE_SUCCESS;
                                 }))
                         )
+                        .then(Commands.literal("spawnprotection")
+                                .then(Commands.literal("on").executes(ctx -> {
+                                    Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.set(true);
+                                    Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.save();
+                                    ctx.getSource().sendSuccess(() -> Component.literal("§a[SpawnSchematic] Protection ON — building in the spawn area is blocked again"), false);
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                                .then(Commands.literal("off").executes(ctx -> {
+                                    Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.set(false);
+                                    Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.save();
+                                    ctx.getSource().sendSuccess(() -> Component.literal("§e[SpawnSchematic] Protection OFF — you can build inside the spawn area. Use /utilitycore spawnprotection on to re-enable."), false);
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                                .then(Commands.literal("status").executes(ctx -> {
+                                    boolean on = Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.get();
+                                    ctx.getSource().sendSuccess(() -> Component.literal(
+                                            (on ? "§a" : "§c") + "[SpawnSchematic] Protection is " + (on ? "ON" : "OFF")), false);
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                        )
                         .then(Commands.literal("help").executes(ctx -> {
                             ctx.getSource().sendSuccess(() -> Component.literal(
                                     "§a--- Utility Core Commands ---\n" +
@@ -177,7 +197,9 @@ public class UtilityCore {
                                     "§e/utilitycore chunkgen stop §7- Stop generation\n" +
                                     "§e/utilitycore chunkgen reset §7- Reset progress to (0,0)\n" +
                                     "§e/utilitycore rules apply §7- Re-apply server rules\n" +
-                                    "§e/utilitycore rules status §7- Show configured server rules"), false);
+                                    "§e/utilitycore rules status §7- Show configured server rules\n" +
+                                    "§e/utilitycore spawnprotection on|off §7- Toggle spawn area build protection\n" +
+                                    "§e/utilitycore spawnprotection status §7- Show protection state"), false);
                             return Command.SINGLE_SUCCESS;
                         }))
         );

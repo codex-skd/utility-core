@@ -1,5 +1,11 @@
 # Utility Core — Registro de cambios
 
+## 1.11.0
+- Breaking change: el **esquema de spawn ya no va empaquetado en el JAR**. El mod ya no extrae ningún esquema por defecto; ahora se lee siempre de `<game-dir>/utility_core/spawn_schem/schematic_spawn.schem`. Si el archivo no existe, la feature se omite con un error en el log. Debes colocar tu propio `.schem` antes de crear/regenerar el mundo. (De paso se quita el payload binario grande del JAR del mod.)
+- Nueva feature: **comando de protección del spawn**. `/utilitycore spawnprotection on|off|status` activa/desactiva en caliente la protección de construcción de la zona del esquema (romper/colocar bloques y explosiones), para construir temporalmente dentro y luego reactivarla. El estado se persiste en la config.
+- Nueva feature: **mensaje de zona protegida**. Al intentar romper/colocar dentro de la zona, el jugador recibe un mensaje indicando que el área está protegida y cuántos bloques debe moverse para salir de ella.
+- Nueva config: `spawnSchematic.protectionEnabled` (default true) — protección de construcción de la zona; se cambia en caliente con `/utilitycore spawnprotection`.
+
 ## 1.10.0
 - Breaking change: se elimina la opción `chunkGen.keepAlive` (era poco fiable: no encontraba el campo de pausa del servidor en todas las versiones). A partir de ahora, para que ChunkGen funcione con el servidor vacío hay que desactivar la pausa por inactividad poniendo `pause-when-empty-seconds=-1` en `server.properties` (sin esto, el servidor se pausa a los 60s y la generación se congela).
 - Cambio de límite: `chunkGen.chunksPerTick` ahora tiene un **tope duro de 100 aplicado en código** (rango configurable 1-100; el tope anterior era 300). Generar a 300 chunks/tick dejaba el servidor a TPS casi nulos durante el pregen, congelando los logins y la descarga del mundo. Default 100. Recomendado 1-8 para que el servidor siga respondiendo.

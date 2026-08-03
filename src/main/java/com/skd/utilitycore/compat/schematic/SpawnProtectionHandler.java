@@ -3,7 +3,9 @@ package com.skd.utilitycore.compat.schematic;
 import com.skd.utilitycore.Config;
 import com.skd.utilitycore.UtilityCore;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -23,11 +25,21 @@ public class SpawnProtectionHandler {
         return event.getLevel() instanceof Level level && level.dimension() == Level.OVERWORLD;
     }
 
+    private static void warnProtected(Player player, BlockPos pos, SpawnSchematicManager mgr) {
+        if (player == null) return;
+        int dist = mgr.distanceToExit(pos);
+        Component msg = dist > 0
+                ? Component.literal("§c[SpawnSchematic] §7This area is protected. Move §e" + dist + " §7blocks outside to build here.")
+                : Component.literal("§c[SpawnSchematic] §7This area is protected.");
+        player.sendSystemMessage(msg);
+    }
+
     @SubscribeEvent
     public static void onBlockBreak(BreakBlockEvent event) {
         SpawnSchematicManager mgr = SpawnSchematicManager.getInstance();
         if (mgr != null && isOverworld(event) && mgr.isWithinBounds(event.getPos())) {
             event.setCanceled(true);
+            warnProtected(event.getPlayer(), event.getPos(), mgr);
         }
     }
 
@@ -36,6 +48,9 @@ public class SpawnProtectionHandler {
         SpawnSchematicManager mgr = SpawnSchematicManager.getInstance();
         if (mgr != null && isOverworld(event) && mgr.isWithinBounds(event.getPos())) {
             event.setCanceled(true);
+            if (event.getEntity() instanceof Player player) {
+                warnProtected(player, event.getPos(), mgr);
+            }
         }
     }
 
@@ -46,6 +61,9 @@ public class SpawnProtectionHandler {
         for (var snapshot : event.getReplacedBlockSnapshots()) {
             if (mgr.isWithinBounds(snapshot.getPos())) {
                 event.setCanceled(true);
+                if (event.getEntity() instanceof Player player) {
+                    warnProtected(player, snapshot.getPos(), mgr);
+                }
                 return;
             }
         }
