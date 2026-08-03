@@ -56,8 +56,8 @@ public class Config {
             .defineInRange("titleVerticalOffset", 75, -200, 200);
 
     public static final ModConfigSpec.BooleanValue ENABLE_SPAWN_SCHEMATIC = BUILDER
-            .comment("EN: Pastes a WorldEdit/FAWE Sponge Schematic (.schem) at world creation, protects the area permanently, and sets the world spawn inside the structure. This only takes effect on a brand-new world save (no existing region files). It does nothing on a world that already existed before this option was enabled. To apply to an already-existing world, the server operator must delete the world save folder first, then start the server with this enabled. Place the schematic at <game-dir>/schematics/schematic_spawn.schem.",
-                     "ES: Pega un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Solo funciona en mundos nuevos sin archivos de región existentes. Para aplicar a un mundo ya existente, el operador debe eliminar la carpeta del mundo primero y luego iniciar el servidor con esta opción activada. Coloca el esquema en <game-dir>/schematics/schematic_spawn.schem.")
+            .comment("EN: Pastes a WorldEdit/FAWE Sponge Schematic (.schem) at world creation, protects the area permanently, and sets the world spawn inside the structure. This only takes effect on a brand-new world save (no existing region files). It does nothing on a world that already existed before this option was enabled. To apply to an already-existing world, the server operator must delete the world save folder first, then start the server with this enabled. The schematic is read from <game-dir>/utility_core/spawn_schem/schematic_spawn.schem; it is NOT bundled in the mod jar, so you must place your own .schem file there before creating/regenerating the world.",
+                     "ES: Pega un esquema .schem de WorldEdit/FAWE al crear un mundo nuevo, protege el área permanentemente y establece el punto de aparición dentro de la estructura. Solo funciona en mundos nuevos sin archivos de región existentes. Para aplicar a un mundo ya existente, el operador debe eliminar la carpeta del mundo primero y luego iniciar el servidor con esta opción activada. El esquema se lee de <game-dir>/utility_core/spawn_schem/schematic_spawn.schem; NO viene empaquetado en el JAR del mod, así que debes colocar tu propio archivo .schem en esa ruta antes de borrar/regenerar el mundo.")
             .define("enableSpawnSchematic", false);
 
     public enum SpawnHeightMode {
@@ -84,6 +84,11 @@ public class Config {
             .comment("EN: Prevents natural mob spawns inside the spawn schematic bounds. Useful when the schematic has no lighting.",
                      "ES: Evita la aparici\u00f3n natural de mobs dentro de los l\u00edmites del esquema de spawn. \u00datil cuando el esquema no tiene iluminaci\u00f3n.")
             .define("spawnSchematic.preventMobSpawns", true);
+
+    public static final ModConfigSpec.BooleanValue SPAWN_SCHEMATIC_PROTECTION_ENABLED = BUILDER
+            .comment("EN: Enables the build protection of the spawn schematic area (no block breaking/placing, no explosions). You can toggle it at runtime with /utilitycore spawnprotection on|off. Use 'off' to temporarily build inside the spawn area, then turn it back on.",
+                     "ES: Activa la protecci\u00f3n de construcci\u00f3n de la zona del esquema de spawn (no se pueden romper/colocar bloques ni hay explosiones). Puedes activarla/desactivarla en caliente con /utilitycore spawnprotection on|off. Usa 'off' para construir temporalmente dentro de la zona de spawn y luego vuelve a activarla.")
+            .define("spawnSchematic.protectionEnabled", true);
 
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: IMPORTANT: The server must not pause while empty or chunk generation will stall and logins may time out. Set pause-when-empty-seconds=-1 in server.properties.",

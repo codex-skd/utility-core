@@ -12,7 +12,7 @@ A library mod for NeoForge (MC 26.1.2) providing shared utilities and features.
 - **Automatic Chunk Pregeneration (ChunkGen)**: Pre-generates chunks in a spiral pattern when the server is empty.
 - **Spawn Zone Protection**: The spawn schematic area is unbreakable, unplaceable, explosion-proof, and free of natural mob spawns (useful when the schematic has no lighting).
 - **Server Rules Manager**: Enforce a curated list of game rules from a JSON file, applied only when they differ from the current server value.
-- **Spawn Schematic (opt-in)**: Pastes a WorldEdit/FAWE `.schem` file at world creation, protects the area permanently, and sets the world spawn point inside the structure.
+- **Spawn Schematic (opt-in)**: Pastes a WorldEdit/FAWE `.schem` file at world creation, protects the area permanently, and sets the world spawn point inside the structure. The schematic is read from `<game-directory>/utility_core/spawn_schem/schematic_spawn.schem` — it is **not** bundled in the mod, so you must place your own `.schem` file there.
 - **Data Pack Folder (opt-in)**: Loads every datapack (`.zip` or folder) placed in `<game-directory>/datapacks` into every world automatically (dedicated servers and single-player), like the Global Packs mod. Packs are always enabled, no per-world toggle needed.
 - **Configurable**: Enable/disable features from the in-game config menu or `config/utility_core-common.toml`.
 - **Developer API**: `PolymorphApi` for other mods to integrate with the recipe selection system.
@@ -25,15 +25,17 @@ A library mod for NeoForge (MC 26.1.2) providing shared utilities and features.
 
 This feature pastes a WorldEdit/FAWE schematic at world creation, permanently protects the pasted area, and sets the world spawn inside the structure. The structure is centered on the vanilla world spawn. Both Sponge `.schem` (v2/v3) and the legacy WorldEdit/MCEdit `.schematic` format are supported and auto-detected.
 
-**Placement:** `<game-directory>/schematics/schematic_spawn.schem`
+**Placement:** `<game-directory>/utility_core/spawn_schem/schematic_spawn.schem`
 
-**Bundled default:** The mod ships a lobby schematic and extracts it to the path above automatically on the first server start if the file is missing, so the feature works out of the box. It is a legacy WorldEdit `.schematic` designed to float **70 blocks above the terrain**. To use your own schematic, simply replace `schematic_spawn.schem` with your file (keep the same filename) **before** creating/regenerating the world.
+**No bundled default:** the mod does **not** ship a schematic anymore. You must place your own `.schem` (or legacy `.schematic`) file at the path above **before** creating/regenerating the world. The example lobby schematic that ships with releases is available as `schematic_spawn.schem` in the download folder of the release and floats **70 blocks above the terrain**.
 
 **Height placement:** controlled by three config options:
 
 - `spawnSchematic.heightMode = SURFACE` (default): aligns the **bottom** of the schematic to the highest ground block under its footprint, plus `spawnSchematic.surfaceOffset` (default `70`), so it floats above the terrain instead of being buried at the world's minimum Y (-64).
 - `spawnSchematic.surfaceOffset = 70`: extra blocks **above the ground** where the bottom is placed. `0` = flush with the ground, positive = raised, negative = buried.
 - `spawnSchematic.heightMode = FIXED` + `spawnSchematic.fixedY = 64`: places the bottom at an **absolute Y coordinate** instead of following the terrain.
+
+**Build protection:** the spawn schematic area is unbreakable, unplaceable and explosion-proof, and players are told how far they need to move out of the zone. To temporarily build inside it, use `/utilitycore spawnprotection off` and `/utilitycore spawnprotection on` to re-enable it (`spawnSchematic.protectionEnabled`, default `true`).
 
 > **IMPORTANT:** This only works on a brand-new world save (no existing region files). To apply it to a world that already exists, you **must delete the world save folder** first, then start the server with `enableSpawnSchematic=true`. This is intentional — it prevents the schematic from being applied to a world that has already generated terrain.
 
@@ -93,6 +95,7 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `spawnSchematic.surfaceOffset` | 70 | Blocks above the ground in `SURFACE` mode. |
 | `spawnSchematic.fixedY` | 64 | Absolute Y in `FIXED` mode. |
 | `spawnSchematic.preventMobSpawns` | true | Prevent natural mob spawns inside the schematic bounds. |
+| `spawnSchematic.protectionEnabled` | true | Build protection of the spawn area. Toggle with `/utilitycore spawnprotection on\|off`. |
 | `chunkGen.enabled` | false | Enable automatic chunk pregeneration. |
 | `chunkGen.chunksPerTick` | 100 | Chunks generated per tick (1-100, hard cap in code). Recommended: 1-8. |
 | `chunkGen.maxRadius` | 0 | Max radius in chunks (0 = unlimited). |
