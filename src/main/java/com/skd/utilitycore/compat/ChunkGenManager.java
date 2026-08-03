@@ -61,9 +61,6 @@ public class ChunkGenManager {
         @SerializedName("first_step") boolean firstStep = true;
     }
 
-    private Field tickField;
-    private boolean tickFieldSearched = false;
-    private boolean tickFieldNanos = false;
     private Field listenerField;
     private boolean listenerFieldSearched = false;
 
@@ -98,10 +95,6 @@ public class ChunkGenManager {
             LOGGER.info("[ChunkGen] No more players, resuming generation");
         }
 
-        if (playerCount == 0) {
-            keepAlive(server);
-        }
-
         // Duty cycle: loadSeconds of generation, then restSeconds of rest (wall-clock).
         long now = Util.getMillis();
         int loadSecs = Math.max(1, Config.CHUNK_GEN_LOAD_SECONDS.get());
@@ -122,7 +115,7 @@ public class ChunkGenManager {
             return;
         }
 
-        int chunksPerTick = Config.CHUNK_GEN_CHUNKS_PER_TICK.get();
+        int chunksPerTick = Math.min(100, Config.CHUNK_GEN_CHUNKS_PER_TICK.get());
         int maxRadius = Config.CHUNK_GEN_MAX_RADIUS.get();
 
         for (int i = 0; i < chunksPerTick; i++) {
@@ -360,62 +353,6 @@ public class ChunkGenManager {
     private static void updateRadius(DimState s) {
         int r = Math.max(Math.abs(s.chunkX), Math.abs(s.chunkZ));
         if (r > s.radius) s.radius = r;
-    }
-
-    // --- Keep Alive ---
-
-    private void keepAlive(MinecraftServer server) {
-        if (!Config.CHUNK_GEN_KEEP_ALIVE.get()) return;
-        if (!tickFieldSearched) {
-            tickFieldSearched = true;
-            try {
-                Field f = MinecraftServer.class.getDeclaredField("nextTickTimeNanos");
-                f.setAccessible(true);
-                tickField = f;
-                tickFieldNanos = true;
-                LOGGER.info("[ChunkGen] Found tick field: nextTickTimeNanos");
-            } catch (Exception ignored) {}
-            if (tickField == null) {
-                try {
-                    Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
-                    f.setAccessible(true);
-                    tickField = f;
-                    tickFieldNanos = false;
-                    LOGGER.info("[ChunkGen] Found tick field: nextTickTick");
-                } catch (Exception ignored) {}
-            }
-            if (tickField == null) {
-                long nowMs = Util.getMillis();
-                long nowNanos = System.nanoTime();
-                for (Field f : MinecraftServer.class.getDeclaredFields()) {
-                    if (f.getType() != long.class) continue;
-                    try {
-                        f.setAccessible(true);
-                        long val = f.getLong(server);
-                        if (val >= nowMs - 100_000 && val <= nowMs + 100_000) {
-                            tickField = f;
-                            tickFieldNanos = false;
-                            LOGGER.info("[ChunkGen] Found tick field (fallback ms): {}", f.getName());
-                            break;
-                        }
-                        if (val >= nowNanos - 100_000_000_000L && val <= nowNanos + 100_000_000_000L) {
-                            tickField = f;
-                            tickFieldNanos = true;
-                            LOGGER.info("[ChunkGen] Found tick field (fallback ns): {}", f.getName());
-                            break;
-                        }
-                    } catch (Exception ignored) {}
-                }
-            }
-            if (tickField == null) {
-                LOGGER.warn("[ChunkGen] No tick field found. Server may pause after 60s idle.");
-            }
-        }
-        if (tickField != null) {
-            try {
-                tickField.setLong(server, tickFieldNanos ? System.nanoTime() + 50_000_000L : Util.getMillis() + 50L);
-            } catch (Exception ignored) {}
-        }
     }
 
     // --- Persistence ---

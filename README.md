@@ -94,15 +94,16 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `spawnSchematic.fixedY` | 64 | Absolute Y in `FIXED` mode. |
 | `spawnSchematic.preventMobSpawns` | true | Prevent natural mob spawns inside the schematic bounds. |
 | `chunkGen.enabled` | false | Enable automatic chunk pregeneration. |
-| `chunkGen.chunksPerTick` | 1 | Chunks generated per tick (1-300). |
+| `chunkGen.chunksPerTick` | 100 | Chunks generated per tick (1-100, hard cap in code). Recommended: 1-8. |
 | `chunkGen.maxRadius` | 0 | Max radius in chunks (0 = unlimited). |
 | `chunkGen.dimensionOverworld` | true | Pre-generate the Overworld. |
 | `chunkGen.dimensionNether` | false | Pre-generate the Nether. |
 | `chunkGen.dimensionEnd` | false | Pre-generate The End. |
 | `chunkGen.runWithPlayers` | false | Keep generating while players are online. |
-| `chunkGen.keepAlive` | true | Prevent the 60s idle pause while generating. |
 | `chunkGen.loadSeconds` | 600 | Duty cycle: seconds of generation before a rest period (60-86400). |
 | `chunkGen.restSeconds` | 300 | Duty cycle: seconds of rest with no generation (0-86400). |
+
+> **Important**: ChunkGen keeps the server busy while it runs. To generate while the server is empty, the dedicated server must not pause: set `pause-when-empty-seconds=-1` in `server.properties`. Otherwise generation stalls and incoming logins can time out.
 | `dataPackFolder.enabled` | false | Auto-load global datapacks into every world. |
 | `dataPackFolder.path` | datapacks | Datapack folder, relative to the game directory. |
 
