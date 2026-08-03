@@ -87,7 +87,7 @@ public class SpawnProtectionHandler {
         if (mgr == null || !Config.SPAWN_SCHEMATIC_PREVENT_MOB_SPAWNS.get()) return;
         if (event.getSpawnType() != EntitySpawnReason.NATURAL) return;
         if (event.getLevel().getLevel().dimension() != Level.OVERWORLD) return;
-        if (mgr.isWithinBounds(event.getPos())) {
+        if (mgr.isWithinMobSpawnColumn(event.getPos())) {
             event.setResult(MobSpawnEvent.SpawnPlacementCheck.Result.FAIL);
         }
     }
