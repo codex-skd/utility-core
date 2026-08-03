@@ -1,5 +1,9 @@
 # Utility Core — Registro de cambios
 
+## 1.10.0
+- Breaking change: se elimina la opción `chunkGen.keepAlive` (era poco fiable: no encontraba el campo de pausa del servidor en todas las versiones). A partir de ahora, para que ChunkGen funcione con el servidor vacío hay que desactivar la pausa por inactividad poniendo `pause-when-empty-seconds=-1` en `server.properties` (sin esto, el servidor se pausa a los 60s y la generación se congela).
+- Cambio de límite: `chunkGen.chunksPerTick` ahora tiene un **tope duro de 100 aplicado en código** (rango configurable 1-100; el tope anterior era 300). Generar a 300 chunks/tick dejaba el servidor a TPS casi nulos durante el pregen, congelando los logins y la descarga del mundo. Default 100. Recomendado 1-8 para que el servidor siga respondiendo.
+
 ## 1.9.0
 - Nueva feature: **sin mobs en la zona de spawn** (portado desde la rama 26.2). `spawnSchematic.preventMobSpawns` (default true) impide la aparición natural de mobs dentro de los límites del esquema de spawn (`MobSpawnEvent.SpawnPlacementCheck`, solo razones `NATURAL`; spawn eggs y comandos siguen funcionando). Útil cuando el esquema no tiene iluminación. La zona ya era inpicable/incolocable y a prueba de explosiones desde la protección del spawn.
 - Nueva feature: **Server Rules Manager** (portado desde la rama 26.2). Archivo `utility_core/server_rules.json` con la lista de gamerules a forzar (p. ej. `"players_sleeping_percentage": 50`). En el arranque del servidor cada regla se compara con su valor actual y **solo se aplica si difiere** (vía API de `GameRules`, sin comandos); si ya coincide no se toca. Comandos: `/utilitycore rules apply` y `/utilitycore rules status`. Si quitas una regla del archivo, el servidor la deja como esté.
