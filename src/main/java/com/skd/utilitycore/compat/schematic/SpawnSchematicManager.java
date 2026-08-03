@@ -176,6 +176,16 @@ public class SpawnSchematicManager {
                 && pos.getZ() >= minPos.getZ() && pos.getZ() <= maxPos.getZ();
     }
 
+    // Schematics can float above the ground (see spawnSchematic.surfaceOffset), leaving the
+    // natural terrain below - inside the same X/Z footprint - dark and outside minPos.getY().
+    // Mob spawn prevention needs the whole column under the structure, not just its own height range.
+    public boolean isWithinMobSpawnColumn(BlockPos pos) {
+        if (!hasProtectionEnabled()) return false;
+        return pos.getX() >= minPos.getX() && pos.getX() <= maxPos.getX()
+                && pos.getY() <= maxPos.getY()
+                && pos.getZ() >= minPos.getZ() && pos.getZ() <= maxPos.getZ();
+    }
+
     public BlockPos getMinPos() {
         return minPos;
     }
