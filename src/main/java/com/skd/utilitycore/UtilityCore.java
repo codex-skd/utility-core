@@ -5,6 +5,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.attachment.ModAttachments;
 import com.skd.utilitycore.compat.ChunkGenManager;
+import com.skd.utilitycore.compat.ServerRulesManager;
 import com.skd.utilitycore.compat.schematic.SpawnSchematicManager;
 import com.skd.utilitycore.network.ModNetwork;
 import net.minecraft.commands.CommandSourceStack;
@@ -33,6 +34,7 @@ public class UtilityCore {
 
     private static ChunkGenManager chunkGenManager;
     private SpawnSchematicManager spawnSchematicManager;
+    private ServerRulesManager serverRulesManager;
 
     public UtilityCore(IEventBus modEventBus, ModContainer modContainer) {
         registerTombstoneErrorHandler();
@@ -45,6 +47,7 @@ public class UtilityCore {
         NeoForge.EVENT_BUS.register(this);
         chunkGenManager = new ChunkGenManager();
         spawnSchematicManager = new SpawnSchematicManager();
+        serverRulesManager = new ServerRulesManager();
     }
 
     @SubscribeEvent
@@ -80,6 +83,9 @@ public class UtilityCore {
         }
         if (spawnSchematicManager != null) {
             spawnSchematicManager.onServerStarted(event.getServer());
+        }
+        if (serverRulesManager != null) {
+            serverRulesManager.apply(event.getServer());
         }
     }
 
@@ -143,6 +149,25 @@ public class UtilityCore {
                                     return Command.SINGLE_SUCCESS;
                                 }))
                         )
+                        .then(Commands.literal("rules")
+                                .then(Commands.literal("apply").executes(ctx -> {
+                                    if (serverRulesManager == null) {
+                                        ctx.getSource().sendSuccess(() -> Component.literal("§c[ServerRules] Not available"), false);
+                                        return 0;
+                                    }
+                                    serverRulesManager.apply(ctx.getSource().getServer());
+                                    ctx.getSource().sendSuccess(() -> Component.literal("§a[ServerRules] Rules re-applied"), false);
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                                .then(Commands.literal("status").executes(ctx -> {
+                                    if (serverRulesManager == null) {
+                                        ctx.getSource().sendSuccess(() -> Component.literal("§c[ServerRules] Not available"), false);
+                                        return 0;
+                                    }
+                                    ctx.getSource().sendSuccess(() -> Component.literal(serverRulesManager.status(ctx.getSource().getServer())), false);
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                        )
                         .then(Commands.literal("help").executes(ctx -> {
                             ctx.getSource().sendSuccess(() -> Component.literal(
                                     "§a--- Utility Core Commands ---\n" +
@@ -150,7 +175,9 @@ public class UtilityCore {
                                     "§e/utilitycore chunkgen start §7- Start/resume generation\n" +
                                     "§e/utilitycore chunkgen pause §7- Pause generation\n" +
                                     "§e/utilitycore chunkgen stop §7- Stop generation\n" +
-                                    "§e/utilitycore chunkgen reset §7- Reset progress to (0,0)"), false);
+                                    "§e/utilitycore chunkgen reset §7- Reset progress to (0,0)\n" +
+                                    "§e/utilitycore rules apply §7- Re-apply server rules\n" +
+                                    "§e/utilitycore rules status §7- Show configured server rules"), false);
                             return Command.SINGLE_SUCCESS;
                         }))
         );

@@ -1,5 +1,12 @@
 # Utility Core — Registro de cambios
 
+## 1.9.0
+- Nueva feature: **sin mobs en la zona de spawn** (portado desde la rama 26.2). `spawnSchematic.preventMobSpawns` (default true) impide la aparición natural de mobs dentro de los límites del esquema de spawn (`MobSpawnEvent.SpawnPlacementCheck`, solo razones `NATURAL`; spawn eggs y comandos siguen funcionando). Útil cuando el esquema no tiene iluminación. La zona ya era inpicable/incolocable y a prueba de explosiones desde la protección del spawn.
+- Nueva feature: **Server Rules Manager** (portado desde la rama 26.2). Archivo `utility_core/server_rules.json` con la lista de gamerules a forzar (p. ej. `"players_sleeping_percentage": 50`). En el arranque del servidor cada regla se compara con su valor actual y **solo se aplica si difiere** (vía API de `GameRules`, sin comandos); si ya coincide no se toca. Comandos: `/utilitycore rules apply` y `/utilitycore rules status`. Si quitas una regla del archivo, el servidor la deja como esté.
+- Fix: ChunkGen **reiniciaba en bucle** al alcanzar `chunkGen.maxRadius` (terminaba y volvía a empezar a regenerar lo mismo para siempre). Ahora al completar todas las dimensiones se persiste un estado `completed` y no se reanuda; para regenerar hay que usar `/utilitycore chunkgen reset`.
+- Fix: keepAlive no encontraba el campo de pausa del servidor (está en nanosegundos en estas versiones: `nextTickTimeNanos`). Ahora lo localiza por nombre con la unidad correcta (con fallback al antiguo `nextTickTick` en milisegundos), de modo que el servidor vacío no se pausa a los 60s y el ciclo de trabajo no se congela.
+
+
 ## 1.8.0
 - Nueva feature: ChunkGen con **ciclo de trabajo por bloques** (portado desde la rama 26.2). Ahora la generación automática de chunks trabaja en bloques de tiempo real: `chunkGen.loadSeconds` (default 600 = 10 min) cargando chunks y `chunkGen.restSeconds` (default 300 = 5 min) de descanso sin generar, para dar respiros periódicos al servidor. El ciclo se mide por tiempo real (no por ticks), porque durante la generación el servidor va a TPS bajos.
 - Mejora: el ChunkGen ahora **pausa sí o sí cuando entra un jugador**. Antes solo miraba `server.getPlayerCount()`, que no cuenta al jugador hasta que termina el login; ahora detecta la conexión en cuanto empieza el *handshake* login/configuración (vía `ServerLoginPacketListenerImpl`/`ServerConfigurationPacketListenerImpl`) y aborta la generación incluso a mitad de un lote (`chunksPerTick`) de chunks. `onPlayerJoin` también fuerza la pausa directamente.
