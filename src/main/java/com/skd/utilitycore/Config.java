@@ -80,6 +80,11 @@ public class Config {
                      "ES: Solo se usa cuando spawnSchematic.heightMode=FIXED. Coordenada Y absoluta donde se coloca la base del esquema.")
             .defineInRange("spawnSchematic.fixedY", 64, -64, 320);
 
+    public static final ModConfigSpec.BooleanValue SPAWN_SCHEMATIC_PREVENT_MOB_SPAWNS = BUILDER
+            .comment("EN: Prevents natural mob spawns inside the spawn schematic bounds. Useful when the schematic has no lighting.",
+                     "ES: Evita la aparici\u00f3n natural de mobs dentro de los l\u00edmites del esquema de spawn. \u00datil cuando el esquema no tiene iluminaci\u00f3n.")
+            .define("spawnSchematic.preventMobSpawns", true);
+
     public static final ModConfigSpec.BooleanValue CHUNK_GEN_ENABLED = BUILDER
             .comment("EN: Enables automatic chunk generation. When enabled, chunks are generated in a spiral pattern from (0,0) when no players are online.",
                      "ES: Activa la generaci\u00f3n autom\u00e1tica de chunks. Cuando est\u00e1 activada, los chunks se generan en espiral desde (0,0) cuando no hay jugadores conectados.")
