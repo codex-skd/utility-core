@@ -18,7 +18,7 @@ Utility Core - A library mod providing useful utilities for Minecraft.
 Features:
 - Recipe conflict resolution: choose between multiple crafting outputs when recipes overlap
 - Biome/Dimension Titles: shows a title when entering a new biome or dimension
-- Spawn Schematic: pastes a .schem/.schematic structure at world creation with configurable height placement (align to ground, surface offset, or fixed absolute Y); bundled lobby default floats 70 blocks above the terrain
+- Spawn Schematic: pastes your own .schem/.schematic structure at world creation with configurable height placement (align to ground, surface offset, or fixed absolute Y); the file is read from <game-dir>/utility_core/spawn_schem/schematic_spawn.schem (not bundled in the mod)
 - Data Pack Folder: auto-loads all datapacks from a folder into every world (dedicated servers and single-player)
 - Automatic chunk pregeneration (to run while the server is empty, set pause-when-empty-seconds=-1 in server.properties), damage safety, and mod compatibility fixes
 - Configurable settings for all features
