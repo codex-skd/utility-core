@@ -62,7 +62,6 @@
 <li><strong>No server pause required</strong>: set <code>pause-when-empty-seconds=-1</code> in <code>server.properties</code> so the dedicated server keeps running while empty and generation never stalls</li>
 <li><strong>Max radius completion</strong>: with a finite <code>chunkGen.maxRadius</code>, the job stops permanently once reached (use <code>/utilitycore chunkgen reset</code> to regenerate)</li>
 <li><strong>Progress persistence</strong>: Survives server restarts and crashes</li>
-<li><strong>Keep alive</strong>: Prevents the vanilla server idle pause during generation (compatible with the current Minecraft tick field)</li>
 <li><strong>Commands</strong>: <code>/utilitycore chunkgen status</code>, <code>start</code>, <code>pause</code>, <code>stop</code>, <code>reset</code></li>
 </ul>
 
