@@ -58,7 +58,8 @@
 <li><strong>Guaranteed pause when a player joins</strong>: generation stops as soon as a connection reaches the login/configuration handshake (not only after the player fully joins), and aborts even mid-batch inside a <code>chunksPerTick</code> block — so the world download is never starved. Resumes when the last player leaves (unless <code>chunkGen.runWithPlayers</code>)</li>
 <li><strong>Duty cycle</strong>: generation works in wall-clock blocks — <code>chunkGen.loadSeconds</code> of loading followed by <code>chunkGen.restSeconds</code> of rest, giving the server periodic breaks (default 10 min on / 5 min off)</li>
 <li><strong>Multi-dimension</strong>: Generate Overworld, Nether, and End simultaneously</li>
-<li><strong>Configurable speed</strong>: 1 to 300 chunks per tick</li>
+<li><strong>Configurable speed</strong>: 1 to 100 chunks per tick (hard cap enforced in code)</li>
+<li><strong>No server pause required</strong>: set <code>pause-when-empty-seconds=-1</code> in <code>server.properties</code> so the dedicated server keeps running while empty and generation never stalls</li>
 <li><strong>Max radius completion</strong>: with a finite <code>chunkGen.maxRadius</code>, the job stops permanently once reached (use <code>/utilitycore chunkgen reset</code> to regenerate)</li>
 <li><strong>Progress persistence</strong>: Survives server restarts and crashes</li>
 <li><strong>Keep alive</strong>: Prevents the vanilla server idle pause during generation (compatible with the current Minecraft tick field)</li>
@@ -121,15 +122,15 @@
 <tr><td><code>spawnSchematic.fixedY</code></td><td>64</td><td>Vanilla / All</td><td>Absolute Y coordinate for the bottom of the schematic (only in <code>FIXED</code> mode).</td></tr>
 <tr><td><code>spawnSchematic.preventMobSpawns</code></td><td>true</td><td>Vanilla / All</td><td>Prevents natural mob spawns inside the schematic bounds (spawn eggs and commands still work).</td></tr>
 <tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
-<tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>
+<tr><td><code>chunkGen.chunksPerTick</code></td><td>100</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-100, hard cap in code). Recommended: 1-8. Higher = faster but more CPU.</td></tr>
 <tr><td><code>chunkGen.maxRadius</code></td><td>0</td><td>Vanilla / All</td><td>Maximum generation radius in chunks (0 = unlimited).</td></tr>
 <tr><td><code>chunkGen.dimensionOverworld</code></td><td>true</td><td>Vanilla / All</td><td>Generate chunks in the Overworld.</td></tr>
 <tr><td><code>chunkGen.dimensionNether</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in the Nether.</td></tr>
 <tr><td><code>chunkGen.dimensionEnd</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in The End.</td></tr>
 <tr><td><code>chunkGen.runWithPlayers</code></td><td>false</td><td>Vanilla / All</td><td>If true, generation continues even when players are online. If false, pauses on player join.</td></tr>
-<tr><td><code>chunkGen.keepAlive</code></td><td>true</td><td>Vanilla / All</td><td>Prevents the dedicated server from idling (60s timeout) while chunks are being generated.</td></tr>
 <tr><td><code>chunkGen.loadSeconds</code></td><td>600</td><td>Vanilla / All</td><td>Duty cycle: seconds of generation before a rest period (60-86400, default 600 = 10 min).</td></tr>
 <tr><td><code>chunkGen.restSeconds</code></td><td>300</td><td>Vanilla / All</td><td>Duty cycle: seconds of rest with no generation (0-86400, default 300 = 5 min).</td></tr>
+<tr><td colspan="4"><strong>Note</strong>: set <code>pause-when-empty-seconds=-1</code> in <code>server.properties</code> so the server does not pause while empty — otherwise ChunkGen stalls and logins can time out.</td></tr>
 <tr><td><code>dataPackFolder.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Auto-loads every datapack from <code>&lt;game-dir&gt;/&lt;dataPackFolder.path&gt;</code> into all worlds (always enabled). Like Global Packs for datapacks.</td></tr>
 <tr><td><code>dataPackFolder.path</code></td><td>datapacks</td><td>Vanilla / All</td><td>Folder (relative to the game directory) scanned for datapacks when <code>dataPackFolder.enabled</code> is true.</td></tr>
 </table>
