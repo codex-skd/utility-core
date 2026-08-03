@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-08-03)
 
 ## Corpus Check
-- 58 files · ~122,124 words
+- 58 files · ~122,180 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 458 nodes · 631 edges · 123 communities (36 shown, 87 thin omitted)
+- 459 nodes · 634 edges · 123 communities (36 shown, 87 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1dc106f9`
+- Built from commit: `325f7ac0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -122,7 +122,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `ChunkGenManager` - 32 edges
-2. `SpawnSchematicManager` - 23 edges
+2. `SpawnSchematicManager` - 24 edges
 3. `LegacyBlockMap` - 18 edges
 4. `Utility Core — Registro de cambios` - 17 edges
 5. `SpongeSchematicReader` - 16 edges
@@ -162,7 +162,7 @@ Cohesion: 0.12
 Nodes (15): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, ServerStartedEvent, ServerStoppingEvent (+7 more)
 
 ### Community 4 - "UtilityCore.java"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (10): CompoundTag, SpongeSchematicReader, HolderLookup, BlockPos, Gson, Logger, MinecraftServer, ServerLevel (+2 more)
 
 ### Community 5 - "Config.java"
@@ -222,7 +222,7 @@ Nodes (3): Block, BlockState, LegacyBlockMap
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `Publicación a GitHub (CI/CD)`, `PlayerRecipeData`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
 - **Why does `ChunkGenManager` connect `ChunkGenManager` to `PlayerRecipeData`, `Config.java`?**
   _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
@@ -234,4 +234,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
   _Cohesion score 0.12 - nodes in this community are weakly interconnected._
 - **Should `UtilityCore.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.1251778093883357 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12280701754385964 - nodes in this community are weakly interconnected._
