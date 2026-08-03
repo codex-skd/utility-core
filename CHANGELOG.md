@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.1
+- Fix: la prevención de mobs (`spawnSchematic.preventMobSpawns`) solo cubría el rango de altura exacto del esquema (`minPos.getY()`-`maxPos.getY()`). Cuando el esquema flota sobre el terreno (`spawnSchematic.surfaceOffset`), el suelo natural bajo la estructura —mismo footprint X/Z, oscuro de noche— quedaba fuera de ese rango y seguían apareciendo mobs ahí. Nuevo `isWithinMobSpawnColumn()` protege toda la columna, desde el fondo del mundo hasta el techo del esquema; la protección de romper/colocar bloques y explosiones sigue usando `isWithinBounds()` sin cambios.
+
 ## 1.11.0
 - Breaking change: el **esquema de spawn ya no va empaquetado en el JAR**. El mod ya no extrae ningún esquema por defecto; ahora se lee siempre de `<game-dir>/utility_core/spawn_schem/schematic_spawn.schem`. Si el archivo no existe, la feature se omite con un error en el log. Debes colocar tu propio `.schem` antes de crear/regenerar el mundo. (De paso se quita el payload binario grande del JAR del mod.)
 - Nueva feature: **comando de protección del spawn**. `/utilitycore spawnprotection on|off|status` activa/desactiva en caliente la protección de construcción de la zona del esquema (romper/colocar bloques y explosiones), para construir temporalmente dentro y luego reactivarla. El estado se persiste en la config.
