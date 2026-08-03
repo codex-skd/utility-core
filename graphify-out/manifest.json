@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785753348.1607,
-    "ast_hash": "c120d26eda71cdc20bb6fcb0d2f9c79f",
+    "mtime": 1785754173.5340636,
+    "ast_hash": "f5799cd718c7226fac7da3c61fc25925",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785752251.0781767,
-    "ast_hash": "e9387175a7908b642d612b9fbd84ff3b",
+    "mtime": 1785754178.9027865,
+    "ast_hash": "73ad707b97d0062da41c80a131e7c06f",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -285,13 +285,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java": {
-    "mtime": 1785752013.0617404,
-    "ast_hash": "8fc7164ff15fc4b653002992010a785e",
+    "mtime": 1785759566.1862676,
+    "ast_hash": "5608cdccabc64923ca112f3875c49a24",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
-    "mtime": 1785752157.0890777,
-    "ast_hash": "f522a9e7a5da0d9dba70ded76349c360",
+    "mtime": 1785759560.5589564,
+    "ast_hash": "1c737d977f20535c706d6cbf2c78dddd",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {

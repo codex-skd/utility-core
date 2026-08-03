@@ -1,16 +1,16 @@
 # Graph Report - 26.1.2  (2026-08-03)
 
 ## Corpus Check
-- 76 files · ~125,183 words
+- 76 files · ~125,239 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 510 nodes · 683 edges · 135 communities (53 shown, 82 thin omitted)
+- 511 nodes · 686 edges · 135 communities (53 shown, 82 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `db5f4536`
+- Built from commit: `0e3f5f5e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -119,7 +119,7 @@
 ## God Nodes (most connected - your core abstractions)
 1. `Utility Core — Registro de cambios` - 46 edges
 2. `ChunkGenManager` - 32 edges
-3. `SpawnSchematicManager` - 23 edges
+3. `SpawnSchematicManager` - 24 edges
 4. `LegacyBlockMap` - 18 edges
 5. `SpongeSchematicReader` - 16 edges
 6. `PolymorphClientHandler` - 15 edges
@@ -154,7 +154,7 @@ Cohesion: 0.13
 Nodes (10): CompoundTag, SpongeSchematicReader, HolderLookup, BlockPos, Gson, Logger, MinecraftServer, ServerLevel (+2 more)
 
 ### Community 3 - "PolymorphApi.java"
-Cohesion: 0.21
+Cohesion: 0.18
 Nodes (11): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnPlacementCheck, BlockPos, EventBusSubscriber (+3 more)
 
 ### Community 4 - "MixinCraftingMenu.java"
@@ -170,16 +170,16 @@ Cohesion: 0.10
 Nodes (8): AbstractContainerMenu, ByteBuf, CustomPacketPayload, MixinCraftingMenu, SelectRecipePacket, SyncRecipesPacket, PlayerRecipeData, RegistryFriendlyByteBuf
 
 ### Community 7 - "UtilityCore.java"
-Cohesion: 0.13
-Nodes (11): Connection, Field, RegisterCommandsEvent, ChunkGenManager, DimState, Gson, Level, Logger (+3 more)
+Cohesion: 0.11
+Nodes (14): CallbackInfoReturnable, Connection, Field, MixinItemInput, Method, RegisterCommandsEvent, ChunkGenManager, DimState (+6 more)
 
 ### Community 9 - "MixinDamageContainer.java"
 Cohesion: 0.31
 Nodes (8): GameRule, GameRules, JsonObject, Gson, Logger, MinecraftServer, ServerRulesManager, SuppressWarnings
 
 ### Community 10 - "UtilityCoreClient.java"
-Cohesion: 0.07
-Nodes (24): AddPackFindersEvent, BooleanValue, Builder, CallbackInfoReturnable, ConfigValue, DamageType, EnumValue, OutpostZeroCompat (+16 more)
+Cohesion: 0.08
+Nodes (21): AddPackFindersEvent, BooleanValue, Builder, ConfigValue, DamageType, EnumValue, OutpostZeroCompat, MixinDamageContainer (+13 more)
 
 ### Community 11 - "gradlew"
 Cohesion: 0.17
@@ -222,7 +222,7 @@ Nodes (3): Block, BlockState, LegacyBlockMap
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SpawnSchematicManager` connect `PlayerRecipeData` to `PolymorphApi.java`, `EnderDragonRespawnHandler.java`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+  _High betweenness centrality (0.064) - this node is a cross-community bridge._
 - **Why does `ChunkGenManager` connect `UtilityCore.java` to `EnderDragonRespawnHandler.java`?**
   _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **Why does `PolymorphClientHandler` connect `PolymorphClientHandler.java` to `SyncRecipesPacket`?**
@@ -234,4 +234,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
   _Cohesion score 0.09247311827956989 - nodes in this community are weakly interconnected._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
-  _Cohesion score 0.1251778093883357 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
