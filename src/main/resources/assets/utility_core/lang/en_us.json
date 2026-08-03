@@ -8,5 +8,6 @@
   "utility_core.configuration.enableBiomeDimensionTitles": "Enable Biome/Dimension Titles",
   "utility_core.configuration.titleVerticalOffset": "Title Vertical Offset",
   "utility_core.configuration.enableSpawnSchematic": "Enable Spawn Schematic",
+  "utility_core.configuration.spawnSchematic.protectionEnabled": "Spawn Area Build Protection",
   "polymorph.selector.title": "Select Recipe"
 }

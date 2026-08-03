@@ -25,7 +25,6 @@ import net.minecraft.util.ProblemReporter;
 import org.slf4j.Logger;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
@@ -35,7 +34,6 @@ public class SpawnSchematicManager {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path SCHEMATIC_FILE = Path.of("utility_core", "spawn_schem", "schematic_spawn.schem");
-    private static final String DEFAULT_SCHEMATIC_RESOURCE = "/utility_core/default_spawn_schematic.schem";
 
     private static SpawnSchematicManager instance;
 
@@ -83,8 +81,8 @@ public class SpawnSchematicManager {
             return;
         }
 
-        if (!Files.exists(SCHEMATIC_FILE) && !extractDefaultSchematic()) {
-            LOGGER.error("[SpawnSchematic] Schematic file not found at {} and no bundled default could be extracted! Place a schematic at this path and delete the world save to try again.", SCHEMATIC_FILE.toAbsolutePath().normalize());
+        if (!Files.exists(SCHEMATIC_FILE)) {
+            LOGGER.error("[SpawnSchematic] Schematic file not found at {}. Place your schematic at this path (and delete the world save to re-run the placement).", SCHEMATIC_FILE.toAbsolutePath().normalize());
             writeNotPlaced(markerFile);
             return;
         }
@@ -166,20 +164,40 @@ public class SpawnSchematicManager {
         LOGGER.info("[SpawnSchematic] Schematic placed at origin {} (bounds: {} to {})", origin, min, max);
     }
 
-    private boolean extractDefaultSchematic() {
-        try (InputStream in = SpawnSchematicManager.class.getResourceAsStream(DEFAULT_SCHEMATIC_RESOURCE)) {
-            if (in == null) {
-                LOGGER.error("[SpawnSchematic] Bundled default schematic resource not found in mod jar");
-                return false;
-            }
-            Files.createDirectories(SCHEMATIC_FILE.getParent());
-            Files.copy(in, SCHEMATIC_FILE);
-            LOGGER.info("[SpawnSchematic] Extracted bundled default schematic to {}", SCHEMATIC_FILE.toAbsolutePath().normalize());
-            return true;
-        } catch (IOException e) {
-            LOGGER.error("[SpawnSchematic] Failed to extract bundled default schematic: {}", e.getMessage());
-            return false;
-        }
+    public boolean hasProtectionEnabled() {
+        return hasBounds && Config.ENABLE_SPAWN_SCHEMATIC.get() && Config.SPAWN_SCHEMATIC_PROTECTION_ENABLED.get();
+    }
+
+    public boolean isWithinBounds(BlockPos pos) {
+        if (!hasProtectionEnabled()) return false;
+        return pos.getX() >= minPos.getX() && pos.getX() <= maxPos.getX()
+                && pos.getY() >= minPos.getY() && pos.getY() <= maxPos.getY()
+                && pos.getZ() >= minPos.getZ() && pos.getZ() <= maxPos.getZ();
+    }
+
+    public BlockPos getMinPos() {
+        return minPos;
+    }
+
+    public BlockPos getMaxPos() {
+        return maxPos;
+    }
+
+    /**
+     * Minimum number of blocks the given position must move horizontally to leave the
+     * protected zone. Returns 0 when the position is already outside the bounds.
+     */
+    public int distanceToExit(BlockPos pos) {
+        if (!hasBounds) return 0;
+        int exitX = axisDistanceToExit(pos.getX(), minPos.getX(), maxPos.getX());
+        int exitZ = axisDistanceToExit(pos.getZ(), minPos.getZ(), maxPos.getZ());
+        return Math.min(exitX, exitZ);
+    }
+
+    private int axisDistanceToExit(int value, int min, int max) {
+        if (value < min) return min - value;
+        if (value > max) return value - max;
+        return Math.min(value - min + 1, max - value + 1);
     }
 
     private int resolveOriginY(ServerLevel level, SpongeSchematicReader reader, int originX, int originZ) {
@@ -279,16 +297,5 @@ public class SpawnSchematicManager {
         } catch (IOException e) {
             LOGGER.warn("[SpawnSchematic] Could not save marker: {}", e.getMessage());
         }
-    }
-
-    public boolean hasProtectionEnabled() {
-        return hasBounds && Config.ENABLE_SPAWN_SCHEMATIC.get();
-    }
-
-    public boolean isWithinBounds(BlockPos pos) {
-        if (!hasProtectionEnabled()) return false;
-        return pos.getX() >= minPos.getX() && pos.getX() <= maxPos.getX()
-                && pos.getY() >= minPos.getY() && pos.getY() <= maxPos.getY()
-                && pos.getZ() >= minPos.getZ() && pos.getZ() <= maxPos.getZ();
     }
 }
