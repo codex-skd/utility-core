@@ -1,6 +1,6 @@
 <h1 align="center">&#9881;&#65039; Utility Core</h1>
 
-<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, spawn schematic, global data packs, biome/dimension titles, and mod compatibility fixes.</strong></p>
+<p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, spawn schematic, global data packs, server rules, biome/dimension titles, and mod compatibility fixes.</strong></p>
 
 <br>
 
@@ -15,8 +15,8 @@
 <p>What it covers:</p>
 <ul>
 <li><strong>Crafting</strong> — resolve recipe conflicts with an in-grid selector</li>
-<li><strong>Server safety</strong> — clamp negative damage, cap OutpostZero infection damage, pre-generate chunks</li>
-<li><strong>World creation</strong> — paste a spawn schematic and protect the area, or auto-load global datapacks</li>
+<li><strong>Server safety</strong> — clamp negative damage, cap OutpostZero infection damage, pre-generate chunks, enforce server game rules</li>
+<li><strong>World creation</strong> — paste a spawn schematic, protect the area from players, explosions and mob spawns, or auto-load global datapacks</li>
 <li><strong>Client</strong> — biome/dimension titles, Tombstone GUI fixes</li>
 <li><strong>Developer API</strong> — <code>PolymorphApi</code> for recipe integration</li>
 </ul>
@@ -48,18 +48,36 @@
 <li>Bundled lobby schematic extracted automatically on first start if the file is missing — replace <code>schematic_spawn.schem</code> with your own file (same filename) before creating a new world to use a custom one</li>
 <li>Sets world spawn inside the structure with safe-position detection</li>
 <li>Permanent area protection: prevents block breaking, block placing, and explosions inside the pasted area</li>
+<li><strong>No natural mob spawns</strong> inside the protected area (<code>spawnSchematic.preventMobSpawns</code>, default true) — perfect for schematics without lighting; spawn eggs and commands still work</li>
 <li>Per-world marker ensures one-time application even if the mod is later removed and reinstalled</li>
 </ul>
 
 <h3>&#127758; Automatic Chunk Pregeneration (ChunkGen)</h3>
 <p>Pre-generates chunks in a spiral pattern when the server is empty, eliminating lag from world generation when players explore. Multi-dimension support (Overworld, Nether, End).</p>
 <ul>
-<li><strong>Auto-pause</strong>: Stops when players join, resumes when they leave</li>
+<li><strong>Guaranteed pause when a player joins</strong>: generation stops as soon as a connection reaches the login/configuration handshake (not only after the player fully joins), and aborts even mid-batch inside a <code>chunksPerTick</code> block — so the world download is never starved. Resumes when the last player leaves (unless <code>chunkGen.runWithPlayers</code>)</li>
+<li><strong>Duty cycle</strong>: generation works in wall-clock blocks — <code>chunkGen.loadSeconds</code> of loading followed by <code>chunkGen.restSeconds</code> of rest, giving the server periodic breaks (default 10 min on / 5 min off)</li>
 <li><strong>Multi-dimension</strong>: Generate Overworld, Nether, and End simultaneously</li>
 <li><strong>Configurable speed</strong>: 1 to 300 chunks per tick</li>
+<li><strong>Max radius completion</strong>: with a finite <code>chunkGen.maxRadius</code>, the job stops permanently once reached (use <code>/utilitycore chunkgen reset</code> to regenerate)</li>
 <li><strong>Progress persistence</strong>: Survives server restarts and crashes</li>
-<li><strong>Keep alive</strong>: Prevents vanilla server idle pause during generation</li>
+<li><strong>Keep alive</strong>: Prevents the vanilla server idle pause during generation (compatible with the current Minecraft tick field)</li>
 <li><strong>Commands</strong>: <code>/utilitycore chunkgen status</code>, <code>start</code>, <code>pause</code>, <code>stop</code>, <code>reset</code></li>
+</ul>
+
+<h3>&#128297; Server Rules Manager</h3>
+<p>Enforce a curated list of server game rules from <code>utility_core/server_rules.json</code>:</p>
+<pre><code>{
+  "rules": {
+    "players_sleeping_percentage": 50,
+    "keep_inventory": true
+  }
+}</code></pre>
+<p>On server start, each configured rule is compared against the current server value and <strong>only applied when it differs</strong> (via the <code>GameRules</code> API — no commands executed, nothing re-applied when it already matches). Removing a rule from the file leaves the server untouched.</p>
+<ul>
+<li>Rule IDs are the in-game gamerule names (snake_case, e.g. <code>players_sleeping_percentage</code>, <code>spawn_mobs</code>, <code>do_daylight_cycle</code>)</li>
+<li>Works for boolean and integer game rules, including rules added by other mods</li>
+<li>Commands: <code>/utilitycore rules apply</code> (re-apply now) and <code>/utilitycore rules status</code> (show configured vs current)</li>
 </ul>
 
 <h3>&#128230; Data Pack Folder (Opt-in)</h3>
@@ -101,6 +119,7 @@
 <tr><td><code>spawnSchematic.heightMode</code></td><td>SURFACE</td><td>Vanilla / All</td><td>Height placement for the spawn schematic. <code>SURFACE</code> aligns the bottom to the highest ground block under its footprint (default); <code>FIXED</code> places it at the absolute coordinate <code>spawnSchematic.fixedY</code>.</td></tr>
 <tr><td><code>spawnSchematic.surfaceOffset</code></td><td>70</td><td>Vanilla / All</td><td>Extra blocks above the ground where the bottom of the schematic is placed (only in <code>SURFACE</code> mode). 0 = flush, positive = raised, negative = buried. The bundled lobby default is designed for 70.</td></tr>
 <tr><td><code>spawnSchematic.fixedY</code></td><td>64</td><td>Vanilla / All</td><td>Absolute Y coordinate for the bottom of the schematic (only in <code>FIXED</code> mode).</td></tr>
+<tr><td><code>spawnSchematic.preventMobSpawns</code></td><td>true</td><td>Vanilla / All</td><td>Prevents natural mob spawns inside the schematic bounds (spawn eggs and commands still work).</td></tr>
 <tr><td><code>chunkGen.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Automatic chunk pregenerator. No dependencies.</td></tr>
 <tr><td><code>chunkGen.chunksPerTick</code></td><td>1</td><td>Vanilla / All</td><td>Chunks generated per server tick (1-300). Higher = faster but more CPU.</td></tr>
 <tr><td><code>chunkGen.maxRadius</code></td><td>0</td><td>Vanilla / All</td><td>Maximum generation radius in chunks (0 = unlimited).</td></tr>
@@ -109,6 +128,8 @@
 <tr><td><code>chunkGen.dimensionEnd</code></td><td>false</td><td>Vanilla / All</td><td>Generate chunks in The End.</td></tr>
 <tr><td><code>chunkGen.runWithPlayers</code></td><td>false</td><td>Vanilla / All</td><td>If true, generation continues even when players are online. If false, pauses on player join.</td></tr>
 <tr><td><code>chunkGen.keepAlive</code></td><td>true</td><td>Vanilla / All</td><td>Prevents the dedicated server from idling (60s timeout) while chunks are being generated.</td></tr>
+<tr><td><code>chunkGen.loadSeconds</code></td><td>600</td><td>Vanilla / All</td><td>Duty cycle: seconds of generation before a rest period (60-86400, default 600 = 10 min).</td></tr>
+<tr><td><code>chunkGen.restSeconds</code></td><td>300</td><td>Vanilla / All</td><td>Duty cycle: seconds of rest with no generation (0-86400, default 300 = 5 min).</td></tr>
 <tr><td><code>dataPackFolder.enabled</code></td><td>false</td><td>Vanilla / All</td><td>Auto-loads every datapack from <code>&lt;game-dir&gt;/&lt;dataPackFolder.path&gt;</code> into all worlds (always enabled). Like Global Packs for datapacks.</td></tr>
 <tr><td><code>dataPackFolder.path</code></td><td>datapacks</td><td>Vanilla / All</td><td>Folder (relative to the game directory) scanned for datapacks when <code>dataPackFolder.enabled</code> is true.</td></tr>
 </table>
@@ -118,7 +139,7 @@
 <h2>&#128196; Requirements</h2>
 
 <table>
-<tr><td><strong>Minecraft</strong></td><td>26.2</td></tr>
+<tr><td><strong>Minecraft</strong></td><td>26.1.2 and 26.2</td></tr>
 <tr><td><strong>NeoForge</strong></td><td>26.2.0.32-beta+</td></tr>
 </table>
 
@@ -133,6 +154,7 @@
 <li>Use <code>/utilitycore chunkgen status</code> to monitor generation progress.</li>
 <li>For Spawn Schematic: set <code>enableSpawnSchematic=true</code>. On first start the mod extracts its bundled example schematic to <code>utility_core/spawn_schem/schematic_spawn.schem</code> if the file is missing. Keep it or replace it with your own schematic (same filename), then create a <strong>new world</strong>. <blockquote><strong>To apply to an existing world, you must delete the world save folder first</strong> — this is intentional.</blockquote></li>
 <li>For Data Pack Folder: set <code>dataPackFolder.enabled=true</code>, drop your datapacks (<code>.zip</code> or folder) into <code>&lt;game-dir&gt;/datapacks</code> and start/restart the world. They load into every world automatically, always enabled.</li>
+<li>For Server Rules: create <code>utility_core/server_rules.json</code> with the rules you want to enforce (see the Server Rules Manager section). They are applied automatically on server start, only when they differ from the current value.</li>
 </ol>
 
 <h3>Known Incompatibilities</h3>
