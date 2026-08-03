@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785711439.766909,
-    "ast_hash": "689ddf36447be4ee1f959d97481cb5ee",
+    "mtime": 1785714370.6259768,
+    "ast_hash": "462b1e51973d3e29b0d320400a8dbd14",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785675112.1433668,
-    "ast_hash": "596a1843e3258b7c9e9724fc977e28c0",
+    "mtime": 1785714364.8145535,
+    "ast_hash": "c8d4fdc61880d3d3f84aa707e49506dc",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
@@ -140,13 +140,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785711450.7174428,
-    "ast_hash": "2f5d37d7d433278b8c9d5a03c7efe77a",
+    "mtime": 1785715787.8056574,
+    "ast_hash": "f7cd5d16cca1fafbd64dcdcd31a2d13d",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785711466.386667,
-    "ast_hash": "54f058f89b22b1b5a126a6ce37b057b9",
+    "mtime": 1785714453.8966863,
+    "ast_hash": "96c30839b23cbbbc4ccf3c8d7c04ed42",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-1-2.md": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
-    "mtime": 1785711427.9737453,
-    "ast_hash": "3d5e5defb1d51624075ec576fb237bf0",
+    "mtime": 1785715065.5238311,
+    "ast_hash": "9f626d6b35ca982e681045e6cbe0efe4",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.0.33.md": {
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java": {
-    "mtime": 1785453440.6242955,
-    "ast_hash": "8142e576575f07aab5ac88c084844397",
+    "mtime": 1785714364.7729177,
+    "ast_hash": "858b10c41167ac6addbe51d4a713f381",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
@@ -377,6 +377,16 @@
   "docs/curseforge/versions/1.8.0.md": {
     "mtime": 1785712036.2524939,
     "ast_hash": "c616d5710cd034bc9c017238d54922d9",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/utilitycore/compat/ServerRulesManager.java": {
+    "mtime": 1785714364.8338215,
+    "ast_hash": "cb716a73269722ccb8416dd4e2424848",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.9.0.md": {
+    "mtime": 1785715805.9555094,
+    "ast_hash": "85dea169ae11248f2901bd7dbdd8dbe7",
     "semantic_hash": ""
   }
 }
