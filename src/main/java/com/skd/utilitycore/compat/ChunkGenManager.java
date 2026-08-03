@@ -41,9 +41,11 @@ public class ChunkGenManager {
     private long phaseStartMillis = 0L;
     private int dimIndex = 0;
     private int ticksSinceLastLog = 0;
+    private boolean completed = false;
 
     private static class RootState {
         @SerializedName("dimensions") Map<String, DimState> dimensions = new HashMap<>();
+        @SerializedName("completed") boolean completed;
     }
 
     private static class DimState {
@@ -61,6 +63,7 @@ public class ChunkGenManager {
 
     private Field tickField;
     private boolean tickFieldSearched = false;
+    private boolean tickFieldNanos = false;
     private Field listenerField;
     private boolean listenerFieldSearched = false;
 
@@ -230,6 +233,10 @@ public class ChunkGenManager {
     }
 
     private void start(MinecraftServer server) {
+        if (completed) {
+            running = false;
+            return;
+        }
         boolean[] configs = {
             Config.CHUNK_GEN_DIMENSION_OVERWORLD.get(),
             Config.CHUNK_GEN_DIMENSION_NETHER.get(),
@@ -270,6 +277,7 @@ public class ChunkGenManager {
         paused = false;
         restPhase = false;
         phaseStartMillis = 0L;
+        completed = true;
         LOGGER.info("[ChunkGen] All dimensions completed");
         saveState();
     }
@@ -298,6 +306,10 @@ public class ChunkGenManager {
         paused = false;
         restPhase = false;
         phaseStartMillis = 0L;
+        completed = false;
+        try {
+            Files.deleteIfExists(STATE_FILE);
+        } catch (IOException ignored) {}
         LOGGER.info("[ChunkGen] Progress reset for all dimensions");
         saveState();
     }
@@ -356,25 +368,40 @@ public class ChunkGenManager {
         if (!Config.CHUNK_GEN_KEEP_ALIVE.get()) return;
         if (!tickFieldSearched) {
             tickFieldSearched = true;
-            long now = Util.getMillis();
             try {
-                Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
+                Field f = MinecraftServer.class.getDeclaredField("nextTickTimeNanos");
                 f.setAccessible(true);
-                long val = f.getLong(server);
-                if (val >= now - 100_000 && val <= now + 100_000) {
-                    tickField = f;
-                    LOGGER.info("[ChunkGen] Found tick field: nextTickTick = {}", val);
-                }
+                tickField = f;
+                tickFieldNanos = true;
+                LOGGER.info("[ChunkGen] Found tick field: nextTickTimeNanos");
             } catch (Exception ignored) {}
             if (tickField == null) {
+                try {
+                    Field f = MinecraftServer.class.getDeclaredField("nextTickTick");
+                    f.setAccessible(true);
+                    tickField = f;
+                    tickFieldNanos = false;
+                    LOGGER.info("[ChunkGen] Found tick field: nextTickTick");
+                } catch (Exception ignored) {}
+            }
+            if (tickField == null) {
+                long nowMs = Util.getMillis();
+                long nowNanos = System.nanoTime();
                 for (Field f : MinecraftServer.class.getDeclaredFields()) {
                     if (f.getType() != long.class) continue;
                     try {
                         f.setAccessible(true);
                         long val = f.getLong(server);
-                        if (val >= now - 100_000 && val <= now + 100_000) {
+                        if (val >= nowMs - 100_000 && val <= nowMs + 100_000) {
                             tickField = f;
-                            LOGGER.info("[ChunkGen] Found tick field (fallback): {} = {}", f.getName(), val);
+                            tickFieldNanos = false;
+                            LOGGER.info("[ChunkGen] Found tick field (fallback ms): {}", f.getName());
+                            break;
+                        }
+                        if (val >= nowNanos - 100_000_000_000L && val <= nowNanos + 100_000_000_000L) {
+                            tickField = f;
+                            tickFieldNanos = true;
+                            LOGGER.info("[ChunkGen] Found tick field (fallback ns): {}", f.getName());
                             break;
                         }
                     } catch (Exception ignored) {}
@@ -385,8 +412,9 @@ public class ChunkGenManager {
             }
         }
         if (tickField != null) {
-            try { tickField.setLong(server, Util.getMillis() + 50L); }
-            catch (Exception ignored) {}
+            try {
+                tickField.setLong(server, tickFieldNanos ? System.nanoTime() + 50_000_000L : Util.getMillis() + 50L);
+            } catch (Exception ignored) {}
         }
     }
 
@@ -399,8 +427,9 @@ public class ChunkGenManager {
             RootState root = GSON.fromJson(json, RootState.class);
             if (root != null && root.dimensions != null) {
                 dims.putAll(root.dimensions);
-                LOGGER.info("[ChunkGen] Loaded state: {} chunks across {} dimensions",
-                        totalGenerated(), dims.size());
+                completed = root.completed;
+                LOGGER.info("[ChunkGen] Loaded state: {} chunks across {} dimensions{}",
+                        totalGenerated(), dims.size(), completed ? " (completed)" : "");
             }
         } catch (IOException e) {
             LOGGER.warn("[ChunkGen] Could not load state: {}", e.getMessage());
@@ -408,9 +437,10 @@ public class ChunkGenManager {
     }
 
     private void saveState() {
-        if (dims.isEmpty()) return;
+        if (dims.isEmpty() && !completed) return;
         RootState root = new RootState();
         root.dimensions = dims;
+        root.completed = completed;
         try {
             Files.createDirectories(STATE_FILE.getParent());
             Files.writeString(STATE_FILE, GSON.toJson(root));

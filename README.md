@@ -9,6 +9,8 @@ A library mod for NeoForge (MC 26.2) providing shared utilities and features.
 - **Corail Tombstone Compatibility**: GUI scale fix, item NBT init fix, and mixin error suppression.
 - **OutpostZero Damage Cap**: Limits infection damage to prevent instant death before death events fire.
 - **Automatic Chunk Pregeneration (ChunkGen)**: Pre-generates chunks in a spiral pattern when the server is empty.
+- **Spawn Zone Protection**: The spawn schematic area is unbreakable, unplaceable, explosion-proof, and free of natural mob spawns (useful when the schematic has no lighting).
+- **Server Rules Manager**: Enforce a curated list of game rules from a JSON file, applied only when they differ from the current server value.
 - **Biome/Dimension Titles**: Shows a title on screen when entering a new biome or dimension. Logic ported from [Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles) by YUNGNICKYOUNG (LGPLv3).
 - **Spawn Schematic (opt-in)**: Pastes a WorldEdit/FAWE `.schem` file at world creation centered on world coordinates (0,0), protects the area permanently, and sets the world spawn point inside the structure. A bundled example schematic is extracted automatically on first start.
 - **Data Pack Folder (opt-in)**: Loads every datapack (`.zip` or folder) placed in `<game-directory>/datapacks` into every world automatically (dedicated servers and single-player), like the Global Packs mod. Packs are always enabled, no per-world toggle needed.
@@ -52,6 +54,24 @@ Pre-generates chunks in a spiral pattern from (0,0) when the server is empty, so
 - **Progress persistence**: survives restarts and crashes.
 - **Commands**: `/utilitycore chunkgen status`, `start`, `pause`, `stop`, `reset`.
 
+## Server Rules Manager
+
+Enforces a curated list of game rules from `utility_core/server_rules.json`:
+
+```json
+{
+  "rules": {
+    "players_sleeping_percentage": 50,
+    "do_daylight_cycle": false
+  }
+}
+```
+
+On server start each configured rule is compared against the current server value and **only applied when it differs** (via the `GameRules` API, no commands executed). If it already matches, nothing happens. Removing a rule from the file leaves the server untouched.
+
+- Rule IDs are the in-game gamerule names (e.g. `players_sleeping_percentage`, `spawn_mobs`, `keep_inventory`).
+- Commands: `/utilitycore rules apply` (re-apply now), `/utilitycore rules status` (show configured vs current).
+
 ## Configuration
 
 All options live in `config/utility_core-common.toml` (also editable from the in-game mod menu). Every feature can be toggled individually.
@@ -72,6 +92,7 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `spawnSchematic.heightMode` | SURFACE | `SURFACE` = align to ground, `FIXED` = absolute Y. |
 | `spawnSchematic.surfaceOffset` | 70 | Blocks above the ground in `SURFACE` mode. |
 | `spawnSchematic.fixedY` | 64 | Absolute Y in `FIXED` mode. |
+| `spawnSchematic.preventMobSpawns` | true | Prevent natural mob spawns inside the schematic bounds. |
 | `chunkGen.enabled` | false | Enable automatic chunk pregeneration. |
 | `chunkGen.chunksPerTick` | 1 | Chunks generated per tick (1-300). |
 | `chunkGen.maxRadius` | 0 | Max radius in chunks (0 = unlimited). |
