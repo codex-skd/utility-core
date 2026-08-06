@@ -2,6 +2,12 @@
 
 <p align="center"><strong>A multi-purpose library mod for NeoForge modpacks. Recipe conflict resolution, damage safety, automatic chunk pregeneration, spawn schematic, global data packs, server rules, biome/dimension titles, and mod compatibility fixes.</strong></p>
 
+<p align="center">
+<img src="https://img.shields.io/curseforge/dt/1601825?style=plastic&logo=curseforge&label=downloads" alt="CurseForge Downloads">
+<img src="https://img.shields.io/curseforge/v/1601825?style=plastic&logo=curseforge&label=latest" alt="CurseForge Version">
+<img src="https://img.shields.io/badge/loader-NeoForge-orange?style=plastic&logo=curseforge" alt="NeoForge">
+</p>
+
 <br>
 
 ---
@@ -10,6 +16,9 @@
 
 <h2>&#10024; Overview</h2>
 
+<table>
+<tr>
+<td width="65%">
 <p>Utility Core is a Swiss Army knife for modded Minecraft servers. It started as a simple recipe conflict resolver and evolved into a collection of essential utilities that every modpack needs. All features are <strong>toggleable individually</strong> from <code>config/utility_core-common.toml</code> (or the in-game mod menu).</p>
 
 <p>What it covers:</p>
@@ -20,6 +29,12 @@
 <li><strong>Client</strong> — biome/dimension titles, Tombstone GUI fixes</li>
 <li><strong>Developer API</strong> — <code>PolymorphApi</code> for recipe integration</li>
 </ul>
+</td>
+<td width="35%" align="center">
+<a href="https://codex.skdragons.com/" target="_blank"><img src="https://node-files.skdragons.com/logo_codex_stalking_dragons.png" alt="Codex Stalking Dragons" width="160"></a>
+</td>
+</tr>
+</table>
 
 <br>
 
