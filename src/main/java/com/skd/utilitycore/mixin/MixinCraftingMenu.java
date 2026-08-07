@@ -59,24 +59,24 @@ public class MixinCraftingMenu {
             pairs.add(RecipePair.of(holder, output.copy()));
             outputs.add(output.copy());
         }
+        List<ItemStack> inputs = captureInputs(container);
 
         ItemStack finalResult;
 
         if (allRecipes.isEmpty()) {
             finalResult = ItemStack.EMPTY;
-            sendSyncPacket(player, List.of());
+            sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
         } else if (allRecipes.size() == 1) {
-            sendSyncPacket(player, List.of());
+            sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
             RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
             result.setRecipeUsed(single);
             finalResult = single.value().assemble(input);
         } else {
-            sendSyncPacket(player, outputs);
+            sendSyncPacket(player, outputs, inputs);
 
             PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
-            List<ItemStack> inputs = captureInputs(container);
 
             if (data.inputsChanged(inputs)) {
                 data.setRecipes(pairs, inputs);
@@ -116,9 +116,9 @@ public class MixinCraftingMenu {
     }
 
     @Unique
-    private static void sendSyncPacket(Player player, List<ItemStack> outputs) {
+    private static void sendSyncPacket(Player player, List<ItemStack> outputs, List<ItemStack> inputs) {
         if (player instanceof ServerPlayer sp) {
-            PacketDistributor.sendToPlayer(sp, new SyncRecipesPacket(outputs));
+            PacketDistributor.sendToPlayer(sp, new SyncRecipesPacket(outputs, inputs));
         }
     }
 }

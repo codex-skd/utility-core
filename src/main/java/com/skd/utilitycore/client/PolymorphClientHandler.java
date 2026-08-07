@@ -106,7 +106,7 @@ public class PolymorphClientHandler {
         }
     }
 
-    public static void receiveServerRecipes(List<ItemStack> outputs) {
+    public static void receiveServerRecipes(List<ItemStack> outputs, List<ItemStack> inputs) {
         cachedRecipes.clear();
         for (ItemStack stack : outputs) {
             cachedRecipes.add(RecipePair.of(null, stack));
@@ -114,6 +114,8 @@ public class PolymorphClientHandler {
         if (selectedIndex >= cachedRecipes.size()) {
             selectedIndex = 0;
         }
+        lastInputs.clear();
+        lastInputs.addAll(inputs);
     }
 
     public static int getSelectedIndex() {
