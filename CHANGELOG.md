@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.3
+- Fix: el selector de recetas parpadeaba y desaparecía al cambiar ingredientes. El cliente recalculaba recetas cada frame, pero el servidor enviaba la lista de forma asincrónica, causando una condición de carrera que limpiaba el cache. Ahora el paquete de sincronización incluye los inputs procesados, evitando que el cliente recalcule innecesariamente hasta que cambien los ingredientes nuevamente.
+
 ## 1.11.2
 - Fix: el selector de recetas desaparecía cuando había múltiples recetas válidas. El selector se renderizaba en una grilla fija que excedía los límites visibles de la pantalla de crafting. Ahora calcula dinámicamente el número de columnas basándose en el espacio disponible y reposiciona la grilla para mantenerse dentro de los límites visibles, funcionando correctamente con 2-16+ recetas.
 
