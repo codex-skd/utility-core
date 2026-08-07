@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.2
+- Fix: el selector de recetas desaparecía cuando había múltiples recetas válidas. El selector se renderizaba en una grilla fija que excedía los límites visibles de la pantalla de crafting. Ahora calcula dinámicamente el número de columnas basándose en el espacio disponible y reposiciona la grilla para mantenerse dentro de los límites visibles, funcionando correctamente con 2-16+ recetas.
+
 ## 1.11.1
 - Fix: la prevención de mobs (`spawnSchematic.preventMobSpawns`) solo cubría el rango de altura exacto del esquema (`minPos.getY()`-`maxPos.getY()`). Cuando el esquema flota sobre el terreno (`spawnSchematic.surfaceOffset`), el suelo natural bajo la estructura —mismo footprint X/Z, oscuro de noche— quedaba fuera de ese rango y seguían apareciendo mobs ahí. Nuevo `isWithinMobSpawnColumn()` protege toda la columna, desde el fondo del mundo hasta el techo del esquema; la protección de romper/colocar bloques y explosiones sigue usando `isWithinBounds()` sin cambios.
 
