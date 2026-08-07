@@ -33,6 +33,7 @@ public class PolymorphClientHandler {
     private static final List<ItemStack> lastInputs = new ArrayList<>();
     private static int selectorX;
     private static int selectorY;
+    private static int selectorColumns = 4;
     private static boolean hovering = false;
     private static int selectedIndex = 0;
 
@@ -42,6 +43,7 @@ public class PolymorphClientHandler {
             cachedRecipes.clear();
             lastInputs.clear();
             selectedIndex = 0;
+            selectorColumns = 4;
         }
     }
 
@@ -57,7 +59,7 @@ public class PolymorphClientHandler {
         if (button == 0 && cachedRecipes.size() > 1 && hovering) {
             int column = ((int) mouseX - selectorX) / 18;
             int row = ((int) mouseY - selectorY) / 18;
-            int index = row * 4 + column;
+            int index = row * selectorColumns + column;
             if (index >= 0 && index < cachedRecipes.size()) {
                 selectedIndex = index;
                 ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
@@ -151,8 +153,29 @@ public class PolymorphClientHandler {
                                                   int selX, int selY) {
         List<RecipePair> recipes = cachedRecipes;
         if (recipes.size() <= 1) return ItemStack.EMPTY;
+
+        int screenW = mc.getWindow().getGuiScaledWidth();
+        int screenH = mc.getWindow().getGuiScaledHeight();
+
+        int maxColumnsByWidth = Math.max(1, (screenW - selX) / 18);
         int columns = Math.min(4, recipes.size());
+        columns = Math.min(columns, maxColumnsByWidth);
+
         int rows = (int) Math.ceil((double) recipes.size() / columns);
+        int maxRowsByHeight = Math.max(1, (screenH - selY) / 18);
+        if (rows > maxRowsByHeight) {
+            int columnsForHeight = (int) Math.ceil((double) recipes.size() / maxRowsByHeight);
+            columns = Math.min(columnsForHeight, maxColumnsByWidth);
+            rows = (int) Math.ceil((double) recipes.size() / columns);
+        }
+
+        selectorColumns = columns;
+
+        int gridW = columns * 18;
+        int gridH = rows * 18;
+        if (selX + gridW > screenW) selX = Math.max(0, screenW - gridW);
+        if (selY + gridH > screenH) selY = Math.max(0, screenH - gridH);
+        setSelectorPosition(selX, selY);
 
         boolean hoveringNow = false;
         ItemStack hoveredStack = ItemStack.EMPTY;
