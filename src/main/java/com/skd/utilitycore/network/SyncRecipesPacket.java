@@ -12,7 +12,7 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 import java.util.ArrayList;
 import java.util.List;
 
-public record SyncRecipesPacket(List<ItemStack> outputs) implements CustomPacketPayload {
+public record SyncRecipesPacket(List<ItemStack> outputs, List<ItemStack> inputs) implements CustomPacketPayload {
 
     public static final Type<SyncRecipesPacket> TYPE =
             new Type<>(Identifier.parse(UtilityCore.MODID + ":sync_recipes"));
@@ -25,6 +25,10 @@ public record SyncRecipesPacket(List<ItemStack> outputs) implements CustomPacket
         for (ItemStack stack : packet.outputs) {
             ItemStack.OPTIONAL_STREAM_CODEC.encode(buf, stack);
         }
+        buf.writeVarInt(packet.inputs.size());
+        for (ItemStack stack : packet.inputs) {
+            ItemStack.OPTIONAL_STREAM_CODEC.encode(buf, stack);
+        }
     }
 
     private static SyncRecipesPacket decode(RegistryFriendlyByteBuf buf) {
@@ -33,7 +37,12 @@ public record SyncRecipesPacket(List<ItemStack> outputs) implements CustomPacket
         for (int i = 0; i < size; i++) {
             outputs.add(ItemStack.OPTIONAL_STREAM_CODEC.decode(buf));
         }
-        return new SyncRecipesPacket(outputs);
+        int inputSize = buf.readVarInt();
+        List<ItemStack> inputs = new ArrayList<>();
+        for (int i = 0; i < inputSize; i++) {
+            inputs.add(ItemStack.OPTIONAL_STREAM_CODEC.decode(buf));
+        }
+        return new SyncRecipesPacket(outputs, inputs);
     }
 
     @Override
@@ -43,7 +52,7 @@ public record SyncRecipesPacket(List<ItemStack> outputs) implements CustomPacket
 
     public static void handle(SyncRecipesPacket packet, IPayloadContext context) {
         context.enqueueWork(() -> {
-            PolymorphClientHandler.receiveServerRecipes(packet.outputs);
+            PolymorphClientHandler.receiveServerRecipes(packet.outputs, packet.inputs);
         });
     }
 }
