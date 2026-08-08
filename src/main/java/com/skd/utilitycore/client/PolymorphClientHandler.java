@@ -56,14 +56,24 @@ public class PolymorphClientHandler {
         double mouseY = event.getMouseY();
         int button = event.getButton();
 
-        if (button == 0 && cachedRecipes.size() > 1 && hovering) {
-            int column = ((int) mouseX - selectorX) / 18;
-            int row = ((int) mouseY - selectorY) / 18;
-            int index = row * selectorColumns + column;
-            if (index >= 0 && index < cachedRecipes.size()) {
-                selectedIndex = index;
-                ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
-                event.setCanceled(true);
+        if (button == 0 && cachedRecipes.size() > 1) {
+            // Check if mouse is within selector bounds
+            if (mouseX >= selectorX && mouseX < selectorX + selectorColumns * 18) {
+                int row = ((int) (mouseY - selectorY)) / 18;
+                if (row >= 0) {
+                    int column = ((int) (mouseX - selectorX)) / 18;
+                    int index = row * selectorColumns + column;
+                    if (index >= 0 && index < cachedRecipes.size()) {
+                        // Verify Y bounds
+                        int rows = (int) Math.ceil((double) cachedRecipes.size() / selectorColumns);
+                        if (row < rows && mouseY >= selectorY && mouseY < selectorY + rows * 18) {
+                            selectedIndex = index;
+                            ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
+                            UtilityCore.LOGGER.debug("[UtilityCore] Selected recipe index: {} from {} recipes", index, cachedRecipes.size());
+                            event.setCanceled(true);
+                        }
+                    }
+                }
             }
         }
     }
