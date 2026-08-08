@@ -38,9 +38,6 @@ public record SelectRecipePacket(int selectedIndex) implements CustomPacketPaylo
             Player player = context.player();
             PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
 
-            UtilityCore.LOGGER.debug("[UtilityCore] Received recipe selection: index={}, available={}",
-                packet.selectedIndex(), data.getRecipeList().size());
-
             if (packet.selectedIndex() >= 0 && packet.selectedIndex() < data.getRecipeList().size()) {
                 data.setSelectedIndex(packet.selectedIndex());
                 RecipePair selected = data.getSelectedRecipe();
@@ -52,14 +49,7 @@ public record SelectRecipePacket(int selectedIndex) implements CustomPacketPaylo
                         sp.connection.send(new ClientboundContainerSetSlotPacket(
                                 menu.containerId, menu.incrementStateId(), 0, selected.output()));
                     }
-                    UtilityCore.LOGGER.debug("[UtilityCore] Recipe selected: {} (index: {})",
-                        selected.output().getHoverName(), packet.selectedIndex());
-                } else {
-                    UtilityCore.LOGGER.warn("[UtilityCore] Selected recipe is null or invalid menu");
                 }
-            } else {
-                UtilityCore.LOGGER.warn("[UtilityCore] Invalid recipe index: {} (max: {})",
-                    packet.selectedIndex(), data.getRecipeList().size() - 1);
             }
         });
     }
