@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.7
+- Diagnóstico: Agregado logging completo en servidor para rastrear selección de recetas. Ahora registra: cuándo se detectan múltiples recetas, cuándo se actualiza la lista, qué receta está seleccionada, y cuándo falla una selección. Esto permite diagnosticar por qué el selector siempre vuelve a la primera opción.
+
 ## 1.11.6
 - Fix: la selección de receta volvía a la primera opción incluso después de haber sido seleccionada. El servidor disparaba un recálculo de recetas tras procesar la selección del cliente (`menu.slotsChanged()`), lo que volvía a ejecutar toda la lógica de validación y reseteba la selección. Ahora al recibir la selección del cliente se aplica directamente sin disparar el recálculo, permitiendo que la selección se mantenga fija.
 

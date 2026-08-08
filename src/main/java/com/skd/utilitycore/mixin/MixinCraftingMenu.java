@@ -74,23 +74,31 @@ public class MixinCraftingMenu {
             result.setRecipeUsed(single);
             finalResult = single.value().assemble(input);
         } else {
+            com.skd.utilitycore.UtilityCore.LOGGER.debug("[UtilityCore] Multiple recipes detected: {} variants, syncing to player", allRecipes.size());
             sendSyncPacket(player, outputs, inputs);
 
             PlayerRecipeData data = player.getData(ModAttachments.PLAYER_RECIPE_DATA);
 
             if (data.inputsChanged(inputs)) {
+                com.skd.utilitycore.UtilityCore.LOGGER.debug("[UtilityCore] Inputs changed, updating recipe list");
                 data.setRecipes(pairs, inputs);
             } else if (data.getRecipeList().isEmpty()) {
+                com.skd.utilitycore.UtilityCore.LOGGER.debug("[UtilityCore] Recipe list empty, initializing");
                 data.setRecipes(pairs, inputs);
             }
+
+            int selectedIndex = data.getSelectedIndex();
+            com.skd.utilitycore.UtilityCore.LOGGER.debug("[UtilityCore] Current selection: {}/{}", selectedIndex, data.getRecipeList().size());
 
             RecipePair selected = data.getSelectedRecipe();
             RecipeHolder<CraftingRecipe> holderToUse;
 
             if (selected != null && allRecipes.stream().anyMatch(
                     r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
+                com.skd.utilitycore.UtilityCore.LOGGER.debug("[UtilityCore] Using selected recipe at index {}", selectedIndex);
                 holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
             } else {
+                com.skd.utilitycore.UtilityCore.LOGGER.warn("[UtilityCore] Selected recipe invalid or not found, falling back to first recipe");
                 holderToUse = allRecipes.get(0);
                 data.setRecipes(pairs, inputs);
             }
