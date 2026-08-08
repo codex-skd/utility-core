@@ -1,4 +1,7 @@
 # Utility Core — Registro de cambios
+## 1.11.8
+- Diagnóstico: Agregado logging para verificar si el mixin slotChangedCraftingGrid se ejecuta en el servidor.
+
 
 ## 1.11.7
 - Diagnóstico: Agregado logging completo en servidor para rastrear selección de recetas. Ahora registra: cuándo se detectan múltiples recetas, cuándo se actualiza la lista, qué receta está seleccionada, y cuándo falla una selección. Esto permite diagnosticar por qué el selector siempre vuelve a la primera opción.
