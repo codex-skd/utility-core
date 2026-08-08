@@ -80,6 +80,8 @@ public class MixinCraftingMenu {
 
             if (data.inputsChanged(inputs)) {
                 data.setRecipes(pairs, inputs);
+            } else if (data.getRecipeList().isEmpty()) {
+                data.setRecipes(pairs, inputs);
             }
 
             RecipePair selected = data.getSelectedRecipe();

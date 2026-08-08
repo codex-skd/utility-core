@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.5
+- Fix: al seleccionar una receta en el selector, automáticamente volvía a seleccionar la primera opción. Cuando se recibía la confirmación del servidor, volvía a ejecutarse el cálculo de recetas, pero la lista de recetas guardadas no se reinicializaba si los ingredientes no habían cambiado. Ahora se asegura que siempre esté inicializada, incluso cuando se procesa una selección.
+
 ## 1.11.4
 - Fix: el selector de recetas no respondía a clics del mouse. La detección del clic dependía de la variable `hovering` del frame anterior, causando desajuste temporal. Ahora el hit-testing se realiza directamente en el evento de mouse, registrando inmediatamente cuando el jugador hace clic en una variante.
 
