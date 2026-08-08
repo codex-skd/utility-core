@@ -8,7 +8,7 @@ public class Config {
     public static final ModConfigSpec.BooleanValue ENABLE_CRAFTING_RECIPE_SELECTOR = BUILDER
             .comment("EN: Enable the recipe selector widget in the crafting table GUI when multiple recipes match the same inputs",
                      "ES: Activa el selector de recetas en la mesa de crafteo cuando varias recetas coinciden con los mismos ingredientes")
-            .define("enableCraftingRecipeSelector", true);
+            .define("enableCraftingRecipeSelector", false);
 
     public static final ModConfigSpec.IntValue MAX_RECIPES_DISPLAYED = BUILDER
             .comment("EN: Maximum number of alternative recipes to display in the selector",
