@@ -46,10 +46,8 @@ public record SelectRecipePacket(int selectedIndex) implements CustomPacketPaylo
                     sp.connection.send(new ClientboundContainerSetSlotPacket(
                             menu.containerId, menu.incrementStateId(), 0, selected.output()));
                 }
-                var slots = acm.getInputGridSlots();
-                if (!slots.isEmpty()) {
-                    menu.slotsChanged(slots.getFirst().container);
-                }
+                UtilityCore.LOGGER.debug("[UtilityCore] Recipe selected: {} (index: {})",
+                    selected.output().getHoverName(), packet.selectedIndex());
             }
         });
     }

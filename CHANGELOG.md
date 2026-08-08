@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.6
+- Fix: la selección de receta volvía a la primera opción incluso después de haber sido seleccionada. El servidor disparaba un recálculo de recetas tras procesar la selección del cliente (`menu.slotsChanged()`), lo que volvía a ejecutar toda la lógica de validación y reseteba la selección. Ahora al recibir la selección del cliente se aplica directamente sin disparar el recálculo, permitiendo que la selección se mantenga fija.
+
 ## 1.11.5
 - Fix: al seleccionar una receta en el selector, automáticamente volvía a seleccionar la primera opción. Cuando se recibía la confirmación del servidor, volvía a ejecutarse el cálculo de recetas, pero la lista de recetas guardadas no se reinicializaba si los ingredientes no habían cambiado. Ahora se asegura que siempre esté inicializada, incluso cuando se procesa una selección.
 
