@@ -63,13 +63,18 @@ public class MixinCraftingMenu {
         }
         List<ItemStack> inputs = captureInputs(container);
 
+        com.skd.utilitycore.UtilityCore.LOGGER.info("[UtilityCore] Recipe calculation: {} recipes found for input {}",
+            allRecipes.size(), inputs.stream().map(i -> i.getCount() + "x" + i.getHoverName()).toList());
+
         ItemStack finalResult;
 
         if (allRecipes.isEmpty()) {
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[UtilityCore] No recipes found");
             finalResult = ItemStack.EMPTY;
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
         } else if (allRecipes.size() == 1) {
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[UtilityCore] Only 1 recipe found");
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
             RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
