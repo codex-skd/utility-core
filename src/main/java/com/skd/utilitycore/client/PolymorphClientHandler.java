@@ -121,7 +121,8 @@ public class PolymorphClientHandler {
         for (ItemStack stack : outputs) {
             cachedRecipes.add(RecipePair.of(null, stack));
         }
-        if (selectedIndex >= cachedRecipes.size()) {
+        // Reset selection only if current index is out of bounds
+        if (cachedRecipes.isEmpty() || selectedIndex >= cachedRecipes.size()) {
             selectedIndex = 0;
         }
         lastInputs.clear();
