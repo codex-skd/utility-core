@@ -37,7 +37,9 @@ public class MixinCraftingMenu {
     private static void onSlotChangedCraftingGrid(AbstractContainerMenu menu, ServerLevel level, Player player,
                                                    CraftingContainer container, ResultContainer result,
                                                    RecipeHolder<CraftingRecipe> recipe, CallbackInfo ci) {
+        com.skd.utilitycore.UtilityCore.LOGGER.info("[UtilityCore] slotChangedCraftingGrid called");
         if (!Config.ENABLE_CRAFTING_RECIPE_SELECTOR.get()) {
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[UtilityCore] Recipe selector is DISABLED");
             return;
         }
 
