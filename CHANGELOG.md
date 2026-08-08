@@ -1,5 +1,8 @@
 # Utility Core — Registro de cambios
 
+## 1.11.4
+- Fix: el selector de recetas no respondía a clics del mouse. La detección del clic dependía de la variable `hovering` del frame anterior, causando desajuste temporal. Ahora el hit-testing se realiza directamente en el evento de mouse, registrando inmediatamente cuando el jugador hace clic en una variante.
+
 ## 1.11.3
 - Fix: el selector de recetas parpadeaba y desaparecía al cambiar ingredientes. El cliente recalculaba recetas cada frame, pero el servidor enviaba la lista de forma asincrónica, causando una condición de carrera que limpiaba el cache. Ahora el paquete de sincronización incluye los inputs procesados, evitando que el cliente recalcule innecesariamente hasta que cambien los ingredientes nuevamente.
 
