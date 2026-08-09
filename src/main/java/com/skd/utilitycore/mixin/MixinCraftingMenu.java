@@ -61,18 +61,23 @@ public class MixinCraftingMenu {
         }
         List<ItemStack> inputs = captureInputs(container);
 
+        com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] slotChangedCraftingGrid: recipes={} player={}",
+                allRecipes.size(), player.getName().getString());
+
         ItemStack finalResult;
 
         if (allRecipes.isEmpty()) {
             finalResult = ItemStack.EMPTY;
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] no recipes matched -> result empty");
         } else if (allRecipes.size() == 1) {
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.PLAYER_RECIPE_DATA).clear();
             RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
             result.setRecipeUsed(single);
             finalResult = single.value().assemble(input);
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] single recipe -> {}", single.id());
         } else {
             sendSyncPacket(player, outputs, inputs);
 
@@ -80,8 +85,10 @@ public class MixinCraftingMenu {
 
             if (data.inputsChanged(inputs)) {
                 data.setRecipes(pairs, inputs);
+                com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] inputs changed -> setRecipes({}) selectedIndex={}", pairs.size(), data.getSelectedIndex());
             } else if (data.getRecipeList().isEmpty()) {
                 data.setRecipes(pairs, inputs);
+                com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] recipe list empty -> setRecipes({}) selectedIndex={}", pairs.size(), data.getSelectedIndex());
             }
 
             RecipePair selected = data.getSelectedRecipe();
@@ -90,13 +97,17 @@ public class MixinCraftingMenu {
             if (selected != null && allRecipes.stream().anyMatch(
                     r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
                 holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
+                com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] using selected recipe {} (index {})", holderToUse.id(), data.getSelectedIndex());
             } else {
                 holderToUse = allRecipes.get(0);
                 data.setRecipes(pairs, inputs);
+                com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] selected recipe not in current list (selected={}) -> falling back to {} (data.selectedIndex={})",
+                        selected != null && selected.recipe() != null ? selected.recipe().id() : null, holderToUse.id(), data.getSelectedIndex());
             }
 
             result.setRecipeUsed(holderToUse);
             finalResult = holderToUse.value().assemble(input);
+            com.skd.utilitycore.UtilityCore.LOGGER.info("[RecipeSelector][S] finalResult={} from {}", finalResult, holderToUse.id());
         }
 
         result.setItem(0, finalResult);

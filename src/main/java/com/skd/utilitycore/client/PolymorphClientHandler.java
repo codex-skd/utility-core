@@ -36,6 +36,8 @@ public class PolymorphClientHandler {
     private static int selectorColumns = 4;
     private static boolean hovering = false;
     private static int selectedIndex = 0;
+    private static int lastRenderSelected = -1;
+    private static boolean selectorWasVisible = false;
 
     @SubscribeEvent
     public static void onScreenClosed(ScreenEvent.Closing event) {
@@ -56,24 +58,36 @@ public class PolymorphClientHandler {
         double mouseY = event.getMouseY();
         int button = event.getButton();
 
-        if (button == 0 && cachedRecipes.size() > 1) {
-            // Check if mouse is within selector bounds
-            if (mouseX >= selectorX && mouseX < selectorX + selectorColumns * 18) {
-                int row = ((int) (mouseY - selectorY)) / 18;
-                if (row >= 0) {
-                    int column = ((int) (mouseX - selectorX)) / 18;
-                    int index = row * selectorColumns + column;
-                    if (index >= 0 && index < cachedRecipes.size()) {
-                        // Verify Y bounds
-                        int rows = (int) Math.ceil((double) cachedRecipes.size() / selectorColumns);
-                        if (row < rows && mouseY >= selectorY && mouseY < selectorY + rows * 18) {
-                            selectedIndex = index;
-                            ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
-                            UtilityCore.LOGGER.debug("[UtilityCore] Selected recipe index: {} from {} recipes", index, cachedRecipes.size());
-                            event.setCanceled(true);
-                        }
+        if (button == 0) {
+            boolean inX = mouseX >= selectorX && mouseX < selectorX + selectorColumns * 18;
+            int row = (int) (mouseY - selectorY) / 18;
+            int column = (int) (mouseX - selectorX) / 18;
+            int index = row * selectorColumns + column;
+
+            if (cachedRecipes.size() > 1) {
+                UtilityCore.LOGGER.info("[RecipeSelector] Click: mouse=({}, {}) selector=({}, {}) cols={} cached={} inX={} row={} col={} index={}",
+                        mouseX, mouseY, selectorX, selectorY, selectorColumns, cachedRecipes.size(), inX, row, column, index);
+            }
+
+            if (cachedRecipes.size() > 1 && inX && row >= 0) {
+                if (index >= 0 && index < cachedRecipes.size()) {
+                    int rows = (int) Math.ceil((double) cachedRecipes.size() / selectorColumns);
+                    if (row < rows && mouseY >= selectorY && mouseY < selectorY + rows * 18) {
+                        int oldIndex = selectedIndex;
+                        selectedIndex = index;
+                        ClientPacketDistributor.sendToServer(new SelectRecipePacket(index));
+                        UtilityCore.LOGGER.info("[RecipeSelector] SELECT index={} (old selectedIndex={}) cached={} -> SelectRecipePacket sent",
+                                index, oldIndex, cachedRecipes.size());
+                        event.setCanceled(true);
+                    } else {
+                        UtilityCore.LOGGER.info("[RecipeSelector] Click outside selector grid: row={} rows={} mouseY={} selY={}", row, rows, mouseY, selectorY);
                     }
+                } else {
+                    UtilityCore.LOGGER.info("[RecipeSelector] Click index out of range: index={} cached={}", index, cachedRecipes.size());
                 }
+            } else if (cachedRecipes.size() > 1) {
+                UtilityCore.LOGGER.info("[RecipeSelector] Click missed selector bounds: inX={} row={} (mouse={}, {})",
+                        inX, row, mouseX, mouseY);
             }
         }
     }
@@ -99,7 +113,8 @@ public class PolymorphClientHandler {
                 lastInputs.clear();
                 return;
             }
-            UtilityCore.LOGGER.debug("[UtilityCore] updateRecipeCache: found {} recipes", recipes.size());
+            UtilityCore.LOGGER.info("[RecipeSelector] updateRecipeCache: inputs changed, found {} recipes (selectedIndex={})",
+                    recipes.size(), selectedIndex);
             setRecipeOutputs(recipes, input);
             lastInputs.clear();
             lastInputs.addAll(inputs);
@@ -117,16 +132,20 @@ public class PolymorphClientHandler {
     }
 
     public static void receiveServerRecipes(List<ItemStack> outputs, List<ItemStack> inputs) {
+        UtilityCore.LOGGER.info("[RecipeSelector] receiveServerRecipes: outputs={} inputs={} selectedIndexBefore={} cachedBefore={}",
+                outputs.size(), inputs.size(), selectedIndex, cachedRecipes.size());
         cachedRecipes.clear();
         for (ItemStack stack : outputs) {
             cachedRecipes.add(RecipePair.of(null, stack));
         }
         // Reset selection only if current index is out of bounds
         if (cachedRecipes.isEmpty() || selectedIndex >= cachedRecipes.size()) {
+            UtilityCore.LOGGER.info("[RecipeSelector] receiveServerRecipes: resetting selectedIndex {} -> 0 (cached={})", selectedIndex, cachedRecipes.size());
             selectedIndex = 0;
         }
         lastInputs.clear();
         lastInputs.addAll(inputs);
+        UtilityCore.LOGGER.info("[RecipeSelector] receiveServerRecipes done: cached={} selectedIndex={}", cachedRecipes.size(), selectedIndex);
     }
 
     public static int getSelectedIndex() {
@@ -165,7 +184,16 @@ public class PolymorphClientHandler {
     public static ItemStack renderRecipeSelector(GuiGraphicsExtractor extractor, Minecraft mc, int mouseX, int mouseY,
                                                   int selX, int selY) {
         List<RecipePair> recipes = cachedRecipes;
-        if (recipes.size() <= 1) return ItemStack.EMPTY;
+        if (recipes.size() <= 1) {
+            if (selectorWasVisible) {
+                UtilityCore.LOGGER.info("[RecipeSelector] Selector hidden (recipes={})", recipes.size());
+                selectorWasVisible = false;
+            }
+            lastRenderSelected = -1;
+            return ItemStack.EMPTY;
+        }
+        boolean wasVisible = selectorWasVisible;
+        selectorWasVisible = true;
 
         int screenW = mc.getWindow().getGuiScaledWidth();
         int screenH = mc.getWindow().getGuiScaledHeight();
@@ -189,6 +217,12 @@ public class PolymorphClientHandler {
         if (selX + gridW > screenW) selX = Math.max(0, screenW - gridW);
         if (selY + gridH > screenH) selY = Math.max(0, screenH - gridH);
         setSelectorPosition(selX, selY);
+
+        if (!wasVisible || selectedIndex != lastRenderSelected) {
+            UtilityCore.LOGGER.info("[RecipeSelector] Render: pos=({}, {}) cols={} rows={} recipes={} selected={} {}",
+                    selX, selY, columns, rows, recipes.size(), selectedIndex, wasVisible ? "" : "(selector shown)");
+            lastRenderSelected = selectedIndex;
+        }
 
         boolean hoveringNow = false;
         ItemStack hoveredStack = ItemStack.EMPTY;
