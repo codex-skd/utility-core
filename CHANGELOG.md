@@ -1,4 +1,18 @@
 # Utility Core — Registro de cambios
+## 1.11.12
+- Fix: el selector de recetas mostraba la segunda opción al hacer clic pero volvía a la primera opción inmediatamente. El servidor solo actualizaba el slot remoto (la copia de lo que ve el cliente) pero no el resultado real del menú, así que `broadcastChanges()` revertía la salida a la receta 0 en el siguiente tick. Ahora al seleccionar una receta el servidor escribe también el slot de resultado real (`ResultContainer`) y fija `recipeUsed`, de modo que la selección se mantiene.
+- Re-activado por defecto: `enableCraftingRecipeSelector` vuelve a `true`.
+- Logs de depuración del selector con prefijo `[RecipeSelector]` (nivel INFO).
+
+## 1.11.11
+- Logging limpio: eliminados los miles de entradas de log añadidas durante el diagnóstico del selector de recetas.
+
+## 1.11.10
+- Desactivado por defecto el selector de recetas (`enableCraftingRecipeSelector` default false) pendiente de fix del lado servidor.
+
+## 1.11.9
+- Diagnóstico: Agregado logging del número de recetas que encuentra el servidor al colocar items en la mesa de crafteo.
+
 ## 1.11.8
 - Diagnóstico: Agregado logging para verificar si el mixin slotChangedCraftingGrid se ejecuta en el servidor.
 
