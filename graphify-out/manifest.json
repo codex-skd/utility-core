@@ -15,7 +15,7 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1785751900.7429206,
+    "mtime": 1786302374.3671684,
     "ast_hash": "af0de48f513742d2c4ad72df30e93430",
     "semantic_hash": ""
   },
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java": {
-    "mtime": 1785359554.4237318,
-    "ast_hash": "e3a38d0649bbb8a78cbd828add040307",
+    "mtime": 1786301710.8559785,
+    "ast_hash": "151b7e9dc43229c1c4ed53ee2a565f80",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/mixin/MixinCraftingMenu.java": {
-    "mtime": 1785359554.6290843,
-    "ast_hash": "0ffc86eb9f3b96675ca29bc53134c6a4",
+    "mtime": 1786301748.2812462,
+    "ast_hash": "4cbd8a8f18b4e8a2f0db90182db1c2da",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/mixin/MixinCraftingScreen.java": {
@@ -105,13 +105,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/network/SelectRecipePacket.java": {
-    "mtime": 1785359554.8211935,
-    "ast_hash": "5fcce349b9380e69784c1a6e72399f8e",
+    "mtime": 1786302370.6979177,
+    "ast_hash": "55b83a6548fe85a49ab03c8162d7e190",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/network/SyncRecipesPacket.java": {
-    "mtime": 1785359554.8419013,
-    "ast_hash": "64066ba00e8227f799e83dea2d804a04",
+    "mtime": 1786139354.0735931,
+    "ast_hash": "54593527f331d3900b559137ba1b41c3",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/utilitycore/polymorph/PlayerRecipeData.java": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785972327.649078,
-    "ast_hash": "85b2c69f0e91037dbd55feb755f73d23",
+    "mtime": 1786302525.1595297,
+    "ast_hash": "55fec364ef79abcd553fc28bab3afee4",
     "semantic_hash": ""
   },
   "README.md": {
@@ -315,8 +315,58 @@
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.11.2.md": {
-    "mtime": 1785972327.6500807,
-    "ast_hash": "d42c87b2c96e259e5455b8b841297eb2",
+    "mtime": 1786110032.125997,
+    "ast_hash": "382f69cfef5481857d4f29541b4be517",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.10.md": {
+    "mtime": 1786156203.374235,
+    "ast_hash": "993c295916ffebc1f984c2bb0c9d306b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.11.md": {
+    "mtime": 1786156855.4613254,
+    "ast_hash": "f74507840db76a9482a7760c3f2a263b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.12.md": {
+    "mtime": 1786302534.0887218,
+    "ast_hash": "a5600ce67475d03d4acb839f106a60f7",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.3.md": {
+    "mtime": 1786139890.7077737,
+    "ast_hash": "f5fedeb3bf1596f783cb1459a5a315c5",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.4.md": {
+    "mtime": 1786147828.8303297,
+    "ast_hash": "98aa804ed513a5083eb1059e6b6ecf8f",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.5.md": {
+    "mtime": 1786149724.85825,
+    "ast_hash": "fd93176e37a660b43796f2737e115ce9",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.6.md": {
+    "mtime": 1786152126.896268,
+    "ast_hash": "ee9d5c88d0aade26086c1b113584a01f",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.7.md": {
+    "mtime": 1786153385.8429782,
+    "ast_hash": "267088cddf1827c06c86a6ef20e152fc",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.8.md": {
+    "mtime": 1786154674.4385293,
+    "ast_hash": "d544809049e46c1774b17a15b4e04d9b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.11.9.md": {
+    "mtime": 1786155455.6279604,
+    "ast_hash": "26eee4e41311e93f7bdbd3c1159cc017",
     "semantic_hash": ""
   }
 }
