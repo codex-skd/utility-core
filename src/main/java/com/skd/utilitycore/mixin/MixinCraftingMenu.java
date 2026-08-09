@@ -41,6 +41,10 @@ public class MixinCraftingMenu {
             return;
         }
 
+        if (menu != player.containerMenu) {
+            return;
+        }
+
         RecipeManager rm = level.recipeAccess();
         CraftingInput input = container.asCraftInput();
 
