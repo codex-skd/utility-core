@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-08-09)
 
 ## Corpus Check
-- 70 files · ~126,516 words
+- 71 files · ~126,822 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 503 nodes · 748 edges · 106 communities (48 shown, 58 thin omitted)
+- 505 nodes · 749 edges · 108 communities (50 shown, 58 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 46 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44e7aafe`
+- Built from commit: `51f7f4e3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,6 +47,7 @@
 - Post
 - ResourceKey
 - SubscribeEvent
+- UtilityCore.java
 - EventBusSubscriber
 - Pre
 - ResourceKey
@@ -92,7 +93,7 @@
 - ModContainer
 
 ## God Nodes (most connected - your core abstractions)
-1. `Utility Core — Registro de cambios` - 48 edges
+1. `Utility Core — Registro de cambios` - 49 edges
 2. `ChunkGenManager` - 32 edges
 3. `SpawnSchematicManager` - 24 edges
 4. `PolymorphClientHandler` - 18 edges
@@ -104,19 +105,19 @@
 10. `SyncRecipesPacket` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
+  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 - `UtilityCore` --references--> `SpawnSchematicManager`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java
 - `UtilityCore` --references--> `ServerRulesManager`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ServerRulesManager.java
-- `UtilityCore` --references--> `ChunkGenManager`  [EXTRACTED]
-  src/main/java/com/skd/utilitycore/UtilityCore.java → src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java
 - `PolymorphClientHandler` --references--> `RecipePair`  [EXTRACTED]
   src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java → src/main/java/com/skd/utilitycore/polymorph/RecipePair.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (106 total, 58 thin omitted)
+## Communities (108 total, 58 thin omitted)
 
 ### Community 0 - "Flujo de trabajo — Utility Core (NeoForge)"
 Cohesion: 0.17
@@ -127,20 +128,20 @@ Cohesion: 0.09
 Nodes (18): Closing, CraftingInput, AccessorAbstractContainerScreen, MixinCraftingScreen, MixinInventoryScreen, RecipePair, CraftingContainer, CraftingRecipe (+10 more)
 
 ### Community 2 - "ChunkGenManager"
-Cohesion: 0.07
-Nodes (26): AttachmentType, Connection, DeferredRegister, Field, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent (+18 more)
+Cohesion: 0.11
+Nodes (13): CallbackInfoReturnable, Connection, Field, MixinItemInput, Method, ChunkGenManager, DimState, Gson (+5 more)
 
 ### Community 3 - "PlayerRecipeData"
 Cohesion: 0.20
 Nodes (12): ByteBuf, CustomPacketPayload, RegistryFriendlyByteBuf, Override, StreamCodec, Type, SelectRecipePacket, ItemStack (+4 more)
 
 ### Community 4 - "UtilityCore.java"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (10): CompoundTag, SpongeSchematicReader, HolderLookup, BlockPos, Gson, Logger, MinecraftServer, ServerLevel (+2 more)
 
 ### Community 5 - "Config.java"
-Cohesion: 0.08
-Nodes (21): BooleanValue, Builder, CallbackInfoReturnable, ConfigValue, DamageType, EnumValue, OutpostZeroCompat, MixinDamageContainer (+13 more)
+Cohesion: 0.09
+Nodes (18): BooleanValue, Builder, ConfigValue, DamageType, EnumValue, OutpostZeroCompat, MixinDamageContainer, MixinHud (+10 more)
 
 ### Community 6 - "PolymorphApi.java"
 Cohesion: 0.14
@@ -176,35 +177,39 @@ Nodes (3): gradlew script, die(), warn()
 
 ### Community 20 - "Utility Core — Registro de cambios"
 Cohesion: 0.04
-Nodes (47): 0.0.0-beta.1, 0.0.0-beta.1, 1.0.0, 1.0.0, 1.10.0, 1.10.0, 1.11.0, 1.11.0 (+39 more)
+Nodes (48): 0.0.0-beta.1, 0.0.0-beta.1, 1.0.0, 1.0.0, 1.10.0, 1.10.0, 1.11.0, 1.11.0 (+40 more)
 
 ### Community 26 - "Publicación a GitHub (CI/CD)"
-Cohesion: 0.18
+Cohesion: 0.21
 Nodes (11): BlockEvent, BreakBlockEvent, Detonate, EntityMultiPlaceEvent, EntityPlaceEvent, SpawnPlacementCheck, BlockPos, EventBusSubscriber (+3 more)
 
 ### Community 27 - "OutpostZeroCompat.java"
 Cohesion: 0.29
 Nodes (3): Block, BlockState, LegacyBlockMap
 
+### Community 63 - "UtilityCore.java"
+Cohesion: 0.11
+Nodes (16): AttachmentType, DeferredRegister, ModAttachments, ModNetwork, PlayerLoggedInEvent, PlayerLoggedOutEvent, RegisterCommandsEvent, ServerStartedEvent (+8 more)
+
 ## Knowledge Gaps
-- **83 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.11.12` (+78 more)
+- **84 isolated node(s):** `SURFACE`, `FIXED`, `Workflow del mod`, `Prioridad de instrucciones`, `1.11.13` (+79 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `Publicación a GitHub (CI/CD)`, `ChunkGenManager`?**
+- **Why does `SpawnSchematicManager` connect `UtilityCore.java` to `Publicación a GitHub (CI/CD)`, `UtilityCore.java`?**
   _High betweenness centrality (0.071) - this node is a cross-community bridge._
-- **Why does `ServerRulesManager` connect `CurseForge — Variables del proyecto` to `ChunkGenManager`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `ChunkGenManager` connect `ChunkGenManager` to `UtilityCore.java`?**
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
+- **Why does `ServerRulesManager` connect `CurseForge — Variables del proyecto` to `UtilityCore.java`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `Workflow del mod` to the rest of the system?**
-  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _84 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
   _Cohesion score 0.08637873754152824 - nodes in this community are weakly interconnected._
 - **Should `ChunkGenManager` be split into smaller, more focused modules?**
-  _Cohesion score 0.06939890710382514 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11201079622132254 - nodes in this community are weakly interconnected._
 - **Should `UtilityCore.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
-- **Should `Config.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.0766488413547237 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12280701754385964 - nodes in this community are weakly interconnected._
