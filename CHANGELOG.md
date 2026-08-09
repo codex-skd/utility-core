@@ -1,4 +1,7 @@
 # Utility Core — Registro de cambios
+## 1.11.13
+- Fix: el selector de recetas de la mesa de crafteo dejaba de responder (el clic se registraba pero el servidor lo rechazaba). El menú de inventario (`InventoryMenu`) permanece suscrito a los cambios del inventario del jugador aunque haya otro menú abierto, y cada cambio disparaba `slotChangedCraftingGrid` con la rejilla 2x2 vacía; eso hacía que el servidor borrara los datos de recetas del jugador (y enviara sincronizaciones con 0 recetas) constantemente. Ahora el cálculo del selector solo procesa el menú activo del jugador (`player.containerMenu`), de modo que la selección se mantiene hasta que el jugador cambia los ingredientes.
+
 ## 1.11.12
 - Fix: el selector de recetas mostraba la segunda opción al hacer clic pero volvía a la primera opción inmediatamente. El servidor solo actualizaba el slot remoto (la copia de lo que ve el cliente) pero no el resultado real del menú, así que `broadcastChanges()` revertía la salida a la receta 0 en el siguiente tick. Ahora al seleccionar una receta el servidor escribe también el slot de resultado real (`ResultContainer`) y fija `recipeUsed`, de modo que la selección se mantiene.
 - Re-activado por defecto: `enableCraftingRecipeSelector` vuelve a `true`.
