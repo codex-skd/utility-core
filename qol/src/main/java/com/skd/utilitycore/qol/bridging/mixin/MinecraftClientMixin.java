@@ -174,7 +174,7 @@ public abstract class MinecraftClientMixin {
                 if (!(canBePlaced && canBePlacedInWorld))
                     continue;
 
-                BlockHitResult blockHitResult = Bridge.getDefaultPlaceAssistTarget(itemStack, level, dir, pos);
+                BlockHitResult blockHitResult = bridgingmod$getFinalPlaceAssistTarget(itemStack, dir, pos, optHandler.orElse(null));
                 blockPlaceResult = this.gameMode.useItemOn(this.player, hand, blockHitResult);
             }
 

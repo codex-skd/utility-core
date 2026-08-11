@@ -147,9 +147,9 @@ public class Render {
         if (player.getBoundingBox().intersects(placeDeadzone))
             return;
 
-        int outlineColour = BridgingConfig.OUTLINE_RED.get().intValue() << 16 |
-                           BridgingConfig.OUTLINE_GREEN.get().intValue() << 8 |
-                           BridgingConfig.OUTLINE_BLUE.get().intValue() |
+        int outlineColour = (int)(BridgingConfig.OUTLINE_RED.get() * 255) << 16 |
+                           (int)(BridgingConfig.OUTLINE_GREEN.get() * 255) << 8 |
+                           (int)(BridgingConfig.OUTLINE_BLUE.get() * 255) |
                            (int)(BridgingConfig.OUTLINE_ALPHA.get() * 255) << 24;
         Render.cubeOutline(poseStack, submitNodeCollector, view, placeTarget, outlineColour);
     }
@@ -163,9 +163,9 @@ public class Render {
         if(lastTarget.context().flags().hasAll(Flags.SKIP_OUTLINE_RENDERING))
             return; // Usually if the rendering is in a weird state.
 
-        int outlineColour = BridgingConfig.OUTLINE_RED.get().intValue() << 16 |
-                           BridgingConfig.OUTLINE_GREEN.get().intValue() << 8 |
-                           BridgingConfig.OUTLINE_BLUE.get().intValue() |
+        int outlineColour = (int)(BridgingConfig.OUTLINE_RED.get() * 255) << 16 |
+                           (int)(BridgingConfig.OUTLINE_GREEN.get() * 255) << 8 |
+                           (int)(BridgingConfig.OUTLINE_BLUE.get() * 255) |
                            (int)(BridgingConfig.OUTLINE_ALPHA.get() * 255) << 24;
 
         AtomicBoolean hasRendered = new AtomicBoolean(false);

@@ -17,7 +17,7 @@ public enum PlacementAlignment {
     private final Identifier textureLocation;
 
     PlacementAlignment(String textureName) {
-        this.textureLocation = Identifier.tryBuild(UtilityCoreQoLBridging.MOD_ID, "textures/gui/sprites/indicator/%s".formatted(textureName));
+        this.textureLocation = Identifier.tryBuild(UtilityCoreQoLBridging.MOD_ID, "indicator/%s".formatted(textureName));
     }
 
     public Identifier getTexturePath() {
