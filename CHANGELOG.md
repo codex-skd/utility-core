@@ -1,4 +1,9 @@
 # Utility Core — Registro de cambios
+## 2.0.0-beta.2
+- Fix: se agregaron los puntos de entrada @Mod faltantes en los subproyectos admin y fixes, permitiendo que cada módulo genere su propio archivo .toml de configuración y funcione como un mod independiente real.
+- Fix: se eliminó el archivo Config.java duplicado y obsoleto del proyecto raíz.
+- Fix: se eliminó el archivo META-INF/neoforge.mods.toml huérfano directamente bajo la raíz del repositorio.
+
 ## 1.11.13
 - Fix: el selector de recetas de la mesa de crafteo dejaba de responder (el clic se registraba pero el servidor lo rechazaba). El menú de inventario (`InventoryMenu`) permanece suscrito a los cambios del inventario del jugador aunque haya otro menú abierto, y cada cambio disparaba `slotChangedCraftingGrid` con la rejilla 2x2 vacía; eso hacía que el servidor borrara los datos de recetas del jugador (y enviara sincronizaciones con 0 recetas) constantemente. Ahora el cálculo del selector solo procesa el menú activo del jugador (`player.containerMenu`), de modo que la selección se mantiene hasta que el jugador cambia los ingredientes.
 
