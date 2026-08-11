@@ -26,6 +26,7 @@ public class UtilityCoreAdmin {
 
     private final ChunkGenManager chunkGenManager = new ChunkGenManager();
     private final ServerRulesManager serverRulesManager = new ServerRulesManager();
+    private final SpawnSchematicManager spawnSchematicManager = new SpawnSchematicManager();
 
     public UtilityCoreAdmin(IEventBus modEventBus, ModContainer modContainer) {
         // Register config
