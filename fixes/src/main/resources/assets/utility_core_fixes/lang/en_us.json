@@ -1,0 +1,10 @@
+{
+  "utility_core_fixes.configuration.title": "Utility Core Fixes Config",
+  "utility_core_fixes.configuration.section.utility_core_fixes.common.toml": "Utility Core Fixes Settings",
+  "utility_core_fixes.configuration.section.utility_core_fixes.common.toml.title": "Utility Core Fixes Settings",
+  "utility_core_fixes.configuration.enableTombstoneGuiScaleFix": "Enable Tombstone GUI Scale Fix",
+  "utility_core_fixes.configuration.enableTombstoneItemInitFix": "Enable Tombstone Item Init Fix",
+  "utility_core_fixes.configuration.enableTombstoneErrorHandler": "Enable Tombstone Error Handler",
+  "utility_core_fixes.configuration.enableNegativeDamageFix": "Enable Negative Damage Fix",
+  "utility_core_fixes.configuration.enableOutpostZeroDamageCap": "Enable OutpostZero Damage Cap"
+}

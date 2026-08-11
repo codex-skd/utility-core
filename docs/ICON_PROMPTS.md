@@ -1,0 +1,10 @@
+# Utility Core - Icon Generation Prompts
+
+## Utility Core Fixes
+**Prompt:** A clean, modern Minecraft mod icon for "Utility Core Fixes". Central design: a stylized wrench crossed with a shield, representing fixes and protection. Color palette: deep navy blue (#1a1a3e) background with bright cyan (#00d4ff) accents and white highlights. The wrench head forms the top curve of the shield. Small spark particles around the intersection suggesting bug fixes. Minecraft-style 16x16 pixel art aesthetic but rendered at 256x256 for clarity. Subtle glow effect on cyan edges. Professional, crisp, recognizable at small sizes.
+
+## Utility Core Admin
+**Prompt:** A professional Minecraft mod icon for "Utility Core Admin". Central design: a command block (Minecraft style) with a gear/cog overlay, representing server administration and automation. Color palette: deep forest green (#0d2b1a) background with bright emerald (#00ff88) accents and gold (#ffd700) highlights. The command block has the classic purple particle effect but in emerald green. Small server rack silhouette behind the command block suggesting server management. Minecraft 16x16 pixel art aesthetic rendered at 256x256. Subtle glow on emerald edges. Clean, authoritative look suitable for server admin tools.
+
+## Utility Core QoL
+**Prompt:** A delightful Minecraft mod icon for "Utility Core QoL" (Quality of Life). Central design: a crafting table with a magical sparkle effect, and a small compass/waypoint marker floating above it. Represents recipe selection convenience and biome/dimension discovery. Color palette: warm amber/orange (#ff8c00) background with cream (#fff8e7) highlights and soft teal (#00b4a8) accents. The crafting table shows the 3x3 grid faintly. A small recipe book hovers open beside it with a glowing recipe page. The compass needle points to a tiny biome transition line (grass to sand). Minecraft 16x16 pixel art aesthetic at 256x256. Gentle glow on warm accents. Friendly, helpful vibe.

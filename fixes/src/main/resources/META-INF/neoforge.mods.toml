@@ -1,0 +1,37 @@
+# Utility Core Fixes - NeoForge mod configuration
+license="MIT"
+
+[[mods]]
+modId="utility_core_fixes"
+version="2.0.0"
+displayName="Utility Core Fixes"
+logoFile="assets/utility_core_fixes/icon.png"
+description='''
+Utility Core Fixes - Compatibility fixes and crash prevention for Minecraft modded servers.
+
+Features:
+- Corail Tombstone Fixes:
+  * GUI Scale Fix: prevents Tombstone from forcing GUI scale to 4 when opening its menus
+  * Item Init Fix: properly initializes NBT data for Tombstone items (lollipop, magic_scroll) when obtained via /give
+  * Error Handler: suppresses mixin errors from Tombstone's ItemInputMixin to prevent crashes on startup
+- Negative Damage Fix: prevents server crash from "Damage cannot be negative" IllegalArgumentException
+- OutpostZero Infection Damage Cap: caps infection damage to 10000 to prevent armor destruction before death events fire
+- Configurable settings for all features
+'''
+
+[[mixins]]
+config="utility_core_fixes.mixins.json"
+
+[[dependencies.utility_core_fixes]]
+    modId="neoforge"
+    type="required"
+    versionRange="[26.2.0.37-beta,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.utility_core_fixes]]
+    modId="minecraft"
+    type="required"
+    versionRange="[26.2]"
+    ordering="NONE"
+    side="BOTH"

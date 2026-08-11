@@ -1,0 +1,35 @@
+{
+  "Version": 2,
+  "Width": 21,
+  "Height": 10,
+  "Length": 21,
+  "DataVersion": 3955,
+  "Palette": {
+    "minecraft:air": 0,
+    "minecraft:stone_bricks": 1,
+    "minecraft:stone_brick_slab": 2,
+    "minecraft:oak_planks": 3,
+    "minecraft:glass_pane": 4,
+    "minecraft:oak_door": 5,
+    "minecraft:glowstone": 6,
+    "minecraft:polished_stone_bricks": 7,
+    "minecraft:chiseled_stone_bricks": 8,
+    "minecraft:stone_brick_stairs": 9,
+    "minecraft:oak_fence": 10,
+    "minecraft:lantern": 11,
+    "minecraft:blue_banner": 12
+  },
+  "BlockData": [
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  ],
+  "BlockEntities": []
+}

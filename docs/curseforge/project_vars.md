@@ -1,155 +1,170 @@
-# CurseForge — Variables del proyecto
+# CurseForge — Variables del proyecto (v2.0.0+ Multi-Mod)
 
-> Las siguientes variables son leídas automáticamente por `../codex-docs/scripts/curseforge-upload.ps1`
+> Las siguientes variables son leídas por scripts de upload para los 3 mods independientes.
 
-project_id = 1601825
-api_token = ee776b0a-ee95-4850-b554-06be02a8657f
-game_versions = 9638, 9639, 16498, 10150
-release_type = release
+---
 
-## Proyecto
+## 3 Proyectos CurseForge Separados
 
-| Variable | Valor |
-|----------|-------|
-| `curseforge_project_id` | `1601825` |
-| `mod_id` | `utility_core` |
-| `display_name` | `Utility Core` (separado, no junto) |
+| Mod | CurseForge Project ID | Mod ID | Display Name | Slug Sugerido |
+|-----|----------------------|--------|--------------|---------------|
+| **Fixes** | `1648135` | `utility_core_fixes` | Utility Core Fixes | `utility-core-fixes` |
+| **QoL** | `1648134` | `utility_core_qol` | Utility Core QoL | `utility-core-qol` |
+| **Admin** | `1601825` | `utility_core_admin` | Utility Core Admin | `utility-core-admin` |
 
-## Tokens
+> **Nota**: El mismo token funciona para los 3 proyectos (token heredado del proyecto original).
 
-| API | Token | Uso |
-|-----|-------|-----|
-| Upload | `ee776b0a-ee95-4850-b554-06be02a8657f` | Subir archivos JAR |
-| Core (GET) | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` | Consultar datos del mod |
+---
 
-Autenticación Upload: cabecera `X-Api-Token`
-Autenticación Core: cabecera `x-api-key`
+## Tokens (Restaurados del historial original)
 
-## Versión actual
+| Mod | Upload Token | Core API Key |
+|-----|--------------|--------------|
+| Fixes | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
+| Admin | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
+| QoL | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
+
+> **Nota**: Token heredado del proyecto original (1601825). Verificar permisos en los nuevos proyectos (1648135, 1648134).
+
+---
+
+## Variables Comunes
 
 | Variable | Valor |
 |----------|-------|
 | `minecraft_version` | `26.2` |
 | `framework` | `neoforge` |
-| `java_version` | `25` |
-| `environment` | `Client`, `Server` |
+| `neo_version` | `26.2.0.37-beta` |
+| `java_version` | `21` |
+| `mod_version` | `2.0.0-beta.1` (CurseForge) / `2.0.0` (NeoForge interno) |
+| `environment` | `Client`, `Server` (Fixes/Admin) / `Client` primary + Server sync (QoL) |
 
-## Rama
+---
+
+## Estructura de Archivos por Mod
 
 ```
-minecraft/26.2/neoforge-26.2.0.32-beta/production
+fixes/build/libs/utility_core_fixes-2.0.0-beta.1.jar
+admin/build/libs/utility_core_admin-2.0.0-beta.1.jar
+qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
 ```
 
-## Tag
+### Nomenclatura JAR
+`utility_core_<mod>-<mod_version>.jar` (ej: `utility_core_fixes-2.0.0-beta.1.jar`)
 
-Formato: `<mc-version>-<framework>-<version>`
-Ejemplo: `26.2-neoforge-1.0.25`
+---
 
-## Parámetros del upload
+## Configuración por Mod
 
-| Campo | Valor | Notas |
-|-------|-------|-------|
-| `displayName` | `Utility Core (1.0.25)` | Nombre visible: `display_name (version)` |
-| `changelog` | HTML (no Markdown) | Ver estructura abajo |
-| `changelogType` | `html` | Obligatorio para que se vea bien |
-| `release_type` | `release` | Puerto a 26.2 confirmado estable en servidor real desde v1.0.0. |
-| `gameVersionNames` | `["Client", "Server", "26.2", "NeoForge"]` | Entorno + MC + modloader |
+### Utility Core Fixes
+- **Mod ID**: `utility_core_fixes`
+- **Display Name**: Utility Core Fixes
+- **Category**: Server Utility
+- **Side**: Both
+- **Dependencies**: None (optional: Corail Tombstone, OutpostZero)
+- **Config**: `utility_core_fixes-common.toml`
+- **Description**: `docs/curseforge/project_description_fixes.md`
 
-## Estructura del changelog (HTML)
+### Utility Core Admin
+- **Mod ID**: `utility_core_admin`
+- **Display Name**: Utility Core Admin
+- **Category**: Server Admin
+- **Side**: Server (primary) + Client (config)
+- **Dependencies**: None
+- **Config**: `utility_core_admin-common.toml`
+- **Description**: `docs/curseforge/project_description_admin.md`
+
+### Utility Core QoL
+- **Mod ID**: `utility_core_qol`
+- **Display Name**: Utility Core QoL
+- **Category**: Client QoL
+- **Side**: Client (primary) + Server (sync)
+- **Dependencies**: None
+- **Config**: `utility_core_qol-common.toml`
+- **Description**: `docs/curseforge/project_description_qol.md`
+
+---
+
+## Flujo de Upload (Por Mod)
+
+1. `./gradlew :fixes:clean :fixes:jar` (o `:admin:jar` / `:qol:jar`)
+2. Copiar JAR a `docs/curseforge/build/` (opcional)
+3. Crear tag: `git tag -a v2.0.0-beta.1-fixes -m "v2.0.0-beta.1: Fixes release"` + `git push origin <tag>`
+3. Subir JAR a CurseForge correspondiente
+4. Pegar HTML de `docs/curseforge/project_description_<mod>.md` en descripción del proyecto CurseForge
+5. Verificar con GET
+
+---
+
+## Estructura Changelog (HTML)
 
 ```html
-<h2>v1.0.21 - Titulo descriptivo</h2>
+<h2>v2.0.0-beta.1 - Initial Split Release</h2>
 
-<h3>Fix</h3>
+<h3>Features</h3>
 <ul>
-<li><strong>Problema</strong>: descripcion con <code>codigo</code>.</li>
-<li><strong>Otro</strong>: descripcion.</li>
+<li><strong>Mod split</strong>: Monolithic Utility Core split into 3 independent mods: Fixes, Admin, QoL.</li>
+<li><strong>Standalone mods</strong>: Each mod has its own modId, config, mixins, and dependencies.</</ul>
+
+<h3>Fixes</h3>
+<ul>
+<li>Tombstone GUI Scale / Item Init / Error Handler fixes</li>
+<li>Negative Damage Fix (clamps to 0)</li>
+<li>OutpostZero Infection Damage Cap (10k)</li>
 </ul>
 
-<h3>Technical Changes</h3>
+<h3>Admin</h3>
 <ul>
-<li><code>Clase/metodo()</code> — descripcion.</li>
+<li>Spawn Schematic (SURFACE/FIXED height, external file support, protection)</li>
+<li>ChunkGen (spiral, duty cycle, per-dimension, persistence)</li>
+<li>Server Rules (from JSON, idempotent)</li>
+<li>Data Pack Folder (auto-load from <game-dir>/datapacks/)</li>
 </ul>
 
-<h3>Notes</h3>
-<blockquote>Nota importante para servidores.</blockquote>
+<h3>QoL</h3>
+<ul>
+<li>Recipe Selector (crafting table + inventory 2x2, server sync)</li>
+<li>Biome/Dimension Titles (vanilla HUD, Traveler's Titles port)</li>
+<li>Title Vertical Offset (-200 to +200)</li>
+</ul>
 
 <hr>
-
-<p><strong>JAR</strong>: <code>utility_core-26.2-neoforge-1.0.24.jar</code></p>
+<p><strong>JAR</strong>: <code>utility_core_fixes-2.0.0-beta.1.jar</code></p>
 ```
 
-## Subir archivo (JAR) con Python
+---
 
-```python
-import json, uuid, urllib.request
+## Versionado
 
-boundary = uuid.uuid4().hex
-version = "1.0.25"
+| Contexto | Versión |
+|----------|---------|
+| NeoForge `neoforge.mods.toml` | `2.0.0` (strict SemVer) |
+| CurseForge upload | `2.0.0-beta.1` |
+| Git tag | `v2.0.0-beta.1-fixes`, `v2.0.0-beta.1-admin`, `v2.0.0-beta.1-qol` |
+| Changelog | `2.0.0-beta.1` |
 
-metadata = {
-    "displayName": f"Utility Core ({version})",
-    "changelog": "<h2>v{version} - Ver documentacion docs/curseforge/versions/{version}.md</h2>",
-    "changelogType": "html",
-    "gameVersionNames": ["Client", "Server", "26.2", "NeoForge"],
-    "releaseType": "release"
-}
+---
 
-with open(f"build/libs/utility_core-26.2-neoforge-{version}.jar", "rb") as f:
-    jar_data = f.read()
-
-meta_bytes = json.dumps(metadata, ensure_ascii=False).encode("utf-8")
-
-body = b""
-body += f"--{boundary}\r\n".encode()
-body += b'Content-Disposition: form-data; name="metadata"\r\n'
-body += b"Content-Type: application/json\r\n\r\n"
-body += meta_bytes + b"\r\n"
-body += f"--{boundary}\r\n".encode()
-body += f'Content-Disposition: form-data; name="file"; filename="utility_core-26.2-neoforge-{version}.jar"\r\n'.encode()
-body += b"Content-Type: application/java-archive\r\n\r\n"
-body += jar_data + b"\r\n"
-body += f"--{boundary}--\r\n".encode()
-
-req = urllib.request.Request(
-    f"https://minecraft.curseforge.com/api/projects/1601825/upload-file",
-    data=body,
-    headers={
-        "X-Api-Token": "ee776b0a-ee95-4850-b554-06be02a8657f",
-        "Content-Type": f"multipart/form-data; boundary={boundary}"
-    },
-    method="POST"
-)
-
-resp = urllib.request.urlopen(req)
-print(resp.read().decode())
-```
-
-## Verificar con GET
+## Build
 
 ```bash
-curl -s "https://api.curseforge.com/v1/mods/1601825/files/<FILE_ID>" \
-  -H "x-api-key: $2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO"
+# Build todos
+./gradlew :fixes:jar :admin:jar :qol:jar
+
+# Build individual
+./gradlew :fixes:jar
+./gradlew :admin:jar
+./gradlew :qol:jar
 ```
 
-## Changelog
+---
 
-```bash
-curl -s "https://api.curseforge.com/v1/mods/1601825/files/<FILE_ID>/changelog" \
-  -H "x-api-key: $2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO"
-```
+## Rutas de Documentación
 
-## Descripcion del proyecto
-
-No hay endpoint API para actualizar la descripcion. Se edita manualmente desde la web de CurseForge pegando el HTML de `docs/curseforge/project_description.md`.
-
-## Flujo completo
-
-1. `./gradlew clean build`
-2. Actualizar `docs/curseforge/versions/<version>.md` con HTML
-3. Actualizar `CHANGELOG.md`
-4. `git commit -m "fix: descripcion\n\nvX.Y.Z"` + `git push`
-5. `git tag -a 26.2-neoforge-<version> -m "vX.Y.Z: descripcion"` + `git push origin <tag>`
-6. Subir JAR a CurseForge con Python
-7. Verificar con GET que el changelog se vea bien
-8. Liberar manualmente desde la web si es necesario
+| Archivo | Uso |
+|---------|-----|
+| `docs/ICON_PROMPTS.md` | 3 prompts para generación de iconos |
+| `docs/curseforge/project_description_fixes.md` | Descripción Fixes (HTML) |
+| `docs/curseforge/project_description_admin.md` | Descripción Admin (HTML) |
+| `docs/curseforge/project_description_qol.md` | Descripción QoL (HTML) |
+| `docs/curseforge/project_vars.md` | Este archivo |

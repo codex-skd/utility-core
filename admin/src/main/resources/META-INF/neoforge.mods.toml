@@ -1,0 +1,36 @@
+# Utility Core Admin - NeoForge mod configuration
+license="MIT"
+
+[[mods]]
+modId="utility_core_admin"
+version="2.0.0"
+displayName="Utility Core Admin"
+logoFile="assets/utility_core_admin/icon.png"
+credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)"
+description='''
+Utility Core Admin - Server administration utilities for Minecraft.
+
+Features:
+- Spawn Schematic: pastes your own .schem/.schematic structure at world creation with configurable height placement (align to ground, surface offset, or fixed absolute Y); the file is read from <game-dir>/utility_core/spawn_schem/schematic_spawn.schem (not bundled in the mod)
+- Data Pack Folder: auto-loads all datapacks from a folder into every world (dedicated servers and single-player)
+- Automatic chunk pregeneration (to run while the server is empty, set pause-when-empty-seconds=-1 in server.properties)
+- Server Rules: enforce game rules from config file
+- Configurable settings for all features
+'''
+
+[[mixins]]
+config="utility_core_admin.mixins.json"
+
+[[dependencies.utility_core_admin]]
+    modId="neoforge"
+    type="required"
+    versionRange="[26.2.0.37-beta,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.utility_core_admin]]
+    modId="minecraft"
+    type="required"
+    versionRange="[26.2]"
+    ordering="NONE"
+    side="BOTH"
