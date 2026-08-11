@@ -100,5 +100,5 @@ public class AdminConfig {
                      "ES: Carpeta que se escanea en busca de datapacks (relativa al directorio del juego) cuando dataPackFolder.enabled está activado.")
             .define("dataPackFolder.path", "datapacks");
 
-    static final ModConfigSpec SPEC = BUILDER.build();
+    public static final ModConfigSpec SPEC = BUILDER.build();
 }
