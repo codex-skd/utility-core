@@ -65,9 +65,7 @@ public class MixinCraftingMenu {
             outputs.add(output.copy());
         }
         List<ItemStack> inputs = captureInputs(container);
-
-        UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] slotChangedCraftingGrid: recipes={} player={}",
-                allRecipes.size(), player.getName().getString());
+        boolean logConflicts = QoLConfig.LOG_DETECTED_CONFLICTS.get();
 
         ItemStack finalResult;
 
@@ -75,14 +73,12 @@ public class MixinCraftingMenu {
             finalResult = ItemStack.EMPTY;
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.getPlayerRecipeData().get()).clear();
-            UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] no recipes matched -> result empty");
         } else if (allRecipes.size() == 1) {
             sendSyncPacket(player, List.of(), inputs);
             player.getData(ModAttachments.getPlayerRecipeData().get()).clear();
             RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
             result.setRecipeUsed(single);
             finalResult = single.value().assemble(input);
-            UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] single recipe -> {}", single.id());
         } else {
             sendSyncPacket(player, outputs, inputs);
 
@@ -90,10 +86,14 @@ public class MixinCraftingMenu {
 
             if (data.inputsChanged(inputs)) {
                 data.setRecipes(pairs, inputs);
-                UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] inputs changed -> setRecipes({}) selectedIndex={}", pairs.size(), data.getSelectedIndex());
+                if (logConflicts) {
+                    UtilityCoreQoL.LOGGER.info("[RecipeSelector] conflict detected: {} matching recipes, inputs changed", pairs.size());
+                }
             } else if (data.getRecipeList().isEmpty()) {
                 data.setRecipes(pairs, inputs);
-                UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] recipe list empty -> setRecipes({}) selectedIndex={}", pairs.size(), data.getSelectedIndex());
+                if (logConflicts) {
+                    UtilityCoreQoL.LOGGER.info("[RecipeSelector] conflict detected: {} matching recipes", pairs.size());
+                }
             }
 
             RecipePair selected = data.getSelectedRecipe();
@@ -102,17 +102,16 @@ public class MixinCraftingMenu {
             if (selected != null && allRecipes.stream().anyMatch(
                     r -> r.id().equals(((RecipeHolder<?>) selected.recipe()).id()))) {
                 holderToUse = (RecipeHolder<CraftingRecipe>) (RecipeHolder<?>) selected.recipe();
-                UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] using selected recipe {} (index {})", holderToUse.id(), data.getSelectedIndex());
             } else {
                 holderToUse = allRecipes.get(0);
                 data.setRecipes(pairs, inputs);
-                UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] selected recipe not in current list (selected={}) -> falling back to {} (data.selectedIndex={})",
-                        selected != null && selected.recipe() != null ? selected.recipe().id() : null, holderToUse.id(), data.getSelectedIndex());
+                if (logConflicts) {
+                    UtilityCoreQoL.LOGGER.info("[RecipeSelector] selected recipe not in current list -> falling back to {}", holderToUse.id());
+                }
             }
 
             result.setRecipeUsed(holderToUse);
             finalResult = holderToUse.value().assemble(input);
-            UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] finalResult={} from {}", finalResult, holderToUse.id());
         }
 
         result.setItem(0, finalResult);

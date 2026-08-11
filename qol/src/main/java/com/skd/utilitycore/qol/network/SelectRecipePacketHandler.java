@@ -22,22 +22,12 @@ public class SelectRecipePacketHandler {
             Player player = context.player();
             PlayerRecipeData data = player.getData(ModAttachments.getPlayerRecipeData().get());
 
-            UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] handle SelectRecipePacket: index={} data.size={} data.selectedIndex={}",
-                    packet.selectedIndex(), data.getRecipeList().size(), data.getSelectedIndex());
-
             if (packet.selectedIndex() >= 0 && packet.selectedIndex() < data.getRecipeList().size()) {
                 data.setSelectedIndex(packet.selectedIndex());
                 RecipePair selected = data.getSelectedRecipe();
                 AbstractContainerMenu menu = player.containerMenu;
 
-                UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] after setSelectedIndex({}): data.selectedIndex={} selected={} menu={}",
-                        packet.selectedIndex(), data.getSelectedIndex(), selected != null ? selected.output() : null, menu);
-
                 if (selected != null && menu instanceof AbstractCraftingMenu acm) {
-                    ItemStack resultCurrent = menu.getSlot(0).getItem();
-                    UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] result slot before: {} | applying selected output {}",
-                            resultCurrent, selected.output());
-
                     Slot resultSlot = menu.getSlot(0);
                     resultSlot.set(selected.output());
                     ResultContainer resultContainer = resultSlot.container instanceof ResultContainer rc ? rc : null;
@@ -49,16 +39,11 @@ public class SelectRecipePacketHandler {
                         sp.connection.send(new ClientboundContainerSetSlotPacket(
                                 menu.containerId, menu.incrementStateId(), 0, selected.output()));
                     }
-                    UtilityCoreQoL.LOGGER.info("[RecipeSelector][S] applied selection: slot0 actual={} recipeUsed={} -> broadcastChanges() no longer reverts",
-                            menu.getSlot(0).getItem(),
-                            resultContainer != null && resultContainer.getRecipeUsed() != null
-                                    ? resultContainer.getRecipeUsed().id()
-                                    : "none");
                 } else {
-                    UtilityCoreQoL.LOGGER.warn("[RecipeSelector][S] selected==null or menu not AbstractCraftingMenu: selected={} menu={}", selected, menu);
+                    UtilityCoreQoL.LOGGER.warn("[RecipeSelector] selected==null or menu not AbstractCraftingMenu: selected={} menu={}", selected, menu);
                 }
             } else {
-                UtilityCoreQoL.LOGGER.warn("[RecipeSelector][S] invalid index {} (data.size={})", packet.selectedIndex(), data.getRecipeList().size());
+                UtilityCoreQoL.LOGGER.warn("[RecipeSelector] invalid index {} (data.size={})", packet.selectedIndex(), data.getRecipeList().size());
             }
         });
     }
