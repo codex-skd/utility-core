@@ -1,15 +1,13 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "com.skd.utilitycore.qol.mixin",
+  "package": "com.skd.utilitycore.qol.bridging.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "MixinCraftingMenu"
-  ],
+  "mixins": [],
   "client": [
-    "MixinCraftingScreen",
-    "MixinInventoryScreen",
-    "MixinHud"
+    "CrosshairRenderingMixin",
+    "OutlineRendererMixin",
+    "MinecraftClientMixin"
   ],
   "server": [],
   "injectors": {

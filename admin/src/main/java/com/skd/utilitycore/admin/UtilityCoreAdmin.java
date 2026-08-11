@@ -12,6 +12,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -33,9 +34,9 @@ public class UtilityCoreAdmin {
 
         // Register event listeners
         modEventBus.addListener(this::onCommonSetup);
-        modEventBus.addListener(this::onServerStarting);
-        modEventBus.addListener(this::onServerStarted);
-        modEventBus.addListener(this::onServerTick);
+        NeoForge.EVENT_BUS.addListener(this::onServerStarting);
+        NeoForge.EVENT_BUS.addListener(this::onServerStarted);
+        NeoForge.EVENT_BUS.addListener(this::onServerTick);
         modEventBus.addListener(DataPackFolderLoader::onAddPackFinders);
     }
 

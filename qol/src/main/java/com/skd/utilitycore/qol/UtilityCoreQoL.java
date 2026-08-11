@@ -36,7 +36,7 @@ public class UtilityCoreQoL {
             );
         });
         modContainer.registerConfig(ModConfig.Type.COMMON, QoLConfig.SPEC);
-        modContainer.registerConfig(ModConfig.Type.COMMON, BridgingConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, BridgingConfig.SPEC);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 }

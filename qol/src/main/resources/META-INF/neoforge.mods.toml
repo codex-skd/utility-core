@@ -24,6 +24,9 @@ config="utility_core_qol.mixins.json"
 [[mixins]]
 config="utility_core_qol_accessors.mixins.json"
 
+[[mixins]]
+config="utility_core_qol_bridging.mixins.json"
+
 [[dependencies.utility_core_qol]]
     modId="neoforge"
     type="required"
