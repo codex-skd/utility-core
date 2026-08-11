@@ -9,7 +9,10 @@
   "client": [
     "MixinCraftingScreen",
     "MixinInventoryScreen",
-    "MixinHud"
+    "MixinHud",
+    "com.skd.utilitycore.qol.bridging.mixin.CrosshairRenderingMixin",
+    "com.skd.utilitycore.qol.bridging.mixin.OutlineRendererMixin",
+    "com.skd.utilitycore.qol.bridging.mixin.MinecraftClientMixin"
   ],
   "server": [],
   "injectors": {

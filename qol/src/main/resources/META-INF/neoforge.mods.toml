@@ -6,7 +6,7 @@ modId="utility_core_qol"
 version="2.0.0"
 displayName="Utility Core QoL"
 logoFile="assets/utility_core_qol/icon.png"
-credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)"
+credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)\nBridging assist logic ported from BridgingMod by Will Scully (MIT)"
 description='''
 Utility Core QoL - Quality of life client-side improvements for Minecraft.
 
@@ -15,6 +15,7 @@ Features:
 - Biome/Dimension Titles: shows a vanilla title/subtitle when entering a new biome or dimension
 - Title Vertical Offset: configurable vertical position for title/subtitle text
 - Configurable settings for all features
+- Bridging Assist: helps with block placement by showing where blocks can be placed based on what you're looking at
 '''
 
 [[mixins]]

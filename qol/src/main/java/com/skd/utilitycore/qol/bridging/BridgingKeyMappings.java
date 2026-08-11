@@ -1,0 +1,32 @@
+package com.skd.utilitycore.qol.bridging;
+
+import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.resources.Identifier;
+import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
+import static com.skd.utilitycore.qol.bridging.UtilityCoreQoLBridging.MOD_ID;
+
+public class BridgingKeyMappings {
+
+    private static final ArrayList<KeyMapping> KEY_MAPPINGS = new ArrayList<>();
+    private static final KeyMapping.Category CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(MOD_ID, "category"));
+
+    public static final KeyMapping TOGGLE_BRIDGING = defineMapping(new KeyMapping("key.utility_core_qol.toggle_bridging", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_COMMA, CATEGORY));
+
+
+
+    private static KeyMapping defineMapping(KeyMapping k) {
+        KEY_MAPPINGS.add(k);
+        return k;
+    }
+
+    public static void forEachKeybindingDo(Consumer<KeyMapping> keyMappingConsumer) {
+        for(KeyMapping mapping: BridgingKeyMappings.KEY_MAPPINGS) {
+            keyMappingConsumer.accept(mapping);
+        }
+    }
+}

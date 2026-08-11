@@ -1,6 +1,7 @@
 package com.skd.utilitycore.qol;
 
 import com.mojang.logging.LogUtils;
+import com.skd.utilitycore.qol.bridging.BridgingConfig;
 import com.skd.utilitycore.qol.common.network.ModNetwork;
 import com.skd.utilitycore.qol.common.network.SelectRecipePacket;
 import com.skd.utilitycore.qol.common.network.SyncRecipesPacket;
@@ -35,6 +36,7 @@ public class UtilityCoreQoL {
             );
         });
         modContainer.registerConfig(ModConfig.Type.COMMON, QoLConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, BridgingConfig.SPEC);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 }
