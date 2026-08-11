@@ -4,7 +4,7 @@ plugins {
 
 subprojects {
     group = "com.skd.utilitycore"
-    version = "2.0.0-beta.1"
+    version = mod_version
 
     repositories {
         mavenCentral()
