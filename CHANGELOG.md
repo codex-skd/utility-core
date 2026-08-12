@@ -1,15 +1,16 @@
 # Utility Core — Registro de cambios
 ## 2.1.0-beta.1
-- Feature: se agregó la asistencia de puentear (Bridging Assist) al módulo qol, portada desde BridgingMod.
-- Feature: se agregaron los puntos de entrada @Mod faltantes en admin y fixes, permitiendo que cada subproyecto genere su propio archivo .toml de configuración y funcione como un mod independiente.
-- Feature: se eliminó el archivo Config.java duplicado y el META-INF/neoforge.mods.toml huérfano directamente bajo la raíz del repositorio.
-- Feature: se actualizaron los archivos de mezcla (mixins) para incluir el renderizado de la cruz y el contorno de puentear, así como la lógica de colocación.
-- Feature: se agregó soporte opcional para DankStorage y Sable mediante verificaciones suaves (sin dependencias duras).
-- Feature: se agregó una tecla de enlace para activar/desactivar la asistencia de puentear (predeterminada: tecla coma).
-## 2.0.0-beta.2
-- Fix: se agregaron los puntos de entrada @Mod faltantes en los subproyectos admin y fixes, permitiendo que cada módulo genere su propio archivo .toml de configuración y funcione como un mod independiente real.
-- Fix: se eliminó el archivo Config.java duplicado y obsoleto del proyecto raíz.
-- Fix: se eliminó el archivo META-INF/neoforge.mods.toml huérfano directamente bajo la raíz del repositorio.
+- Feature (QoL): se agregó la asistencia de puentear (Bridging Assist), portada desde BridgingMod — colocación "reacharound" al construir puentes, outline y crosshair direccional, slab assist, y ajustes de distancia/ejes/retardo configurables.
+- Feature (QoL): soporte opcional para DankStorage y Sable mediante verificaciones suaves (sin dependencias duras); tecla de enlace para activar/desactivar la asistencia (predeterminada: coma).
+- Fix (Admin, Fixes): se agregaron los puntos de entrada `@Mod` faltantes en admin y fixes — antes ninguno de los dos registraba su config ni funcionaba como mod independiente.
+- Fix (Admin): `ServerStartingEvent`/`ServerStartedEvent`/`ServerTickEvent` estaban registrados en el bus equivocado (mod-bus en vez de `NeoForge.EVENT_BUS`), causando un crash al cargar el cliente.
+- Fix (Admin): `SpawnSchematicManager` nunca se instanciaba, causando un `NullPointerException` al iniciar el servidor integrado.
+- Fix (QoL): conflicto de config entre `BridgingConfig` y `QoLConfig` (ambos apuntaban al mismo `.toml`) — `BridgingConfig` pasa a config de cliente (`utility_core_qol-client.toml`).
+- Fix (QoL): los mixins de bridging (crosshair, outline) tenían una ruta de paquete duplicada en `utility_core_qol.mixins.json` y nunca se cargaban; movidos a su propio archivo de mixins.
+- Fix (QoL): el sprite de la flecha direccional del crosshair tenía un path erróneo (nunca se encontraba la textura); el color del contorno se calculaba mal (truncaba a negro); la colocación con items de compat especiales (DankStorage, etc.) se saltaba el handler correspondiente.
+- Chore (QoL): se eliminaron logs de depuración residuales del selector de recetas que se disparaban en cada cambio de la rejilla de crafteo; ahora están tras el flag `logDetectedConflicts`.
+- Chore: se eliminó el archivo `Config.java` duplicado y el `META-INF/neoforge.mods.toml` huérfano directamente bajo la raíz del repositorio.
+- Fix (build): la versión de los subproyectos estaba hardcodeada en `build.gradle` en vez de leerse de `mod_version`, así que los bumps de versión no llegaban a los JARs.
 ## 1.11.13
 - Fix: el selector de recetas de la mesa de crafteo dejaba de responder (el clic se registraba pero el servidor lo rechazaba). El menú de inventario (`InventoryMenu`) permanece suscrito a los cambios del inventario del jugador aunque haya otro menú abierto, y cada cambio disparaba `slotChangedCraftingGrid` con la rejilla 2x2 vacía; eso hacía que el servidor borrara los datos de recetas del jugador (y enviara sincronizaciones con 0 recetas) constantemente. Ahora el cálculo del selector solo procesa el menú activo del jugador (`player.containerMenu`), de modo que la selección se mantiene hasta que el jugador cambia los ingredientes.
 
