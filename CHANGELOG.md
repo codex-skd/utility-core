@@ -1,5 +1,5 @@
 # Utility Core — Registro de cambios
-## 2.1.0-beta.1
+## 2.1.0
 - Feature (QoL): se agregó la asistencia de puentear (Bridging Assist), portada desde BridgingMod — colocación "reacharound" al construir puentes, outline y crosshair direccional, slab assist, y ajustes de distancia/ejes/retardo configurables.
 - Feature (QoL): soporte opcional para DankStorage y Sable mediante verificaciones suaves (sin dependencias duras); tecla de enlace para activar/desactivar la asistencia (predeterminada: coma).
 - Fix (Admin, Fixes): se agregaron los puntos de entrada `@Mod` faltantes en admin y fixes — antes ninguno de los dos registraba su config ni funcionaba como mod independiente.
