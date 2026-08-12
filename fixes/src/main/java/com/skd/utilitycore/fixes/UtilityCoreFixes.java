@@ -17,7 +17,7 @@ public class UtilityCoreFixes {
 
     public UtilityCoreFixes(IEventBus modEventBus, ModContainer modContainer) {
         // Register config
-        modContainer.registerConfig(ModConfig.Type.COMMON, FixesConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, FixesConfig.SPEC, "utility_core/utility_core_fixes-common.toml");
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         }

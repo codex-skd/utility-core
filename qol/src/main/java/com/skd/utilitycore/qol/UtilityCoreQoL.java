@@ -37,8 +37,8 @@ public class UtilityCoreQoL {
                     SyncRecipesPacketHandler::handle
             );
         });
-        modContainer.registerConfig(ModConfig.Type.COMMON, QoLConfig.SPEC);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, BridgingConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, QoLConfig.SPEC, "utility_core/utility_core_qol-common.toml");
+        modContainer.registerConfig(ModConfig.Type.CLIENT, BridgingConfig.SPEC, "utility_core/utility_core_qol-client.toml");
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         }

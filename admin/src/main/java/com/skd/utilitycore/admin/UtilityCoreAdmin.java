@@ -32,7 +32,7 @@ public class UtilityCoreAdmin {
 
     public UtilityCoreAdmin(IEventBus modEventBus, ModContainer modContainer) {
         // Register config
-        modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, AdminConfig.SPEC);
+        modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, AdminConfig.SPEC, "utility_core/utility_core_admin-common.toml");
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         }
