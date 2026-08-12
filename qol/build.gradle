@@ -16,7 +16,7 @@ dependencies {
 }
 
 jar {
-    archiveBaseName = "utility_core_qol"
+    archiveBaseName = "utility_core_qol-${minecraft_version}-neoforge-${neo_version}"
     manifest {
         attributes(
             "Mod-ID": "utility_core_qol",

@@ -16,7 +16,7 @@ dependencies {
 }
 
 jar {
-    archiveBaseName = "utility_core_admin"
+    archiveBaseName = "utility_core_admin-${minecraft_version}-neoforge-${neo_version}"
     manifest {
         attributes(
             "Mod-ID": "utility_core_admin",

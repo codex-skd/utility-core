@@ -1,0 +1,86 @@
+Loaded 154 artifacts from G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\admin\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadManifest[0m[0m
+  DL    https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
+ [1m[92mDONE [0m Completed [4mdownloadManifest[0m in 0.46s
+[1m*** Started working on [4mdownloadJson[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadJson[0m in 0.01s
+[1m*** Started working on [4mdownloadClient[0m[0m
+[1m*** Started working on [4mdownloadServer[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadServer[0m in 0.03s
+ [1m[92mDONE [0m Completed [4mdownloadClient[0m in 0.03s
+[1m*** Started working on [4mpreProcessJar[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpreProcessJar[0m in 0.00s
+[1m*** Started working on [4mdecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mdecompile[0m in 0.00s
+[1m*** Started working on [4mpatch[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpatch[0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mtransformSources[0m in 0.00s
+[1m*** Started working on [4mrecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrecompile[0m in 0.00s
+[1m*** Started working on [4mmergeWithSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmergeWithSources[0m in 0.00s
+Total runtime: 2.08s
+
+Note: G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\admin\src\main\java\com\skd\utilitycore\admin\schematic\SpawnSchematicManager.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\admin\src\main\java\com\skd\utilitycore\admin\chunkgen\ChunkGenManager.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Loaded 154 artifacts from G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\fixes\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadManifest[0m[0m
+  DL    https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
+ [1m[92mDONE [0m Completed [4mdownloadManifest[0m in 0.41s
+[1m*** Started working on [4mdownloadJson[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadJson[0m in 0.01s
+[1m*** Started working on [4mdownloadServer[0m[0m
+[1m*** Started working on [4mdownloadClient[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadServer[0m in 0.03s
+ [1m[92mDONE [0m Completed [4mdownloadClient[0m in 0.03s
+[1m*** Started working on [4mpreProcessJar[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpreProcessJar[0m in 0.01s
+[1m*** Started working on [4mdecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mdecompile[0m in 0.00s
+[1m*** Started working on [4mpatch[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpatch[0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mtransformSources[0m in 0.00s
+[1m*** Started working on [4mrecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrecompile[0m in 0.00s
+[1m*** Started working on [4mmergeWithSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmergeWithSources[0m in 0.00s
+Total runtime: 1.44s
+
+Loaded 154 artifacts from G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\qol\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadManifest[0m[0m
+  DL    https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
+ [1m[92mDONE [0m Completed [4mdownloadManifest[0m in 0.48s
+[1m*** Started working on [4mdownloadJson[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadJson[0m in 0.01s
+[1m*** Started working on [4mdownloadClient[0m[0m
+[1m*** Started working on [4mdownloadServer[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadClient[0m in 0.03s
+ [1m[92mDONE [0m Completed [4mdownloadServer[0m in 0.03s
+[1m*** Started working on [4mpreProcessJar[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpreProcessJar[0m in 0.00s
+[1m*** Started working on [4mdecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mdecompile[0m in 0.00s
+[1m*** Started working on [4mpatch[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpatch[0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mtransformSources[0m in 0.00s
+[1m*** Started working on [4mrecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrecompile[0m in 0.00s
+[1m*** Started working on [4mmergeWithSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmergeWithSources[0m in 0.00s
+Total runtime: 1.96s
+
+Note: G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\qol\src\main\java\com\skd\utilitycore\qol\bridging\BridgingKeyMappings.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: G:\Proyectos\Mods_Minecraft\utility_core\neoforge\26.2\qol\src\main\java\com\skd\utilitycore\qol\mixin\MixinCraftingMenu.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
