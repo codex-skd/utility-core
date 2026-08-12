@@ -23,7 +23,9 @@ subprojects {
             var replaceProperties = [mod_version: mod_version]
             inputs.properties replaceProperties
             filesMatching('META-INF/neoforge.mods.toml') {
-                expand replaceProperties
+                expand(replaceProperties) {
+                    it.escapeBackslash = true
+                }
             }
         }
     }
