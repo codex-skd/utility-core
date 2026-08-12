@@ -1,4 +1,8 @@
 # Utility Core — Registro de cambios
+## 2.1.2
+- Fix (Admin, Fixes, QoL): **crash crítico en servidor dedicado** — `registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new)` se ejecutaba sin comprobar el lado (`Dist`) en el constructor de los 3 mods. `ConfigurationScreen` extiende la clase cliente-only `Screen`, por lo que el classloading de esa referencia lanzaba `NoClassDefFoundError: net/minecraft/client/gui/screens/Screen` y tumbaba la carga de los 3 mods en cualquier servidor dedicado. Ahora el registro solo ocurre si `FMLEnvironment.dist.isClient()`.
+- Fix (build): `version` en los 3 `neoforge.mods.toml` estaba hardcodeado como literal `"2.0.0"` y nunca reflejaba `mod_version` — el crash report mostraba "Mod version: 2.0.0" pese a que el JAR era 2.1.0. Ahora usa `${mod_version}` con `expand` en `processResources`, igual que el resto de mods del ecosistema.
+
 ## 2.1.0
 
 ## [2.1.1] - 2026-08-12
