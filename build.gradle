@@ -1,3 +1,5 @@
+import org.gradle.language.jvm.tasks.ProcessResources
+
 plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -14,5 +16,15 @@ subprojects {
 
     tasks.withType(JavaCompile).configureEach {
         options.encoding = 'UTF-8'
+    }
+
+    afterEvaluate {
+        tasks.named('processResources', ProcessResources) {
+            var replaceProperties = [mod_version: mod_version]
+            inputs.properties replaceProperties
+            filesMatching('META-INF/neoforge.mods.toml') {
+                expand replaceProperties
+            }
+        }
     }
 }

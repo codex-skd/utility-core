@@ -3,7 +3,7 @@ license="MIT"
 
 [[mods]]
 modId="utility_core_admin"
-version="2.0.0"
+version="${mod_version}"
 displayName="Utility Core Admin"
 logoFile="assets/utility_core_admin/icon.png"
 credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)"

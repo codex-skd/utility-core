@@ -8,7 +8,9 @@ import com.skd.utilitycore.admin.schematic.SpawnSchematicManager;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -31,7 +33,9 @@ public class UtilityCoreAdmin {
     public UtilityCoreAdmin(IEventBus modEventBus, ModContainer modContainer) {
         // Register config
         modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, AdminConfig.SPEC);
-        modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        if (FMLEnvironment.getDist() == Dist.CLIENT) {
+            modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
 
         // Register event listeners
         modEventBus.addListener(this::onCommonSetup);
