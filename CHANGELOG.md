@@ -1,5 +1,12 @@
 # Utility Core — Registro de cambios
 
+
+## [1.11.2] - 2026-08-12
+
+### Change
+
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core-26.1.2-neoforge-26.1.2.78-1.11.2.jar` (se añade la versión de cargador/NeoForge al nombre del archivo). Empaquetado y documentación; sin cambios de funcionalidad.
+
 ## 1.11.1
 - Fix: la prevención de mobs (`spawnSchematic.preventMobSpawns`) solo cubría el rango de altura exacto del esquema (`minPos.getY()`-`maxPos.getY()`). Cuando el esquema flota sobre el terreno (`spawnSchematic.surfaceOffset`), el suelo natural bajo la estructura —mismo footprint X/Z, oscuro de noche— quedaba fuera de ese rango y seguían apareciendo mobs ahí. Nuevo `isWithinMobSpawnColumn()` protege toda la columna, desde el fondo del mundo hasta el techo del esquema; la protección de romper/colocar bloques y explosiones sigue usando `isWithinBounds()` sin cambios.
 
