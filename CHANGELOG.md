@@ -1,5 +1,12 @@
 # Utility Core — Registro de cambios
 ## 2.1.0
+
+## [2.1.1] - 2026-08-12
+
+### Change
+
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.37-beta-2.1.1.jar` (se añade la versión de cargador/NeoForge al nombre del archivo). Empaquetado y documentación; sin cambios de funcionalidad.
+
 - Feature (QoL): se agregó la asistencia de puentear (Bridging Assist), portada desde BridgingMod — colocación "reacharound" al construir puentes, outline y crosshair direccional, slab assist, y ajustes de distancia/ejes/retardo configurables.
 - Feature (QoL): soporte opcional para DankStorage y Sable mediante verificaciones suaves (sin dependencias duras); tecla de enlace para activar/desactivar la asistencia (predeterminada: coma).
 - Fix (Admin, Fixes): se agregaron los puntos de entrada `@Mod` faltantes en admin y fixes — antes ninguno de los dos registraba su config ni funcionaba como mod independiente.

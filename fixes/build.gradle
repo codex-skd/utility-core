@@ -16,7 +16,7 @@ dependencies {
 }
 
 jar {
-    archiveBaseName = "utility_core_fixes"
+    archiveBaseName = "utility_core_fixes-${minecraft_version}-neoforge-${neo_version}"
     manifest {
         attributes(
             "Mod-ID": "utility_core_fixes",
