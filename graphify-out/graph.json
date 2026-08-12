@@ -3406,7 +3406,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency",
-      "community": 53,
+      "community": 39,
       "norm_label": "bridgingadjacency.java"
     },
     {
@@ -3416,7 +3416,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency",
-      "community": 53,
+      "community": 39,
       "norm_label": "bridgingadjacency"
     },
     {
@@ -3426,7 +3426,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_none",
-      "community": 53,
+      "community": 39,
       "norm_label": "none"
     },
     {
@@ -3436,7 +3436,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_corners",
-      "community": 53,
+      "community": 39,
       "norm_label": "corners"
     },
     {
@@ -3446,7 +3446,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_edges",
-      "community": 53,
+      "community": 39,
       "norm_label": "edges"
     },
     {
@@ -3456,7 +3456,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_full",
-      "community": 53,
+      "community": 39,
       "norm_label": "full"
     },
     {
@@ -3546,7 +3546,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings",
-      "community": 78,
+      "community": 4,
       "norm_label": "bridgingkeymappings.java"
     },
     {
@@ -3556,7 +3556,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings",
-      "community": 78,
+      "community": 4,
       "norm_label": "bridgingkeymappings"
     },
     {
@@ -3566,7 +3566,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "keymapping",
-      "community": 78,
+      "community": 4,
       "norm_label": "keymapping"
     },
     {
@@ -3576,7 +3576,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "category",
-      "community": 78,
+      "community": 4,
       "norm_label": "category"
     },
     {
@@ -3586,7 +3586,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings_definemapping",
-      "community": 78,
+      "community": 4,
       "norm_label": ".definemapping()"
     },
     {
@@ -3596,7 +3596,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings_foreachkeybindingdo",
-      "community": 78,
+      "community": 4,
       "norm_label": ".foreachkeybindingdo()"
     },
     {
@@ -3606,7 +3606,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_modids",
-      "community": 64,
+      "community": 39,
       "norm_label": "modids.java"
     },
     {
@@ -3616,7 +3616,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_modids_modids",
-      "community": 64,
+      "community": 39,
       "norm_label": "modids"
     },
     {
@@ -3626,7 +3626,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode",
-      "community": 71,
+      "community": 39,
       "norm_label": "placementaxismode.java"
     },
     {
@@ -3636,7 +3636,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_placementaxismode",
-      "community": 71,
+      "community": 39,
       "norm_label": "placementaxismode"
     },
     {
@@ -3646,7 +3646,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_placementaxismode_none",
-      "community": 71,
+      "community": 39,
       "norm_label": "none"
     },
     {
@@ -3656,7 +3656,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_placementaxismode_xz",
-      "community": 71,
+      "community": 39,
       "norm_label": "xz"
     },
     {
@@ -3666,7 +3666,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_placementaxismode_y",
-      "community": 71,
+      "community": 39,
       "norm_label": "y"
     },
     {
@@ -3676,7 +3676,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_placementaxismode_both",
-      "community": 71,
+      "community": 39,
       "norm_label": "both"
     },
     {
@@ -3686,7 +3686,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_isdirectionenabled",
-      "community": 71,
+      "community": 39,
       "norm_label": "isdirectionenabled()"
     },
     {
@@ -3696,7 +3696,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismode_java_direction",
-      "community": 71,
+      "community": 39,
       "norm_label": "direction"
     },
     {
@@ -3706,7 +3706,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride",
-      "community": 72,
+      "community": 39,
       "norm_label": "placementaxismodeoverride.java"
     },
     {
@@ -3716,7 +3716,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride",
-      "community": 72,
+      "community": 39,
       "norm_label": "placementaxismodeoverride"
     },
     {
@@ -3726,7 +3726,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_fallback",
-      "community": 72,
+      "community": 39,
       "norm_label": "fallback"
     },
     {
@@ -3736,7 +3736,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_none",
-      "community": 72,
+      "community": 39,
       "norm_label": "none"
     },
     {
@@ -3746,7 +3746,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_xz",
-      "community": 72,
+      "community": 39,
       "norm_label": "xz"
     },
     {
@@ -3756,7 +3756,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_y",
-      "community": 72,
+      "community": 39,
       "norm_label": "y"
     },
     {
@@ -3766,7 +3766,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_both",
-      "community": 72,
+      "community": 39,
       "norm_label": "both"
     },
     {
@@ -3776,7 +3776,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_getplacementaxismode",
-      "community": 72,
+      "community": 39,
       "norm_label": "getplacementaxismode()"
     },
     {
@@ -3836,7 +3836,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging",
-      "community": 64,
+      "community": 39,
       "norm_label": "utilitycoreqolbridging.java"
     },
     {
@@ -3846,7 +3846,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging",
-      "community": 64,
+      "community": 39,
       "norm_label": "utilitycoreqolbridging"
     },
     {
@@ -3856,7 +3856,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_noteincompatiblemod",
-      "community": 64,
+      "community": 39,
       "norm_label": ".noteincompatiblemod()"
     },
     {
@@ -3866,7 +3866,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_getcompatiblesourceperspective",
-      "community": 64,
+      "community": 39,
       "norm_label": ".getcompatiblesourceperspective()"
     },
     {
@@ -3876,7 +3876,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_id",
-      "community": 64,
+      "community": 39,
       "norm_label": ".id()"
     },
     {
@@ -3886,7 +3886,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_java_identifier",
-      "community": 64,
+      "community": 39,
       "norm_label": "identifier"
     },
     {
@@ -3896,7 +3896,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_getlogger",
-      "community": 64,
+      "community": 39,
       "norm_label": ".getlogger()"
     },
     {
@@ -3906,7 +3906,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_java_logger",
-      "community": 64,
+      "community": 39,
       "norm_label": "logger"
     },
     {
@@ -3916,7 +3916,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge",
-      "community": 63,
+      "community": 4,
       "norm_label": "bridge.java"
     },
     {
@@ -3926,7 +3926,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge",
-      "community": 63,
+      "community": 4,
       "norm_label": "bridge"
     },
     {
@@ -3936,7 +3936,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_getdefaultplaceassisttarget",
-      "community": 63,
+      "community": 4,
       "norm_label": ".getdefaultplaceassisttarget()"
     },
     {
@@ -3946,7 +3946,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_itemstack",
-      "community": 63,
+      "community": 4,
       "norm_label": "itemstack"
     },
     {
@@ -3956,7 +3956,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_level",
-      "community": 63,
+      "community": 4,
       "norm_label": "level"
     },
     {
@@ -3966,7 +3966,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_direction",
-      "community": 63,
+      "community": 4,
       "norm_label": "direction"
     },
     {
@@ -3976,7 +3976,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_blockpos",
-      "community": 63,
+      "community": 4,
       "norm_label": "blockpos"
     },
     {
@@ -3986,7 +3986,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_blockhitresult",
-      "community": 63,
+      "community": 4,
       "norm_label": "blockhitresult"
     },
     {
@@ -3996,7 +3996,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_handlehorizontalslabassist",
-      "community": 63,
+      "community": 4,
       "norm_label": ".handlehorizontalslabassist()"
     },
     {
@@ -4006,7 +4006,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_handleverticalslabassist",
-      "community": 63,
+      "community": 4,
       "norm_label": ".handleverticalslabassist()"
     },
     {
@@ -4206,7 +4206,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler",
-      "community": 43,
+      "community": 40,
       "norm_label": "specialbridgingenvironmenthandler.java"
     },
     {
@@ -4236,7 +4236,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_specialbridgingenvironmenthandler_transformbridgingoutlinerendering",
-      "community": 43,
+      "community": 40,
       "norm_label": ".transformbridgingoutlinerendering()"
     },
     {
@@ -4246,7 +4246,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_java_posestack",
-      "community": 43,
+      "community": 40,
       "norm_label": "posestack"
     },
     {
@@ -4256,7 +4256,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_java_submitnodecollector",
-      "community": 43,
+      "community": 40,
       "norm_label": "submitnodecollector"
     },
     {
@@ -4266,7 +4266,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_java_blockpos",
-      "community": 43,
+      "community": 40,
       "norm_label": "blockpos"
     },
     {
@@ -4276,7 +4276,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_specialbridgingenvironmenthandler_transformnonbridgingoutlinerendering",
-      "community": 43,
+      "community": 40,
       "norm_label": ".transformnonbridgingoutlinerendering()"
     },
     {
@@ -4516,7 +4516,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin",
-      "community": 22,
+      "community": 4,
       "norm_label": "minecraftclientmixin.java"
     },
     {
@@ -4526,7 +4526,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_minecraftclientmixin",
-      "community": 22,
+      "community": 4,
       "norm_label": "minecraftclientmixin"
     },
     {
@@ -4536,7 +4536,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_mixin",
-      "community": 22,
+      "community": 4,
       "norm_label": "mixin"
     },
     {
@@ -4546,7 +4546,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "multiplayergamemode",
-      "community": 22,
+      "community": 4,
       "norm_label": "multiplayergamemode"
     },
     {
@@ -4556,7 +4556,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_localplayer",
-      "community": 22,
+      "community": 4,
       "norm_label": "localplayer"
     },
     {
@@ -4566,7 +4566,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "hitresult",
-      "community": 22,
+      "community": 4,
       "norm_label": "hitresult"
     },
     {
@@ -4576,7 +4576,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "clientlevel",
-      "community": 22,
+      "community": 4,
       "norm_label": "clientlevel"
     },
     {
@@ -4586,7 +4586,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_minecraftclientmixin_ontick",
-      "community": 22,
+      "community": 4,
       "norm_label": ".ontick()"
     },
     {
@@ -4596,7 +4596,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_callbackinfo",
-      "community": 22,
+      "community": 4,
       "norm_label": "callbackinfo"
     },
     {
@@ -4606,7 +4606,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_inject",
-      "community": 22,
+      "community": 4,
       "norm_label": "inject"
     },
     {
@@ -4626,7 +4626,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_minecraftclientmixin_bridgingmod_getfinalplaceassisttarget",
-      "community": 22,
+      "community": 4,
       "norm_label": ".bridgingmod$getfinalplaceassisttarget()"
     },
     {
@@ -4636,7 +4636,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_itemstack",
-      "community": 22,
+      "community": 4,
       "norm_label": "itemstack"
     },
     {
@@ -4646,7 +4646,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_direction",
-      "community": 22,
+      "community": 4,
       "norm_label": "direction"
     },
     {
@@ -4656,7 +4656,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_blockpos",
-      "community": 22,
+      "community": 4,
       "norm_label": "blockpos"
     },
     {
@@ -4666,7 +4666,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_blockhitresult",
-      "community": 22,
+      "community": 4,
       "norm_label": "blockhitresult"
     },
     {
@@ -4676,7 +4676,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_unique",
-      "community": 22,
+      "community": 4,
       "norm_label": "unique"
     },
     {
@@ -4686,7 +4686,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "notnull",
-      "community": 22,
+      "community": 4,
       "norm_label": "notnull"
     },
     {
@@ -4696,7 +4696,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin",
-      "community": 57,
+      "community": 40,
       "norm_label": "outlinerenderermixin.java"
     },
     {
@@ -4706,7 +4706,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_outlinerenderermixin",
-      "community": 57,
+      "community": 40,
       "norm_label": "outlinerenderermixin"
     },
     {
@@ -4716,7 +4716,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_java_mixin",
-      "community": 57,
+      "community": 40,
       "norm_label": "mixin"
     },
     {
@@ -4726,7 +4726,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_outlinerenderermixin_checkposestack",
-      "community": 57,
+      "community": 40,
       "norm_label": ".checkposestack()"
     },
     {
@@ -4736,7 +4736,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_java_posestack",
-      "community": 57,
+      "community": 40,
       "norm_label": "posestack"
     },
     {
@@ -4746,7 +4746,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "shadow",
-      "community": 57,
+      "community": 40,
       "norm_label": "shadow"
     },
     {
@@ -4756,7 +4756,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_outlinerenderermixin_rendertracedviewpath",
-      "community": 57,
+      "community": 40,
       "norm_label": ".rendertracedviewpath()"
     },
     {
@@ -4766,7 +4766,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_java_submitnodecollector",
-      "community": 57,
+      "community": 40,
       "norm_label": "submitnodecollector"
     },
     {
@@ -4776,7 +4776,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "levelrenderstate",
-      "community": 57,
+      "community": 40,
       "norm_label": "levelrenderstate"
     },
     {
@@ -4786,7 +4786,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_java_callbackinfo",
-      "community": 57,
+      "community": 40,
       "norm_label": "callbackinfo"
     },
     {
@@ -4796,7 +4796,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_outlinerenderermixin_java_inject",
-      "community": 57,
+      "community": 40,
       "norm_label": "inject"
     },
     {
@@ -4806,7 +4806,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingprecontext",
-      "community": 65,
+      "community": 40,
       "norm_label": "bridgingprecontext.java"
     },
     {
@@ -4816,7 +4816,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingprecontext_bridgingprecontext",
-      "community": 65,
+      "community": 40,
       "norm_label": "bridgingprecontext"
     },
     {
@@ -4826,7 +4826,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingprecontext_java_level",
-      "community": 65,
+      "community": 40,
       "norm_label": "level"
     },
     {
@@ -4836,7 +4836,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingprecontext_java_player",
-      "community": 65,
+      "community": 40,
       "norm_label": "player"
     },
     {
@@ -4846,7 +4846,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult",
-      "community": 66,
+      "community": 40,
       "norm_label": "bridgingresult.java"
     },
     {
@@ -4856,7 +4856,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_bridgingresult",
-      "community": 66,
+      "community": 40,
       "norm_label": "bridgingresult"
     },
     {
@@ -4866,7 +4866,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_blockpos",
-      "community": 66,
+      "community": 40,
       "norm_label": "blockpos"
     },
     {
@@ -4876,7 +4876,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_direction",
-      "community": 66,
+      "community": 40,
       "norm_label": "direction"
     },
     {
@@ -4886,7 +4886,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker",
-      "community": 39,
+      "community": 4,
       "norm_label": "bridgingstatetracker.java"
     },
     {
@@ -4896,7 +4896,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker",
-      "community": 66,
+      "community": 40,
       "norm_label": "bridgingstatetracker"
     },
     {
@@ -4906,7 +4906,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getbridgeassisttargetfor",
-      "community": 66,
+      "community": 40,
       "norm_label": ".getbridgeassisttargetfor()"
     },
     {
@@ -4916,7 +4916,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_player",
-      "community": 66,
+      "community": 40,
       "norm_label": "player"
     },
     {
@@ -4926,7 +4926,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_tick",
-      "community": 66,
+      "community": 40,
       "norm_label": ".tick()"
     },
     {
@@ -4936,7 +4936,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_localplayer",
-      "community": 66,
+      "community": 40,
       "norm_label": "localplayer"
     },
     {
@@ -4946,7 +4946,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getlastticktarget",
-      "community": 66,
+      "community": 40,
       "norm_label": ".getlastticktarget()"
     },
     {
@@ -5086,7 +5086,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective",
-      "community": 41,
+      "community": 40,
       "norm_label": "perspective.java"
     },
     {
@@ -5096,7 +5096,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective",
-      "community": 41,
+      "community": 40,
       "norm_label": "perspective"
     },
     {
@@ -5106,7 +5106,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_java_vec3",
-      "community": 41,
+      "community": 40,
       "norm_label": "vec3"
     },
     {
@@ -5116,7 +5116,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_java_vector3fc",
-      "community": 41,
+      "community": 40,
       "norm_label": "vector3fc"
     },
     {
@@ -5126,7 +5126,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_perspective",
-      "community": 41,
+      "community": 40,
       "norm_label": ".perspective()"
     },
     {
@@ -5136,7 +5136,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_getposition",
-      "community": 41,
+      "community": 40,
       "norm_label": ".getposition()"
     },
     {
@@ -5146,7 +5146,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_getlookvector",
-      "community": 41,
+      "community": 40,
       "norm_label": ".getlookvector()"
     },
     {
@@ -5156,7 +5156,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_fromcamera",
-      "community": 41,
+      "community": 40,
       "norm_label": ".fromcamera()"
     },
     {
@@ -5166,7 +5166,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "camera",
-      "community": 41,
+      "community": 40,
       "norm_label": "camera"
     },
     {
@@ -5176,7 +5176,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_fromentity",
-      "community": 41,
+      "community": 40,
       "norm_label": ".fromentity()"
     },
     {
@@ -5186,7 +5186,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entity",
-      "community": 41,
+      "community": 40,
       "norm_label": "entity"
     },
     {
@@ -5196,7 +5196,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_perspective_getsourceperspective",
-      "community": 41,
+      "community": 40,
       "norm_label": ".getsourceperspective()"
     },
     {
@@ -5206,7 +5206,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_perspective_java_player",
-      "community": 41,
+      "community": 40,
       "norm_label": "player"
     },
     {
@@ -5306,7 +5306,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport",
-      "community": 39,
+      "community": 4,
       "norm_label": "gamesupport.java"
     },
     {
@@ -5316,7 +5316,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport",
-      "community": 82,
+      "community": 4,
       "norm_label": "gamesupport"
     },
     {
@@ -5326,7 +5326,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_getreach",
-      "community": 82,
+      "community": 4,
       "norm_label": ".getreach()"
     },
     {
@@ -5336,7 +5336,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_iscontrollercrouching",
-      "community": 82,
+      "community": 10,
       "norm_label": ".iscontrollercrouching()"
     },
     {
@@ -5346,7 +5346,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_isholdingplaceable",
-      "community": 82,
+      "community": 4,
       "norm_label": ".isholdingplaceable()"
     },
     {
@@ -5356,7 +5356,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_java_player",
-      "community": 82,
+      "community": 4,
       "norm_label": "player"
     },
     {
@@ -5396,7 +5396,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings",
-      "community": 86,
+      "community": 4,
       "norm_label": "infostrings.java"
     },
     {
@@ -5406,7 +5406,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings_infostrings",
-      "community": 86,
+      "community": 4,
       "norm_label": "infostrings"
     },
     {
@@ -5416,7 +5416,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings_java_component",
-      "community": 86,
+      "community": 4,
       "norm_label": "component"
     },
     {
@@ -5426,7 +5426,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path",
-      "community": 53,
+      "community": 39,
       "norm_label": "path.java"
     },
     {
@@ -5436,7 +5436,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path",
-      "community": 53,
+      "community": 39,
       "norm_label": "path"
     },
     {
@@ -5446,7 +5446,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_vec3",
-      "community": 53,
+      "community": 39,
       "norm_label": "vec3"
     },
     {
@@ -5456,7 +5456,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatebresenhamvoxels",
-      "community": 53,
+      "community": 39,
       "norm_label": ".calculatebresenhamvoxels()"
     },
     {
@@ -5466,7 +5466,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_blockpos",
-      "community": 53,
+      "community": 39,
       "norm_label": "blockpos"
     },
     {
@@ -5476,7 +5476,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatemissedpoints",
-      "community": 53,
+      "community": 39,
       "norm_label": ".calculatemissedpoints()"
     },
     {
@@ -5606,7 +5606,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "vector3f",
-      "community": 40,
+      "community": 67,
       "norm_label": "vector3f"
     },
     {
@@ -5616,7 +5616,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flag",
-      "community": 22,
+      "community": 4,
       "norm_label": "flag.java"
     },
     {
@@ -5696,7 +5696,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags",
-      "community": 65,
+      "community": 40,
       "norm_label": "flags.java"
     },
     {
@@ -5706,7 +5706,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags_flags",
-      "community": 65,
+      "community": 40,
       "norm_label": "flags"
     },
     {
@@ -5716,7 +5716,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags_flags_flags",
-      "community": 65,
+      "community": 40,
       "norm_label": ".flags()"
     },
     {
@@ -5726,7 +5726,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags_flags_hasall",
-      "community": 65,
+      "community": 40,
       "norm_label": ".hasall()"
     },
     {
@@ -5736,7 +5736,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags_flags_extend",
-      "community": 65,
+      "community": 40,
       "norm_label": ".extend()"
     },
     {
@@ -5746,7 +5746,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_flags_flags_flags_empty",
-      "community": 65,
+      "community": 40,
       "norm_label": ".empty()"
     },
     {
@@ -5756,7 +5756,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask",
-      "community": 43,
+      "community": 40,
       "norm_label": "cuberendertask.java"
     },
     {
@@ -5766,7 +5766,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask_cuberendertask",
-      "community": 43,
+      "community": 40,
       "norm_label": "cuberendertask"
     },
     {
@@ -5776,7 +5776,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "functionalinterface",
-      "community": 43,
+      "community": 40,
       "norm_label": "functionalinterface"
     },
     {
@@ -5786,7 +5786,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask_cuberendertask_render",
-      "community": 43,
+      "community": 40,
       "norm_label": ".render()"
     },
     {
@@ -5796,7 +5796,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask_java_posestack",
-      "community": 43,
+      "community": 40,
       "norm_label": "posestack"
     },
     {
@@ -5806,7 +5806,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask_java_submitnodecollector",
-      "community": 43,
+      "community": 40,
       "norm_label": "submitnodecollector"
     },
     {
@@ -5816,7 +5816,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_cuberendertask_java_blockpos",
-      "community": 43,
+      "community": 40,
       "norm_label": "blockpos"
     },
     {
@@ -5826,7 +5826,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render",
-      "community": 54,
+      "community": 40,
       "norm_label": "render.java"
     },
     {
@@ -5836,7 +5836,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render",
-      "community": 54,
+      "community": 40,
       "norm_label": "render"
     },
     {
@@ -5846,7 +5846,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_blocksinviewpath",
-      "community": 54,
+      "community": 40,
       "norm_label": ".blocksinviewpath()"
     },
     {
@@ -5856,7 +5856,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_java_posestack",
-      "community": 54,
+      "community": 40,
       "norm_label": "posestack"
     },
     {
@@ -5866,7 +5866,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_java_submitnodecollector",
-      "community": 54,
+      "community": 40,
       "norm_label": "submitnodecollector"
     },
     {
@@ -5876,7 +5876,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_cubehighlight",
-      "community": 54,
+      "community": 40,
       "norm_label": ".cubehighlight()"
     },
     {
@@ -5886,7 +5886,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_java_blockpos",
-      "community": 54,
+      "community": 40,
       "norm_label": "blockpos"
     },
     {
@@ -5896,7 +5896,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_cubetrace",
-      "community": 54,
+      "community": 40,
       "norm_label": ".cubetrace()"
     },
     {
@@ -5906,7 +5906,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_cubetermination",
-      "community": 54,
+      "community": 40,
       "norm_label": ".cubetermination()"
     },
     {
@@ -5916,7 +5916,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_cubeoutline",
-      "community": 54,
+      "community": 40,
       "norm_label": ".cubeoutline()"
     },
     {
@@ -5926,7 +5926,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_currentnonbridgingoutline",
-      "community": 54,
+      "community": 40,
       "norm_label": ".currentnonbridgingoutline()"
     },
     {
@@ -5936,7 +5936,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render_render_currentbridgingoutline",
-      "community": 54,
+      "community": 40,
       "norm_label": ".currentbridgingoutline()"
     },
     {
@@ -6156,7 +6156,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_client_polymorphclienthandler_polymorphclienthandler_getcachedrecipes",
-      "community": 6,
+      "community": 1,
       "norm_label": ".getcachedrecipes()"
     },
     {
@@ -7236,7 +7236,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu",
-      "community": 9,
+      "community": 3,
       "norm_label": "mixincraftingmenu.java"
     },
     {
@@ -7246,7 +7246,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_mixincraftingmenu",
-      "community": 9,
+      "community": 3,
       "norm_label": "mixincraftingmenu"
     },
     {
@@ -7256,7 +7256,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_mixin",
-      "community": 9,
+      "community": 3,
       "norm_label": "mixin"
     },
     {
@@ -7266,7 +7266,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_mixincraftingmenu_onslotchangedcraftinggrid",
-      "community": 9,
+      "community": 3,
       "norm_label": ".onslotchangedcraftinggrid()"
     },
     {
@@ -7276,7 +7276,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "abstractcontainermenu",
-      "community": 9,
+      "community": 3,
       "norm_label": "abstractcontainermenu"
     },
     {
@@ -7286,7 +7286,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_serverlevel",
-      "community": 9,
+      "community": 3,
       "norm_label": "serverlevel"
     },
     {
@@ -7296,7 +7296,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_player",
-      "community": 9,
+      "community": 3,
       "norm_label": "player"
     },
     {
@@ -7306,7 +7306,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_craftingcontainer",
-      "community": 9,
+      "community": 3,
       "norm_label": "craftingcontainer"
     },
     {
@@ -7316,7 +7316,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_resultcontainer",
-      "community": 9,
+      "community": 3,
       "norm_label": "resultcontainer"
     },
     {
@@ -7326,7 +7326,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_recipeholder",
-      "community": 9,
+      "community": 3,
       "norm_label": "recipeholder"
     },
     {
@@ -7336,7 +7336,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_craftingrecipe",
-      "community": 9,
+      "community": 3,
       "norm_label": "craftingrecipe"
     },
     {
@@ -7346,7 +7346,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_callbackinfo",
-      "community": 9,
+      "community": 3,
       "norm_label": "callbackinfo"
     },
     {
@@ -7356,7 +7356,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_inject",
-      "community": 9,
+      "community": 3,
       "norm_label": "inject"
     },
     {
@@ -7366,7 +7366,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_mixincraftingmenu_captureinputs",
-      "community": 9,
+      "community": 3,
       "norm_label": ".captureinputs()"
     },
     {
@@ -7376,7 +7376,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_itemstack",
-      "community": 9,
+      "community": 3,
       "norm_label": "itemstack"
     },
     {
@@ -7386,7 +7386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_java_unique",
-      "community": 9,
+      "community": 3,
       "norm_label": "unique"
     },
     {
@@ -7396,7 +7396,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_mixin_mixincraftingmenu_mixincraftingmenu_sendsyncpacket",
-      "community": 9,
+      "community": 3,
       "norm_label": ".sendsyncpacket()"
     },
     {
@@ -7636,7 +7636,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler",
-      "community": 1,
+      "community": 3,
       "norm_label": "syncrecipespackethandler.java"
     },
     {
@@ -7646,7 +7646,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_syncrecipespackethandler",
-      "community": 1,
+      "community": 3,
       "norm_label": "syncrecipespackethandler"
     },
     {
@@ -7656,7 +7656,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_syncrecipespackethandler_handle",
-      "community": 1,
+      "community": 3,
       "norm_label": ".handle()"
     },
     {
@@ -7666,7 +7666,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_java_ipayloadcontext",
-      "community": 1,
+      "community": 3,
       "norm_label": "ipayloadcontext"
     },
     {
@@ -7900,30 +7900,20 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
-      "label": "2.1.0-beta.1",
+      "label": "2.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "changelog_2_1_0_beta_1",
+      "id": "changelog_2_1_0",
       "community": 20,
-      "norm_label": "2.1.0-beta.1"
-    },
-    {
-      "label": "2.0.0-beta.2",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "changelog_2_0_0_beta_2",
-      "community": 20,
-      "norm_label": "2.0.0-beta.2"
+      "norm_label": "2.1.0"
     },
     {
       "label": "1.11.13",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "changelog_1_11_13",
       "community": 20,
@@ -7933,7 +7923,7 @@
       "label": "1.11.12",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "changelog_1_11_12",
       "community": 20,
@@ -7943,7 +7933,7 @@
       "label": "1.11.11",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "changelog_1_11_11",
       "community": 20,
@@ -7953,7 +7943,7 @@
       "label": "1.11.10",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "changelog_1_11_10",
       "community": 20,
@@ -7963,7 +7953,7 @@
       "label": "1.11.9",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "changelog_1_11_9",
       "community": 20,
@@ -7973,7 +7963,7 @@
       "label": "1.11.8",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "changelog_1_11_8",
       "community": 20,
@@ -7983,7 +7973,7 @@
       "label": "1.11.7",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "changelog_1_11_7",
       "community": 20,
@@ -7993,7 +7983,7 @@
       "label": "1.11.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "changelog_1_11_6",
       "community": 20,
@@ -8003,7 +7993,7 @@
       "label": "1.11.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "changelog_1_11_5",
       "community": 20,
@@ -8013,7 +8003,7 @@
       "label": "1.11.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "changelog_1_11_4",
       "community": 20,
@@ -8023,7 +8013,7 @@
       "label": "1.11.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "changelog_1_11_3",
       "community": 20,
@@ -8033,7 +8023,7 @@
       "label": "1.11.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "changelog_1_11_2",
       "community": 20,
@@ -8043,7 +8033,7 @@
       "label": "1.11.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "changelog_1_11_1",
       "community": 20,
@@ -8053,7 +8043,7 @@
       "label": "1.11.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L55",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "changelog_1_11_0",
       "community": 20,
@@ -8063,7 +8053,7 @@
       "label": "1.10.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "changelog_1_10_0",
       "community": 20,
@@ -8073,7 +8063,7 @@
       "label": "1.9.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "changelog_1_9_0",
       "community": 20,
@@ -8083,7 +8073,7 @@
       "label": "1.8.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "changelog_1_8_0",
       "community": 20,
@@ -8093,7 +8083,7 @@
       "label": "1.7.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "changelog_1_7_0",
       "community": 20,
@@ -8103,7 +8093,7 @@
       "label": "1.6.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "changelog_1_6_0",
       "community": 20,
@@ -8113,7 +8103,7 @@
       "label": "1.5.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "changelog_1_5_0",
       "community": 20,
@@ -8123,7 +8113,7 @@
       "label": "1.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L76",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "changelog_1_4_0",
       "community": 20,
@@ -8133,7 +8123,7 @@
       "label": "1.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "changelog_1_3_0",
       "community": 20,
@@ -8143,7 +8133,7 @@
       "label": "1.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "changelog_1_2_0",
       "community": 20,
@@ -8153,7 +8143,7 @@
       "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L85",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "changelog_1_1_0",
       "community": 20,
@@ -8163,7 +8153,7 @@
       "label": "1.0.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "changelog_1_0_0",
       "community": 20,
@@ -9448,6 +9438,36 @@
       "id": "docs_curseforge_versions_2_0_0_beta_1_qol",
       "community": 93,
       "norm_label": "2.0.0-beta.1_qol.md"
+    },
+    {
+      "label": "2.1.0_admin.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.1.0_admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_1_0_admin",
+      "community": 9,
+      "norm_label": "2.1.0_admin.md"
+    },
+    {
+      "label": "2.1.0_fixes.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.1.0_fixes.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_1_0_fixes",
+      "community": 22,
+      "norm_label": "2.1.0_fixes.md"
+    },
+    {
+      "label": "2.1.0_qol.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.1.0_qol.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_1_0_qol",
+      "community": 41,
+      "norm_label": "2.1.0_qol.md"
     }
   ],
   "links": [
@@ -26086,7 +26106,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_0",
@@ -26096,7 +26116,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_10_0",
@@ -26106,7 +26126,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_0",
@@ -26116,7 +26136,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_1",
@@ -26126,7 +26146,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_10",
@@ -26136,7 +26156,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_11",
@@ -26146,7 +26166,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_12",
@@ -26156,7 +26176,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_13",
@@ -26166,7 +26186,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_2",
@@ -26176,7 +26196,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_3",
@@ -26186,7 +26206,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_4",
@@ -26196,7 +26216,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_5",
@@ -26206,7 +26226,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_6",
@@ -26216,7 +26236,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_7",
@@ -26226,7 +26246,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_8",
@@ -26236,7 +26256,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_9",
@@ -26246,7 +26266,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L85",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_1_0",
@@ -26256,7 +26276,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_2_0",
@@ -26266,7 +26286,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L79",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_3_0",
@@ -26276,7 +26296,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_4_0",
@@ -26286,7 +26306,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_5_0",
@@ -26296,7 +26316,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_6_0",
@@ -26306,7 +26326,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_7_0",
@@ -26316,7 +26336,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_8_0",
@@ -26326,7 +26346,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L62",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_9_0",
@@ -26336,20 +26356,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "changelog_utility_core_registro_de_cambios",
-      "target": "changelog_2_0_0_beta_2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
       "source_location": "L2",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
-      "target": "changelog_2_1_0_beta_1",
+      "target": "changelog_2_1_0",
       "confidence_score": 1.0
     },
     {
@@ -27194,5 +27204,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d1cf53dcbcb7981726112bca9f1a83bf1631652c"
+  "built_at_commit": "714037119fe52c7dd08660f521afe1d0a707e2bf"
 }
