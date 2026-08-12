@@ -1,7 +1,7 @@
 {
   "build.gradle": {
-    "mtime": 1785453222.3796415,
-    "ast_hash": "04137e0596ce418c3fd3f2cc7d91094a",
+    "mtime": 1786475584.7133927,
+    "ast_hash": "cfe2dfcfdb17a8b5645c9efea7b5ef2b",
     "semantic_hash": ""
   },
   "gradlew": {
@@ -10,123 +10,8 @@
     "semantic_hash": ""
   },
   "settings.gradle": {
-    "mtime": 1785352060.8085904,
-    "ast_hash": "58a5df05c6546d7d2671a516793e02e7",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/Config.java": {
-    "mtime": 1786302374.3671684,
-    "ast_hash": "af0de48f513742d2c4ad72df30e93430",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/TombstoneErrorHandler.java": {
-    "mtime": 1785359554.1221142,
-    "ast_hash": "bf351a18b840302fea47ef3c1fe877a6",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/UtilityCore.java": {
-    "mtime": 1785751944.0424223,
-    "ast_hash": "1d67a1a5f1bb1a3c3cb8200fd8b8cecb",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/UtilityCoreClient.java": {
-    "mtime": 1785360941.0814207,
-    "ast_hash": "6108d296ecec0180ea7ed8aa0a2d740f",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/api/PolymorphApi.java": {
-    "mtime": 1785359554.237888,
-    "ast_hash": "52d239ed4d31893cb08bd62361645493",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/attachment/ModAttachments.java": {
-    "mtime": 1785359554.3580878,
-    "ast_hash": "c614c0bb0f514f7cf70435b903f710b1",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/client/PolymorphClientHandler.java": {
-    "mtime": 1786301710.8559785,
-    "ast_hash": "151b7e9dc43229c1c4ed53ee2a565f80",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/ChunkGenManager.java": {
-    "mtime": 1785717243.4064562,
-    "ast_hash": "a1ae405a4395ad03e6ad9a9df58f41a0",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/OutpostZeroCompat.java": {
-    "mtime": 1785359554.5425303,
-    "ast_hash": "e4fdcabc3525ea36cc006530e0c71c72",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/AccessorAbstractContainerScreen.java": {
-    "mtime": 1785359554.602872,
-    "ast_hash": "6c0c77df36c3a8ad7c406ef035572e05",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/AccessorCraftingMenu.java": {
-    "mtime": 1785359554.6132457,
-    "ast_hash": "51ad2df095eaa3d840e4bb1bdcc9fe54",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinCraftingMenu.java": {
-    "mtime": 1786304223.183872,
-    "ast_hash": "414a2175ea3b4e95f5a981c362721046",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinCraftingScreen.java": {
-    "mtime": 1785359554.6476524,
-    "ast_hash": "48eca5e9def2ea0bc2b1c014bfc43c6d",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinDamageContainer.java": {
-    "mtime": 1785359554.660612,
-    "ast_hash": "bee17fc4ad165605e19b565f16c71714",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinInventoryScreen.java": {
-    "mtime": 1785359554.6780078,
-    "ast_hash": "17668cbf8406428a71e84c47de8a506e",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinItemInput.java": {
-    "mtime": 1785359554.6917324,
-    "ast_hash": "7752be0115b4396d9fb639acbdeca468",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinTBScreen.java": {
-    "mtime": 1785543425.0556226,
-    "ast_hash": "249e90c2c3f6717b8cf465ac86749995",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/network/ModNetwork.java": {
-    "mtime": 1785359554.8047838,
-    "ast_hash": "b1c3d83d610cb07fd97d7ae7c7d26d05",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/network/SelectRecipePacket.java": {
-    "mtime": 1786302370.6979177,
-    "ast_hash": "55b83a6548fe85a49ab03c8162d7e190",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/network/SyncRecipesPacket.java": {
-    "mtime": 1786139354.0735931,
-    "ast_hash": "54593527f331d3900b559137ba1b41c3",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/polymorph/PlayerRecipeData.java": {
-    "mtime": 1785359554.9040616,
-    "ast_hash": "67d99e5d890c9bdbc269d61e109d30d4",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/polymorph/RecipeFinder.java": {
-    "mtime": 1785359554.907597,
-    "ast_hash": "880a4ec244c278accc208da2926dac7c",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/polymorph/RecipePair.java": {
-    "mtime": 1785359554.9241314,
-    "ast_hash": "b79339a57941e9ff2abca84436104244",
+    "mtime": 1786433542.4748466,
+    "ast_hash": "f01fb80291af751eb61f175cde9a70fc",
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
@@ -150,8 +35,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1786304278.8037615,
-    "ast_hash": "79a5acb82e973011a7f331dbe56bd48c",
+    "mtime": 1786474795.442515,
+    "ast_hash": "166cfb97426eb7e091283204c1349145",
     "semantic_hash": ""
   },
   "README.md": {
@@ -170,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1785543219.496933,
-    "ast_hash": "104f5f685e5a322c0522a0a86d9ed7e5",
+    "mtime": 1786447382.1106784,
+    "ast_hash": "ec539a41466c4ffeb80449e43b6f79f0",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -194,11 +79,6 @@
     "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
     "semantic_hash": ""
   },
-  "src/main/java/com/skd/utilitycore/client/titles/BiomeDimensionTitleHandler.java": {
-    "mtime": 1785432570.1793592,
-    "ast_hash": "a282ea863b8cff6312c08771f17db04f",
-    "semantic_hash": ""
-  },
   "docs/curseforge/versions/1.0.0.md": {
     "mtime": 1785407254.235788,
     "ast_hash": "fbbede5ad268ca569a3f96aeaea7bd5c",
@@ -207,26 +87,6 @@
   "docs/curseforge/versions/1.1.0.md": {
     "mtime": 1785432659.8920522,
     "ast_hash": "f14f7210649700fa66e22ac5d614e1b3",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnProtectionHandler.java": {
-    "mtime": 1785759532.1765225,
-    "ast_hash": "5608cdccabc64923ca112f3875c49a24",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/schematic/SpawnSchematicManager.java": {
-    "mtime": 1785759527.9655802,
-    "ast_hash": "69c6e50f460d44643dbe999261ff41b3",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/schematic/SpongeSchematicReader.java": {
-    "mtime": 1785623228.9647346,
-    "ast_hash": "f983a50c42eeeede77b52cf669ff6265",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/mixin/MixinHud.java": {
-    "mtime": 1785490452.0162358,
-    "ast_hash": "621368816b0d1f04be93292e1679e03c",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.2.0.md": {
@@ -259,11 +119,6 @@
     "ast_hash": "d7fc79a02265fe2020fcefbd651150da",
     "semantic_hash": ""
   },
-  "src/main/java/com/skd/utilitycore/compat/schematic/LegacyBlockMap.java": {
-    "mtime": 1785671363.8611572,
-    "ast_hash": "7d92efb8f156b704125da18ae3598f2d",
-    "semantic_hash": ""
-  },
   "docs/curseforge/versions/1.6.0.md": {
     "mtime": 1785623476.948252,
     "ast_hash": "7861a4980faa8e157428f76de6c7918d",
@@ -274,11 +129,6 @@
     "ast_hash": "f9fce173ca05ad992f1bcf5cce3acf02",
     "semantic_hash": ""
   },
-  "src/main/java/com/skd/utilitycore/compat/DataPackFolderLoader.java": {
-    "mtime": 1785675080.3407524,
-    "ast_hash": "7bd2f4eadc97032bf7e2e6f04fa7d6bf",
-    "semantic_hash": ""
-  },
   "docs/curseforge/versions/1.7.0.md": {
     "mtime": 1785679558.3898413,
     "ast_hash": "da61558af4ff487d2065ab19bce5c494",
@@ -287,11 +137,6 @@
   "docs/curseforge/versions/1.8.0.md": {
     "mtime": 1785712029.73664,
     "ast_hash": "4106710743eb825925eae307faa47394",
-    "semantic_hash": ""
-  },
-  "src/main/java/com/skd/utilitycore/compat/ServerRulesManager.java": {
-    "mtime": 1785714340.219952,
-    "ast_hash": "cb716a73269722ccb8416dd4e2424848",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/1.9.0.md": {
@@ -372,6 +217,576 @@
   "docs/curseforge/versions/1.11.13.md": {
     "mtime": 1786304294.480631,
     "ast_hash": "c7ec33e059324743470da02c8c12d922",
+    "semantic_hash": ""
+  },
+  "admin/build.gradle": {
+    "mtime": 1786438378.9726684,
+    "ast_hash": "8b0022fc60a615fcf5b9e9e132d741a1",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/UtilityCoreAdmin.java": {
+    "mtime": 1786484553.357333,
+    "ast_hash": "725859728fd646ca6f82bf7dc2a40504",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/chunkgen/ChunkGenManager.java": {
+    "mtime": 1786402967.306929,
+    "ast_hash": "d32f0983bda4fc48c03ab5d6c4bc4067",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/api/PolymorphApi.java": {
+    "mtime": 1786434856.5044742,
+    "ast_hash": "5828d13a24a6168b49c82c23d1f11551",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/attachment/ModAttachments.java": {
+    "mtime": 1786434837.227626,
+    "ast_hash": "bd82d3f7d62b51740f67956904afd22d",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/attachment/PlayerRecipeData.java": {
+    "mtime": 1786434800.9977245,
+    "ast_hash": "0887c11693106d74b8db7cf552682c8b",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/attachment/RecipePair.java": {
+    "mtime": 1786434800.998804,
+    "ast_hash": "d1b7332ba133fa78314e405ed7779ac4",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/mixin/AccessorAbstractContainerScreen.java": {
+    "mtime": 1786433298.6639132,
+    "ast_hash": "c64ef8f5639224de02a3122e714ee7a9",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/mixin/AccessorCraftingMenu.java": {
+    "mtime": 1786433298.7010016,
+    "ast_hash": "49ecd833196054044594f1e700fd6306",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/network/ModNetwork.java": {
+    "mtime": 1786433365.5026622,
+    "ast_hash": "064469fc1404cea66330147ffc6cb126",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/polymorph/PlayerRecipeData.java": {
+    "mtime": 1786433298.9132073,
+    "ast_hash": "040278c4d9d7ee48bacafcea1c9d83e0",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/polymorph/RecipeFinder.java": {
+    "mtime": 1786433298.9967985,
+    "ast_hash": "9a428b5b7434d0eb9d02644a8acebd34",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/common/polymorph/RecipePair.java": {
+    "mtime": 1786433299.0281186,
+    "ast_hash": "4655009749282d468d9d72dff217e056",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/compat/DataPackFolderLoader.java": {
+    "mtime": 1786406338.8992493,
+    "ast_hash": "aa70f06d3ab24d8e7e22eaf9e52344b4",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/config/AdminConfig.java": {
+    "mtime": 1786460247.2720692,
+    "ast_hash": "8b82641b267e42f91408fd341f235cc9",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/rules/ServerRulesManager.java": {
+    "mtime": 1786403078.457755,
+    "ast_hash": "58968d178b8cce72abe0c75936328b52",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/schematic/LegacyBlockMap.java": {
+    "mtime": 1786406208.4128704,
+    "ast_hash": "880606b796003c1bc3dbca3e59964265",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/schematic/SpawnProtectionHandler.java": {
+    "mtime": 1786403550.199653,
+    "ast_hash": "361d75249ee2cf5361e8ae596a174a77",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/schematic/SpawnSchematicManager.java": {
+    "mtime": 1786437325.9490018,
+    "ast_hash": "06188ced4520aa0f4e081e3e9cc32703",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/schematic/SpongeSchematicReader.java": {
+    "mtime": 1786437539.9709866,
+    "ast_hash": "ab933fbdecb990d7278e60268341cf1b",
+    "semantic_hash": ""
+  },
+  "admin/src/main/resources/assets/utility_core_admin/lang/en_us.json": {
+    "mtime": 1786406691.6022494,
+    "ast_hash": "1294f2d3c9c3dd091bb040f993ca770b",
+    "semantic_hash": ""
+  },
+  "admin/src/main/resources/utility_core_admin.mixins.json": {
+    "mtime": 1786406537.7739816,
+    "ast_hash": "4286d25a10fff5486e04354c692b6e51",
+    "semantic_hash": ""
+  },
+  "assets/equipmentcompare/lang/en_us.json": {
+    "mtime": 315529200.0,
+    "ast_hash": "597a61a7f576b0f607349d6e6341f4bc",
+    "semantic_hash": ""
+  },
+  "fixes/build.gradle": {
+    "mtime": 1786438396.333953,
+    "ast_hash": "a72c7e6e0acedab4cd1d804c2f06b66a",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/UtilityCoreFixes.java": {
+    "mtime": 1786459266.0215442,
+    "ast_hash": "cb42f8ea6e7ca4cc6b9493b51553a061",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/ModAttachments.java": {
+    "mtime": 1786433771.9029999,
+    "ast_hash": "1dedd2a89e4ebe2afcca921a8aa37288",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/PlayerRecipeData.java": {
+    "mtime": 1786433757.0596592,
+    "ast_hash": "a190d6d9979ab18178a15133778518a0",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/RecipePair.java": {
+    "mtime": 1786433801.954169,
+    "ast_hash": "81c413752a2c1d13c692a3cf4c311ae3",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/compat/OutpostZeroCompat.java": {
+    "mtime": 1786444743.3345442,
+    "ast_hash": "f29ed80e9a6690397674062f599ec52f",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/config/FixesConfig.java": {
+    "mtime": 1786460441.4541166,
+    "ast_hash": "7f1f1a10f48edb282a2910e65501d0bf",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinDamageContainer.java": {
+    "mtime": 1786443762.7773194,
+    "ast_hash": "0c1fb0fcb047345ec29016955d4391f3",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinItemInput.java": {
+    "mtime": 1786402117.5554712,
+    "ast_hash": "6fe135ad77ff33571fd86cdbdb374fb4",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinTBScreen.java": {
+    "mtime": 1786442843.7768452,
+    "ast_hash": "a41a6a8817fa079a7e62a58719fa97e3",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/TombstoneErrorHandler.java": {
+    "mtime": 1786402534.492333,
+    "ast_hash": "83276386b9a01599e0574fedd46a59fa",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/resources/assets/utility_core_fixes/lang/en_us.json": {
+    "mtime": 1786408514.2582083,
+    "ast_hash": "dbb412c6ce303aed55e7b603bcde23eb",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/resources/utility_core_fixes.mixins.json": {
+    "mtime": 1786408428.2165675,
+    "ast_hash": "2b0e6c389e3f9eea5eedd17e88f5fa4b",
+    "semantic_hash": ""
+  },
+  "qol/build.gradle": {
+    "mtime": 1786438413.1638038,
+    "ast_hash": "3a52477cf45fd8237230abb195f406f5",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/UtilityCoreQoL.java": {
+    "mtime": 1786483531.3942318,
+    "ast_hash": "2752ce184978479b92012a1b276e5b43",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/BridgingAdjacency.java": {
+    "mtime": 1786467328.8943832,
+    "ast_hash": "996caf3c888fbd83e0cbbbc778b520ae",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/BridgingConfig.java": {
+    "mtime": 1786472203.7389545,
+    "ast_hash": "8936610bd7db95ae73b2ea27fe878d19",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/BridgingKeyMappings.java": {
+    "mtime": 1786462816.6926847,
+    "ast_hash": "3622bf9c481b2040732b4340fb731af2",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/ModIds.java": {
+    "mtime": 1786463771.3232946,
+    "ast_hash": "34c28e0bf7c7d1d7b54b133127d3ef13",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/PlacementAxisMode.java": {
+    "mtime": 1786471733.4667697,
+    "ast_hash": "b81b373279e4871e5e0b5ce52c5d40e0",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/PlacementAxisModeOverride.java": {
+    "mtime": 1786467429.4725344,
+    "ast_hash": "0637b4a09226f8af23df697f37a585a1",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/SourcePerspective.java": {
+    "mtime": 1786467478.8691127,
+    "ast_hash": "6d03f0acc433f78df62e93d882319a78",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/UtilityCoreQoLBridging.java": {
+    "mtime": 1786471427.3282983,
+    "ast_hash": "a454333c717a042bbfa5e2b5b3c09d9d",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/building/Bridge.java": {
+    "mtime": 1786467840.0056994,
+    "ast_hash": "2aece694460729b70f8375411072ccee",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/BridgingCrosshairTweaks.java": {
+    "mtime": 1786467180.561274,
+    "ast_hash": "618bef835c617397495197f2aef78db6",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/GroupSelector.java": {
+    "mtime": 1786466213.8966832,
+    "ast_hash": "5d61cb275a18ddc73c69ae26c2f5ee82",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/SpecialHandlers.java": {
+    "mtime": 1786466098.61401,
+    "ast_hash": "3cb70e54b3e6394e80c5c9d28d992d55",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/type/SpecialBridgingEnvironmentHandler.java": {
+    "mtime": 1786466500.8846078,
+    "ast_hash": "f9ff3fad46c4851920e4a4bc88ba8789",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/type/SpecialBridgingItemHandler.java": {
+    "mtime": 1786466387.0110478,
+    "ast_hash": "317435357b5be0600b7a3b9cec387618",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/mixin/CrosshairRenderingMixin.java": {
+    "mtime": 1786470755.3199544,
+    "ast_hash": "cfa1068e5cb6f5fb48b4b4e265ef6d01",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/mixin/MinecraftClientMixin.java": {
+    "mtime": 1786485463.7567775,
+    "ast_hash": "88d99f8ef214096ca9c85abf699f4063",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/mixin/OutlineRendererMixin.java": {
+    "mtime": 1786473771.6971958,
+    "ast_hash": "7f85150ff982380fc89e15dbd79c875d",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/BridgingPreContext.java": {
+    "mtime": 1786465128.238738,
+    "ast_hash": "c7bc3c4713d2a5db593a2504ed71988a",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/BridgingResult.java": {
+    "mtime": 1786465249.62546,
+    "ast_hash": "b58990741d7641c4f782a417f031d92a",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/BridgingStateTracker.java": {
+    "mtime": 1786467960.0228257,
+    "ast_hash": "5c13efa8df2d09acf22f595b1ad906e0",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/PathTraversalHandler.java": {
+    "mtime": 1786473002.3381925,
+    "ast_hash": "11f992f9218bf39d95755c626cd4e4e9",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/Perspective.java": {
+    "mtime": 1786472672.945192,
+    "ast_hash": "fcddc6526eda19216c4f44c299b45e17",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/raytrace/PlacementAlignment.java": {
+    "mtime": 1786485248.5294852,
+    "ast_hash": "bd6d9d01fe35c3e57e8686151f6ea71a",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/GameSupport.java": {
+    "mtime": 1786471944.2904775,
+    "ast_hash": "cfd2b5e3bc1c359bda56f422e1b041cb",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/InfoStrings.java": {
+    "mtime": 1786464023.7417603,
+    "ast_hash": "4b064dd36293f0baf605b74051792654",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/Path.java": {
+    "mtime": 1786470121.9701378,
+    "ast_hash": "d70dbb88aa4585f603610bb90b763897",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/ReflectSupport.java": {
+    "mtime": 1786464399.9048643,
+    "ast_hash": "9a242968b325fd502cfb283b7cb304ba",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/VectorSupport.java": {
+    "mtime": 1786464523.4010458,
+    "ast_hash": "9e7d814fe5800f77c4505074cc0d5096",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/flags/Flag.java": {
+    "mtime": 1786464635.4786763,
+    "ast_hash": "a7beedb5602549805d19567db6e4ec05",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/flags/Flags.java": {
+    "mtime": 1786464723.532715,
+    "ast_hash": "607fdf395ccdbed9d428eaea9eedcb08",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/render/CubeRenderTask.java": {
+    "mtime": 1786464805.8350587,
+    "ast_hash": "e3e17296d9e0e01f003a0cb2ed2ade98",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/bridging/util/render/Render.java": {
+    "mtime": 1786485454.166933,
+    "ast_hash": "1456ff1d74205bcb3a564414147df5e0",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/client/PolymorphClientHandler.java": {
+    "mtime": 1786435386.6734385,
+    "ast_hash": "a08b6975fd7f22d6c792d85a5fb65401",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/client/titles/BiomeDimensionTitleHandler.java": {
+    "mtime": 1786434929.738195,
+    "ast_hash": "631408d382da2a993a976a72bb0325e8",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/api/PolymorphApi.java": {
+    "mtime": 1786435587.6323092,
+    "ast_hash": "c7ec7fce93a9062e3c23e2a25dbede18",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/attachment/ModAttachments.java": {
+    "mtime": 1786435133.3481388,
+    "ast_hash": "58f2f7de9083adfbe52a4f9e33395bb0",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/attachment/PlayerRecipeData.java": {
+    "mtime": 1786434895.850222,
+    "ast_hash": "3ca0755093835019a14c17161d290fe2",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/attachment/RecipePair.java": {
+    "mtime": 1786434895.9035728,
+    "ast_hash": "b66c08a9cbc0f6d23d88139b9365195e",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/mixin/AccessorAbstractContainerScreen.java": {
+    "mtime": 1786434895.9502645,
+    "ast_hash": "1e10c4b8d3c309625fda81ae53795f5c",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/mixin/AccessorCraftingMenu.java": {
+    "mtime": 1786434895.9889698,
+    "ast_hash": "5bde3e75708aa108137189b2820ba466",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/network/ModNetwork.java": {
+    "mtime": 1786434896.020644,
+    "ast_hash": "58dabcd0b72fcbf44cde917971d248f4",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/network/SelectRecipePacket.java": {
+    "mtime": 1786435493.1039162,
+    "ast_hash": "a0a0fdb46b462c9d32a2b65d0c4e4c9c",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/network/SyncRecipesPacket.java": {
+    "mtime": 1786435527.7172062,
+    "ast_hash": "f7c6197864b8ff39fe13aec64eb41b07",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/common/polymorph/RecipeFinder.java": {
+    "mtime": 1786434896.1151595,
+    "ast_hash": "8979d37f4d682988893d3fe6ec265795",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/config/QoLConfig.java": {
+    "mtime": 1786435216.8363905,
+    "ast_hash": "9c39407c1fd9444054c27bfdb7969348",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinCraftingMenu.java": {
+    "mtime": 1786486027.6226919,
+    "ast_hash": "1a83d05a572a16413b36f473ec4f5940",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinCraftingScreen.java": {
+    "mtime": 1786435437.228208,
+    "ast_hash": "5bffd08322df732581f897963ea823e4",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinHud.java": {
+    "mtime": 1786407957.3960884,
+    "ast_hash": "a9778d5c939a4a664ad4732479eb3b91",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinInventoryScreen.java": {
+    "mtime": 1786435417.143284,
+    "ast_hash": "37d4070090f1564ead4057e3cf017e69",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/network/SelectRecipePacketHandler.java": {
+    "mtime": 1786486040.598722,
+    "ast_hash": "440741b5e921c90e2f92d3ec0e1f0f12",
+    "semantic_hash": ""
+  },
+  "qol/src/main/java/com/skd/utilitycore/qol/network/SyncRecipesPacketHandler.java": {
+    "mtime": 1786434929.8305442,
+    "ast_hash": "499f08493c83a41318a147ba6b0a9d5f",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/assets/utility_core_qol/lang/en_us.json": {
+    "mtime": 1786468747.1001868,
+    "ast_hash": "a35171efbd24e385b9b49840753117b9",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/utility_core_qol.mixins.json": {
+    "mtime": 1786483561.7589777,
+    "ast_hash": "70c012757a6bac9f0b94f26a52fbd17c",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/utility_core_qol_accessors.mixins.json": {
+    "mtime": 1786442074.5701933,
+    "ast_hash": "2e250d36530cbd7fea12a503dee2dacc",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/utility_core_qol_bridging.mixins.json": {
+    "mtime": 1786483558.196472,
+    "ast_hash": "a04fd9b7efa45ee17061e5ab4da0cd37",
+    "semantic_hash": ""
+  },
+  ".claude/plans/admin-fixes-config-and-bridging-port.md": {
+    "mtime": 1786453584.3929696,
+    "ast_hash": "9d4b9f2bb19fc320a35e3da892cb2577",
+    "semantic_hash": ""
+  },
+  "docs/CURSEFORGE_ADMIN.md": {
+    "mtime": 1786441925.6846733,
+    "ast_hash": "90fcf3dc3850b36e008fbe4da9d21c3e",
+    "semantic_hash": ""
+  },
+  "docs/CURSEFORGE_FIXES.md": {
+    "mtime": 1786441876.3574429,
+    "ast_hash": "1f69e2b291f296d0188aade4abdb75d1",
+    "semantic_hash": ""
+  },
+  "docs/CURSEFORGE_QOL.md": {
+    "mtime": 1786441947.6186204,
+    "ast_hash": "3337127c21b3e6eaf2700cdf54e343d9",
+    "semantic_hash": ""
+  },
+  "docs/CURSEFORGE_SUMMARY.md": {
+    "mtime": 1786441993.4897163,
+    "ast_hash": "c62b7267cd529490ae82baf2dbfa1cd2",
+    "semantic_hash": ""
+  },
+  "docs/ICON_PROMPTS.md": {
+    "mtime": 1786443416.6483798,
+    "ast_hash": "3503c5a42e526dc56d1962968233afdb",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description_admin.md": {
+    "mtime": 1786444074.9128523,
+    "ast_hash": "ec05e8dfb029d1157c228ae207800960",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description_fixes.md": {
+    "mtime": 1786444019.2438796,
+    "ast_hash": "1a62a1ecb8261e6588cb6cc4d7eff332",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description_qol.md": {
+    "mtime": 1786444129.1693254,
+    "ast_hash": "d2f2db52d78fae7815ac9ca8d4f5b2dd",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.0.0-beta.1_admin.md": {
+    "mtime": 1786447883.1348844,
+    "ast_hash": "46994d32d120a3ceda55295a878d209f",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.0.0-beta.1_fixes.md": {
+    "mtime": 1786447871.4055085,
+    "ast_hash": "7e46399434bb30518501e27f2798d47a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.0.0-beta.1_qol.md": {
+    "mtime": 1786447905.9001942,
+    "ast_hash": "35f6dc3ecc2628d58881367b42188609",
+    "semantic_hash": ""
+  },
+  "admin/src/main/resources/assets/utility_core_admin/icon.png": {
+    "mtime": 1786447029.271234,
+    "ast_hash": "8899a0991ebacb4846e83de9c7cb0fa4",
+    "semantic_hash": ""
+  },
+  "admin/src/main/resources/logo.png": {
+    "mtime": 1786406731.9055948,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/resources/assets/utility_core_fixes/icon.png": {
+    "mtime": 1786447029.18318,
+    "ast_hash": "26d88d1e5e904de7126b687cf018b79b",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/resources/logo.png": {
+    "mtime": 1786408551.8479316,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/assets/utility_core_qol/icon.png": {
+    "mtime": 1786447029.2369466,
+    "ast_hash": "6db60887e8c0b16a3633bad8a6630e1a",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/assets/utility_core_qol/textures/gui/sprites/indicator/down.png": {
+    "mtime": 1786468555.8904693,
+    "ast_hash": "418c403edb37717648ea6292bd4fdeeb",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/assets/utility_core_qol/textures/gui/sprites/indicator/horizontal.png": {
+    "mtime": 1786468555.9107704,
+    "ast_hash": "589016777fce1c9c8b7259b4a89da54f",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/assets/utility_core_qol/textures/gui/sprites/indicator/up.png": {
+    "mtime": 1786468555.9213712,
+    "ast_hash": "4527dbe3b5db9b7c32270c5efc3298e2",
+    "semantic_hash": ""
+  },
+  "qol/src/main/resources/logo.png": {
+    "mtime": 1786408254.801771,
+    "ast_hash": "bff1488c79aa74d0881e05bc79ed02fc",
     "semantic_hash": ""
   }
 }
