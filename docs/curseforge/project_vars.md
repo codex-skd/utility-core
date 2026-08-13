@@ -36,7 +36,7 @@
 | `framework` | `neoforge` |
 | `neo_version` | `26.2.0.37-beta` |
 | `java_version` | `21` |
-| `mod_version` | `2.0.0-beta.1` (CurseForge) / `2.0.0` (NeoForge interno) |
+| `admin_version` / `fixes_version` / `qol_version` | Independientes por mod, en `gradle.properties` (raíz) — no hay `mod_version` compartido |
 | `environment` | `Client`, `Server` (Fixes/Admin) / `Client` primary + Server sync (QoL) |
 
 ---
@@ -44,13 +44,13 @@
 ## Estructura de Archivos por Mod
 
 ```
-fixes/build/libs/utility_core_fixes-2.0.0-beta.1.jar
-admin/build/libs/utility_core_admin-2.0.0-beta.1.jar
-qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
+fixes/build/libs/utility_core_fixes-26.2-neoforge-26.2.0.37-beta-<fixes_version>.jar
+admin/build/libs/utility_core_admin-26.2-neoforge-26.2.0.37-beta-<admin_version>.jar
+qol/build/libs/utility_core_qol-26.2-neoforge-26.2.0.37-beta-<qol_version>.jar
 ```
 
 ### Nomenclatura JAR
-`utility_core_<mod>-<mod_version>.jar` (ej: `utility_core_fixes-2.0.0-beta.1.jar`)
+`utility_core_<mod>-<mc>-neoforge-<neo_version>-<mod_version>.jar` (ej: `utility_core_fixes-26.2-neoforge-26.2.0.37-beta-2.2.1.jar`)
 
 ---
 
@@ -62,7 +62,7 @@ qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
 - **Category**: Server Utility
 - **Side**: Both
 - **Dependencies**: None (optional: Corail Tombstone, OutpostZero)
-- **Config**: `utility_core_fixes-common.toml`
+- **Config**: `utility_core/utility_core_fixes-common.toml`
 - **Description**: `docs/curseforge/project_description_fixes.md`
 
 ### Utility Core Admin
@@ -71,7 +71,7 @@ qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
 - **Category**: Server Admin
 - **Side**: Server (primary) + Client (config)
 - **Dependencies**: None
-- **Config**: `utility_core_admin-common.toml`
+- **Config**: `utility_core/utility_core_admin-common.toml`
 - **Description**: `docs/curseforge/project_description_admin.md`
 
 ### Utility Core QoL
@@ -80,16 +80,16 @@ qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
 - **Category**: Client QoL
 - **Side**: Client (primary) + Server (sync)
 - **Dependencies**: None
-- **Config**: `utility_core_qol-common.toml`
+- **Config**: `utility_core/utility_core_qol-common.toml` (+ `utility_core/utility_core_qol-client.toml`)
 - **Description**: `docs/curseforge/project_description_qol.md`
 
 ---
 
 ## Flujo de Upload (Por Mod)
 
-1. `./gradlew :fixes:clean :fixes:jar` (o `:admin:jar` / `:qol:jar`)
-2. Copiar JAR a `docs/curseforge/build/` (opcional)
-3. Crear tag: `git tag -a v2.0.0-beta.1-fixes -m "v2.0.0-beta.1: Fixes release"` + `git push origin <tag>`
+1. `./gradlew :fixes:clean :fixes:build` (o `:admin:build` / `:qol:build`)
+2. Bump solo la propiedad de versión del mod afectado (`fixes_version`, etc.) en `gradle.properties`
+3. Crear tag: `git tag 26.2-neoforge-fixes-<version>` + `git push origin <tag>`
 3. Subir JAR a CurseForge correspondiente
 4. Pegar HTML de `docs/curseforge/project_description_<mod>.md` en descripción del proyecto CurseForge
 5. Verificar con GET
@@ -136,12 +136,14 @@ qol/build/libs/utility_core_qol-2.0.0-beta.1.jar
 
 ## Versionado
 
-| Contexto | Versión |
+Independiente por mod — cada uno en su propia línea SemVer, sin sincronizarse entre sí.
+
+| Contexto | Formato |
 |----------|---------|
-| NeoForge `neoforge.mods.toml` | `2.0.0` (strict SemVer) |
-| CurseForge upload | `2.0.0-beta.1` |
-| Git tag | `v2.0.0-beta.1-fixes`, `v2.0.0-beta.1-admin`, `v2.0.0-beta.1-qol` |
-| Changelog | `2.0.0-beta.1` |
+| NeoForge `neoforge.mods.toml` | `<mod>_version` de `gradle.properties` (SemVer estricto) |
+| CurseForge upload | Igual que `neoforge.mods.toml` |
+| Git tag | `26.2-neoforge-<mod>-<version>` (ej. `26.2-neoforge-fixes-2.2.1`) |
+| Changelog | `CHANGELOG.md` compartido, encabezado con `[<Mod>] <version>` |
 
 ---
 

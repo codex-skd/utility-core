@@ -4,9 +4,16 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
 
-subprojects {
+// Each submodule is an independent CurseForge project and versions on its own
+// SemVer track; the property name follows the subproject's own name (<name>_version).
+subprojects { subproject ->
+    def modVersion = project.findProperty("${subproject.name}_version")
+    if (modVersion == null) {
+        throw new GradleException("Missing '${subproject.name}_version' property in gradle.properties for subproject '${subproject.name}'")
+    }
+
     group = "com.skd.utilitycore"
-    version = mod_version
+    version = modVersion
 
     repositories {
         mavenCentral()
@@ -20,7 +27,7 @@ subprojects {
 
     afterEvaluate {
         tasks.named('processResources', ProcessResources) {
-            var replaceProperties = [mod_version: mod_version]
+            var replaceProperties = [mod_version: modVersion]
             inputs.properties replaceProperties
             filesMatching('META-INF/neoforge.mods.toml') {
                 expand(replaceProperties) {

@@ -36,20 +36,21 @@
 
 ## Versionado
 
+- **Versionado independiente por mod**: `admin`, `fixes` y `qol` son 3 proyectos de CurseForge separados y versionan cada uno en su propia línea SemVer — no hay que subir los 3 a la vez ni mantenerlos sincronizados en número.
 - Beta `0.0.0-beta.X` · Release `X.Y.Z` (SemVer: MAJOR breaking / MINOR feature / PATCH fix)
-- `mod_version` y `mod_framework` en `gradle.properties`. JAR: `<mod_id>-<mc>-<framework>-<loader>-<version>.jar`
+- `admin_version`, `fixes_version`, `qol_version` en `gradle.properties` (raíz, uno por subproyecto) · `mod_framework` compartido. JAR: `<mod_id>-<mc>-<framework>-<loader>-<version>.jar`
 
 ## Commits (Conventional Commits)
 
-`<tipo>[<ámbito>]: <descripción>` · tipos `feat fix refactor docs chore style perf test` · el mensaje incluye la versión (`v<version>`).
+`<tipo>[<ámbito>]: <descripción>` · tipos `feat fix refactor docs chore style perf test` · el mensaje incluye la versión (`v<version>`) del mod afectado, con el ámbito (`fix(qol): ...`) indicando cuál.
 
 ## Tags
 
-Cada subida a CurseForge crea tag: beta `<mc>-neoforge-beta.X` · release `<mc>-neoforge-X.Y.Z`.
+Cada subida a CurseForge crea tag por mod: beta `<mc>-neoforge-<mod>-beta.X` · release `<mc>-neoforge-<mod>-X.Y.Z` (ej. `26.2-neoforge-qol-2.3.0`). Un cambio que solo afecta a un mod solo tagea/publica ese mod, no los otros dos.
 
 ## Flujo por tarea
 
-**0. Alcance** — si el mod tiene varias versiones, preguntar con la herramienta `question`: **"Todas"** o una versión. No asumir.
+**0. Alcance** — si el mod tiene varias versiones de Minecraft, preguntar con la herramienta `question`: **"Todas"** o una versión. No asumir. Además, como `admin`/`fixes`/`qol` versionan por separado, identificar a cuál(es) afecta el cambio antes de tocar versión — no bumpear los 3 si solo cambió uno.
 
 **1. Desarrollo**
 
@@ -64,10 +65,10 @@ git push
 ```
 
 **2. CurseForge** — solo si el usuario confirma:
-- Bump `mod_version` en gradle.properties → `./gradlew.bat clean build`
-- Release notes `docs/curseforge/versions/<version>.md` (HTML) + actualizar `CHANGELOG.md`
-- Commit `chore: bump version to <version>` → tag `<mc>-neoforge-<version>` → push
-- Subir JAR: `powershell -File ../../codex-docs/scripts/curseforge-upload.ps1` (desde este repo)
+- Bump `<mod>_version` (`admin_version`/`fixes_version`/`qol_version`) en gradle.properties del mod(s) afectado(s) → `./gradlew.bat clean build`
+- Release notes `docs/curseforge/versions/<version>_<mod>.md` (HTML, uno por mod) + actualizar `CHANGELOG.md`
+- Commit `chore(<mod>): bump version to <version>` → tag `<mc>-neoforge-<mod>-<version>` → push
+- Subir JAR: uno por mod, a su proyecto CurseForge correspondiente (ver `docs/curseforge/project_vars.md` para IDs/tokens)
 - Formato HTML de descripciones/changelog: `codex-docs/reference/CURSEFORGE.md`
 
 **3. Release estable** — bump `X.Y.Z` + tag.

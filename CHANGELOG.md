@@ -1,4 +1,7 @@
 # Utility Core — Registro de cambios
+
+> A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
+
 ## 2.2.1
 - Fix (QoL): **NullPointerException al usar el crafteo** — `ModAttachments.ATTACHMENT_TYPES` (el attachment `player_recipe_data` que guarda la receta seleccionada por jugador) se creaba pero nunca se registraba en el mod event bus. El attachment type quedaba "unbound" y el mixin del selector de recetas (`CraftingMenu.onSlotChangedCraftingGrid`) lanzaba `NullPointerException: Trying to access unbound value` al cambiar la rejilla de crafteo. Ahora `ModAttachments.ATTACHMENT_TYPES.register(modEventBus)` se llama en el constructor de `UtilityCoreQoL`.
 
