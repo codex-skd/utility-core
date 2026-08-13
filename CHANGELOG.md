@@ -2,6 +2,11 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [Admin] 2.2.2
+## [Fixes] 2.2.2
+## [QoL] 2.2.2
+- Chore: versionado independiente por mod — `admin_version`/`fixes_version`/`qol_version` en `gradle.properties` en vez de un `mod_version` compartido. A partir de ahora cada mod bumpea y publica en CurseForge por separado; este bump conjunto es el único que se hace a la vez para dejar los 3 alineados en el punto de partida. Sin cambios de comportamiento.
+
 ## 2.2.1
 - Fix (QoL): **NullPointerException al usar el crafteo** — `ModAttachments.ATTACHMENT_TYPES` (el attachment `player_recipe_data` que guarda la receta seleccionada por jugador) se creaba pero nunca se registraba en el mod event bus. El attachment type quedaba "unbound" y el mixin del selector de recetas (`CraftingMenu.onSlotChangedCraftingGrid`) lanzaba `NullPointerException: Trying to access unbound value` al cambiar la rejilla de crafteo. Ahora `ModAttachments.ATTACHMENT_TYPES.register(modEventBus)` se llama en el constructor de `UtilityCoreQoL`.
 
