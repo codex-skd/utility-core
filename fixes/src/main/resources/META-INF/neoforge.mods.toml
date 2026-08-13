@@ -16,6 +16,7 @@ Features:
   * Error Handler: suppresses mixin errors from Tombstone's ItemInputMixin to prevent crashes on startup
 - Negative Damage Fix: prevents server crash from "Damage cannot be negative" IllegalArgumentException
 - OutpostZero Infection Damage Cap: caps infection damage to 10000 to prevent armor destruction before death events fire
+- Block Entity Mismatch Fix: prevents crashes from stale block entity NBT by removing orphaned block entity data when block/entity type mismatch is detected
 - Configurable settings for all features
 '''
 

@@ -30,5 +30,10 @@ public class FixesConfig {
                      "ES: Limita el daño de infección de OutpostZero a 10000 para evitar destrucción de armadura antes de que salten los eventos de muerte. Requiere que OutpostZero esté presente.")
             .define("enableOutpostZeroDamageCap", true);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_BLOCKENTITY_MISMATCH_FIX = BUILDER
+            .comment("EN: Prevents crashes from stale block entity NBT by removing orphaned block entity data when block/entity type mismatch is detected.",
+                     "ES: Evita los crashes por NBT de bloque de entidad obsoleto eliminando los datos de bloque de entidad huérfanos cuando se detecta una discrepancia de tipo.")
+            .define("enableBlockentityMismatchFix", true);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }
