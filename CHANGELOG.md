@@ -2,6 +2,9 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [Fixes] 2.3.0
+- Feature: **fix genérico de crash por corrupción bloque/block-entity** — algunos chunks pueden quedar con NBT de block entity huérfana (p. ej. `enchanting_table`) en una posición cuyo bloque real ya no coincide (sustituido por otro bloque, típicamente por un mod tercero no relacionado). Cualquier código que intentara crear esa block entity de forma perezosa (incluido código de render de otro mod) lanzaba `IllegalStateException` y crasheaba el juego. Ahora, en servidor (o servidor integrado en singleplayer), se elimina la block entity huérfana para que la corrupción se autorrepare en vez de volver a crashear, y se loguea un warning con la posición y los tipos esperado/real; en cliente simplemente se trata como "sin block entity" sin tocar el mundo. No es específico de ningún bloque/mod concreto — cubre cualquier mismatch de este tipo. Nuevo toggle de config `enableBlockentityMismatchFix` (activado por defecto).
+
 ## [Admin] 2.2.2
 ## [Fixes] 2.2.2
 ## [QoL] 2.2.2
