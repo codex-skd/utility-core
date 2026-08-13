@@ -2,6 +2,7 @@ package com.skd.utilitycore.qol;
 
 import com.mojang.logging.LogUtils;
 import com.skd.utilitycore.qol.bridging.BridgingConfig;
+import com.skd.utilitycore.qol.common.attachment.ModAttachments;
 import com.skd.utilitycore.qol.common.network.ModNetwork;
 import com.skd.utilitycore.qol.common.network.SelectRecipePacket;
 import com.skd.utilitycore.qol.common.network.SyncRecipesPacket;
@@ -25,6 +26,7 @@ public class UtilityCoreQoL {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public UtilityCoreQoL(IEventBus modEventBus, ModContainer modContainer) {
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModNetwork.register(modEventBus, MODID, (registrar, modId) -> {
             registrar.playToServer(
                     SelectRecipePacket.createType(modId),
