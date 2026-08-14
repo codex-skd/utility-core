@@ -2,6 +2,9 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [QoL] 2.2.3
+- Fix: **spam de logs y tráfico de red redundante del selector de recetas** — `CraftingMenu.slotChangedCraftingGrid` se dispara repetidamente aunque el contenido de la rejilla no cambie. Las ramas de "0 recetas" y "1 receta" reenviaban un paquete de sincronización al cliente en cada disparo sin comprobar nada, a diferencia de la rama de "varias recetas", que ya comprobaba si los inputs habían cambiado. Ahora las tres ramas se saltan el reenvío si los inputs no cambiaron. Además, los 3 logs de `receiveServerRecipes` en cliente (disparados en cada paquete recibido) estaban en nivel `INFO` sin condición; ahora están en `DEBUG`.
+
 ## [Fixes] 2.3.0
 - Feature: **fix genérico de crash por corrupción bloque/block-entity** — algunos chunks pueden quedar con NBT de block entity huérfana (p. ej. `enchanting_table`) en una posición cuyo bloque real ya no coincide (sustituido por otro bloque, típicamente por un mod tercero no relacionado). Cualquier código que intentara crear esa block entity de forma perezosa (incluido código de render de otro mod) lanzaba `IllegalStateException` y crasheaba el juego. Ahora, en servidor (o servidor integrado en singleplayer), se elimina la block entity huérfana para que la corrupción se autorrepare en vez de volver a crashear, y se loguea un warning con la posición y los tipos esperado/real; en cliente simplemente se trata como "sin block entity" sin tocar el mundo. No es específico de ningún bloque/mod concreto — cubre cualquier mismatch de este tipo. Nuevo toggle de config `enableBlockentityMismatchFix` (activado por defecto).
 
