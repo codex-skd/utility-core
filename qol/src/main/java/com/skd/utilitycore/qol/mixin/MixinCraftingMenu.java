@@ -71,11 +71,17 @@ public class MixinCraftingMenu {
 
         if (allRecipes.isEmpty()) {
             finalResult = ItemStack.EMPTY;
-            sendSyncPacket(player, List.of(), inputs);
-            player.getData(ModAttachments.getPlayerRecipeData().get()).clear();
+            PlayerRecipeData emptyData = player.getData(ModAttachments.getPlayerRecipeData().get());
+            if (emptyData.inputsChanged(inputs)) {
+                sendSyncPacket(player, List.of(), inputs);
+                emptyData.setRecipes(List.of(), inputs);
+            }
         } else if (allRecipes.size() == 1) {
-            sendSyncPacket(player, List.of(), inputs);
-            player.getData(ModAttachments.getPlayerRecipeData().get()).clear();
+            PlayerRecipeData singleData = player.getData(ModAttachments.getPlayerRecipeData().get());
+            if (singleData.inputsChanged(inputs)) {
+                sendSyncPacket(player, List.of(), inputs);
+                singleData.setRecipes(List.of(), inputs);
+            }
             RecipeHolder<CraftingRecipe> single = allRecipes.get(0);
             result.setRecipeUsed(single);
             finalResult = single.value().assemble(input);

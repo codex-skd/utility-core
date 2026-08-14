@@ -132,7 +132,7 @@ public class PolymorphClientHandler {
     }
 
     public static void receiveServerRecipes(List<ItemStack> outputs, List<ItemStack> inputs) {
-        UtilityCoreQoL.LOGGER.info("[RecipeSelector] receiveServerRecipes: outputs={} inputs={} selectedIndexBefore={} cachedBefore={}",
+        UtilityCoreQoL.LOGGER.debug("[RecipeSelector] receiveServerRecipes: outputs={} inputs={} selectedIndexBefore={} cachedBefore={}",
                 outputs.size(), inputs.size(), selectedIndex, cachedRecipes.size());
         cachedRecipes.clear();
         for (ItemStack stack : outputs) {
@@ -140,12 +140,12 @@ public class PolymorphClientHandler {
         }
         // Reset selection only if current index is out of bounds
         if (cachedRecipes.isEmpty() || selectedIndex >= cachedRecipes.size()) {
-            UtilityCoreQoL.LOGGER.info("[RecipeSelector] receiveServerRecipes: resetting selectedIndex {} -> 0 (cached={})", selectedIndex, cachedRecipes.size());
+            UtilityCoreQoL.LOGGER.debug("[RecipeSelector] receiveServerRecipes: resetting selectedIndex {} -> 0 (cached={})", selectedIndex, cachedRecipes.size());
             selectedIndex = 0;
         }
         lastInputs.clear();
         lastInputs.addAll(inputs);
-        UtilityCoreQoL.LOGGER.info("[RecipeSelector] receiveServerRecipes done: cached={} selectedIndex={}", cachedRecipes.size(), selectedIndex);
+        UtilityCoreQoL.LOGGER.debug("[RecipeSelector] receiveServerRecipes done: cached={} selectedIndex={}", cachedRecipes.size(), selectedIndex);
     }
 
     public static int getSelectedIndex() {
