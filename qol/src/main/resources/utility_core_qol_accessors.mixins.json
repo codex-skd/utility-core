@@ -4,10 +4,11 @@
   "package": "com.skd.utilitycore.qol.common.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AccessorCraftingMenu",
+    "AccessorCraftingMenu"
+  ],
+  "client": [
     "AccessorAbstractContainerScreen"
   ],
-  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1,

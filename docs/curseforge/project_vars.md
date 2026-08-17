@@ -2,6 +2,12 @@
 
 > Las siguientes variables son leídas por scripts de upload para los 3 mods independientes.
 
+# Script variables (key=value format for curseforge-upload.ps1)
+project_id = 1648135
+api_token = ee776b0a-ee95-4850-b554-06be02a8657f
+game_versions = 9638, 9639, 16498, 10150
+release_type = release
+
 ---
 
 ## 3 Proyectos CurseForge Separados

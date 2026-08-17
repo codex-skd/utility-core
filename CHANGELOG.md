@@ -2,6 +2,9 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [QoL] 2.2.4
+- Fix: **mixin target AbstractContainerScreen no encontrado** — mover `AccessorAbstractContainerScreen` al array `client` en `utility_core_qol_accessors.mixins.json` para evitar errores en servidor dedicado.
+
 ## [QoL] 2.2.3
 - Fix: **spam de logs y tráfico de red redundante del selector de recetas** — `CraftingMenu.slotChangedCraftingGrid` se dispara repetidamente aunque el contenido de la rejilla no cambie. Las ramas de "0 recetas" y "1 receta" reenviaban un paquete de sincronización al cliente en cada disparo sin comprobar nada, a diferencia de la rama de "varias recetas", que ya comprobaba si los inputs habían cambiado. Ahora las tres ramas se saltan el reenvío si los inputs no cambiaron. Además, los 3 logs de `receiveServerRecipes` en cliente (disparados en cada paquete recibido) estaban en nivel `INFO` sin condición; ahora están en `DEBUG`.
 
