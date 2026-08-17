@@ -37,6 +37,11 @@ public class FixesConfig {
                      "ES: Evita los crashes por NBT de bloque de entidad obsoleto eliminando los datos de bloque de entidad huérfanos cuando se detecta una discrepancia de tipo.")
             .define("enableBlockentityMismatchFix", true);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_CURIOS_LOOT_PREDICATE_FIX = BUILDER
+            .comment("EN: Prevents server crash from Curios API's NBT merging during loot table predicate evaluation. Requires Curios to be present but will not hard-depend on it.",
+                     "ES: Evita el crash del servidor por la fusión de NBT de la API de Curios durante la evaluación de predicados de tabla de botín. Requiere que Curios esté presente pero no será una dependencia rígida.")
+            .define("enableCuriosLootPredicateFix", true);
+
     // Vehicle Anti-Cheat Whitelist
     public static final ModConfigSpec.BooleanValue ENABLE_VEHICLE_ANTICHEAT_WHITELIST = BUILDER
             .comment("EN: Enables whitelist for vanilla's 'moved too quickly' vehicle anti-cheat. Allows specified entity types to move faster without warnings.",
