@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1786971601.5494788,
-    "ast_hash": "a37b66ea75b4c365c915e1062ac9ae6f",
+    "mtime": 1786984201.914016,
+    "ast_hash": "5e5a690aa0207a8116fe7ec3f27aa212",
     "semantic_hash": ""
   },
   "README.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1786972623.5912468,
-    "ast_hash": "94f0e65879e4fb2826fb0195119c52b5",
+    "mtime": 1786983859.1219516,
+    "ast_hash": "4ee3927fb31a0fbf2a1c9ee3dbb6596a",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/config/FixesConfig.java": {
-    "mtime": 1786957234.2771342,
-    "ast_hash": "13b19d284151cde390d75ce76589df3a",
+    "mtime": 1786983051.7849996,
+    "ast_hash": "fb7b67ba29ad446afc89153ec6e7ba5d",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinDamageContainer.java": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/resources/utility_core_fixes.mixins.json": {
-    "mtime": 1786957323.6813922,
-    "ast_hash": "9656488d829c95bfa33db5efc5d3f417",
+    "mtime": 1786983064.974348,
+    "ast_hash": "17d66b2ced71bf4bdba6a354dc57289e",
     "semantic_hash": ""
   },
   "qol/build.gradle": {
@@ -897,6 +897,16 @@
   "docs/curseforge/versions/2.3.1_fixes.md": {
     "mtime": 1786959974.06863,
     "ast_hash": "7bc7b48e47da7158a1baff555ccd734b",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java": {
+    "mtime": 1786983915.7099147,
+    "ast_hash": "ffc9ca08e276e9dfa5c2e020179e4340",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.2_fixes.md": {
+    "mtime": 1786984196.8760614,
+    "ast_hash": "5249e11915cd7c637486c54604ab80ec",
     "semantic_hash": ""
   }
 }
