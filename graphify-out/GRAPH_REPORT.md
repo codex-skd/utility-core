@@ -1,16 +1,16 @@
-# Graph Report - 26.2  (2026-08-12)
+# Graph Report - 26.2  (2026-08-17)
 
 ## Corpus Check
-- 148 files · ~426,218 words
+- 167 files · ~429,773 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 945 nodes · 1657 edges · 84 communities (79 shown, 5 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
+- 1011 nodes · 1744 edges · 103 communities (98 shown, 5 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `71403711`
+- Built from commit: `b6315613`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,6 +39,8 @@
 - Player
 - RecipeHolder
 - RecipeType
+- MixinVehicleAntiCheatWhitelist.java
+- MixinTBScreen.java
 - Minecraft
 - Post
 - SubscribeEvent
@@ -60,8 +62,8 @@
 - project_description_fixes.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `ChunkGenManager` - 31 edges
-2. `Utility Core — Registro de cambios` - 27 edges
+1. `Utility Core — Registro de cambios` - 38 edges
+2. `ChunkGenManager` - 31 edges
 3. `SpawnSchematicManager` - 24 edges
 4. `SpongeSchematicReader` - 21 edges
 5. `Perspective` - 21 edges
@@ -78,15 +80,15 @@
   admin/src/main/java/com/skd/utilitycore/admin/UtilityCoreAdmin.java → admin/src/main/java/com/skd/utilitycore/admin/schematic/SpawnSchematicManager.java
 - `getPlacementAxisMode()` --references--> `PlacementAxisMode`  [EXTRACTED]
   qol/src/main/java/com/skd/utilitycore/qol/bridging/PlacementAxisModeOverride.java → qol/src/main/java/com/skd/utilitycore/qol/bridging/PlacementAxisMode.java
+- `SpecialHandlers` --references--> `SpecialBridgingEnvironmentHandler`  [EXTRACTED]
+  qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/SpecialHandlers.java → qol/src/main/java/com/skd/utilitycore/qol/bridging/compat/type/SpecialBridgingEnvironmentHandler.java
 - `Flags` --references--> `Flag`  [EXTRACTED]
   qol/src/main/java/com/skd/utilitycore/qol/bridging/util/flags/Flags.java → qol/src/main/java/com/skd/utilitycore/qol/bridging/util/flags/Flag.java
-- `PolymorphClientHandler` --references--> `RecipePair`  [EXTRACTED]
-  qol/src/main/java/com/skd/utilitycore/qol/client/PolymorphClientHandler.java → qol/src/main/java/com/skd/utilitycore/qol/common/attachment/RecipePair.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (84 total, 5 thin omitted)
+## Communities (103 total, 5 thin omitted)
 
 ### Community 0 - "Flujo de trabajo — Utility Core (NeoForge)"
 Cohesion: 0.17
@@ -105,12 +107,12 @@ Cohesion: 0.06
 Nodes (44): AbstractContainerMenu, Biome, ByteBuf, CustomPacketPayload, BiomeDimensionTitleHandler, Component, EventBusSubscriber, Level (+36 more)
 
 ### Community 4 - "UtilityCore.java"
-Cohesion: 0.05
-Nodes (45): Category, ClientLevel, HitResult, InteractionResult, Item, KeyMapping, MultiPlayerGameMode, NotNull (+37 more)
+Cohesion: 0.06
+Nodes (44): Category, ClientLevel, HitResult, InteractionResult, Item, KeyMapping, MultiPlayerGameMode, NotNull (+36 more)
 
 ### Community 5 - "Config.java"
-Cohesion: 0.12
-Nodes (18): FixesConfig, BooleanValue, Builder, ModConfigSpec, Mixin, Unique, MixinDamageContainer, CallbackInfo (+10 more)
+Cohesion: 0.09
+Nodes (24): BlockEntity, EntityBlock, FixesConfig, BooleanValue, Builder, ConfigValue, ModConfigSpec, Mixin (+16 more)
 
 ### Community 6 - "PolymorphApi.java"
 Cohesion: 0.10
@@ -122,7 +124,7 @@ Nodes (14): Level, Player, RecipeHolder, RecipeManager, RecipeType, PolymorphApi
 
 ### Community 8 - "CurseForge — Variables del proyecto"
 Cohesion: 0.07
-Nodes (30): AddPackFindersEvent, DataPackFolderLoader, Logger, AdminConfig, BooleanValue, Builder, EnumValue, IntValue (+22 more)
+Nodes (29): AddPackFindersEvent, DataPackFolderLoader, Logger, AdminConfig, BooleanValue, Builder, ConfigValue, EnumValue (+21 more)
 
 ### Community 10 - ".onExtractBackground"
 Cohesion: 0.13
@@ -153,12 +155,12 @@ Cohesion: 0.29
 Nodes (3): Block, BlockState, LegacyBlockMap
 
 ### Community 20 - "Utility Core — Registro de cambios"
-Cohesion: 0.07
-Nodes (27): 1.0.0, 1.10.0, 1.11.0, 1.11.1, 1.11.10, 1.11.11, 1.11.12, 1.11.13 (+19 more)
+Cohesion: 0.05
+Nodes (39): 1.0.0, 1.10.0, 1.11.0, 1.11.1, 1.11.10, 1.11.11, 1.11.12, 1.11.13 (+31 more)
 
 ### Community 26 - "Publicación a GitHub (CI/CD)"
-Cohesion: 0.08
-Nodes (26): BlockPos, EventBusSubscriber, Player, SubscribeEvent, SpawnProtectionHandler, BlockPos, Gson, Identifier (+18 more)
+Cohesion: 0.07
+Nodes (27): BlockPos, EventBusSubscriber, Player, SubscribeEvent, SpawnProtectionHandler, BlockPos, Gson, Identifier (+19 more)
 
 ### Community 27 - "OutpostZeroCompat.java"
 Cohesion: 0.19
@@ -170,7 +172,7 @@ Nodes (15): Build & release, Config migration: YACL3 → native `ModConfigSpec`,
 
 ### Community 38 - "Level"
 Cohesion: 0.12
-Nodes (15): 3 Proyectos CurseForge Separados, Build, Configuración por Mod, CurseForge — Variables del proyecto (v2.0.0+ Multi-Mod), Estructura Changelog (HTML), Estructura de Archivos por Mod, Flujo de Upload (Por Mod), Nomenclatura JAR (+7 more)
+Nodes (16): 3 Proyectos CurseForge Separados, Build, Configuración por Mod, CurseForge — Variables del proyecto (v2.0.0+ Multi-Mod), Estructura Changelog (HTML), Estructura de Archivos por Mod, Flujo de Upload (Por Mod), Nomenclatura JAR (+8 more)
 
 ### Community 39 - "Player"
 Cohesion: 0.05
@@ -178,11 +180,19 @@ Nodes (37): DoubleValue, BridgingAdjacency, CORNERS, EDGES, FULL, NONE, Bridging
 
 ### Community 40 - "RecipeHolder"
 Cohesion: 0.06
-Nodes (42): Camera, Entity, FunctionalInterface, LevelRenderState, BlockPos, PoseStack, SubmitNodeCollector, CallbackInfo (+34 more)
+Nodes (43): Camera, FunctionalInterface, LevelRenderState, BlockPos, PoseStack, SubmitNodeCollector, SpecialBridgingEnvironmentHandler, CallbackInfo (+35 more)
 
 ### Community 42 - "RecipeType"
 Cohesion: 0.15
 Nodes (12): 1. Utility Core Fixes, 2. Utility Core Admin, 3. Utility Core QoL, Common Settings, CurseForge Setup (Per Project), Dependencies, JAR Locations (After Build), Overview (+4 more)
+
+### Community 43 - "MixinVehicleAntiCheatWhitelist.java"
+Cohesion: 0.27
+Nodes (11): EntityType, CallbackInfoReturnable, Entity, Inject, Logger, MinecraftServer, Mixin, ResourceKey (+3 more)
+
+### Community 53 - "MixinTBScreen.java"
+Cohesion: 0.38
+Nodes (6): CallbackInfo, Inject, Mixin, Unique, MixinTBScreen, Screen
 
 ### Community 55 - "Minecraft"
 Cohesion: 0.33
@@ -241,24 +251,24 @@ Cohesion: 0.60
 Nodes (3): IEventBus, PayloadRegistrar, ModNetwork
 
 ## Knowledge Gaps
-- **133 isolated node(s):** `SURFACE`, `FIXED`, `NONE`, `CORNERS`, `EDGES` (+128 more)
+- **146 isolated node(s):** `SURFACE`, `FIXED`, `NONE`, `CORNERS`, `EDGES` (+141 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `RecipePair` connect `PolymorphApi.java` to `PolymorphClientHandler.java`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
 - **Why does `ChunkGenManager` connect `ChunkGenManager` to `CurseForge — Variables del proyecto`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `RecipePair` connect `PolymorphApi.java` to `PolymorphClientHandler.java`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+- **Why does `SpawnSchematicManager` connect `Publicación a GitHub (CI/CD)` to `CurseForge — Variables del proyecto`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `SURFACE`, `FIXED`, `NONE` to the rest of the system?**
-  _133 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PolymorphClientHandler.java` be split into smaller, more focused modules?**
   _Cohesion score 0.06821480406386067 - nodes in this community are weakly interconnected._
 - **Should `ChunkGenManager` be split into smaller, more focused modules?**
   _Cohesion score 0.10121951219512196 - nodes in this community are weakly interconnected._
 - **Should `PlayerRecipeData` be split into smaller, more focused modules?**
   _Cohesion score 0.0601404741000878 - nodes in this community are weakly interconnected._
-- **Should `UtilityCore.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.05387861084063616 - nodes in this community are weakly interconnected._

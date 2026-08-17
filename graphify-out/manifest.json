@@ -1,7 +1,7 @@
 {
   "build.gradle": {
-    "mtime": 1786475584.7133927,
-    "ast_hash": "cfe2dfcfdb17a8b5645c9efea7b5ef2b",
+    "mtime": 1786580221.3546362,
+    "ast_hash": "3ec35dd8692f64f31105cb8e049ea911",
     "semantic_hash": ""
   },
   "gradlew": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1786530708.0816264,
-    "ast_hash": "2bf7d6c4c86c3e58d8ffbbaced4c56b8",
+    "mtime": 1786971601.5494788,
+    "ast_hash": "a37b66ea75b4c365c915e1062ac9ae6f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -45,18 +45,18 @@
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
-    "mtime": 1785626678.1472802,
-    "ast_hash": "7321f798d9d3fb674122c866113ccc42",
+    "mtime": 1786580271.832794,
+    "ast_hash": "3134c923eb9b80d197fc83af08c5fbb5",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1785793011.890048,
-    "ast_hash": "7b364f76702f034d4eec6669c4d0ad36",
+    "mtime": 1786567703.503145,
+    "ast_hash": "bbe51f8eb74836e9763176754484f310",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1786447382.1106784,
-    "ast_hash": "ec539a41466c4ffeb80449e43b6f79f0",
+    "mtime": 1786972623.5912468,
+    "ast_hash": "94f0e65879e4fb2826fb0195119c52b5",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -220,13 +220,13 @@
     "semantic_hash": ""
   },
   "admin/build.gradle": {
-    "mtime": 1786438378.9726684,
-    "ast_hash": "8b0022fc60a615fcf5b9e9e132d741a1",
+    "mtime": 1786569058.4928403,
+    "ast_hash": "784e153fe0205328846c8ce54118dc76",
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/UtilityCoreAdmin.java": {
-    "mtime": 1786484553.357333,
-    "ast_hash": "725859728fd646ca6f82bf7dc2a40504",
+    "mtime": 1786576347.8833983,
+    "ast_hash": "d4b392d25c0180c6bc68e9dc558f0de7",
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/chunkgen/ChunkGenManager.java": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "fixes/build.gradle": {
-    "mtime": 1786438396.333953,
-    "ast_hash": "a72c7e6e0acedab4cd1d804c2f06b66a",
+    "mtime": 1786569058.4928403,
+    "ast_hash": "abd1d0ce587aa881fa798b58dcdc032a",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/UtilityCoreFixes.java": {
-    "mtime": 1786459266.0215442,
-    "ast_hash": "cb42f8ea6e7ca4cc6b9493b51553a061",
+    "mtime": 1786576350.8506677,
+    "ast_hash": "f1536f98b6c0d314fb7129d580778ed8",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/ModAttachments.java": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/config/FixesConfig.java": {
-    "mtime": 1786460441.4541166,
-    "ast_hash": "7f1f1a10f48edb282a2910e65501d0bf",
+    "mtime": 1786957234.2771342,
+    "ast_hash": "13b19d284151cde390d75ce76589df3a",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinDamageContainer.java": {
@@ -395,18 +395,18 @@
     "semantic_hash": ""
   },
   "fixes/src/main/resources/utility_core_fixes.mixins.json": {
-    "mtime": 1786408428.2165675,
-    "ast_hash": "2b0e6c389e3f9eea5eedd17e88f5fa4b",
+    "mtime": 1786957323.6813922,
+    "ast_hash": "9656488d829c95bfa33db5efc5d3f417",
     "semantic_hash": ""
   },
   "qol/build.gradle": {
-    "mtime": 1786438413.1638038,
-    "ast_hash": "3a52477cf45fd8237230abb195f406f5",
+    "mtime": 1786569058.4928403,
+    "ast_hash": "31824962e942c4cfadb3e6fb04f6e30c",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/UtilityCoreQoL.java": {
-    "mtime": 1786483531.3942318,
-    "ast_hash": "2752ce184978479b92012a1b276e5b43",
+    "mtime": 1786579854.7789817,
+    "ast_hash": "f62ef3f8b10686249a5f71e5868fa43b",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/bridging/BridgingAdjacency.java": {
@@ -570,8 +570,8 @@
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/client/PolymorphClientHandler.java": {
-    "mtime": 1786435386.6734385,
-    "ast_hash": "a08b6975fd7f22d6c792d85a5fb65401",
+    "mtime": 1786665080.65251,
+    "ast_hash": "3188ea88f30068faf3515525722d3f9a",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/client/titles/BiomeDimensionTitleHandler.java": {
@@ -635,8 +635,8 @@
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinCraftingMenu.java": {
-    "mtime": 1786486027.6226919,
-    "ast_hash": "1a83d05a572a16413b36f473ec4f5940",
+    "mtime": 1786665088.2670388,
+    "ast_hash": "348c231b62ebb2e032cf48e8ef4db16e",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinCraftingScreen.java": {
@@ -675,8 +675,8 @@
     "semantic_hash": ""
   },
   "qol/src/main/resources/utility_core_qol_accessors.mixins.json": {
-    "mtime": 1786442074.5701933,
-    "ast_hash": "2e250d36530cbd7fea12a503dee2dacc",
+    "mtime": 1786970163.026205,
+    "ast_hash": "8bc6300009e1b0a0a8ea8ab38e47b421",
     "semantic_hash": ""
   },
   "qol/src/main/resources/utility_core_qol_bridging.mixins.json": {
@@ -720,8 +720,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_fixes.md": {
-    "mtime": 1786444019.2438796,
-    "ast_hash": "1a62a1ecb8261e6588cb6cc4d7eff332",
+    "mtime": 1786958923.6247766,
+    "ast_hash": "9e823bbe0feb91dcc88934dee83825d2",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_qol.md": {
@@ -802,6 +802,101 @@
   "docs/curseforge/versions/2.1.0_qol.md": {
     "mtime": 1786530705.5130486,
     "ast_hash": "098b3d74903ceb28225dd29b14080b2b",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLevelChunk.java": {
+    "mtime": 1786655699.309847,
+    "ast_hash": "eaf1e0a0f26f03c118a25edbdc1ee695",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinVehicleAntiCheatWhitelist.java": {
+    "mtime": 1786957844.7755146,
+    "ast_hash": "9f29a0788e0c85dceeef762e539d92d6",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.1.1.md": {
+    "mtime": 1786569058.4939158,
+    "ast_hash": "bec8c619ed2d065dea9470c2e3c4ceb4",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.1.2_admin.md": {
+    "mtime": 1786574464.3133483,
+    "ast_hash": "3237d1f949f0a020cba8024c7e2383e7",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.1.2_fixes.md": {
+    "mtime": 1786574469.2882328,
+    "ast_hash": "f278c2e836299497e2f96b1b18db8971",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.1.2_qol.md": {
+    "mtime": 1786574473.737943,
+    "ast_hash": "2f5bc98476616049374cbb9cc63ed062",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.0_admin.md": {
+    "mtime": 1786576732.1748695,
+    "ast_hash": "26e4094b2308cd4661a2921b943869cf",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.0_fixes.md": {
+    "mtime": 1786576737.2284336,
+    "ast_hash": "d11be8be9309a019a0f850be66defdd8",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.0_qol.md": {
+    "mtime": 1786576727.1086931,
+    "ast_hash": "f72af9e11b2c34d08f45ea6b786258e5",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.1_admin.md": {
+    "mtime": 1786579911.906507,
+    "ast_hash": "a8138d78d582fe3f64e449cd7b128524",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.1_fixes.md": {
+    "mtime": 1786579915.0600154,
+    "ast_hash": "358a0743ef08398b81bf58a51e490e4e",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.1_qol.md": {
+    "mtime": 1786579907.5621657,
+    "ast_hash": "953f83ad27516a5b3a48f8e6e10852b3",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.2_admin.md": {
+    "mtime": 1786580400.095117,
+    "ast_hash": "c05b3c2b16629b0f4c4b47472c0cb964",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.2_fixes.md": {
+    "mtime": 1786580403.2681248,
+    "ast_hash": "debcc1e71843d07c1598fb71c67c3d8b",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.2_qol.md": {
+    "mtime": 1786580406.3788834,
+    "ast_hash": "ae072ac36fcda2461fc5912851eacf26",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.3_qol.md": {
+    "mtime": 1786665951.5350013,
+    "ast_hash": "a17899f9d6327e46e98df922d9c30860",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.2.4_qol.md": {
+    "mtime": 1786971580.384145,
+    "ast_hash": "6181278a8e657387b8053029b1dbe984",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.0_fixes.md": {
+    "mtime": 1786656057.9302487,
+    "ast_hash": "337adb0679138bf3ef89d1ce992290ce",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.1_fixes.md": {
+    "mtime": 1786959974.06863,
+    "ast_hash": "7bc7b48e47da7158a1baff555ccd734b",
     "semantic_hash": ""
   }
 }
