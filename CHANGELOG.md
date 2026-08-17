@@ -2,6 +2,9 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [Fixes] 2.3.2
+- Fix: **crash del servidor al morir con un curio encantado equipado** — el mixin de Curios sobre `NbtPredicate.getEntityTagToCompare` fusiona el inventario de Curios en el NBT comparado por predicados de loot table/advancement; si un curio equipado está encantado, esa serialización necesita acceso al registro `minecraft:enchantment`, que no está disponible en ese contexto y lanza `IllegalStateException: Can't access registry ResourceKey[minecraft:root / minecraft:enchantment]`, sin capturar, tumbando el servidor (p. ej. al morir por una flecha con drops de muerte). Ahora se captura esa excepción en `LootItemEntityPropertyCondition.test` y el predicado simplemente falla en vez de crashear. Nuevo toggle de config `enableCuriosLootPredicateFix` (activado por defecto).
+
 ## [QoL] 2.2.4
 - Fix: **mixin target AbstractContainerScreen no encontrado** — mover `AccessorAbstractContainerScreen` al array `client` en `utility_core_qol_accessors.mixins.json` para evitar errores en servidor dedicado.
 
