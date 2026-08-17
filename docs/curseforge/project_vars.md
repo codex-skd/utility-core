@@ -2,7 +2,13 @@
 
 > Las siguientes variables son leídas por scripts de upload para los 3 mods independientes.
 
-# Script variables (key=value format for curseforge-upload.ps1)
+# Script variables (key=value format for curseforge-upload.ps1 / curseforge-upload-submodule.ps1)
+# This repo is split multi-mod (admin/fixes/qol) — use curseforge-upload-submodule.ps1 with -SubModule.
+# project_id is suffixed per submodule; api_token/game_versions/release_type are shared (no suffix needed).
+project_id_fixes = 1648135
+project_id_admin = 1601825
+project_id_qol = 1648134
+# Legacy unsuffixed project_id kept for back-compat with curseforge-upload.ps1 (points at Fixes).
 project_id = 1648135
 api_token = ee776b0a-ee95-4850-b554-06be02a8657f
 game_versions = 9638, 9639, 16498, 10150
