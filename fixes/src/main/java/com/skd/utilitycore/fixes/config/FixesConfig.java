@@ -2,6 +2,8 @@ package com.skd.utilitycore.fixes.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+import java.util.List;
+
 public class FixesConfig {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
@@ -34,6 +36,17 @@ public class FixesConfig {
             .comment("EN: Prevents crashes from stale block entity NBT by removing orphaned block entity data when block/entity type mismatch is detected.",
                      "ES: Evita los crashes por NBT de bloque de entidad obsoleto eliminando los datos de bloque de entidad huérfanos cuando se detecta una discrepancia de tipo.")
             .define("enableBlockentityMismatchFix", true);
+
+    // Vehicle Anti-Cheat Whitelist
+    public static final ModConfigSpec.BooleanValue ENABLE_VEHICLE_ANTICHEAT_WHITELIST = BUILDER
+            .comment("EN: Enables whitelist for vanilla's 'moved too quickly' vehicle anti-cheat. Allows specified entity types to move faster without warnings.",
+                     "ES: Activa la lista blanca para el anti-cheat vanilla 'moved too quickly' de vehículos. Permite que tipos de entidad especificados se muevan más rápido sin warnings.")
+            .define("enableVehicleAntiCheatWhitelist", true);
+
+    public static final ModConfigSpec.ConfigValue<List<? extends String>> VEHICLE_ANTICHEAT_WHITELIST = BUILDER
+            .comment("EN: List of entity type IDs (namespace:path) to whitelist from 'moved too quickly' checks. Supports wildcards like 'modid:*'.",
+                     "ES: Lista de IDs de tipo de entidad (namespace:path) para incluir en la lista blanca del check 'moved too quickly'. Soporta comodines como 'modid:*'.")
+            .defineList("vehicleAntiCheatWhitelist", List.of("evilcraft:broom"), s -> s instanceof String);
 
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

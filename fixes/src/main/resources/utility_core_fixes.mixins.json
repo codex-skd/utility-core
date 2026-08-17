@@ -11,7 +11,9 @@
   "client": [
     "MixinTBScreen"
   ],
-  "server": [],
+  "server": [
+    "MixinVehicleAntiCheatWhitelist"
+  ],
   "injectors": {
     "defaultRequire": 1,
     "maxShiftBy": 2
