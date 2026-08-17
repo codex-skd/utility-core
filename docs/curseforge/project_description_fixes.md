@@ -16,6 +16,9 @@
 
 <h2>Features</h2>
 
+<h3>Vehicle Anti-Cheat Whitelist</h3>
+<p>Allows configurable whitelisting of entity types from vanilla's <code>moved too quickly</code> vehicle anti-cheat. Prevents spam of warnings like <code>entity.evilcraft.broom (vehicle of X) moved too quickly!</code> by intercepting <code>isVehicleMovingTooFast</code> and <code>checkVehicleMovement</code> in <code>ServerGamePacketListenerImpl</code>. Configure via <code>vehicleAntiCheatWhitelist</code> (default: <code>["evilcraft:broom"]</code>).</p>
+
 <h3>Corail Tombstone Compatibility</h3>
 <ul>
   <li><strong>GUI Scale Fix</strong> — Prevents Corail Tombstone from forcing GUI scale to 4 when opening its menus; restores your configured scale on close</li>
@@ -43,6 +46,10 @@ enableTombstoneErrorHandler = true
 # General fixes
 enableNegativeDamageFix = true
 enableOutpostZeroDamageCap = true
+
+# Vehicle anti-cheat whitelist
+enableVehicleAntiCheatWhitelist = true
+vehicleAntiCheatWhitelist = ["evilcraft:broom"]
 </code></pre>
 
 <hr>
@@ -59,6 +66,7 @@ enableOutpostZeroDamageCap = true
 <ul>
   <li>Corail Tombstone</li>
   <li>OutpostZero</li>
+  <li>EvilCraft (for vehicle anti-cheat whitelist)</li>
 </ul>
 
 <hr>
