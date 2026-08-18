@@ -39,6 +39,15 @@
   <li>Positive = up, Negative = down</li>
 </ul>
 
+<h3>Bridging Assist</h3>
+<ul>
+  <li>New "reacharound" placement feature ported from BridgingMod.</li>
+  <li>Helps you bridge/scaffold by extending block placement to positions you're looking at but not directly reaching.</li>
+  <li>Includes a crosshair indicator and outline showing where the next block will go.</li>
+  <li>Features slab assist and configurable distance/axes/delay settings.</li>
+  <li>Toggle with keybind (default: comma).</li>
+</ul>
+
 <hr>
 
 <h2>Configuration</h2>
@@ -112,3 +121,12 @@ PolymorphApi.INSTANCE.clearPlayerRecipeData(player)
 <hr>
 
 <p>MIT License. Developed by <strong>Stalking Dragons</strong>.</p>
+<p align="center">
+  <a href="https://codex.skdragons.com/" target="_blank">
+    <img src="https://node-files.skdragons.com/uploads/MINECRAFT/Codex/logo_codex_stalking_dragons.png" alt="Codex Stalking Dragons" width="200">
+  </a>
+  <br>
+  <a href="https://codex.skdragons.com/">https://codex.skdragons.com/</a>
+  <br>
+  <em>Codex Stalking Dragons — Minecraft Modding</em>
+</p>

@@ -116,3 +116,12 @@ dataPackFolder.path = "datapacks"
 <hr>
 
 <p>MIT License. Developed by <strong>Stalking Dragons</strong>.</p>
+<p align="center">
+  <a href="https://codex.skdragons.com/" target="_blank">
+    <img src="https://node-files.skdragons.com/uploads/MINECRAFT/Codex/logo_codex_stalking_dragons.png" alt="Codex Stalking Dragons" width="200">
+  </a>
+  <br>
+  <a href="https://codex.skdragons.com/">https://codex.skdragons.com/</a>
+  <br>
+  <em>Codex Stalking Dragons — Minecraft Modding</em>
+</p>
