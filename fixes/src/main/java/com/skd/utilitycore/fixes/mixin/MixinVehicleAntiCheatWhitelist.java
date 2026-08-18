@@ -117,7 +117,7 @@ public abstract class MixinVehicleAntiCheatWhitelist {
         return vehicle != null && isWhitelisted(vehicle, listener);
     }
 
-    // 1.21.6+ inlined the 'moved too quickly' vehicle anti-cheat inside handleMoveVehicle:
+    // 26.2 inlined the 'moved too quickly' vehicle anti-cheat inside handleMoveVehicle:
     // the branch is `if (movedDistanceSqr - deltaLenSqr > 100.0 && !isSingleplayerOwner())` and
     // there are no separate isVehicleMovingTooFast/checkVehicleMovement methods anymore.
     // This call site is the ONLY isSingleplayerOwner() use in handleMoveVehicle, so a scoped
