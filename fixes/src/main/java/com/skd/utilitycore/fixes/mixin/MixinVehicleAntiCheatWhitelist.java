@@ -15,7 +15,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.Unique;
@@ -106,9 +105,6 @@ public abstract class MixinVehicleAntiCheatWhitelist {
         return key != null && WHITELIST_CACHE.contains(key);
     }
 
-    @Shadow
-    protected abstract boolean isSingleplayerOwner();
-
     @Unique
     private boolean isVehicleAntiCheatWhitelisted(ServerGamePacketListenerImpl listener) {
         ServerPlayer player = listener.player;
@@ -131,6 +127,6 @@ public abstract class MixinVehicleAntiCheatWhitelist {
         if (isVehicleAntiCheatWhitelisted(listener)) {
             return true;
         }
-        return isSingleplayerOwner();
+        return ((InvokerServerCommonPacketListenerImpl) listener).utility_core$invokeIsSingleplayerOwner();
     }
 }
