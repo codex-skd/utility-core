@@ -15,9 +15,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.Unique;
 
 import java.util.List;
@@ -106,28 +106,31 @@ public abstract class MixinVehicleAntiCheatWhitelist {
         return key != null && WHITELIST_CACHE.contains(key);
     }
 
-    @Inject(
-        method = "isVehicleMovingTooFast",
-        at = @At("HEAD"),
-        cancellable = true
-    )
-    private void onIsVehicleMovingTooFast(Entity vehicle, CallbackInfoReturnable<Boolean> cir) {
-        ServerGamePacketListenerImpl listener = (ServerGamePacketListenerImpl) (Object) this;
-        if (vehicle != null && isWhitelisted(vehicle, listener)) {
-            cir.setReturnValue(false);
-        }
+    @Shadow
+    protected abstract boolean isSingleplayerOwner();
+
+    @Unique
+    private boolean isVehicleAntiCheatWhitelisted(ServerGamePacketListenerImpl listener) {
+        ServerPlayer player = listener.player;
+        if (player == null) return false;
+        Entity vehicle = player.getRootVehicle();
+        return vehicle != null && isWhitelisted(vehicle, listener);
     }
 
-    @Inject(
-        method = "checkVehicleMovement",
-        at = @At("HEAD"),
-        cancellable = true
+    // 1.21.6+ inlined the 'moved too quickly' vehicle anti-cheat inside handleMoveVehicle:
+    // the branch is `if (movedDistanceSqr - deltaLenSqr > 100.0 && !isSingleplayerOwner())` and
+    // there are no separate isVehicleMovingTooFast/checkVehicleMovement methods anymore.
+    // This call site is the ONLY isSingleplayerOwner() use in handleMoveVehicle, so a scoped
+    // redirect neutralizes the check for whitelisted vehicles without touching the player
+    // movement checks, difficulty/gamemode permission checks, etc. that share the method.
+    @Redirect(
+        method = "handleMoveVehicle",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerGamePacketListenerImpl;isSingleplayerOwner()Z")
     )
-    private void onCheckVehicleMovement(CallbackInfoReturnable<Boolean> cir) {
-        ServerGamePacketListenerImpl listener = (ServerGamePacketListenerImpl) (Object) this;
-        Entity vehicle = listener.player.getVehicle();
-        if (vehicle != null && isWhitelisted(vehicle, listener)) {
-            cir.setReturnValue(true);
+    private boolean utility_core$bypassVehicleTooQuickCheck(ServerGamePacketListenerImpl listener) {
+        if (isVehicleAntiCheatWhitelisted(listener)) {
+            return true;
         }
+        return isSingleplayerOwner();
     }
 }
