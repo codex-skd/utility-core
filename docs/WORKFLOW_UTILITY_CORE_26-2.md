@@ -24,7 +24,7 @@
 |---|---|
 | Mod ID | `utility_core_admin` |
 | Display name | `Utility Core Admin` |
-| Versión actual | `2.2.3` (CurseForge file ID TBD) |
+| Versión actual | `2.2.3` (CurseForge file ID 8677970) |
 | Estado | ✅ Release estable 2.2.3 |
 
 ### Fixes
@@ -33,7 +33,7 @@
 |---|---|
 | Mod ID | `utility_core_fixes` |
 | Display name | `Utility Core Fixes` |
-| Versión actual | `2.3.5` (CurseForge file ID TBD) |
+| Versión actual | `2.3.5` (CurseForge file ID 8677969) |
 | Estado | ✅ Release estable 2.3.5 |
 
 ### QoL
@@ -42,7 +42,7 @@
 |---|---|
 | Mod ID | `utility_core_qol` |
 | Display name | `Utility Core QoL` |
-| Versión actual | `2.2.5` (CurseForge file ID TBD) |
+| Versión actual | `2.2.5` (CurseForge file ID 8677973) |
 | Estado | ✅ Release estable 2.2.5 |
 
 ## Convenciones de nomenclatura
