@@ -90,6 +90,8 @@ All options live in `config/utility_core-common.toml` (also editable from the in
 | `enableTombstoneItemInitFix` | true | Fixes NBT on Tombstone items given via `/give`. |
 | `enableTombstoneErrorHandler` | true | Suppresses Tombstone mixin errors at startup. |
 | `enableOutpostZeroDamageCap` | true | Caps OutpostZero infection damage to prevent instant death. |
+| `enableVehicleAntiCheatWhitelist` | true | Whitelist entity types from vanilla's "moved too quickly" vehicle anti-cheat. |
+| `vehicleAntiCheatWhitelist` | `["evilcraft:broom"]` | Entity type IDs (`namespace:path`) allowed to move faster than the vanilla limit. |
 | `enableSpawnSchematic` | false | Paste + protect a spawn schematic on new worlds. |
 | `spawnSchematic.heightMode` | SURFACE | `SURFACE` = align to ground, `FIXED` = absolute Y. |
 | `spawnSchematic.surfaceOffset` | 70 | Blocks above the ground in `SURFACE` mode. |

@@ -17,7 +17,7 @@
 <h2>Features</h2>
 
 <h3>Vehicle Anti-Cheat Whitelist</h3>
-<p>Allows configurable whitelisting of entity types from vanilla's <code>moved too quickly</code> vehicle anti-cheat. Prevents spam of warnings like <code>entity.evilcraft.broom (vehicle of X) moved too quickly!</code> by intercepting <code>isVehicleMovingTooFast</code> and <code>checkVehicleMovement</code> in <code>ServerGamePacketListenerImpl</code>. Configure via <code>vehicleAntiCheatWhitelist</code> (default: <code>["evilcraft:broom"]</code>).</p>
+<p>Allows configurable whitelisting of entity types from vanilla's <code>moved too quickly</code> vehicle anti-cheat. Prevents spam of warnings like <code>entity.evilcraft.broom (vehicle of X) moved too quickly!</code> by hooking the inline vehicle check inside <code>ServerGamePacketListenerImpl.handleMoveVehicle</code> (the dedicated <code>isVehicleMovingTooFast</code> / <code>checkVehicleMovement</code> methods no longer exist in 1.21.6). Configure via <code>vehicleAntiCheatWhitelist</code> (default: <code>["evilcraft:broom"]</code>).</p>
 
 <h3>Corail Tombstone Compatibility</h3>
 <ul>
