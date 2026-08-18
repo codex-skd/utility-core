@@ -1,7 +1,7 @@
 # Utility Core 2.0.0-beta.1 - CurseForge Projects Summary
 
 ## Overview
-Monorepo split into 3 independent CurseForge projects. All require NeoForge 26.2.0.37-beta (MC 1.21.1).
+Monorepo split into 3 independent CurseForge projects. All require NeoForge 26.2.0.37-beta (MC 26.2).
 
 ---
 
@@ -17,7 +17,7 @@ Monorepo split into 3 independent CurseForge projects. All require NeoForge 26.2
 
 ## Common Settings
 - **NeoForge**: 26.2.0.37-beta
-- **Minecraft**: 26.2 (1.21.1)
+- **Minecraft**: 26.2
 - **License**: MIT
 - **Group**: `com.skd.utilitycore`
 - **Java**: 21

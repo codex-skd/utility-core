@@ -7,7 +7,7 @@
 - **Display Name**: Utility Core QoL
 - **Version**: 2.0.0-beta.1 (CurseForge) / 2.0.0 (NeoForge internal)
 - **NeoForge Version**: 26.2.0.37-beta
-- **Minecraft Version**: 26.2 (1.21.1)
+- **Minecraft Version**: 26.2
 - **License**: MIT
 - **Category**: Client QoL
 

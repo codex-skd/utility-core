@@ -107,7 +107,7 @@ dataPackFolder.path = "datapacks"
 
 <table>
   <tr><th>Requirement</th><th>Version</th></tr>
-  <tr><td>Minecraft</td><td>26.2 (1.21.1)</td></tr>
+  <tr><td>Minecraft</td><td>26.2</td></tr>
   <tr><td>NeoForge</td><td>26.2.0.37-beta+</td></tr>
 </table>
 
