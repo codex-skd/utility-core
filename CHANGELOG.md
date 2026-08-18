@@ -2,6 +2,31 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+
+## [Admin] 2.2.3
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_admin-26.2-neoforge-26.2.0.45-beta-2.2.3.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [Fixes] 2.3.5
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.45-beta-2.3.5.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [QoL] 2.2.5
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_qol-26.2-neoforge-26.2.0.45-beta-2.2.5.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
 ## [Fixes] 2.3.4
 - Fix: **mixin del whitelist de vehículos no aplicaba en 26.2 (`InvalidMixinException` al arrancar)** — el `@Redirect` acotado sobre `isSingleplayerOwner()` dentro de `handleMoveVehicle` era correcto, pero el `@Shadow` declarado para llamar al método original fallaba: en 26.2 `isSingleplayerOwner()` se movió de `ServerGamePacketListenerImpl` a su superclase `ServerCommonPacketListenerImpl`, y Mixin no puede resolver `@Shadow` contra una superclase no registrada en su ClassInfo tracker. El mixin completo se descartaba con `InvalidMixinException: @Shadow method isSingleplayerOwner()Z was not located in the target class`, así que la whitelist quedaba desactivada en silencio. Reemplazado el `@Shadow` por un mixin `@Invoker` sobre `ServerCommonPacketListenerImpl` (`InvokerServerCommonPacketListenerImpl`), registrado en la sección `server` de `utility_core_fixes.mixins.json`; el handler del redirect ahora hace fallback a través de ese invoker.
 
