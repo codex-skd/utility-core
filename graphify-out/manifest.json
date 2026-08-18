@@ -35,13 +35,13 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1786984201.914016,
-    "ast_hash": "5e5a690aa0207a8116fe7ec3f27aa212",
+    "mtime": 1787048384.7212253,
+    "ast_hash": "af89fe0d208395276def8fbcd6b342d8",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785754157.631796,
-    "ast_hash": "dc429717ba849edf9f45cda9650c740e",
+    "mtime": 1787043355.904034,
+    "ast_hash": "d33440e41cf85969e65775ebbb0d62c7",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1786983859.1219516,
-    "ast_hash": "4ee3927fb31a0fbf2a1c9ee3dbb6596a",
+    "mtime": 1786984757.7839468,
+    "ast_hash": "ab28dff2a20c62f1fbb5bac5ec55004c",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/resources/utility_core_fixes.mixins.json": {
-    "mtime": 1786983064.974348,
-    "ast_hash": "17d66b2ced71bf4bdba6a354dc57289e",
+    "mtime": 1787047815.5492108,
+    "ast_hash": "9947e3b4cdf9b462fa8a4938b9daf1bd",
     "semantic_hash": ""
   },
   "qol/build.gradle": {
@@ -690,23 +690,23 @@
     "semantic_hash": ""
   },
   "docs/CURSEFORGE_ADMIN.md": {
-    "mtime": 1786441925.6846733,
-    "ast_hash": "90fcf3dc3850b36e008fbe4da9d21c3e",
+    "mtime": 1787044891.0068688,
+    "ast_hash": "bdd4bbbfb4b95f420e04f3466d7071a0",
     "semantic_hash": ""
   },
   "docs/CURSEFORGE_FIXES.md": {
-    "mtime": 1786441876.3574429,
-    "ast_hash": "1f69e2b291f296d0188aade4abdb75d1",
+    "mtime": 1787044891.0158691,
+    "ast_hash": "684b4c82d28fb0d75d541afc4598af8d",
     "semantic_hash": ""
   },
   "docs/CURSEFORGE_QOL.md": {
-    "mtime": 1786441947.6186204,
-    "ast_hash": "3337127c21b3e6eaf2700cdf54e343d9",
+    "mtime": 1787044891.0268717,
+    "ast_hash": "6c5ffb744ba08c5499b5c2d8f28ff588",
     "semantic_hash": ""
   },
   "docs/CURSEFORGE_SUMMARY.md": {
-    "mtime": 1786441993.4897163,
-    "ast_hash": "c62b7267cd529490ae82baf2dbfa1cd2",
+    "mtime": 1787044891.0914426,
+    "ast_hash": "85f6b0031a2ab4746a972a8da5595d01",
     "semantic_hash": ""
   },
   "docs/ICON_PROMPTS.md": {
@@ -715,18 +715,18 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_admin.md": {
-    "mtime": 1786444074.9128523,
-    "ast_hash": "ec05e8dfb029d1157c228ae207800960",
+    "mtime": 1787044883.5404682,
+    "ast_hash": "742d94ac8cd9634dbb89240ba0f954e0",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_fixes.md": {
-    "mtime": 1786958923.6247766,
-    "ast_hash": "9e823bbe0feb91dcc88934dee83825d2",
+    "mtime": 1787044880.1544645,
+    "ast_hash": "9321ef2d5545088a50c0c04520f7d346",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_qol.md": {
-    "mtime": 1786444129.1693254,
-    "ast_hash": "d2f2db52d78fae7815ac9ca8d4f5b2dd",
+    "mtime": 1787044882.97461,
+    "ast_hash": "b6db012db124ce6b2932d90fdadb7493",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/2.0.0-beta.1_admin.md": {
@@ -810,8 +810,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinVehicleAntiCheatWhitelist.java": {
-    "mtime": 1786957844.7755146,
-    "ast_hash": "9f29a0788e0c85dceeef762e539d92d6",
+    "mtime": 1787047838.396041,
+    "ast_hash": "58c1b9493b32eb3b3038775452eaccd0",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/2.1.1.md": {
@@ -907,6 +907,21 @@
   "docs/curseforge/versions/2.3.2_fixes.md": {
     "mtime": 1786984196.8760614,
     "ast_hash": "5249e11915cd7c637486c54604ab80ec",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/InvokerServerCommonPacketListenerImpl.java": {
+    "mtime": 1787047812.8582428,
+    "ast_hash": "2f3edf0693fb2e72889cf84e66d507e1",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.3_fixes.md": {
+    "mtime": 1787044189.8756135,
+    "ast_hash": "c61bb644abbb0158ec9a895c7850c097",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.4_fixes.md": {
+    "mtime": 1787048388.409259,
+    "ast_hash": "e23f511e6f866bb8fbb8a5a9cac8c2df",
     "semantic_hash": ""
   }
 }

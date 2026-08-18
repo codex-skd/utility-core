@@ -106,16 +106,5 @@
   "104": "MixinLevelChunk.java",
   "105": "SpecialHandlers.java",
   "106": "MixinLootItemEntityPropertyCondition.java",
-  "107": "PathTraversalHandler.java",
-  "108": "Render.java",
-  "109": "SpecialBridgingItemHandler.java",
-  "110": ".renderTracedViewPath",
-  "111": "GameSupport.java",
-  "112": "Bridge.java",
-  "113": "BridgingPreContext",
-  "114": "PlacementAlignment.java",
-  "115": "CubeRenderTask",
-  "116": "BridgingKeyMappings",
-  "117": "InfoStrings.java",
   "118": "2.3.2_fixes.md"
 }
