@@ -2,6 +2,9 @@
 
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
+## [Fixes] 2.3.3
+- Fix: **whitelist del anti-cheat vanilla "moved too quickly" de vehículos no funcionaba en 1.21.6** — el fix interceptaba `isVehicleMovingTooFast` y `checkVehicleMovement` en `ServerGamePacketListenerImpl`, pero esos métodos se eliminaron en 1.21.6: el check quedó inline dentro de `handleMoveVehicle` (`if (movedSqr - velLenSqr > 100.0 && !isSingleplayerOwner())`), así que los targets del mixin ya no existían y la whitelist nunca se aplicaba. Reescrito como `@Redirect` acotado sobre la única llamada a `isSingleplayerOwner()` dentro de `handleMoveVehicle`: si el vehículo raíz del jugador está whitelisteado devuelve `true` y se salta el check solo para ese vehículo, sin tocar los demás usos del método (checks de movimiento de jugador, permisos de dificultad/gamemode). `defaultRequire` vuelto a `1` (target verificado contra `minecraft-server-patched-26.2.0.45-beta.jar`).
+
 ## [Fixes] 2.3.2
 - Fix: **crash del servidor al morir con un curio encantado equipado** — el mixin de Curios sobre `NbtPredicate.getEntityTagToCompare` fusiona el inventario de Curios en el NBT comparado por predicados de loot table/advancement; si un curio equipado está encantado, esa serialización necesita acceso al registro `minecraft:enchantment`, que no está disponible en ese contexto y lanza `IllegalStateException: Can't access registry ResourceKey[minecraft:root / minecraft:enchantment]`, sin capturar, tumbando el servidor (p. ej. al morir por una flecha con drops de muerte). Ahora se captura esa excepción en `LootItemEntityPropertyCondition.test` y el predicado simplemente falla en vez de crashear. Nuevo toggle de config `enableCuriosLootPredicateFix` (activado por defecto).
 
