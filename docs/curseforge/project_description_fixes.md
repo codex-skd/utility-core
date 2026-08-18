@@ -19,6 +19,12 @@
 <h3>Vehicle Anti-Cheat Whitelist</h3>
 <p>Allows configurable whitelisting of entity types from vanilla's <code>moved too quickly</code> vehicle anti-cheat. Prevents spam of warnings like <code>entity.evilcraft.broom (vehicle of X) moved too quickly!</code> by hooking the inline vehicle check inside <code>ServerGamePacketListenerImpl.handleMoveVehicle</code> (the dedicated <code>isVehicleMovingTooFast</code> / <code>checkVehicleMovement</code> methods no longer exist in 26.2). Configure via <code>vehicleAntiCheatWhitelist</code> (default: <code>["evilcraft:broom"]</code>).</p>
 
+<h3>Curios Loot Predicate Crash Fix</h3>
+<p>Prevents a server crash caused by Curios API's NBT merging during loot table predicate evaluation. Fixes <code>MixinLootItemEntityPropertyCondition</code> so entity type predicates no longer trip the Curios integration when items are being merged. Requires Curios to be present, but the mod does not hard-depend on it.</p>
+
+<h3>Block Entity Mismatch Fix</h3>
+<p>Prevents crashes from stale block entity NBT by removing orphaned block entity data when a block/entity type mismatch is detected on chunk load (e.g., after a mod that changed block entity types is removed).</p>
+
 <h3>Corail Tombstone Compatibility</h3>
 <ul>
   <li><strong>GUI Scale Fix</strong> — Prevents Corail Tombstone from forcing GUI scale to 4 when opening its menus; restores your configured scale on close</li>
@@ -46,6 +52,8 @@ enableTombstoneErrorHandler = true
 # General fixes
 enableNegativeDamageFix = true
 enableOutpostZeroDamageCap = true
+enableBlockentityMismatchFix = true
+enableCuriosLootPredicateFix = true
 
 # Vehicle anti-cheat whitelist
 enableVehicleAntiCheatWhitelist = true
@@ -58,7 +66,7 @@ vehicleAntiCheatWhitelist = ["evilcraft:broom"]
 
 <table>
   <tr><th>Requirement</th><th>Version</th></tr>
-  <tr><td>Minecraft</td><td>26.2 (1.21.1)</td></tr>
+  <tr><td>Minecraft</td><td>26.2</td></tr>
   <tr><td>NeoForge</td><td>26.2.0.37-beta+</td></tr>
 </table>
 
@@ -66,6 +74,7 @@ vehicleAntiCheatWhitelist = ["evilcraft:broom"]
 <ul>
   <li>Corail Tombstone</li>
   <li>OutpostZero</li>
+  <li>Curios API</li>
   <li>EvilCraft (for vehicle anti-cheat whitelist)</li>
 </ul>
 
