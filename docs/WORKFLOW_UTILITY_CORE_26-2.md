@@ -13,7 +13,37 @@
 | Clase principal | `UtilityCore` |
 | Display name (Title Case) | `Utility Core` |
 | Versiones de Minecraft | `26.1.2 y 26.2` |
-| Rama | `minecraft/26.2/neoforge-26.2.0.32-beta/production` |
+| Rama | `minecraft/26.2/neoforge-26.2.0.45-beta/production` |
+
+
+## Sub-módulos (versionado independiente)
+
+### Admin
+
+| Dato | Valor |
+|---|---|
+| Mod ID | `utility_core_admin` |
+| Display name | `Utility Core Admin` |
+| Versión actual | `2.2.3` (CurseForge file ID TBD) |
+| Estado | ✅ Release estable 2.2.3 |
+
+### Fixes
+
+| Dato | Valor |
+|---|---|
+| Mod ID | `utility_core_fixes` |
+| Display name | `Utility Core Fixes` |
+| Versión actual | `2.3.5` (CurseForge file ID TBD) |
+| Estado | ✅ Release estable 2.3.5 |
+
+### QoL
+
+| Dato | Valor |
+|---|---|
+| Mod ID | `utility_core_qol` |
+| Display name | `Utility Core QoL` |
+| Versión actual | `2.2.5` (CurseForge file ID TBD) |
+| Estado | ✅ Release estable 2.2.5 |
 
 ## Convenciones de nomenclatura
 
@@ -55,7 +85,7 @@ Cada subida a CurseForge crea tag por mod: beta `<mc>-neoforge-<mod>-beta.X` · 
 **1. Desarrollo**
 
 ```bash
-git checkout minecraft/26.2/neoforge-26.2.0.32-beta/production
+git checkout minecraft/26.2/neoforge-26.2.0.45-beta/production
 ./gradlew.bat build
 git add -A
 git commit -m "feat: <descripción>
