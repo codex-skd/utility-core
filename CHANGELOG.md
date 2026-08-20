@@ -3,6 +3,33 @@
 > A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
 
+## [Admin] 2.3.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_admin-26.2-neoforge-26.2.0.57-2.3.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+
+## [Fixes] 2.4.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Supresión de logs**: el fallback de `IllegalStateException` en el predicado de loot ahora registra una vez y suprime repeticiones (un resumen cada 200 ocurrencias) en lugar de saturar el log del servidor.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.4.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+
+## [QoL] 2.3.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_qol-26.2-neoforge-26.2.0.57-2.3.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
 ## [Admin] 2.2.3
 
 ### Change

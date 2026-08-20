@@ -46,7 +46,7 @@ release_type = release
 |----------|-------|
 | `minecraft_version` | `26.2` |
 | `framework` | `neoforge` |
-| `neo_version` | `26.2.0.45-beta` |
+| `neo_version` | `26.2.0.57` |
 | `java_version` | `21` |
 | `admin_version` / `fixes_version` / `qol_version` | Independientes por mod, en `gradle.properties` (raíz) — no hay `mod_version` compartido |
 | `environment` | `Client`, `Server` (Fixes/Admin) / `Client` primary + Server sync (QoL) |
@@ -56,13 +56,13 @@ release_type = release
 ## Estructura de Archivos por Mod
 
 ```
-fixes/build/libs/utility_core_fixes-26.2-neoforge-26.2.0.45-beta-<fixes_version>.jar
-admin/build/libs/utility_core_admin-26.2-neoforge-26.2.0.45-beta-<admin_version>.jar
-qol/build/libs/utility_core_qol-26.2-neoforge-26.2.0.45-beta-<qol_version>.jar
+fixes/build/libs/utility_core_fixes-26.2-neoforge-26.2.0.57-<fixes_version>.jar
+admin/build/libs/utility_core_admin-26.2-neoforge-26.2.0.57-<admin_version>.jar
+qol/build/libs/utility_core_qol-26.2-neoforge-26.2.0.57-<qol_version>.jar
 ```
 
 ### Nomenclatura JAR
-`utility_core_<mod>-<mc>-neoforge-<neo_version>-<mod_version>.jar` (ej: `utility_core_fixes-26.2-neoforge-26.2.0.45-beta-2.2.1.jar`)
+`utility_core_<mod>-<mc>-neoforge-<neo_version>-<mod_version>.jar` (ej: `utility_core_fixes-26.2-neoforge-26.2.0.57-2.2.1.jar`)
 
 ---
 
