@@ -120,7 +120,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_utilitycoreadmin_utilitycoreadmin_onserverstarted",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onserverstarted()"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstartedevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "serverstartedevent"
     },
     {
@@ -1770,7 +1770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler",
-      "community": 26,
+      "community": 17,
       "norm_label": "spawnprotectionhandler.java"
     },
     {
@@ -1780,7 +1780,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler",
-      "community": 26,
+      "community": 17,
       "norm_label": "spawnprotectionhandler"
     },
     {
@@ -1790,7 +1790,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_java_eventbussubscriber",
-      "community": 26,
+      "community": 17,
       "norm_label": "eventbussubscriber"
     },
     {
@@ -1800,7 +1800,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_isoverworld",
-      "community": 26,
+      "community": 17,
       "norm_label": ".isoverworld()"
     },
     {
@@ -1810,7 +1810,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "blockevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "blockevent"
     },
     {
@@ -1820,7 +1820,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_warnprotected",
-      "community": 26,
+      "community": 17,
       "norm_label": ".warnprotected()"
     },
     {
@@ -1830,7 +1830,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_java_player",
-      "community": 26,
+      "community": 17,
       "norm_label": "player"
     },
     {
@@ -1840,7 +1840,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_java_blockpos",
-      "community": 26,
+      "community": 17,
       "norm_label": "blockpos"
     },
     {
@@ -1850,7 +1850,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_onblockbreak",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onblockbreak()"
     },
     {
@@ -1860,7 +1860,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "breakblockevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "breakblockevent"
     },
     {
@@ -1870,7 +1870,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_java_subscribeevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "subscribeevent"
     },
     {
@@ -1880,7 +1880,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_onblockplace",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onblockplace()"
     },
     {
@@ -1890,7 +1890,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entityplaceevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "entityplaceevent"
     },
     {
@@ -1900,7 +1900,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_onmultiplace",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onmultiplace()"
     },
     {
@@ -1910,7 +1910,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entitymultiplaceevent",
-      "community": 26,
+      "community": 17,
       "norm_label": "entitymultiplaceevent"
     },
     {
@@ -1920,7 +1920,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_onexplosion",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onexplosion()"
     },
     {
@@ -1930,7 +1930,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "detonate",
-      "community": 26,
+      "community": 17,
       "norm_label": "detonate"
     },
     {
@@ -1940,7 +1940,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnprotectionhandler_spawnprotectionhandler_onspawnplacementcheck",
-      "community": 26,
+      "community": 17,
       "norm_label": ".onspawnplacementcheck()"
     },
     {
@@ -1950,7 +1950,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "spawnplacementcheck",
-      "community": 26,
+      "community": 17,
       "norm_label": "spawnplacementcheck"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnschematicmanager_spawnschematicmanager_getinstance",
-      "community": 26,
+      "community": 17,
       "norm_label": ".getinstance()"
     },
     {
@@ -2080,7 +2080,7 @@
       "source_location": "L181",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_schematic_spawnschematicmanager_spawnschematicmanager_iswithinbounds",
-      "community": 26,
+      "community": 17,
       "norm_label": ".iswithinbounds()"
     },
     {
@@ -2720,7 +2720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat",
-      "community": 55,
+      "community": 5,
       "norm_label": "outpostzerocompat.java"
     },
     {
@@ -2730,7 +2730,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_outpostzerocompat",
-      "community": 55,
+      "community": 5,
       "norm_label": "outpostzerocompat"
     },
     {
@@ -2740,7 +2740,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_java_eventbussubscriber",
-      "community": 55,
+      "community": 5,
       "norm_label": "eventbussubscriber"
     },
     {
@@ -2750,7 +2750,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_java_resourcekey",
-      "community": 55,
+      "community": 5,
       "norm_label": "resourcekey"
     },
     {
@@ -2760,7 +2760,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "damagetype",
-      "community": 55,
+      "community": 5,
       "norm_label": "damagetype"
     },
     {
@@ -2770,7 +2770,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_outpostzerocompat_isconfigloaded",
-      "community": 55,
+      "community": 5,
       "norm_label": ".isconfigloaded()"
     },
     {
@@ -2780,7 +2780,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_java_unique",
-      "community": 55,
+      "community": 5,
       "norm_label": "unique"
     },
     {
@@ -2790,7 +2790,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_outpostzerocompat_isoutpostzerocapenabled",
-      "community": 55,
+      "community": 5,
       "norm_label": ".isoutpostzerocapenabled()"
     },
     {
@@ -2800,7 +2800,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_outpostzerocompat_onlivingdamagepre",
-      "community": 55,
+      "community": 5,
       "norm_label": ".onlivingdamagepre()"
     },
     {
@@ -2810,7 +2810,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_java_pre",
-      "community": 55,
+      "community": 5,
       "norm_label": "pre"
     },
     {
@@ -2820,7 +2820,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_compat_outpostzerocompat_java_subscribeevent",
-      "community": 55,
+      "community": 5,
       "norm_label": "subscribeevent"
     },
     {
@@ -3277,7 +3277,7 @@
       "label": "MixinLootItemEntityPropertyCondition",
       "file_type": "code",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L16",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
       "community": 106,
@@ -3307,7 +3307,7 @@
       "label": ".isConfigLoaded()",
       "file_type": "code",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L20",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_isconfigloaded",
       "community": 106,
@@ -3327,7 +3327,7 @@
       "label": ".isCuriosLootPredicateFixEnabled()",
       "file_type": "code",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L29",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
       "community": 106,
@@ -3337,7 +3337,7 @@
       "label": ".utility_core$redirectEntityPredicateMatches()",
       "file_type": "code",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
       "community": 106,
@@ -3400,7 +3400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen",
-      "community": 5,
+      "community": 56,
       "norm_label": "mixintbscreen.java"
     },
     {
@@ -3410,7 +3410,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen",
-      "community": 5,
+      "community": 56,
       "norm_label": "mixintbscreen"
     },
     {
@@ -3420,7 +3420,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_java_mixin",
-      "community": 5,
+      "community": 56,
       "norm_label": "mixin"
     },
     {
@@ -3430,7 +3430,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen_utilitycore_istombstonescreen",
-      "community": 5,
+      "community": 56,
       "norm_label": ".utilitycore$istombstonescreen()"
     },
     {
@@ -3440,7 +3440,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "screen",
-      "community": 5,
+      "community": 56,
       "norm_label": "screen"
     },
     {
@@ -3450,7 +3450,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_java_unique",
-      "community": 5,
+      "community": 56,
       "norm_label": "unique"
     },
     {
@@ -3460,7 +3460,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen_isconfigloaded",
-      "community": 5,
+      "community": 56,
       "norm_label": ".isconfigloaded()"
     },
     {
@@ -3470,7 +3470,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen_isguiscalefixenabled",
-      "community": 5,
+      "community": 56,
       "norm_label": ".isguiscalefixenabled()"
     },
     {
@@ -3480,7 +3480,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen_onscreeninit",
-      "community": 5,
+      "community": 56,
       "norm_label": ".onscreeninit()"
     },
     {
@@ -3490,7 +3490,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_java_callbackinfo",
-      "community": 5,
+      "community": 56,
       "norm_label": "callbackinfo"
     },
     {
@@ -3500,7 +3500,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_java_inject",
-      "community": 5,
+      "community": 56,
       "norm_label": "inject"
     },
     {
@@ -3510,7 +3510,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixintbscreen_mixintbscreen_onscreenremoved",
-      "community": 5,
+      "community": 56,
       "norm_label": ".onscreenremoved()"
     },
     {
@@ -3926,7 +3926,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency",
-      "community": 39,
+      "community": 114,
       "norm_label": "bridgingadjacency.java"
     },
     {
@@ -3936,7 +3936,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency",
-      "community": 39,
+      "community": 114,
       "norm_label": "bridgingadjacency"
     },
     {
@@ -3946,7 +3946,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_none",
-      "community": 39,
+      "community": 114,
       "norm_label": "none"
     },
     {
@@ -3956,7 +3956,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_corners",
-      "community": 39,
+      "community": 114,
       "norm_label": "corners"
     },
     {
@@ -3966,7 +3966,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_edges",
-      "community": 39,
+      "community": 114,
       "norm_label": "edges"
     },
     {
@@ -3976,7 +3976,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_full",
-      "community": 39,
+      "community": 114,
       "norm_label": "full"
     },
     {
@@ -3986,7 +3986,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig",
-      "community": 39,
+      "community": 70,
       "norm_label": "bridgingconfig.java"
     },
     {
@@ -3996,7 +3996,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_bridgingconfig",
-      "community": 39,
+      "community": 112,
       "norm_label": "bridgingconfig"
     },
     {
@@ -4006,7 +4006,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_java_builder",
-      "community": 39,
+      "community": 112,
       "norm_label": "builder"
     },
     {
@@ -4016,7 +4016,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_java_booleanvalue",
-      "community": 39,
+      "community": 112,
       "norm_label": "booleanvalue"
     },
     {
@@ -4026,7 +4026,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "doublevalue",
-      "community": 39,
+      "community": 112,
       "norm_label": "doublevalue"
     },
     {
@@ -4036,7 +4036,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_java_enumvalue",
-      "community": 39,
+      "community": 112,
       "norm_label": "enumvalue"
     },
     {
@@ -4046,7 +4046,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_java_intvalue",
-      "community": 39,
+      "community": 112,
       "norm_label": "intvalue"
     },
     {
@@ -4056,7 +4056,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig_java_modconfigspec",
-      "community": 39,
+      "community": 112,
       "norm_label": "modconfigspec"
     },
     {
@@ -4066,7 +4066,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings",
-      "community": 4,
+      "community": 113,
       "norm_label": "bridgingkeymappings.java"
     },
     {
@@ -4076,7 +4076,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings",
-      "community": 4,
+      "community": 113,
       "norm_label": "bridgingkeymappings"
     },
     {
@@ -4086,7 +4086,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "keymapping",
-      "community": 4,
+      "community": 113,
       "norm_label": "keymapping"
     },
     {
@@ -4096,7 +4096,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "category",
-      "community": 4,
+      "community": 113,
       "norm_label": "category"
     },
     {
@@ -4106,7 +4106,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings_definemapping",
-      "community": 4,
+      "community": 113,
       "norm_label": ".definemapping()"
     },
     {
@@ -4116,7 +4116,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingkeymappings_bridgingkeymappings_foreachkeybindingdo",
-      "community": 4,
+      "community": 113,
       "norm_label": ".foreachkeybindingdo()"
     },
     {
@@ -4126,7 +4126,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_modids",
-      "community": 11,
+      "community": 108,
       "norm_label": "modids.java"
     },
     {
@@ -4136,7 +4136,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_modids_modids",
-      "community": 11,
+      "community": 108,
       "norm_label": "modids"
     },
     {
@@ -4226,7 +4226,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride",
-      "community": 39,
+      "community": 111,
       "norm_label": "placementaxismodeoverride.java"
     },
     {
@@ -4236,7 +4236,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride",
-      "community": 39,
+      "community": 111,
       "norm_label": "placementaxismodeoverride"
     },
     {
@@ -4246,7 +4246,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_fallback",
-      "community": 39,
+      "community": 111,
       "norm_label": "fallback"
     },
     {
@@ -4256,7 +4256,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_none",
-      "community": 39,
+      "community": 111,
       "norm_label": "none"
     },
     {
@@ -4266,7 +4266,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_xz",
-      "community": 39,
+      "community": 111,
       "norm_label": "xz"
     },
     {
@@ -4276,7 +4276,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_y",
-      "community": 39,
+      "community": 111,
       "norm_label": "y"
     },
     {
@@ -4286,7 +4286,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_both",
-      "community": 39,
+      "community": 111,
       "norm_label": "both"
     },
     {
@@ -4296,7 +4296,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_getplacementaxismode",
-      "community": 39,
+      "community": 111,
       "norm_label": "getplacementaxismode()"
     },
     {
@@ -4306,7 +4306,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_sourceperspective",
-      "community": 39,
+      "community": 116,
       "norm_label": "sourceperspective.java"
     },
     {
@@ -4316,7 +4316,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_sourceperspective_sourceperspective",
-      "community": 39,
+      "community": 116,
       "norm_label": "sourceperspective"
     },
     {
@@ -4326,7 +4326,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_sourceperspective_sourceperspective_let_bridging_mod_decide",
-      "community": 39,
+      "community": 116,
       "norm_label": "let_bridging_mod_decide"
     },
     {
@@ -4336,7 +4336,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_sourceperspective_sourceperspective_always_eyeline",
-      "community": 39,
+      "community": 116,
       "norm_label": "always_eyeline"
     },
     {
@@ -4346,7 +4346,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_sourceperspective_sourceperspective_copy_toggle_perspective",
-      "community": 39,
+      "community": 116,
       "norm_label": "copy_toggle_perspective"
     },
     {
@@ -4356,7 +4356,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging",
-      "community": 11,
+      "community": 108,
       "norm_label": "utilitycoreqolbridging.java"
     },
     {
@@ -4366,7 +4366,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging",
-      "community": 11,
+      "community": 108,
       "norm_label": "utilitycoreqolbridging"
     },
     {
@@ -4376,7 +4376,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_noteincompatiblemod",
-      "community": 11,
+      "community": 108,
       "norm_label": ".noteincompatiblemod()"
     },
     {
@@ -4386,7 +4386,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_getcompatiblesourceperspective",
-      "community": 11,
+      "community": 108,
       "norm_label": ".getcompatiblesourceperspective()"
     },
     {
@@ -4396,7 +4396,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_id",
-      "community": 11,
+      "community": 108,
       "norm_label": ".id()"
     },
     {
@@ -4406,7 +4406,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_java_identifier",
-      "community": 11,
+      "community": 108,
       "norm_label": "identifier"
     },
     {
@@ -4416,7 +4416,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_utilitycoreqolbridging_getlogger",
-      "community": 11,
+      "community": 108,
       "norm_label": ".getlogger()"
     },
     {
@@ -4426,7 +4426,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_utilitycoreqolbridging_java_logger",
-      "community": 11,
+      "community": 108,
       "norm_label": "logger"
     },
     {
@@ -4436,7 +4436,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge",
-      "community": 4,
+      "community": 107,
       "norm_label": "bridge.java"
     },
     {
@@ -4446,7 +4446,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge",
-      "community": 4,
+      "community": 107,
       "norm_label": "bridge"
     },
     {
@@ -4456,7 +4456,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_getdefaultplaceassisttarget",
-      "community": 4,
+      "community": 107,
       "norm_label": ".getdefaultplaceassisttarget()"
     },
     {
@@ -4466,7 +4466,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_itemstack",
-      "community": 4,
+      "community": 107,
       "norm_label": "itemstack"
     },
     {
@@ -4476,7 +4476,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_level",
-      "community": 4,
+      "community": 107,
       "norm_label": "level"
     },
     {
@@ -4486,7 +4486,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_direction",
-      "community": 4,
+      "community": 107,
       "norm_label": "direction"
     },
     {
@@ -4496,7 +4496,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_blockpos",
-      "community": 4,
+      "community": 107,
       "norm_label": "blockpos"
     },
     {
@@ -4506,7 +4506,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_java_blockhitresult",
-      "community": 4,
+      "community": 107,
       "norm_label": "blockhitresult"
     },
     {
@@ -4516,7 +4516,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_handlehorizontalslabassist",
-      "community": 4,
+      "community": 107,
       "norm_label": ".handlehorizontalslabassist()"
     },
     {
@@ -4526,7 +4526,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_building_bridge_bridge_handleverticalslabassist",
-      "community": 4,
+      "community": 107,
       "norm_label": ".handleverticalslabassist()"
     },
     {
@@ -4556,7 +4556,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_groupselector",
-      "community": 4,
+      "community": 55,
       "norm_label": "groupselector.java"
     },
     {
@@ -4566,7 +4566,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_groupselector_groupselector",
-      "community": 4,
+      "community": 55,
       "norm_label": "groupselector"
     },
     {
@@ -4576,7 +4576,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_groupselector_groupselector_passes",
-      "community": 4,
+      "community": 55,
       "norm_label": ".passes()"
     },
     {
@@ -4586,7 +4586,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_groupselector_java_itemstack",
-      "community": 4,
+      "community": 55,
       "norm_label": "itemstack"
     },
     {
@@ -4596,7 +4596,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers",
-      "community": 4,
+      "community": 55,
       "norm_label": "specialhandlers.java"
     },
     {
@@ -4606,7 +4606,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers",
-      "community": 4,
+      "community": 55,
       "norm_label": "specialhandlers"
     },
     {
@@ -4616,7 +4616,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_java_identifier",
-      "community": 4,
+      "community": 55,
       "norm_label": "identifier"
     },
     {
@@ -4626,7 +4626,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_java_block",
-      "community": 4,
+      "community": 55,
       "norm_label": "block"
     },
     {
@@ -4636,7 +4636,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers_registerspecialitemhandler",
-      "community": 4,
+      "community": 55,
       "norm_label": ".registerspecialitemhandler()"
     },
     {
@@ -4646,7 +4646,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "item",
-      "community": 4,
+      "community": 55,
       "norm_label": "item"
     },
     {
@@ -4656,7 +4656,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers_registerspecialitemgrouphandler",
-      "community": 4,
+      "community": 55,
       "norm_label": ".registerspecialitemgrouphandler()"
     },
     {
@@ -4676,7 +4676,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers_getspecialitemhandler",
-      "community": 4,
+      "community": 55,
       "norm_label": ".getspecialitemhandler()"
     },
     {
@@ -4686,7 +4686,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_java_itemstack",
-      "community": 4,
+      "community": 55,
       "norm_label": "itemstack"
     },
     {
@@ -4706,7 +4706,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers_hasspecialitemhandler",
-      "community": 4,
+      "community": 55,
       "norm_label": ".hasspecialitemhandler()"
     },
     {
@@ -4716,7 +4716,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialgrouphandlerentry",
-      "community": 4,
+      "community": 55,
       "norm_label": "specialgrouphandlerentry"
     },
     {
@@ -4806,7 +4806,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler",
-      "community": 4,
+      "community": 58,
       "norm_label": "specialbridgingitemhandler.java"
     },
     {
@@ -4816,7 +4816,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_specialbridgingitemhandler",
-      "community": 4,
+      "community": 55,
       "norm_label": "specialbridgingitemhandler"
     },
     {
@@ -4836,7 +4836,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_itemstack",
-      "community": 4,
+      "community": 58,
       "norm_label": "itemstack"
     },
     {
@@ -4846,7 +4846,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_specialbridgingitemhandler_canbeplacedinworld",
-      "community": 4,
+      "community": 58,
       "norm_label": ".canbeplacedinworld()"
     },
     {
@@ -4856,7 +4856,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_player",
-      "community": 4,
+      "community": 58,
       "norm_label": "player"
     },
     {
@@ -4866,7 +4866,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_level",
-      "community": 4,
+      "community": 58,
       "norm_label": "level"
     },
     {
@@ -4876,7 +4876,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_blockpos",
-      "community": 4,
+      "community": 58,
       "norm_label": "blockpos"
     },
     {
@@ -4886,7 +4886,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_direction",
-      "community": 4,
+      "community": 58,
       "norm_label": "direction"
     },
     {
@@ -4896,7 +4896,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_specialbridgingitemhandler_place",
-      "community": 4,
+      "community": 58,
       "norm_label": ".place()"
     },
     {
@@ -4906,7 +4906,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "interactionresult",
-      "community": 4,
+      "community": 58,
       "norm_label": "interactionresult"
     },
     {
@@ -4916,7 +4916,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_specialbridgingitemhandler_generateplacementtarget",
-      "community": 4,
+      "community": 58,
       "norm_label": ".generateplacementtarget()"
     },
     {
@@ -4926,7 +4926,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingitemhandler_java_blockhitresult",
-      "community": 4,
+      "community": 58,
       "norm_label": "blockhitresult"
     },
     {
@@ -5366,7 +5366,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult",
-      "community": 11,
+      "community": 109,
       "norm_label": "bridgingresult.java"
     },
     {
@@ -5376,7 +5376,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_bridgingresult",
-      "community": 11,
+      "community": 109,
       "norm_label": "bridgingresult"
     },
     {
@@ -5386,7 +5386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_blockpos",
-      "community": 11,
+      "community": 109,
       "norm_label": "blockpos"
     },
     {
@@ -5396,7 +5396,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_direction",
-      "community": 11,
+      "community": 109,
       "norm_label": "direction"
     },
     {
@@ -5406,7 +5406,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker",
-      "community": 4,
+      "community": 70,
       "norm_label": "bridgingstatetracker.java"
     },
     {
@@ -5416,7 +5416,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker",
-      "community": 4,
+      "community": 109,
       "norm_label": "bridgingstatetracker"
     },
     {
@@ -5426,7 +5426,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getbridgeassisttargetfor",
-      "community": 4,
+      "community": 109,
       "norm_label": ".getbridgeassisttargetfor()"
     },
     {
@@ -5436,7 +5436,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_player",
-      "community": 4,
+      "community": 109,
       "norm_label": "player"
     },
     {
@@ -5446,7 +5446,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_tick",
-      "community": 4,
+      "community": 109,
       "norm_label": ".tick()"
     },
     {
@@ -5456,7 +5456,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_localplayer",
-      "community": 4,
+      "community": 109,
       "norm_label": "localplayer"
     },
     {
@@ -5466,7 +5466,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getlastticktarget",
-      "community": 10,
+      "community": 109,
       "norm_label": ".getlastticktarget()"
     },
     {
@@ -5736,7 +5736,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment",
-      "community": 10,
+      "community": 110,
       "norm_label": "placementalignment.java"
     },
     {
@@ -5746,7 +5746,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment",
-      "community": 10,
+      "community": 110,
       "norm_label": "placementalignment"
     },
     {
@@ -5756,7 +5756,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_up",
-      "community": 10,
+      "community": 110,
       "norm_label": "up"
     },
     {
@@ -5766,7 +5766,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_down",
-      "community": 10,
+      "community": 110,
       "norm_label": "down"
     },
     {
@@ -5776,7 +5776,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_horizontal",
-      "community": 10,
+      "community": 110,
       "norm_label": "horizontal"
     },
     {
@@ -5786,7 +5786,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_gettexturepath",
-      "community": 10,
+      "community": 110,
       "norm_label": "gettexturepath()"
     },
     {
@@ -5796,7 +5796,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_java_identifier",
-      "community": 10,
+      "community": 110,
       "norm_label": "identifier"
     },
     {
@@ -5806,7 +5806,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_from",
-      "community": 10,
+      "community": 110,
       "norm_label": "from()"
     },
     {
@@ -5816,7 +5816,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_java_direction",
-      "community": 10,
+      "community": 110,
       "norm_label": "direction"
     },
     {
@@ -5826,7 +5826,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport",
-      "community": 4,
+      "community": 70,
       "norm_label": "gamesupport.java"
     },
     {
@@ -5836,7 +5836,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport",
-      "community": 4,
+      "community": 70,
       "norm_label": "gamesupport"
     },
     {
@@ -5846,7 +5846,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_getreach",
-      "community": 4,
+      "community": 70,
       "norm_label": ".getreach()"
     },
     {
@@ -5856,7 +5856,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_iscontrollercrouching",
-      "community": 11,
+      "community": 70,
       "norm_label": ".iscontrollercrouching()"
     },
     {
@@ -5866,7 +5866,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_isholdingplaceable",
-      "community": 4,
+      "community": 70,
       "norm_label": ".isholdingplaceable()"
     },
     {
@@ -5876,7 +5876,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_java_player",
-      "community": 4,
+      "community": 70,
       "norm_label": "player"
     },
     {
@@ -5886,7 +5886,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_isstackplaceable",
-      "community": 4,
+      "community": 70,
       "norm_label": ".isstackplaceable()"
     },
     {
@@ -5896,7 +5896,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_java_itemstack",
-      "community": 4,
+      "community": 70,
       "norm_label": "itemstack"
     },
     {
@@ -5906,7 +5906,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport_gamesupport_passesdefaultplacementcheck",
-      "community": 4,
+      "community": 70,
       "norm_label": ".passesdefaultplacementcheck()"
     },
     {
@@ -5916,7 +5916,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings",
-      "community": 4,
+      "community": 117,
       "norm_label": "infostrings.java"
     },
     {
@@ -5926,7 +5926,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings_infostrings",
-      "community": 4,
+      "community": 117,
       "norm_label": "infostrings"
     },
     {
@@ -5936,7 +5936,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_infostrings_java_component",
-      "community": 4,
+      "community": 117,
       "norm_label": "component"
     },
     {
@@ -5946,7 +5946,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path",
-      "community": 39,
+      "community": 115,
       "norm_label": "path.java"
     },
     {
@@ -5956,7 +5956,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path",
-      "community": 39,
+      "community": 115,
       "norm_label": "path"
     },
     {
@@ -5966,7 +5966,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_vec3",
-      "community": 39,
+      "community": 115,
       "norm_label": "vec3"
     },
     {
@@ -5976,7 +5976,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatebresenhamvoxels",
-      "community": 39,
+      "community": 115,
       "norm_label": ".calculatebresenhamvoxels()"
     },
     {
@@ -5986,7 +5986,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_blockpos",
-      "community": 39,
+      "community": 115,
       "norm_label": "blockpos"
     },
     {
@@ -5996,7 +5996,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatemissedpoints",
-      "community": 39,
+      "community": 115,
       "norm_label": ".calculatemissedpoints()"
     },
     {
@@ -8420,10 +8420,130 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
+      "label": "[Admin] 2.3.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "changelog_admin_2_3_0",
+      "community": 121,
+      "norm_label": "[admin] 2.3.0"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "changelog_change",
+      "community": 121,
+      "norm_label": "change"
+    },
+    {
+      "label": "[Fixes] 2.4.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "changelog_fixes_2_4_0",
+      "community": 122,
+      "norm_label": "[fixes] 2.4.0"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "changelog_change_17",
+      "community": 122,
+      "norm_label": "change"
+    },
+    {
+      "label": "[QoL] 2.3.0",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "changelog_qol_2_3_0",
+      "community": 123,
+      "norm_label": "[qol] 2.3.0"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "changelog_change_27",
+      "community": 123,
+      "norm_label": "change"
+    },
+    {
+      "label": "[Admin] 2.2.3",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "changelog_admin_2_2_3",
+      "community": 120,
+      "norm_label": "[admin] 2.2.3"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "changelog_change_35",
+      "community": 120,
+      "norm_label": "change"
+    },
+    {
+      "label": "[Fixes] 2.3.5",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "changelog_fixes_2_3_5",
+      "community": 124,
+      "norm_label": "[fixes] 2.3.5"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "changelog_change_43",
+      "community": 124,
+      "norm_label": "change"
+    },
+    {
+      "label": "[QoL] 2.2.5",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "changelog_qol_2_2_5",
+      "community": 125,
+      "norm_label": "[qol] 2.2.5"
+    },
+    {
+      "label": "Change",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "changelog_change_51",
+      "community": 125,
+      "norm_label": "change"
+    },
+    {
       "label": "[Fixes] 2.3.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_4",
       "community": 20,
@@ -8433,7 +8553,7 @@
       "label": "[Fixes] 2.3.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L8",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_3",
       "community": 20,
@@ -8443,7 +8563,7 @@
       "label": "[Fixes] 2.3.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L11",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_2",
       "community": 20,
@@ -8453,7 +8573,7 @@
       "label": "[QoL] 2.2.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L14",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "changelog_qol_2_2_4",
       "community": 20,
@@ -8463,7 +8583,7 @@
       "label": "[QoL] 2.2.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "changelog_qol_2_2_3",
       "community": 20,
@@ -8473,7 +8593,7 @@
       "label": "[Fixes] 2.3.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_1",
       "community": 20,
@@ -8483,7 +8603,7 @@
       "label": "[Fixes] 2.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L23",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_0",
       "community": 20,
@@ -8493,7 +8613,7 @@
       "label": "[Admin] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L26",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "changelog_admin_2_2_2",
       "community": 20,
@@ -8503,7 +8623,7 @@
       "label": "[Fixes] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "changelog_fixes_2_2_2",
       "community": 20,
@@ -8513,7 +8633,7 @@
       "label": "[QoL] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L28",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "changelog_qol_2_2_2",
       "community": 20,
@@ -8523,7 +8643,7 @@
       "label": "2.2.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "changelog_2_2_1",
       "community": 20,
@@ -8533,7 +8653,7 @@
       "label": "2.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L34",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "changelog_2_2_0",
       "community": 20,
@@ -8543,7 +8663,7 @@
       "label": "2.1.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "changelog_2_1_2",
       "community": 20,
@@ -8553,7 +8673,7 @@
       "label": "2.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L42",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "changelog_2_1_0",
       "community": 20,
@@ -8563,27 +8683,27 @@
       "label": "[2.1.1] - 2026-08-12",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "changelog_2_1_1_2026_08_12",
-      "community": 20,
+      "community": 119,
       "norm_label": "[2.1.1] - 2026-08-12"
     },
     {
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L46",
+      "source_location": "L98",
       "_origin": "ast",
-      "id": "changelog_change",
-      "community": 20,
+      "id": "changelog_change_98",
+      "community": 119,
       "norm_label": "change"
     },
     {
       "label": "1.11.13",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "changelog_1_11_13",
       "community": 20,
@@ -8593,7 +8713,7 @@
       "label": "1.11.12",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L64",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "changelog_1_11_12",
       "community": 20,
@@ -8603,7 +8723,7 @@
       "label": "1.11.11",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L69",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "changelog_1_11_11",
       "community": 20,
@@ -8613,7 +8733,7 @@
       "label": "1.11.10",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L72",
+      "source_location": "L124",
       "_origin": "ast",
       "id": "changelog_1_11_10",
       "community": 20,
@@ -8623,7 +8743,7 @@
       "label": "1.11.9",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L75",
+      "source_location": "L127",
       "_origin": "ast",
       "id": "changelog_1_11_9",
       "community": 20,
@@ -8633,7 +8753,7 @@
       "label": "1.11.8",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L78",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "changelog_1_11_8",
       "community": 20,
@@ -8643,7 +8763,7 @@
       "label": "1.11.7",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L81",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "changelog_1_11_7",
       "community": 20,
@@ -8653,7 +8773,7 @@
       "label": "1.11.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L84",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "changelog_1_11_6",
       "community": 20,
@@ -8663,7 +8783,7 @@
       "label": "1.11.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L88",
+      "source_location": "L140",
       "_origin": "ast",
       "id": "changelog_1_11_5",
       "community": 20,
@@ -8673,7 +8793,7 @@
       "label": "1.11.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L91",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "changelog_1_11_4",
       "community": 20,
@@ -8683,7 +8803,7 @@
       "label": "1.11.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L94",
+      "source_location": "L146",
       "_origin": "ast",
       "id": "changelog_1_11_3",
       "community": 20,
@@ -8693,7 +8813,7 @@
       "label": "1.11.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L97",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "changelog_1_11_2",
       "community": 20,
@@ -8703,7 +8823,7 @@
       "label": "1.11.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L100",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "changelog_1_11_1",
       "community": 20,
@@ -8713,7 +8833,7 @@
       "label": "1.11.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L103",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "changelog_1_11_0",
       "community": 20,
@@ -8723,7 +8843,7 @@
       "label": "1.10.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L106",
+      "source_location": "L158",
       "_origin": "ast",
       "id": "changelog_1_10_0",
       "community": 20,
@@ -8733,7 +8853,7 @@
       "label": "1.9.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L109",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "changelog_1_9_0",
       "community": 20,
@@ -8743,7 +8863,7 @@
       "label": "1.8.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L112",
+      "source_location": "L164",
       "_origin": "ast",
       "id": "changelog_1_8_0",
       "community": 20,
@@ -8753,7 +8873,7 @@
       "label": "1.7.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L115",
+      "source_location": "L167",
       "_origin": "ast",
       "id": "changelog_1_7_0",
       "community": 20,
@@ -8763,7 +8883,7 @@
       "label": "1.6.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L118",
+      "source_location": "L170",
       "_origin": "ast",
       "id": "changelog_1_6_0",
       "community": 20,
@@ -8773,7 +8893,7 @@
       "label": "1.5.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L121",
+      "source_location": "L173",
       "_origin": "ast",
       "id": "changelog_1_5_0",
       "community": 20,
@@ -8783,7 +8903,7 @@
       "label": "1.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L124",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "changelog_1_4_0",
       "community": 20,
@@ -8793,7 +8913,7 @@
       "label": "1.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L127",
+      "source_location": "L179",
       "_origin": "ast",
       "id": "changelog_1_3_0",
       "community": 20,
@@ -8803,7 +8923,7 @@
       "label": "1.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L130",
+      "source_location": "L182",
       "_origin": "ast",
       "id": "changelog_1_2_0",
       "community": 20,
@@ -8813,7 +8933,7 @@
       "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "changelog_1_1_0",
       "community": 20,
@@ -8823,7 +8943,7 @@
       "label": "1.0.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L188",
       "_origin": "ast",
       "id": "changelog_1_0_0",
       "community": 20,
@@ -8948,296 +9068,6 @@
       "id": "readme_credits",
       "community": 13,
       "norm_label": "credits"
-    },
-    {
-      "label": "CURSEFORGE_ADMIN.md",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin",
-      "community": 58,
-      "norm_label": "curseforge_admin.md"
-    },
-    {
-      "label": "Utility Core Admin - CurseForge Documentation",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "community": 58,
-      "norm_label": "utility core admin - curseforge documentation"
-    },
-    {
-      "label": "Project Info",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_project_info",
-      "community": 58,
-      "norm_label": "project info"
-    },
-    {
-      "label": "Description (Long)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_description_long",
-      "community": 58,
-      "norm_label": "description (long)"
-    },
-    {
-      "label": "Features",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_features",
-      "community": 58,
-      "norm_label": "features"
-    },
-    {
-      "label": "Commands",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_commands",
-      "community": 58,
-      "norm_label": "commands"
-    },
-    {
-      "label": "Configuration",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_configuration",
-      "community": 58,
-      "norm_label": "configuration"
-    },
-    {
-      "label": "Spawn Schematic File",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L91",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_spawn_schematic_file",
-      "community": 58,
-      "norm_label": "spawn schematic file"
-    },
-    {
-      "label": "Requirements",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_requirements",
-      "community": 58,
-      "norm_label": "requirements"
-    },
-    {
-      "label": "Changelog (2.0.0-beta.1)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L105",
-      "_origin": "ast",
-      "id": "docs_curseforge_admin_changelog_2_0_0_beta_1",
-      "community": 58,
-      "norm_label": "changelog (2.0.0-beta.1)"
-    },
-    {
-      "label": "CURSEFORGE_FIXES.md",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes",
-      "community": 70,
-      "norm_label": "curseforge_fixes.md"
-    },
-    {
-      "label": "Utility Core Fixes - CurseForge Documentation",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "community": 70,
-      "norm_label": "utility core fixes - curseforge documentation"
-    },
-    {
-      "label": "Project Info",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_project_info",
-      "community": 70,
-      "norm_label": "project info"
-    },
-    {
-      "label": "Description (Long)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_description_long",
-      "community": 70,
-      "norm_label": "description (long)"
-    },
-    {
-      "label": "Features",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_features",
-      "community": 70,
-      "norm_label": "features"
-    },
-    {
-      "label": "Configuration",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_configuration",
-      "community": 70,
-      "norm_label": "configuration"
-    },
-    {
-      "label": "Compatibility",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_compatibility",
-      "community": 70,
-      "norm_label": "compatibility"
-    },
-    {
-      "label": "Changelog (2.0.0-beta.1)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L57",
-      "_origin": "ast",
-      "id": "docs_curseforge_fixes_changelog_2_0_0_beta_1",
-      "community": 70,
-      "norm_label": "changelog (2.0.0-beta.1)"
-    },
-    {
-      "label": "CURSEFORGE_QOL.md",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol",
-      "community": 56,
-      "norm_label": "curseforge_qol.md"
-    },
-    {
-      "label": "Utility Core QoL - CurseForge Documentation",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "community": 56,
-      "norm_label": "utility core qol - curseforge documentation"
-    },
-    {
-      "label": "Project Info",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_project_info",
-      "community": 56,
-      "norm_label": "project info"
-    },
-    {
-      "label": "Description (Long)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_description_long",
-      "community": 56,
-      "norm_label": "description (long)"
-    },
-    {
-      "label": "Features",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_features",
-      "community": 56,
-      "norm_label": "features"
-    },
-    {
-      "label": "Configuration",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_configuration",
-      "community": 56,
-      "norm_label": "configuration"
-    },
-    {
-      "label": "How Recipe Selector Works",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_how_recipe_selector_works",
-      "community": 56,
-      "norm_label": "how recipe selector works"
-    },
-    {
-      "label": "API (for other mods)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L68",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_api_for_other_mods",
-      "community": 56,
-      "norm_label": "api (for other mods)"
-    },
-    {
-      "label": "Credits",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L82",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_credits",
-      "community": 56,
-      "norm_label": "credits"
-    },
-    {
-      "label": "Requirements",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_requirements",
-      "community": 56,
-      "norm_label": "requirements"
-    },
-    {
-      "label": "Changelog (2.0.0-beta.1)",
-      "file_type": "document",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L93",
-      "_origin": "ast",
-      "id": "docs_curseforge_qol_changelog_2_0_0_beta_1",
-      "community": 56,
-      "norm_label": "changelog (2.0.0-beta.1)"
     },
     {
       "label": "CURSEFORGE_SUMMARY.md",
@@ -9450,10 +9280,50 @@
       "norm_label": "especifico del mod"
     },
     {
+      "label": "Sub-m\u00f3dulos (versionado independiente)",
+      "file_type": "document",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "docs_workflow_utility_core_26_2_sub_m\u00f3dulos_versionado_independiente",
+      "community": 0,
+      "norm_label": "sub-modulos (versionado independiente)"
+    },
+    {
+      "label": "Admin",
+      "file_type": "document",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_workflow_utility_core_26_2_admin",
+      "community": 0,
+      "norm_label": "admin"
+    },
+    {
+      "label": "Fixes",
+      "file_type": "document",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "docs_workflow_utility_core_26_2_fixes",
+      "community": 0,
+      "norm_label": "fixes"
+    },
+    {
+      "label": "QoL",
+      "file_type": "document",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "docs_workflow_utility_core_26_2_qol",
+      "community": 0,
+      "norm_label": "qol"
+    },
+    {
       "label": "Convenciones de nomenclatura",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L18",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_convenciones_de_nomenclatura",
       "community": 0,
@@ -9463,7 +9333,7 @@
       "label": "Organizaci\u00f3n y ramas",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L27",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_organizaci\u00f3n_y_ramas",
       "community": 0,
@@ -9473,7 +9343,7 @@
       "label": "Estructura del proyecto",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L33",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_estructura_del_proyecto",
       "community": 0,
@@ -9483,7 +9353,7 @@
       "label": "Versionado",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L37",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_versionado",
       "community": 0,
@@ -9493,7 +9363,7 @@
       "label": "Commits (Conventional Commits)",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L43",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_commits_conventional_commits",
       "community": 0,
@@ -9503,7 +9373,7 @@
       "label": "Tags",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L47",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_tags",
       "community": 0,
@@ -9513,7 +9383,7 @@
       "label": "Flujo por tarea",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L51",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_flujo_por_tarea",
       "community": 0,
@@ -9523,7 +9393,7 @@
       "label": "Buenas pr\u00e1cticas",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L86",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_buenas_pr\u00e1cticas",
       "community": 0,
@@ -9533,21 +9403,11 @@
       "label": "Idioma",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L93",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "docs_workflow_utility_core_26_2_idioma",
       "community": 0,
       "norm_label": "idioma"
-    },
-    {
-      "label": "project_description.md",
-      "file_type": "document",
-      "source_file": "docs/curseforge/project_description.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_curseforge_project_description",
-      "community": 17,
-      "norm_label": "project_description.md"
     },
     {
       "label": "project_description_admin.md",
@@ -9603,7 +9463,7 @@
       "label": "Biome/Dimension Titles",
       "file_type": "document",
       "source_file": "docs/curseforge/project_description_qol.md",
-      "source_location": "L53",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "docs_curseforge_project_description_qol_biome_dimension_titles",
       "community": 85,
@@ -9613,7 +9473,7 @@
       "label": "Title Vertical Offset",
       "file_type": "document",
       "source_file": "docs/curseforge/project_description_qol.md",
-      "source_location": "L56",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "docs_curseforge_project_description_qol_title_vertical_offset",
       "community": 85,
@@ -10300,6 +10160,16 @@
       "norm_label": "2.2.2_qol.md"
     },
     {
+      "label": "2.2.3_admin.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.2.3_admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_2_3_admin",
+      "community": 126,
+      "norm_label": "2.2.3_admin.md"
+    },
+    {
       "label": "2.2.3_qol.md",
       "file_type": "document",
       "source_file": "docs/curseforge/versions/2.2.3_qol.md",
@@ -10320,6 +10190,26 @@
       "norm_label": "2.2.4_qol.md"
     },
     {
+      "label": "2.2.5_qol.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.2.5_qol.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_2_5_qol",
+      "community": 127,
+      "norm_label": "2.2.5_qol.md"
+    },
+    {
+      "label": "2.3.0_admin.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.3.0_admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_3_0_admin",
+      "community": 128,
+      "norm_label": "2.3.0_admin.md"
+    },
+    {
       "label": "2.3.0_fixes.md",
       "file_type": "document",
       "source_file": "docs/curseforge/versions/2.3.0_fixes.md",
@@ -10328,6 +10218,16 @@
       "id": "docs_curseforge_versions_2_3_0_fixes",
       "community": 101,
       "norm_label": "2.3.0_fixes.md"
+    },
+    {
+      "label": "2.3.0_qol.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.3.0_qol.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_3_0_qol",
+      "community": 129,
+      "norm_label": "2.3.0_qol.md"
     },
     {
       "label": "2.3.1_fixes.md",
@@ -10368,6 +10268,26 @@
       "id": "docs_curseforge_versions_2_3_4_fixes",
       "community": 105,
       "norm_label": "2.3.4_fixes.md"
+    },
+    {
+      "label": "2.3.5_fixes.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.3.5_fixes.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_3_5_fixes",
+      "community": 130,
+      "norm_label": "2.3.5_fixes.md"
+    },
+    {
+      "label": "2.4.0_fixes.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.4.0_fixes.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_4_0_fixes",
+      "community": 131,
+      "norm_label": "2.4.0_fixes.md"
     }
   ],
   "links": [
@@ -17324,7 +17244,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
@@ -17334,7 +17254,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "field",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
@@ -17345,7 +17265,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "attribute",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
@@ -17356,7 +17276,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_isconfigloaded",
@@ -17366,7 +17286,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
@@ -17376,7 +17296,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -17386,7 +17306,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "attribute",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_isconfigloaded",
@@ -17398,7 +17318,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L31",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_isconfigloaded",
@@ -17408,7 +17328,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "context": "attribute",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
@@ -17420,7 +17340,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
       "target": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
@@ -17430,7 +17350,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -17441,7 +17361,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -17452,7 +17372,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "attribute",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -17463,7 +17383,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -17474,7 +17394,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinLootItemEntityPropertyCondition.java",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
@@ -28099,7 +28019,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L188",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_0",
@@ -28109,7 +28029,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L106",
+      "source_location": "L158",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_10_0",
@@ -28119,7 +28039,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L103",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_0",
@@ -28129,7 +28049,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L100",
+      "source_location": "L152",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_1",
@@ -28139,7 +28059,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L72",
+      "source_location": "L124",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_10",
@@ -28149,7 +28069,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L69",
+      "source_location": "L121",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_11",
@@ -28159,7 +28079,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L64",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_12",
@@ -28169,7 +28089,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L61",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_13",
@@ -28179,7 +28099,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L97",
+      "source_location": "L149",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_2",
@@ -28189,7 +28109,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L94",
+      "source_location": "L146",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_3",
@@ -28199,7 +28119,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L91",
+      "source_location": "L143",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_4",
@@ -28209,7 +28129,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L88",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_5",
@@ -28219,7 +28139,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L84",
+      "source_location": "L136",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_6",
@@ -28229,7 +28149,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L81",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_7",
@@ -28239,7 +28159,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L78",
+      "source_location": "L130",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_8",
@@ -28249,7 +28169,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L75",
+      "source_location": "L127",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_9",
@@ -28259,7 +28179,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L185",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_1_0",
@@ -28269,7 +28189,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L130",
+      "source_location": "L182",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_2_0",
@@ -28279,7 +28199,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L127",
+      "source_location": "L179",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_3_0",
@@ -28289,7 +28209,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L124",
+      "source_location": "L176",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_4_0",
@@ -28299,7 +28219,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L121",
+      "source_location": "L173",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_5_0",
@@ -28309,7 +28229,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L118",
+      "source_location": "L170",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_6_0",
@@ -28319,7 +28239,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L115",
+      "source_location": "L167",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_7_0",
@@ -28329,7 +28249,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L112",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_8_0",
@@ -28339,7 +28259,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L109",
+      "source_location": "L161",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_9_0",
@@ -28349,7 +28269,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L42",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_0",
@@ -28359,7 +28279,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L44",
+      "source_location": "L96",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_1_2026_08_12",
@@ -28369,7 +28289,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_2",
@@ -28379,7 +28299,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L34",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_2_0",
@@ -28389,7 +28309,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_2_1",
@@ -28399,7 +28319,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L26",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_2_2",
@@ -28409,7 +28329,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_admin_2_2_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_admin_2_3_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_2_2",
@@ -28419,7 +28359,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L23",
+      "source_location": "L75",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_0",
@@ -28429,7 +28369,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_1",
@@ -28439,7 +28379,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L11",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_2",
@@ -28449,7 +28389,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L8",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_3",
@@ -28459,7 +28399,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_4",
@@ -28469,7 +28409,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L28",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_fixes_2_3_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_fixes_2_4_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_2",
@@ -28479,7 +28439,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_3",
@@ -28489,7 +28449,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L14",
+      "source_location": "L66",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_4",
@@ -28499,10 +28459,90 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L46",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_qol_2_2_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_qol_2_3_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "changelog_admin_2_3_0",
+      "target": "changelog_change",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "changelog_fixes_2_4_0",
+      "target": "changelog_change_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "changelog_qol_2_3_0",
+      "target": "changelog_change_27",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "changelog_admin_2_2_3",
+      "target": "changelog_change_35",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "changelog_fixes_2_3_5",
+      "target": "changelog_change_43",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "changelog_qol_2_2_5",
+      "target": "changelog_change_51",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L98",
       "weight": 1.0,
       "source": "changelog_2_1_1_2026_08_12",
-      "target": "changelog_change",
+      "target": "changelog_change_98",
       "confidence_score": 1.0
     },
     {
@@ -28613,266 +28653,6 @@
       "weight": 1.0,
       "source": "readme_utility_core",
       "target": "readme_spawn_schematic_opt_in",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin",
-      "target": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_changelog_2_0_0_beta_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_commands",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_configuration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_description_long",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_project_info",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_requirements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L91",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_utility_core_admin_curseforge_documentation",
-      "target": "docs_curseforge_admin_spawn_schematic_file",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_ADMIN.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "docs_curseforge_admin_description_long",
-      "target": "docs_curseforge_admin_features",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes",
-      "target": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "target": "docs_curseforge_fixes_changelog_2_0_0_beta_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "target": "docs_curseforge_fixes_compatibility",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "target": "docs_curseforge_fixes_configuration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "target": "docs_curseforge_fixes_description_long",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_utility_core_fixes_curseforge_documentation",
-      "target": "docs_curseforge_fixes_project_info",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_FIXES.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "docs_curseforge_fixes_description_long",
-      "target": "docs_curseforge_fixes_features",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol",
-      "target": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L68",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_api_for_other_mods",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L93",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_changelog_2_0_0_beta_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_configuration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_credits",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_description_long",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L59",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_how_recipe_selector_works",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_project_info",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_utility_core_qol_curseforge_documentation",
-      "target": "docs_curseforge_qol_requirements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/CURSEFORGE_QOL.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "docs_curseforge_qol_description_long",
-      "target": "docs_curseforge_qol_features",
       "confidence_score": 1.0
     },
     {
@@ -29049,7 +28829,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L86",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_buenas_pr\u00e1cticas",
@@ -29059,7 +28839,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L43",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_commits_conventional_commits",
@@ -29069,7 +28849,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L18",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_convenciones_de_nomenclatura",
@@ -29089,7 +28869,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L33",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_estructura_del_proyecto",
@@ -29099,7 +28879,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L51",
+      "source_location": "L81",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_flujo_por_tarea",
@@ -29109,7 +28889,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L93",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_idioma",
@@ -29119,7 +28899,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L27",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_organizaci\u00f3n_y_ramas",
@@ -29129,7 +28909,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L47",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
+      "target": "docs_workflow_utility_core_26_2_sub_m\u00f3dulos_versionado_independiente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_tags",
@@ -29139,10 +28929,40 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
-      "source_location": "L37",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "docs_workflow_utility_core_26_2_flujo_de_trabajo_utility_core_neoforge",
       "target": "docs_workflow_utility_core_26_2_versionado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_workflow_utility_core_26_2_sub_m\u00f3dulos_versionado_independiente",
+      "target": "docs_workflow_utility_core_26_2_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "docs_workflow_utility_core_26_2_sub_m\u00f3dulos_versionado_independiente",
+      "target": "docs_workflow_utility_core_26_2_fixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/WORKFLOW_UTILITY_CORE_26-2.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_workflow_utility_core_26_2_sub_m\u00f3dulos_versionado_independiente",
+      "target": "docs_workflow_utility_core_26_2_qol",
       "confidence_score": 1.0
     },
     {
@@ -29169,7 +28989,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/curseforge/project_description_qol.md",
-      "source_location": "L53",
+      "source_location": "L62",
       "weight": 1.0,
       "source": "docs_curseforge_project_description_qol",
       "target": "docs_curseforge_project_description_qol_biome_dimension_titles",
@@ -29179,7 +28999,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/curseforge/project_description_qol.md",
-      "source_location": "L56",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "docs_curseforge_project_description_qol",
       "target": "docs_curseforge_project_description_qol_title_vertical_offset",
@@ -29377,5 +29197,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a922475dcad9e8c235a6918fd536c20cc26cbb9b"
+  "built_at_commit": "02f2162b2f6f7725965b923d91253277b7bd0585"
 }
