@@ -12,10 +12,14 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Mixin(LootItemEntityPropertyCondition.class)
 public abstract class MixinLootItemEntityPropertyCondition {
     private static final Logger LOGGER = LogUtils.getLogger();
+    private static final AtomicBoolean firstOccurrence = new AtomicBoolean(false);
+    private static final AtomicInteger occurrenceCounter = new AtomicInteger(0);
 
     @Unique
     private static boolean isConfigLoaded() {
@@ -38,9 +42,14 @@ public abstract class MixinLootItemEntityPropertyCondition {
             return entityPredicate.matches(level, pos, entity);
         } catch (IllegalStateException e) {
             if (isCuriosLootPredicateFixEnabled()) {
-                // Registry access failure while merging Curios inventory NBT (e.g. enchantment registry
-                // not accessible in this tick context). Fail the predicate instead of crashing the server.
-                LOGGER.warn("[UtilityCoreFixes] Caught IllegalStateException in EntityPredicate.matches during loot table predicate evaluation. Returning false to prevent crash.", e);
+                if (firstOccurrence.compareAndSet(false, true)) {
+                    LOGGER.warn("[UtilityCoreFixes] Caught IllegalStateException in EntityPredicate.matches during loot table predicate evaluation. Returning false to prevent crash.", e);
+                } else {
+                    int count = occurrenceCounter.incrementAndGet();
+                    if (count % 200 == 0) {
+                        LOGGER.warn("[UtilityCoreFixes] Caught IllegalStateException in EntityPredicate.matches during loot table predicate evaluation. Returning false to prevent crash. [Suppressed {} similar messages]", count);
+                    }
+                }
                 return false;
             } else {
                 throw e;
