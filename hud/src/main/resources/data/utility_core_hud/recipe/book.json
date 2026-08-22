@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [{
+    "type": "neoforge:mod_loaded",
+    "modid": "vellumli"
+  }],
+  "ingredients": [
+    "minecraft:book",
+    "#c:ingots/iron",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "vellumli:guide_book",
+    "count": 1,
+    "components": {
+      "vellumli:book": "utility_core_hud:hud_guide"
+    }
+  }
+}

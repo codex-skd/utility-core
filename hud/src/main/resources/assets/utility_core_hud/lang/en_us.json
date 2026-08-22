@@ -1,0 +1,17 @@
+{
+  "hud.menu.title": "HUD Settings",
+  "hud.menu.show": "Show",
+  "hud.menu.never_show": "Never Show",
+  "hud.menu.edit_position": "Edit Position",
+  "hud.menu.save": "Save",
+  "hud.menu.close": "Close",
+  "hud.editor.title": "HUD Position Editor",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Done",
+  "hud.editor.cancel": "Cancel",
+  "category.utility_core_hud.general": "Utility Core HUD",
+  "book.utility_core_hud.name": "HUD Guide",
+  "book.utility_core_hud.landing": "Use /hudmenu (OP) to open the HUD configuration.",
+  "book.utility_core_hud.subtitle": "Utility Core HUD Guide"
+}

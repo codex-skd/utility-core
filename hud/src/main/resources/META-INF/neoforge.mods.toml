@@ -1,0 +1,26 @@
+# Utility Core HUD - NeoForge mod configuration
+license="MIT"
+
+[[mods]]
+modId="utility_core_hud"
+version="${mod_version}"
+displayName="Utility Core HUD"
+logoFile="assets/utility_core_hud/icon.png"
+credits=""
+description='''
+Utility Core HUD - client-side overlay showing armor durability.
+'''# Note: client-only mod; no server logic required.
+
+[[dependencies.utility_core_hud]]
+    modId="neoforge"
+    type="required"
+    versionRange="[26.2.0.57, )"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.utility_core_hud]]
+    modId="minecraft"
+    type="required"
+    versionRange="[26.2]"
+    ordering="NONE"
+    side="CLIENT"

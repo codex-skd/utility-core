@@ -1,0 +1,29 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.141'
+    id 'com.github.johnrengelman.shadow'
+}
+
+ext {
+    mod_id = "utility_core_hud"
+    mod_name = "Utility Core HUD"
+}
+
+neoForge {
+    version = neo_version
+}
+
+dependencies {
+    // Vellumli guide book support
+    compileOnly files("libs/vellumli-26.2-neoforge-26.2.0.57-1.1.0.jar")
+}
+
+jar {
+    archiveBaseName = "utility_core_hud-${minecraft_version}-neoforge-${neo_version}"
+    manifest {
+        attributes(
+            "Mod-ID": "utility_core_hud",
+            "Mod-Name": "Utility Core HUD",
+            "Mod-Version": project.version.toString()
+        )
+    }
+}

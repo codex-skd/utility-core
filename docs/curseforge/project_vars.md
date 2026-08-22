@@ -3,11 +3,12 @@
 > Las siguientes variables son leídas por scripts de upload para los 3 mods independientes.
 
 # Script variables (key=value format for curseforge-upload.ps1 / curseforge-upload-submodule.ps1)
-# This repo is split multi-mod (admin/fixes/qol) — use curseforge-upload-submodule.ps1 with -SubModule.
+# This repo is split multi-mod (admin/fixes/qol/hud) — use curseforge-upload-submodule.ps1 with -SubModule.
 # project_id is suffixed per submodule; api_token/game_versions/release_type are shared (no suffix needed).
 project_id_fixes = 1648135
 project_id_admin = 1601825
 project_id_qol = 1648134
+project_id_hud = 1662269
 # Legacy unsuffixed project_id kept for back-compat with curseforge-upload.ps1 (points at Fixes).
 project_id = 1648135
 api_token = ee776b0a-ee95-4850-b554-06be02a8657f
@@ -16,13 +17,14 @@ release_type = release
 
 ---
 
-## 3 Proyectos CurseForge Separados
+## 4 Proyectos CurseForge Separados
 
 | Mod | CurseForge Project ID | Mod ID | Display Name | Slug Sugerido |
 |-----|----------------------|--------|--------------|---------------|
 | **Fixes** | `1648135` | `utility_core_fixes` | Utility Core Fixes | `utility-core-fixes` |
 | **QoL** | `1648134` | `utility_core_qol` | Utility Core QoL | `utility-core-qol` |
 | **Admin** | `1601825` | `utility_core_admin` | Utility Core Admin | `utility-core-admin` |
+| **HUD** | `1662269` | `utility_core_hud` | Utility Core HUD | `utility-core-hud` |
 
 > **Nota**: El mismo token funciona para los 3 proyectos (token heredado del proyecto original).
 
@@ -35,6 +37,7 @@ release_type = release
 | Fixes | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
 | Admin | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
 | QoL | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
+| HUD | `ee776b0a-ee95-4850-b554-06be02a8657f` | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` |
 
 > **Nota**: Token heredado del proyecto original (1601825). Verificar permisos en los nuevos proyectos (1648135, 1648134).
 
@@ -48,8 +51,8 @@ release_type = release
 | `framework` | `neoforge` |
 | `neo_version` | `26.2.0.57` |
 | `java_version` | `21` |
-| `admin_version` / `fixes_version` / `qol_version` | Independientes por mod, en `gradle.properties` (raíz) — no hay `mod_version` compartido |
-| `environment` | `Client`, `Server` (Fixes/Admin) / `Client` primary + Server sync (QoL) |
+| `admin_version` / `fixes_version` / `qol_version` / `hud_version` | Independientes por mod, en `gradle.properties` (raíz) — no hay `mod_version` compartido |
+| `environment` | `Client`, `Server` (Fixes/Admin) / `Client` primary + Server sync (QoL) / `Client` only (HUD) |
 
 ---
 
@@ -59,6 +62,7 @@ release_type = release
 fixes/build/libs/utility_core_fixes-26.2-neoforge-26.2.0.57-<fixes_version>.jar
 admin/build/libs/utility_core_admin-26.2-neoforge-26.2.0.57-<admin_version>.jar
 qol/build/libs/utility_core_qol-26.2-neoforge-26.2.0.57-<qol_version>.jar
+hud/build/libs/utility_core_hud-26.2-neoforge-26.2.0.57-<hud_version>.jar
 ```
 
 ### Nomenclatura JAR
@@ -94,6 +98,15 @@ qol/build/libs/utility_core_qol-26.2-neoforge-26.2.0.57-<qol_version>.jar
 - **Dependencies**: None
 - **Config**: `utility_core/utility_core_qol-common.toml` (+ `utility_core/utility_core_qol-client.toml`)
 - **Description**: `docs/curseforge/project_description_qol.md`
+
+### Utility Core HUD
+- **Mod ID**: `utility_core_hud`
+- **Display Name**: Utility Core HUD
+- **Category**: Client QoL
+- **Side**: Client only
+- **Dependencies**: Vellumli (required)
+- **Config**: `config/utility_core_hud/` (posición/orientación/escala guardadas por el editor interactivo, no TOML estático)
+- **Description**: `docs/curseforge/project_description_hud.md`
 
 ---
 
@@ -163,12 +176,13 @@ Independiente por mod — cada uno en su propia línea SemVer, sin sincronizarse
 
 ```bash
 # Build todos
-./gradlew :fixes:jar :admin:jar :qol:jar
+./gradlew :fixes:jar :admin:jar :qol:jar :hud:jar
 
 # Build individual
 ./gradlew :fixes:jar
 ./gradlew :admin:jar
 ./gradlew :qol:jar
+./gradlew :hud:jar
 ```
 
 ---
@@ -181,4 +195,5 @@ Independiente por mod — cada uno en su propia línea SemVer, sin sincronizarse
 | `docs/curseforge/project_description_fixes.md` | Descripción Fixes (HTML) |
 | `docs/curseforge/project_description_admin.md` | Descripción Admin (HTML) |
 | `docs/curseforge/project_description_qol.md` | Descripción QoL (HTML) |
+| `docs/curseforge/project_description_hud.md` | Descripción HUD (HTML) |
 | `docs/curseforge/project_vars.md` | Este archivo |

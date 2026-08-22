@@ -1,0 +1,9 @@
+{
+  "name": "Utility Core HUD",
+  "icon": "minecraft:iron_chestplate",
+  "category": "utility_core_hud:general",
+  "pages": [
+    { "type": "vellumli:text", "title": "Armor Durability HUD", "text": "Displays an icon for each equipped armor piece, showing its durability just like your inventory. Icons always sit next to each other with no gaps." },
+    { "type": "vellumli:text", "title": "Opening the HUD Menu", "text": "Use the command /hudmenu to open the configuration menu (requires operator level 2). From there you can show or hide the HUD, or enter the interactive editor: drag with your mouse to move it, scroll to switch orientation, use +/- to resize, and press Enter to save." }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "book.utility_core_hud.name",
+  "landing_text": "book.utility_core_hud.landing",
+  "subtitle": "book.utility_core_hud.subtitle",
+  "show_progress": false,
+  "creative_tab": "tools_and_utilities",
+  "use_resource_pack": true
+}
