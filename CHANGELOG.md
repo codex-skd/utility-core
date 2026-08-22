@@ -12,6 +12,13 @@
 - **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
 
 
+## [Fixes] 2.5.0
+
+### Add
+
+- **Fix de portal de retorno del Nether**: al cruzar un portal entre Overworld y Nether se recuerda qué portal de origen usó el jugador, emparejado con el portal de llegada. Al volver a cruzar en sentido contrario, si ese portal recordado sigue existiendo, se redirige la salida a él en vez de usar la búsqueda vanilla de "portal más cercano" (que podía enviar al jugador a un portal equivocado cuando había varios cerca). Si el portal recordado ya no existe, se recurre al comportamiento vanilla. Activable/desactivable con `enableNetherReturnPortalFix` (activado por defecto).
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.5.0.jar`.
+
 ## [Fixes] 2.4.0
 
 ### Change

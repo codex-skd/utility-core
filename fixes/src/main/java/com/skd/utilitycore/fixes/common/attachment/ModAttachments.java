@@ -15,4 +15,8 @@ public class ModAttachments {
     public static final Supplier<AttachmentType<PlayerRecipeData>> PLAYER_RECIPE_DATA =
             ATTACHMENT_TYPES.register("player_recipe_data",
                     () -> AttachmentType.builder(PlayerRecipeData::new).build());
+
+    public static final Supplier<AttachmentType<ReturnPortalData>> RETURN_PORTAL_DATA =
+            ATTACHMENT_TYPES.register("return_portal_data",
+                    () -> AttachmentType.builder(ReturnPortalData::new).build());
 }

@@ -24,6 +24,7 @@
 <li><strong>Mod compatibility</strong> — Corail Tombstone, Curios API, EvilCraft, OutpostZero fixes</li>
 <li><strong>World integrity</strong> — remove orphaned block entity data to stop chunk-load crashes</li>
 <li><strong>Anti-cheat tuning</strong> — whitelist entities from vanilla's <code>moved too quickly</code> vehicle check</li>
+<li><strong>Nether portal reliability</strong> — remembers the correct return portal instead of vanilla's error-prone closest-portal search</li>
 </ul>
 
 <br>
@@ -56,6 +57,9 @@
 <li>Scoped redirect: only neutralizes the vehicle check for whitelisted vehicles, leaving player movement, difficulty and gamemode permission checks untouched</li>
 </ul>
 
+<h3>&#127774; Nether Return Portal Fix</h3>
+<p>Fixes vanilla's unreliable Nether portal linking in multiplayer: normally, returning through a portal searches for the <em>closest</em> portal on the other side instead of the exact one you originally used, which can send you to the wrong portal when several exist near each other. This fix remembers which portal you departed from every time you cross between the Overworld and the Nether, paired with the portal you arrived at, and redirects you back to that exact remembered portal on the return trip — falling back to vanilla behavior if it no longer exists.</p>
+
 <br>
 
 <h2>&#9881;&#65039; Fully Configurable</h2>
@@ -73,6 +77,7 @@
 <tr><td><code>enableCuriosLootPredicateFix</code></td><td>true</td><td>Curios API</td><td>Curios' NBT merging during loot table predicate evaluation crashes the server. This neutralizes the failing merge.</td></tr>
 <tr><td><code>enableVehicleAntiCheatWhitelist</code></td><td>true</td><td>Vanilla / EvilCraft</td><td>Whitelists configured entity types from the <code>moved too quickly</code> vehicle anti-cheat.</td></tr>
 <tr><td><code>vehicleAntiCheatWhitelist</code></td><td><code>["evilcraft:broom"]</code></td><td>EvilCraft</td><td>List of entity type IDs (<code>namespace:path</code>) to whitelist. Supports wildcards like <code>"modid:*"</code>.</td></tr>
+<tr><td><code>enableNetherReturnPortalFix</code></td><td>true</td><td>Vanilla</td><td>Vanilla's closest-portal search can send players to the wrong Nether portal on return trips. This remembers and redirects to the exact portal originally used.</td></tr>
 </table>
 
 <br>

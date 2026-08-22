@@ -14,7 +14,8 @@
   ],
   "server": [
     "InvokerServerCommonPacketListenerImpl",
-    "MixinVehicleAntiCheatWhitelist"
+    "MixinVehicleAntiCheatWhitelist",
+    "MixinNetherReturnPortalFix"
   ],
   "injectors": {
     "defaultRequire": 1,

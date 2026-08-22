@@ -53,5 +53,10 @@ public class FixesConfig {
                      "ES: Lista de IDs de tipo de entidad (namespace:path) para incluir en la lista blanca del check 'moved too quickly'. Soporta comodines como 'modid:*'.")
             .defineList("vehicleAntiCheatWhitelist", List.of("evilcraft:broom"), s -> s instanceof String);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_NETHER_RETURN_PORTAL_FIX = BUILDER
+            .comment("EN: Prevents Nether portals from sending players to the wrong destination portal on return trips by remembering the portal they originally used.",
+                     "ES: Evita que los portales del Nether envíen a los jugadores al portal de destino incorrecto en los viajes de regreso recordando el portal que usaron originalmente.")
+            .define("enableNetherReturnPortalFix", true);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }
