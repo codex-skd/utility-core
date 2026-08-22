@@ -11,3 +11,4 @@ rootProject.name = "utility-core"
 include("fixes")
 include("admin")
 include("qol")
+include("hud")
