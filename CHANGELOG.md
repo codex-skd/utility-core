@@ -1,6 +1,20 @@
 # Utility Core — Registro de cambios
 
-> A partir de aquí (post-2.2.1), `admin`, `fixes` y `qol` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
+> A partir de aquí (post-2.2.1), `admin`, `fixes`, `qol` y `hud` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
+
+
+## [HUD] 0.0.0-beta.1
+
+### Add
+
+- **Initial release** of Utility Core HUD as 4th submodule in the utility_core repo.
+- **Armor Durability HUD**: Displays equipped armor pieces (helmet, chestplate, leggings, boots) with durability overlay, matching inventory icon style. Icons always stay contiguous — no gaps when pieces are removed.
+- **Vellumli Guide Book**: In-game book explaining all HUD features. First page has a button that opens the HUD menu directly.
+- **Interactive Position Editor**: Drag to move, mouse wheel to toggle horizontal/vertical layout, +/− buttons to scale. Gold border marks editable area. Enter to save, Escape to cancel.
+- **Show / Never Show Toggle**: Cycle through Show → Never Show → Show states from the menu.
+- **Config** saved to `config/utility_core_hud/hud_config.json` (position, orientation, scale, visibility).
+- **Client-only** mod for NeoForge 26.2.0.57 / Minecraft 26.2.
+- **Required dependency**: Vellumli (in-game guide book).
 
 
 ## [Admin] 2.3.0
