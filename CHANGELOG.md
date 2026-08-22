@@ -26,6 +26,13 @@
 - **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
 
 
+## [Admin] 2.3.1
+
+### Fix
+
+- **Reset paused state when chunk gen disabled**: al desactivar `chunkGen.enabled`, el estado `paused` se reinicia para permitir que el modo pausa del juego funcione correctamente.
+
+
 ## [Fixes] 2.5.0
 
 ### Add
