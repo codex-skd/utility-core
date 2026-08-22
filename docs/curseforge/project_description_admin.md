@@ -33,6 +33,7 @@
   <li>Pauses automatically when players join (configurable)</li>
   <li>Persists progress to disk (<code>utility_core/chunk_pregen/utility_core_chunk_gen.json</code>)</li>
   <li>Independent per dimension: Overworld, Nether, End</li>
+  <li>When chunk generation is disabled (<code>chunkGen.enabled = false</code>), pause state is reset to allow normal game pause functionality</li>
   <li>Commands: <code>/utilitycore chunkgen status|start|pause|stop|reset</code></li>
 </ul>
 
