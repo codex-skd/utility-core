@@ -69,7 +69,10 @@ public class ChunkGenManager {
     }
 
     public void tick(MinecraftServer server) {
-        if (!AdminConfig.CHUNK_GEN_ENABLED.get()) return;
+        if (!AdminConfig.CHUNK_GEN_ENABLED.get()) {
+            paused = false;
+            return;
+        }
 
         int playerCount = server.getPlayerCount();
         boolean joining = hasJoiningConnection(server);
