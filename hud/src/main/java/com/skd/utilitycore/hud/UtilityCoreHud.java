@@ -23,7 +23,7 @@ public class UtilityCoreHud {
 
     public UtilityCoreHud(IEventBus modEventBus) {
         modEventBus.addListener(this::onClientSetup);
-        modEventBus.addListener(this::onRegisterCommands);
+        NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         NeoForge.EVENT_BUS.addListener(UtilityCoreHud::onRenderGui);
     }
 
