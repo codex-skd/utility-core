@@ -33,12 +33,27 @@
 - **Reset paused state when chunk gen disabled**: al desactivar `chunkGen.enabled`, el estado `paused` se reinicia para permitir que el modo pausa del juego funcione correctamente.
 
 
+## [Admin] 2.3.2
+
+### Add
+
+- **Force pause safety option for chunk generation**: nueva opción de config <code>chunkGen.forcePause</code> (default: <code>false</code>) como override de seguridad de emergencia. Cuando es <code>true</code>, la generación de chunks nunca se ejecuta aunque <code>chunkGen.enabled = true</code>. Útil como medida de seguridad para prevenir cualquier generación accidental.
+
+
 ## [Fixes] 2.5.0
 
 ### Add
 
 - **Fix de portal de retorno del Nether**: al cruzar un portal entre Overworld y Nether se recuerda qué portal de origen usó el jugador, emparejado con el portal de llegada. Al volver a cruzar en sentido contrario, si ese portal recordado sigue existiendo, se redirige la salida a él en vez de usar la búsqueda vanilla de "portal más cercano" (que podía enviar al jugador a un portal equivocado cuando había varios cerca). Si el portal recordado ya no existe, se recurre al comportamiento vanilla. Activable/desactivable con `enableNetherReturnPortalFix` (activado por defecto).
 - **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.5.0.jar`.
+
+
+## [Fixes] 2.5.1
+
+### Fix
+
+- **Crash al cruzar portal del Nether**: `ModAttachments.ATTACHMENT_TYPES` (el attachment `return_portal_data` que guarda el mapeo de portales de retorno) se creaba pero nunca se registraba en el mod event bus. El attachment type quedaba "unbound" y el mixin `MixinNetherReturnPortalFix` lanzaba `NullPointerException: Trying to access unbound value: ResourceKey[neoforge:attachment_types / utility_core_fixes:return_portal_data]` al intentar acceder a los datos del portal. Ahora `ModAttachments.ATTACHMENT_TYPES.register(modEventBus)` se llama en el constructor de `UtilityCoreFixes`.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.5.1.jar`.
 
 ## [Fixes] 2.4.0
 
