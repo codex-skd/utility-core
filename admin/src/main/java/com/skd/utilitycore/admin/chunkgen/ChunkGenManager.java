@@ -69,7 +69,7 @@ public class ChunkGenManager {
     }
 
     public void tick(MinecraftServer server) {
-        if (!AdminConfig.CHUNK_GEN_ENABLED.get()) {
+        if (!AdminConfig.CHUNK_GEN_ENABLED.get() || AdminConfig.CHUNK_GEN_FORCE_PAUSE.get()) {
             paused = false;
             return;
         }
@@ -229,7 +229,7 @@ public class ChunkGenManager {
     }
 
     private void start(MinecraftServer server) {
-        if (completed) {
+        if (completed || AdminConfig.CHUNK_GEN_FORCE_PAUSE.get()) {
             running = false;
             return;
         }

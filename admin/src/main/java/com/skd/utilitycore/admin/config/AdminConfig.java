@@ -89,6 +89,11 @@ public class AdminConfig {
                      "ES: Ciclo de trabajo: segundos de descanso (sin generación) tras cada periodo de carga, para dar un respiro al servidor. Por defecto 300 = 5 minutos.")
             .defineInRange("chunkGen.restSeconds", 300, 0, 86400);
 
+    public static final ModConfigSpec.BooleanValue CHUNK_GEN_FORCE_PAUSE = BUILDER
+            .comment("EN: Force pause chunk generation even if enabled. Use as safety measure to prevent any accidental generation.",
+                     "ES: Fuerza la pausa de la generación de chunks aunque esté activado. Úsalo como medida de seguridad para evitar cualquier generación accidental.")
+            .define("chunkGen.forcePause", false);
+
     // Data Pack Folder
     public static final ModConfigSpec.BooleanValue DATA_PACK_FOLDER_ENABLED = BUILDER
             .comment("EN: Loads every datapack (.zip or folder) found in <game-dir>/<dataPackFolder.path> into every world automatically, without enabling it per world. Works on dedicated servers and single-player worlds.",
