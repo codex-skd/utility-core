@@ -130,5 +130,15 @@
   "128": "2.3.0_admin.md",
   "129": "2.3.0_qol.md",
   "130": "2.3.5_fixes.md",
-  "131": "2.4.0_fixes.md"
+  "131": "2.4.0_fixes.md",
+  "132": "[Fixes] 2.5.1",
+  "133": "project_description_hud.md",
+  "134": "0.0.0-beta.1_hud.md",
+  "135": "0.0.0-beta.2_hud.md",
+  "136": "2.3.1_admin.md",
+  "137": "2.3.2_admin.md",
+  "138": "2.5.0_fixes.md",
+  "139": "2.5.1_fixes.md",
+  "140": "build.gradle",
+  "141": "HudOverlay.java"
 }
