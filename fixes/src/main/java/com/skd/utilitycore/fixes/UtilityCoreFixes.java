@@ -9,6 +9,7 @@ import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.fml.ModContainer;
+import com.skd.utilitycore.fixes.common.attachment.ModAttachments;
 
 @Mod("utility_core_fixes")
 public class UtilityCoreFixes {
@@ -16,6 +17,9 @@ public class UtilityCoreFixes {
     public static final String MODID = "utility_core_fixes";
 
     public UtilityCoreFixes(IEventBus modEventBus, ModContainer modContainer) {
+        // Register attachment types
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
+        
         // Register config
         modContainer.registerConfig(ModConfig.Type.COMMON, FixesConfig.SPEC, "utility_core/utility_core_fixes-common.toml");
         if (FMLEnvironment.getDist() == Dist.CLIENT) {

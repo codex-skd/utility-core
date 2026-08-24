@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "HUD 設定",
+  "hud.menu.show": "表示",
+  "hud.menu.never_show": "常に非表示",
+  "hud.menu.edit_position": "位置編集",
+  "hud.menu.save": "保存",
+  "hud.menu.close": "閉じる",
+  "hud.editor.title": "HUD 位置エディタ",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "完了",
+  "hud.editor.cancel": "キャンセル",
+  "hud.editor.hint_drag": "ドラッグで HUD を移動",
+  "hud.editor.hint_scroll": "ホイールでスケール変更",
+  "hud.editor.hint_enter": "Enter で保存、Escape でキャンセル",
+  "hud.editor.hint_scale": "+/- ボタンでスケール変更",
+  "hud.editor.values": "スケール: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

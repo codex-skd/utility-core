@@ -10,8 +10,10 @@
   "hud.editor.scale_down": "-",
   "hud.editor.done": "Done",
   "hud.editor.cancel": "Cancel",
-  "category.utility_core_hud.general": "Utility Core HUD",
-  "book.utility_core_hud.name": "HUD Guide",
-  "book.utility_core_hud.landing": "Use /hudmenu (OP) to open the HUD configuration.",
-  "book.utility_core_hud.subtitle": "Utility Core HUD Guide"
+  "hud.editor.hint_drag": "Drag to move HUD",
+  "hud.editor.hint_scroll": "Scroll to change scale",
+  "hud.editor.hint_enter": "Enter to save, Escape to cancel",
+  "hud.editor.hint_scale": "Buttons +/- to scale",
+  "hud.editor.values": "Scale: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
 }

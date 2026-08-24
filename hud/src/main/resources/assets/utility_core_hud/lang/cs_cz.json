@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "Nastavení HUD",
+  "hud.menu.show": "Zobrazit",
+  "hud.menu.never_show": "Nikdy nezobrazovat",
+  "hud.menu.edit_position": "Upravit pozici",
+  "hud.menu.save": "Uložit",
+  "hud.menu.close": "Zavřít",
+  "hud.editor.title": "Editor pozice HUD",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Hotovo",
+  "hud.editor.cancel": "Zrušit",
+  "hud.editor.hint_drag": "Přetažení pro přesun HUD",
+  "hud.editor.hint_scroll": "Kolečko pro změnu měřítka",
+  "hud.editor.hint_enter": "Enter pro uložení, Escape pro zrušení",
+  "hud.editor.hint_scale": "Tlačítka +/- pro měřítko",
+  "hud.editor.values": "Měřítko: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

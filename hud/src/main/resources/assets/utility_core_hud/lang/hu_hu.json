@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "HUD Beállítások",
+  "hud.menu.show": "Megjelenítés",
+  "hud.menu.never_show": "Soha ne jelenjen meg",
+  "hud.menu.edit_position": "Pozíció szerkesztése",
+  "hud.menu.save": "Mentés",
+  "hud.menu.close": "Bezárás",
+  "hud.editor.title": "HUD Pozíció Szerkesztő",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Kész",
+  "hud.editor.cancel": "Mégse",
+  "hud.editor.hint_drag": "Húzd az HUD mozgatásához",
+  "hud.editor.hint_scroll": "Kerekítés a méret változtatásához",
+  "hud.editor.hint_enter": "Enter a mentéshez, Escape a megszakításhoz",
+  "hud.editor.hint_scale": "Gombok +/- a skálázáshoz",
+  "hud.editor.values": "Méret: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

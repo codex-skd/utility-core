@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "Настройки HUD",
+  "hud.menu.show": "Показать",
+  "hud.menu.never_show": "Никогда не показывать",
+  "hud.menu.edit_position": "Изменить позицию",
+  "hud.menu.save": "Сохранить",
+  "hud.menu.close": "Закрыть",
+  "hud.editor.title": "Редактор позиции HUD",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Готово",
+  "hud.editor.cancel": "Отмена",
+  "hud.editor.hint_drag": "Перетащите для перемещения HUD",
+  "hud.editor.hint_scroll": "Колесико для изменения масштаба",
+  "hud.editor.hint_enter": "Enter для сохранения, Escape для отмены",
+  "hud.editor.hint_scale": "Кнопки +/- для масштаба",
+  "hud.editor.values": "Масштаб: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

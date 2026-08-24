@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "Setări HUD",
+  "hud.menu.show": "Afișează",
+  "hud.menu.never_show": "Nu afișa niciodată",
+  "hud.menu.edit_position": "Editează poziția",
+  "hud.menu.save": "Salvează",
+  "hud.menu.close": "Închide",
+  "hud.editor.title": "Editor Poziție HUD",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Gata",
+  "hud.editor.cancel": "Anulează",
+  "hud.editor.hint_drag": "Trage pentru a muta HUD-ul",
+  "hud.editor.hint_scroll": "Rotire pentru a schimba scala",
+  "hud.editor.hint_enter": "Enter pentru salvare, Escape pentru anulare",
+  "hud.editor.hint_scale": "Butoane +/- pentru scalare",
+  "hud.editor.values": "Scara: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

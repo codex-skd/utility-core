@@ -13,8 +13,6 @@ neoForge {
 }
 
 dependencies {
-    // Vellumli guide book support
-    compileOnly files("libs/vellumli-26.2-neoforge-26.2.0.57-1.1.0.jar")
 }
 
 jar {

@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "Configuración del HUD",
+  "hud.menu.show": "Mostrar",
+  "hud.menu.never_show": "Nunca mostrar",
+  "hud.menu.edit_position": "Editar posición",
+  "hud.menu.save": "Guardar",
+  "hud.menu.close": "Cerrar",
+  "hud.editor.title": "Editor de posición del HUD",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Listo",
+  "hud.editor.cancel": "Cancelar",
+  "hud.editor.hint_drag": "Arrastra para mover el HUD",
+  "hud.editor.hint_scroll": "Rueda para cambiar escala",
+  "hud.editor.hint_enter": "Enter para guardar, Escape para cancelar",
+  "hud.editor.hint_scale": "Botones +/- para escalar",
+  "hud.editor.values": "Escala: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

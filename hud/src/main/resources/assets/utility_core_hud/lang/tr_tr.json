@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "HUD Ayarları",
+  "hud.menu.show": "Göster",
+  "hud.menu.never_show": "Hiç Gösterme",
+  "hud.menu.edit_position": "Konumu Düzenle",
+  "hud.menu.save": "Kaydet",
+  "hud.menu.close": "Kapat",
+  "hud.editor.title": "HUD Konum Editörü",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Tamam",
+  "hud.editor.cancel": "İptal",
+  "hud.editor.hint_drag": "HUD'u taşımak için sürükleyin",
+  "hud.editor.hint_scroll": "Tekerlek ile ölçeği değiştirin",
+  "hud.editor.hint_enter": "Kaydetmek için Enter, iptal için Escape",
+  "hud.editor.hint_scale": "+/- butonları ile ölçekleyin",
+  "hud.editor.values": "Ölçek: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

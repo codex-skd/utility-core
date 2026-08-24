@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "HUD 设置",
+  "hud.menu.show": "显示",
+  "hud.menu.never_show": "从不显示",
+  "hud.menu.edit_position": "编辑位置",
+  "hud.menu.save": "保存",
+  "hud.menu.close": "关闭",
+  "hud.editor.title": "HUD 位置编辑器",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "完成",
+  "hud.editor.cancel": "取消",
+  "hud.editor.hint_drag": "拖拽移动 HUD",
+  "hud.editor.hint_scroll": "滚轮调整缩放",
+  "hud.editor.hint_enter": "回车保存，Esc 取消",
+  "hud.editor.hint_scale": "按钮 +/- 调整缩放",
+  "hud.editor.values": "缩放: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}

@@ -1,0 +1,19 @@
+{
+  "hud.menu.title": "Налаштування HUD",
+  "hud.menu.show": "Показати",
+  "hud.menu.never_show": "Ніколи не показувати",
+  "hud.menu.edit_position": "Змінити позицію",
+  "hud.menu.save": "Зберегти",
+  "hud.menu.close": "Закрити",
+  "hud.editor.title": "Редактор позиції HUD",
+  "hud.editor.scale_up": "+",
+  "hud.editor.scale_down": "-",
+  "hud.editor.done": "Готово",
+  "hud.editor.cancel": "Скасувати",
+  "hud.editor.hint_drag": "Перетягніть, щоб перемістити HUD",
+  "hud.editor.hint_scroll": "Колесо для зміни масштабу",
+  "hud.editor.hint_enter": "Enter для збереження, Escape для скасування",
+  "hud.editor.hint_scale": "Кнопки +/- для масштабу",
+  "hud.editor.values": "Масштаб: %1$s",
+  "category.utility_core_hud.general": "Utility Core HUD"
+}
