@@ -120,7 +120,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "admin_src_main_java_com_skd_utilitycore_admin_utilitycoreadmin_utilitycoreadmin_onserverstarted",
-      "community": 26,
+      "community": 8,
       "norm_label": ".onserverstarted()"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "serverstartedevent",
-      "community": 26,
+      "community": 8,
       "norm_label": "serverstartedevent"
     },
     {
@@ -3800,7 +3800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition",
-      "community": 5,
+      "community": 40,
       "norm_label": "mixinlootitementitypropertycondition.java"
     },
     {
@@ -3810,7 +3810,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition",
-      "community": 5,
+      "community": 40,
       "norm_label": "mixinlootitementitypropertycondition"
     },
     {
@@ -3820,7 +3820,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_mixin",
-      "community": 5,
+      "community": 40,
       "norm_label": "mixin"
     },
     {
@@ -3830,7 +3830,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_logger",
-      "community": 5,
+      "community": 40,
       "norm_label": "logger"
     },
     {
@@ -3840,7 +3840,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_isconfigloaded",
-      "community": 5,
+      "community": 40,
       "norm_label": ".isconfigloaded()"
     },
     {
@@ -3850,7 +3850,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_unique",
-      "community": 5,
+      "community": 40,
       "norm_label": "unique"
     },
     {
@@ -3860,7 +3860,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_iscurioslootpredicatefixenabled",
-      "community": 5,
+      "community": 40,
       "norm_label": ".iscurioslootpredicatefixenabled()"
     },
     {
@@ -3870,7 +3870,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_mixinlootitementitypropertycondition_utility_core_redirectentitypredicatematches",
-      "community": 5,
+      "community": 40,
       "norm_label": ".utility_core$redirectentitypredicatematches()"
     },
     {
@@ -3880,7 +3880,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "entitypredicate",
-      "community": 5,
+      "community": 40,
       "norm_label": "entitypredicate"
     },
     {
@@ -3890,7 +3890,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_serverlevel",
-      "community": 5,
+      "community": 40,
       "norm_label": "serverlevel"
     },
     {
@@ -3900,7 +3900,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_vec3",
-      "community": 5,
+      "community": 40,
       "norm_label": "vec3"
     },
     {
@@ -3910,7 +3910,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_entity",
-      "community": 5,
+      "community": 40,
       "norm_label": "entity"
     },
     {
@@ -3920,7 +3920,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_mixinlootitementitypropertycondition_java_redirect",
-      "community": 5,
+      "community": 40,
       "norm_label": "redirect"
     },
     {
@@ -4390,7 +4390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler",
-      "community": 40,
+      "community": 5,
       "norm_label": "tombstoneerrorhandler.java"
     },
     {
@@ -4400,7 +4400,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_tombstoneerrorhandler",
-      "community": 40,
+      "community": 5,
       "norm_label": "tombstoneerrorhandler"
     },
     {
@@ -4410,7 +4410,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "imixinerrorhandler",
-      "community": 40,
+      "community": 5,
       "norm_label": "imixinerrorhandler"
     },
     {
@@ -4420,7 +4420,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_java_logger",
-      "community": 40,
+      "community": 5,
       "norm_label": "logger"
     },
     {
@@ -4430,7 +4430,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_tombstoneerrorhandler_onprepareerror",
-      "community": 40,
+      "community": 5,
       "norm_label": ".onprepareerror()"
     },
     {
@@ -4440,7 +4440,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "imixinconfig",
-      "community": 40,
+      "community": 5,
       "norm_label": "imixinconfig"
     },
     {
@@ -4450,7 +4450,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "imixininfo",
-      "community": 40,
+      "community": 5,
       "norm_label": "imixininfo"
     },
     {
@@ -4460,7 +4460,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "erroraction",
-      "community": 40,
+      "community": 5,
       "norm_label": "erroraction"
     },
     {
@@ -4470,7 +4470,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_java_override",
-      "community": 40,
+      "community": 5,
       "norm_label": "override"
     },
     {
@@ -4480,7 +4480,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_tombstoneerrorhandler_onapplyerror",
-      "community": 40,
+      "community": 5,
       "norm_label": ".onapplyerror()"
     },
     {
@@ -4490,7 +4490,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "fixes_src_main_java_com_skd_utilitycore_fixes_mixin_tombstoneerrorhandler_tombstoneerrorhandler_isenabled",
-      "community": 40,
+      "community": 5,
       "norm_label": ".isenabled()"
     },
     {
@@ -5196,7 +5196,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency",
-      "community": 114,
+      "community": 147,
       "norm_label": "bridgingadjacency.java"
     },
     {
@@ -5206,7 +5206,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency",
-      "community": 114,
+      "community": 147,
       "norm_label": "bridgingadjacency"
     },
     {
@@ -5216,7 +5216,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_none",
-      "community": 114,
+      "community": 147,
       "norm_label": "none"
     },
     {
@@ -5226,7 +5226,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_corners",
-      "community": 114,
+      "community": 147,
       "norm_label": "corners"
     },
     {
@@ -5236,7 +5236,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_edges",
-      "community": 114,
+      "community": 147,
       "norm_label": "edges"
     },
     {
@@ -5246,7 +5246,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingadjacency_bridgingadjacency_full",
-      "community": 114,
+      "community": 147,
       "norm_label": "full"
     },
     {
@@ -5256,7 +5256,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_bridgingconfig",
-      "community": 109,
+      "community": 112,
       "norm_label": "bridgingconfig.java"
     },
     {
@@ -5496,7 +5496,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride",
-      "community": 39,
+      "community": 109,
       "norm_label": "placementaxismodeoverride.java"
     },
     {
@@ -5506,7 +5506,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride",
-      "community": 112,
+      "community": 109,
       "norm_label": "placementaxismodeoverride"
     },
     {
@@ -5516,7 +5516,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_fallback",
-      "community": 112,
+      "community": 109,
       "norm_label": "fallback"
     },
     {
@@ -5526,7 +5526,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_none",
-      "community": 112,
+      "community": 109,
       "norm_label": "none"
     },
     {
@@ -5536,7 +5536,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_xz",
-      "community": 112,
+      "community": 109,
       "norm_label": "xz"
     },
     {
@@ -5546,7 +5546,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_y",
-      "community": 112,
+      "community": 109,
       "norm_label": "y"
     },
     {
@@ -5556,7 +5556,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_placementaxismodeoverride_both",
-      "community": 112,
+      "community": 109,
       "norm_label": "both"
     },
     {
@@ -5566,7 +5566,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_placementaxismodeoverride_getplacementaxismode",
-      "community": 39,
+      "community": 109,
       "norm_label": "getplacementaxismode()"
     },
     {
@@ -5946,7 +5946,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_specialhandlers_specialhandlers_getspecialitemhandler",
-      "community": 70,
+      "community": 55,
       "norm_label": ".getspecialitemhandler()"
     },
     {
@@ -6016,7 +6016,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_compat_type_specialbridgingenvironmenthandler_specialbridgingenvironmenthandler_generateplacementcontextoverride",
-      "community": 55,
+      "community": 11,
       "norm_label": ".generateplacementcontextoverride()"
     },
     {
@@ -6356,7 +6356,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "hitresult",
-      "community": 109,
+      "community": 4,
       "norm_label": "hitresult"
     },
     {
@@ -6376,7 +6376,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_minecraftclientmixin_ontick",
-      "community": 4,
+      "community": 70,
       "norm_label": ".ontick()"
     },
     {
@@ -6386,7 +6386,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_callbackinfo",
-      "community": 4,
+      "community": 70,
       "norm_label": "callbackinfo"
     },
     {
@@ -6396,7 +6396,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_mixin_minecraftclientmixin_java_inject",
-      "community": 4,
+      "community": 70,
       "norm_label": "inject"
     },
     {
@@ -6636,7 +6636,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult",
-      "community": 109,
+      "community": 11,
       "norm_label": "bridgingresult.java"
     },
     {
@@ -6646,7 +6646,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_bridgingresult",
-      "community": 109,
+      "community": 11,
       "norm_label": "bridgingresult"
     },
     {
@@ -6656,7 +6656,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_blockpos",
-      "community": 109,
+      "community": 11,
       "norm_label": "blockpos"
     },
     {
@@ -6666,7 +6666,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingresult_java_direction",
-      "community": 109,
+      "community": 11,
       "norm_label": "direction"
     },
     {
@@ -6676,7 +6676,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker",
-      "community": 109,
+      "community": 4,
       "norm_label": "bridgingstatetracker.java"
     },
     {
@@ -6686,7 +6686,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker",
-      "community": 109,
+      "community": 70,
       "norm_label": "bridgingstatetracker"
     },
     {
@@ -6696,7 +6696,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getbridgeassisttargetfor",
-      "community": 109,
+      "community": 70,
       "norm_label": ".getbridgeassisttargetfor()"
     },
     {
@@ -6706,7 +6706,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_player",
-      "community": 109,
+      "community": 70,
       "norm_label": "player"
     },
     {
@@ -6716,7 +6716,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_tick",
-      "community": 109,
+      "community": 70,
       "norm_label": ".tick()"
     },
     {
@@ -6726,7 +6726,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_java_localplayer",
-      "community": 109,
+      "community": 70,
       "norm_label": "localplayer"
     },
     {
@@ -6736,7 +6736,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_bridgingstatetracker_bridgingstatetracker_getlastticktarget",
-      "community": 109,
+      "community": 70,
       "norm_label": ".getlastticktarget()"
     },
     {
@@ -7006,7 +7006,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment",
-      "community": 114,
+      "community": 67,
       "norm_label": "placementalignment.java"
     },
     {
@@ -7016,7 +7016,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment",
-      "community": 114,
+      "community": 67,
       "norm_label": "placementalignment"
     },
     {
@@ -7026,7 +7026,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_up",
-      "community": 114,
+      "community": 67,
       "norm_label": "up"
     },
     {
@@ -7036,7 +7036,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_down",
-      "community": 114,
+      "community": 67,
       "norm_label": "down"
     },
     {
@@ -7046,7 +7046,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_placementalignment_horizontal",
-      "community": 114,
+      "community": 67,
       "norm_label": "horizontal"
     },
     {
@@ -7056,7 +7056,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_gettexturepath",
-      "community": 114,
+      "community": 67,
       "norm_label": "gettexturepath()"
     },
     {
@@ -7066,7 +7066,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_java_identifier",
-      "community": 114,
+      "community": 67,
       "norm_label": "identifier"
     },
     {
@@ -7076,7 +7076,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_from",
-      "community": 114,
+      "community": 67,
       "norm_label": "from()"
     },
     {
@@ -7086,7 +7086,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_raytrace_placementalignment_java_direction",
-      "community": 114,
+      "community": 67,
       "norm_label": "direction"
     },
     {
@@ -7096,7 +7096,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_gamesupport",
-      "community": 109,
+      "community": 4,
       "norm_label": "gamesupport.java"
     },
     {
@@ -7216,7 +7216,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path",
-      "community": 114,
+      "community": 148,
       "norm_label": "path.java"
     },
     {
@@ -7226,7 +7226,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path",
-      "community": 114,
+      "community": 148,
       "norm_label": "path"
     },
     {
@@ -7236,7 +7236,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_vec3",
-      "community": 114,
+      "community": 148,
       "norm_label": "vec3"
     },
     {
@@ -7246,7 +7246,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatebresenhamvoxels",
-      "community": 114,
+      "community": 148,
       "norm_label": ".calculatebresenhamvoxels()"
     },
     {
@@ -7256,7 +7256,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_java_blockpos",
-      "community": 114,
+      "community": 148,
       "norm_label": "blockpos"
     },
     {
@@ -7266,7 +7266,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_path_path_calculatemissedpoints",
-      "community": 114,
+      "community": 148,
       "norm_label": ".calculatemissedpoints()"
     },
     {
@@ -7306,7 +7306,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport",
-      "community": 67,
+      "community": 11,
       "norm_label": "vectorsupport.java"
     },
     {
@@ -7316,7 +7316,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_vectorsupport",
-      "community": 67,
+      "community": 11,
       "norm_label": "vectorsupport"
     },
     {
@@ -7326,7 +7326,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_vectorsupport_tovec3",
-      "community": 67,
+      "community": 11,
       "norm_label": ".tovec3()"
     },
     {
@@ -7336,7 +7336,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "vector3dc",
-      "community": 67,
+      "community": 11,
       "norm_label": "vector3dc"
     },
     {
@@ -7346,7 +7346,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_java_vec3",
-      "community": 67,
+      "community": 11,
       "norm_label": "vec3"
     },
     {
@@ -7356,7 +7356,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_vectorsupport_tovector3d",
-      "community": 67,
+      "community": 11,
       "norm_label": ".tovector3d()"
     },
     {
@@ -7366,7 +7366,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "vector3d",
-      "community": 67,
+      "community": 11,
       "norm_label": "vector3d"
     },
     {
@@ -7376,7 +7376,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_java_vector3fc",
-      "community": 67,
+      "community": 11,
       "norm_label": "vector3fc"
     },
     {
@@ -7386,7 +7386,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_vectorsupport_vectorsupport_tovector3f",
-      "community": 67,
+      "community": 11,
       "norm_label": ".tovector3f()"
     },
     {
@@ -7396,7 +7396,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "vector3f",
-      "community": 67,
+      "community": 11,
       "norm_label": "vector3f"
     },
     {
@@ -7616,7 +7616,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_bridging_util_render_render",
-      "community": 109,
+      "community": 11,
       "norm_label": "render.java"
     },
     {
@@ -7946,7 +7946,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_client_polymorphclienthandler_polymorphclienthandler_getcachedrecipes",
-      "community": 6,
+      "community": 1,
       "norm_label": ".getcachedrecipes()"
     },
     {
@@ -9426,7 +9426,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler",
-      "community": 3,
+      "community": 1,
       "norm_label": "syncrecipespackethandler.java"
     },
     {
@@ -9436,7 +9436,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_syncrecipespackethandler",
-      "community": 3,
+      "community": 1,
       "norm_label": "syncrecipespackethandler"
     },
     {
@@ -9446,7 +9446,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_syncrecipespackethandler_handle",
-      "community": 3,
+      "community": 1,
       "norm_label": ".handle()"
     },
     {
@@ -9456,7 +9456,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qol_src_main_java_com_skd_utilitycore_qol_network_syncrecipespackethandler_java_ipayloadcontext",
-      "community": 3,
+      "community": 1,
       "norm_label": "ipayloadcontext"
     },
     {
@@ -9780,14 +9780,14 @@
       "norm_label": "utility core \u2014 registro de cambios"
     },
     {
-      "label": "[QoL] 2.4.0",
+      "label": "[Admin] 2.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "changelog_qol_2_4_0",
+      "id": "changelog_admin_2_4_0",
       "community": 108,
-      "norm_label": "[qol] 2.4.0"
+      "norm_label": "[admin] 2.4.0"
     },
     {
       "label": "Add",
@@ -9800,14 +9800,14 @@
       "norm_label": "add"
     },
     {
-      "label": "[HUD] 0.0.0-beta.1",
+      "label": "[QoL] 2.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "changelog_hud_0_0_0_beta_1",
+      "id": "changelog_qol_2_4_0",
       "community": 144,
-      "norm_label": "[hud] 0.0.0-beta.1"
+      "norm_label": "[qol] 2.4.0"
     },
     {
       "label": "Add",
@@ -9820,10 +9820,30 @@
       "norm_label": "add"
     },
     {
+      "label": "[HUD] 0.0.0-beta.1",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "changelog_hud_0_0_0_beta_1",
+      "community": 149,
+      "norm_label": "[hud] 0.0.0-beta.1"
+    },
+    {
+      "label": "Add",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "changelog_add_22",
+      "community": 149,
+      "norm_label": "add"
+    },
+    {
       "label": "[Admin] 2.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "changelog_admin_2_3_0",
       "community": 121,
@@ -9833,7 +9853,7 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "changelog_change",
       "community": 121,
@@ -9843,7 +9863,7 @@
       "label": "[Admin] 2.3.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L36",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "changelog_admin_2_3_1",
       "community": 116,
@@ -9853,7 +9873,7 @@
       "label": "Fix",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "changelog_fix",
       "community": 116,
@@ -9863,7 +9883,7 @@
       "label": "[Admin] 2.3.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "changelog_admin_2_3_2",
       "community": 111,
@@ -9873,9 +9893,9 @@
       "label": "Add",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L45",
+      "source_location": "L52",
       "_origin": "ast",
-      "id": "changelog_add_45",
+      "id": "changelog_add_52",
       "community": 111,
       "norm_label": "add"
     },
@@ -9883,7 +9903,7 @@
       "label": "[Fixes] 2.5.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L50",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "changelog_fixes_2_5_0",
       "community": 115,
@@ -9893,9 +9913,9 @@
       "label": "Add",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L52",
+      "source_location": "L59",
       "_origin": "ast",
-      "id": "changelog_add_52",
+      "id": "changelog_add_59",
       "community": 115,
       "norm_label": "add"
     },
@@ -9903,7 +9923,7 @@
       "label": "[Fixes] 2.5.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L58",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "changelog_fixes_2_5_1",
       "community": 132,
@@ -9913,9 +9933,9 @@
       "label": "Fix",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L60",
+      "source_location": "L67",
       "_origin": "ast",
-      "id": "changelog_fix_60",
+      "id": "changelog_fix_67",
       "community": 132,
       "norm_label": "fix"
     },
@@ -9923,7 +9943,7 @@
       "label": "[Fixes] 2.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L65",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "changelog_fixes_2_4_0",
       "community": 122,
@@ -9933,9 +9953,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L67",
+      "source_location": "L74",
       "_origin": "ast",
-      "id": "changelog_change_67",
+      "id": "changelog_change_74",
       "community": 122,
       "norm_label": "change"
     },
@@ -9943,7 +9963,7 @@
       "label": "[QoL] 2.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L75",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "changelog_qol_2_3_0",
       "community": 123,
@@ -9953,9 +9973,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L77",
+      "source_location": "L84",
       "_origin": "ast",
-      "id": "changelog_change_77",
+      "id": "changelog_change_84",
       "community": 123,
       "norm_label": "change"
     },
@@ -9963,7 +9983,7 @@
       "label": "[Admin] 2.2.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L83",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "changelog_admin_2_2_3",
       "community": 120,
@@ -9973,9 +9993,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L85",
+      "source_location": "L92",
       "_origin": "ast",
-      "id": "changelog_change_85",
+      "id": "changelog_change_92",
       "community": 120,
       "norm_label": "change"
     },
@@ -9983,7 +10003,7 @@
       "label": "[Fixes] 2.3.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L91",
+      "source_location": "L98",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_5",
       "community": 124,
@@ -9993,9 +10013,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L93",
+      "source_location": "L100",
       "_origin": "ast",
-      "id": "changelog_change_93",
+      "id": "changelog_change_100",
       "community": 124,
       "norm_label": "change"
     },
@@ -10003,7 +10023,7 @@
       "label": "[QoL] 2.2.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L99",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "changelog_qol_2_2_5",
       "community": 125,
@@ -10013,9 +10033,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L101",
+      "source_location": "L108",
       "_origin": "ast",
-      "id": "changelog_change_101",
+      "id": "changelog_change_108",
       "community": 125,
       "norm_label": "change"
     },
@@ -10023,7 +10043,7 @@
       "label": "[Fixes] 2.3.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L107",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_4",
       "community": 20,
@@ -10033,7 +10053,7 @@
       "label": "[Fixes] 2.3.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L110",
+      "source_location": "L117",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_3",
       "community": 20,
@@ -10043,7 +10063,7 @@
       "label": "[Fixes] 2.3.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L113",
+      "source_location": "L120",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_2",
       "community": 20,
@@ -10053,7 +10073,7 @@
       "label": "[QoL] 2.2.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L116",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "changelog_qol_2_2_4",
       "community": 20,
@@ -10063,7 +10083,7 @@
       "label": "[QoL] 2.2.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L119",
+      "source_location": "L126",
       "_origin": "ast",
       "id": "changelog_qol_2_2_3",
       "community": 20,
@@ -10073,7 +10093,7 @@
       "label": "[Fixes] 2.3.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L122",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_1",
       "community": 20,
@@ -10083,7 +10103,7 @@
       "label": "[Fixes] 2.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L125",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "changelog_fixes_2_3_0",
       "community": 20,
@@ -10093,7 +10113,7 @@
       "label": "[Admin] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L128",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "changelog_admin_2_2_2",
       "community": 20,
@@ -10103,7 +10123,7 @@
       "label": "[Fixes] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L129",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "changelog_fixes_2_2_2",
       "community": 20,
@@ -10113,7 +10133,7 @@
       "label": "[QoL] 2.2.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L130",
+      "source_location": "L137",
       "_origin": "ast",
       "id": "changelog_qol_2_2_2",
       "community": 20,
@@ -10123,7 +10143,7 @@
       "label": "2.2.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L140",
       "_origin": "ast",
       "id": "changelog_2_2_1",
       "community": 20,
@@ -10133,7 +10153,7 @@
       "label": "2.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "changelog_2_2_0",
       "community": 20,
@@ -10143,7 +10163,7 @@
       "label": "2.1.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L140",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "changelog_2_1_2",
       "community": 20,
@@ -10153,7 +10173,7 @@
       "label": "2.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L144",
+      "source_location": "L151",
       "_origin": "ast",
       "id": "changelog_2_1_0",
       "community": 20,
@@ -10163,7 +10183,7 @@
       "label": "[2.1.1] - 2026-08-12",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L146",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "changelog_2_1_1_2026_08_12",
       "community": 119,
@@ -10173,9 +10193,9 @@
       "label": "Change",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L148",
+      "source_location": "L155",
       "_origin": "ast",
-      "id": "changelog_change_148",
+      "id": "changelog_change_155",
       "community": 119,
       "norm_label": "change"
     },
@@ -10183,7 +10203,7 @@
       "label": "1.11.13",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L163",
+      "source_location": "L170",
       "_origin": "ast",
       "id": "changelog_1_11_13",
       "community": 20,
@@ -10193,7 +10213,7 @@
       "label": "1.11.12",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L166",
+      "source_location": "L173",
       "_origin": "ast",
       "id": "changelog_1_11_12",
       "community": 20,
@@ -10203,7 +10223,7 @@
       "label": "1.11.11",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L171",
+      "source_location": "L178",
       "_origin": "ast",
       "id": "changelog_1_11_11",
       "community": 20,
@@ -10213,7 +10233,7 @@
       "label": "1.11.10",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L174",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "changelog_1_11_10",
       "community": 20,
@@ -10223,7 +10243,7 @@
       "label": "1.11.9",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L177",
+      "source_location": "L184",
       "_origin": "ast",
       "id": "changelog_1_11_9",
       "community": 20,
@@ -10233,7 +10253,7 @@
       "label": "1.11.8",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L180",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "changelog_1_11_8",
       "community": 20,
@@ -10243,7 +10263,7 @@
       "label": "1.11.7",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L183",
+      "source_location": "L190",
       "_origin": "ast",
       "id": "changelog_1_11_7",
       "community": 20,
@@ -10253,7 +10273,7 @@
       "label": "1.11.6",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L186",
+      "source_location": "L193",
       "_origin": "ast",
       "id": "changelog_1_11_6",
       "community": 20,
@@ -10263,7 +10283,7 @@
       "label": "1.11.5",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L190",
+      "source_location": "L197",
       "_origin": "ast",
       "id": "changelog_1_11_5",
       "community": 20,
@@ -10273,7 +10293,7 @@
       "label": "1.11.4",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L193",
+      "source_location": "L200",
       "_origin": "ast",
       "id": "changelog_1_11_4",
       "community": 20,
@@ -10283,7 +10303,7 @@
       "label": "1.11.3",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L196",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "changelog_1_11_3",
       "community": 20,
@@ -10293,7 +10313,7 @@
       "label": "1.11.2",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L199",
+      "source_location": "L206",
       "_origin": "ast",
       "id": "changelog_1_11_2",
       "community": 20,
@@ -10303,7 +10323,7 @@
       "label": "1.11.1",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L202",
+      "source_location": "L209",
       "_origin": "ast",
       "id": "changelog_1_11_1",
       "community": 20,
@@ -10313,7 +10333,7 @@
       "label": "1.11.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L205",
+      "source_location": "L212",
       "_origin": "ast",
       "id": "changelog_1_11_0",
       "community": 20,
@@ -10323,7 +10343,7 @@
       "label": "1.10.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L208",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "changelog_1_10_0",
       "community": 20,
@@ -10333,7 +10353,7 @@
       "label": "1.9.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L211",
+      "source_location": "L218",
       "_origin": "ast",
       "id": "changelog_1_9_0",
       "community": 20,
@@ -10343,7 +10363,7 @@
       "label": "1.8.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L214",
+      "source_location": "L221",
       "_origin": "ast",
       "id": "changelog_1_8_0",
       "community": 20,
@@ -10353,7 +10373,7 @@
       "label": "1.7.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L217",
+      "source_location": "L224",
       "_origin": "ast",
       "id": "changelog_1_7_0",
       "community": 20,
@@ -10363,7 +10383,7 @@
       "label": "1.6.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L220",
+      "source_location": "L227",
       "_origin": "ast",
       "id": "changelog_1_6_0",
       "community": 20,
@@ -10373,7 +10393,7 @@
       "label": "1.5.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L223",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "changelog_1_5_0",
       "community": 20,
@@ -10383,7 +10403,7 @@
       "label": "1.4.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L226",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "changelog_1_4_0",
       "community": 20,
@@ -10393,7 +10413,7 @@
       "label": "1.3.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L229",
+      "source_location": "L236",
       "_origin": "ast",
       "id": "changelog_1_3_0",
       "community": 20,
@@ -10403,7 +10423,7 @@
       "label": "1.2.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L232",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "changelog_1_2_0",
       "community": 20,
@@ -10413,7 +10433,7 @@
       "label": "1.1.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L235",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "changelog_1_1_0",
       "community": 20,
@@ -10423,7 +10443,7 @@
       "label": "1.0.0",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L238",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "changelog_1_0_0",
       "community": 20,
@@ -11918,6 +11938,16 @@
       "id": "docs_curseforge_versions_2_3_5_fixes",
       "community": 130,
       "norm_label": "2.3.5_fixes.md"
+    },
+    {
+      "label": "2.4.0_admin.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/2.4.0_admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_2_4_0_admin",
+      "community": 150,
+      "norm_label": "2.4.0_admin.md"
     },
     {
       "label": "2.4.0_fixes.md",
@@ -32627,7 +32657,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L238",
+      "source_location": "L245",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_0_0",
@@ -32637,7 +32667,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L208",
+      "source_location": "L215",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_10_0",
@@ -32647,7 +32677,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L205",
+      "source_location": "L212",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_0",
@@ -32657,7 +32687,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L202",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_1",
@@ -32667,7 +32697,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L174",
+      "source_location": "L181",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_10",
@@ -32677,7 +32707,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L171",
+      "source_location": "L178",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_11",
@@ -32687,7 +32717,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L166",
+      "source_location": "L173",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_12",
@@ -32697,7 +32727,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L163",
+      "source_location": "L170",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_13",
@@ -32707,7 +32737,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L199",
+      "source_location": "L206",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_2",
@@ -32717,7 +32747,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L196",
+      "source_location": "L203",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_3",
@@ -32727,7 +32757,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L193",
+      "source_location": "L200",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_4",
@@ -32737,7 +32767,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L190",
+      "source_location": "L197",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_5",
@@ -32747,7 +32777,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L186",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_6",
@@ -32757,7 +32787,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L183",
+      "source_location": "L190",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_7",
@@ -32767,7 +32797,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L180",
+      "source_location": "L187",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_8",
@@ -32777,7 +32807,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L177",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_11_9",
@@ -32787,7 +32817,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L235",
+      "source_location": "L242",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_1_0",
@@ -32797,7 +32827,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L232",
+      "source_location": "L239",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_2_0",
@@ -32807,7 +32837,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L229",
+      "source_location": "L236",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_3_0",
@@ -32817,7 +32847,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L226",
+      "source_location": "L233",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_4_0",
@@ -32827,7 +32857,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L223",
+      "source_location": "L230",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_5_0",
@@ -32837,7 +32867,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L220",
+      "source_location": "L227",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_6_0",
@@ -32847,7 +32877,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L217",
+      "source_location": "L224",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_7_0",
@@ -32857,7 +32887,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L214",
+      "source_location": "L221",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_8_0",
@@ -32867,7 +32897,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L211",
+      "source_location": "L218",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_1_9_0",
@@ -32877,7 +32907,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L144",
+      "source_location": "L151",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_0",
@@ -32887,7 +32917,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L146",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_1_2026_08_12",
@@ -32897,7 +32927,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L140",
+      "source_location": "L147",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_1_2",
@@ -32907,7 +32937,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L136",
+      "source_location": "L143",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_2_0",
@@ -32917,7 +32947,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L133",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_2_2_1",
@@ -32927,7 +32957,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L128",
+      "source_location": "L135",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_2_2",
@@ -32937,7 +32967,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L83",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_2_3",
@@ -32947,7 +32977,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_3_0",
@@ -32957,7 +32987,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L36",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_3_1",
@@ -32967,7 +32997,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L43",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_admin_2_3_2",
@@ -32977,7 +33007,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L129",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "changelog_utility_core_registro_de_cambios",
+      "target": "changelog_admin_2_4_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L136",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_2_2",
@@ -32987,7 +33027,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L125",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_0",
@@ -32997,7 +33037,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L122",
+      "source_location": "L129",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_1",
@@ -33007,7 +33047,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L113",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_2",
@@ -33017,7 +33057,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L110",
+      "source_location": "L117",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_3",
@@ -33027,7 +33067,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L107",
+      "source_location": "L114",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_4",
@@ -33037,7 +33077,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L91",
+      "source_location": "L98",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_3_5",
@@ -33047,7 +33087,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L65",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_4_0",
@@ -33057,7 +33097,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L50",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_5_0",
@@ -33067,7 +33107,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L58",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_fixes_2_5_1",
@@ -33077,7 +33117,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L13",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_hud_0_0_0_beta_1",
@@ -33087,7 +33127,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L130",
+      "source_location": "L137",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_2",
@@ -33097,7 +33137,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L119",
+      "source_location": "L126",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_3",
@@ -33107,7 +33147,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L116",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_4",
@@ -33117,7 +33157,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L99",
+      "source_location": "L106",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_2_5",
@@ -33127,7 +33167,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L75",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_3_0",
@@ -33137,7 +33177,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L6",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "changelog_utility_core_registro_de_cambios",
       "target": "changelog_qol_2_4_0",
@@ -33149,7 +33189,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "changelog_qol_2_4_0",
+      "source": "changelog_admin_2_4_0",
       "target": "changelog_add",
       "confidence_score": 1.0
     },
@@ -33159,7 +33199,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L15",
       "weight": 1.0,
-      "source": "changelog_hud_0_0_0_beta_1",
+      "source": "changelog_qol_2_4_0",
       "target": "changelog_add_15",
       "confidence_score": 1.0
     },
@@ -33167,7 +33207,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "changelog_hud_0_0_0_beta_1",
+      "target": "changelog_add_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "changelog_admin_2_3_0",
       "target": "changelog_change",
@@ -33177,7 +33227,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L38",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "changelog_admin_2_3_1",
       "target": "changelog_fix",
@@ -33187,19 +33237,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "changelog_admin_2_3_2",
-      "target": "changelog_add_45",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
       "source_location": "L52",
       "weight": 1.0,
-      "source": "changelog_fixes_2_5_0",
+      "source": "changelog_admin_2_3_2",
       "target": "changelog_add_52",
       "confidence_score": 1.0
     },
@@ -33207,10 +33247,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L60",
+      "source_location": "L59",
       "weight": 1.0,
-      "source": "changelog_fixes_2_5_1",
-      "target": "changelog_fix_60",
+      "source": "changelog_fixes_2_5_0",
+      "target": "changelog_add_59",
       "confidence_score": 1.0
     },
     {
@@ -33219,58 +33259,68 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L67",
       "weight": 1.0,
-      "source": "changelog_fixes_2_4_0",
-      "target": "changelog_change_67",
+      "source": "changelog_fixes_2_5_1",
+      "target": "changelog_fix_67",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L77",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "changelog_fixes_2_4_0",
+      "target": "changelog_change_74",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "changelog_qol_2_3_0",
-      "target": "changelog_change_77",
+      "target": "changelog_change_84",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L85",
+      "source_location": "L92",
       "weight": 1.0,
       "source": "changelog_admin_2_2_3",
-      "target": "changelog_change_85",
+      "target": "changelog_change_92",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L93",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "changelog_fixes_2_3_5",
-      "target": "changelog_change_93",
+      "target": "changelog_change_100",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L101",
+      "source_location": "L108",
       "weight": 1.0,
       "source": "changelog_qol_2_2_5",
-      "target": "changelog_change_101",
+      "target": "changelog_change_108",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L148",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "changelog_2_1_1_2026_08_12",
-      "target": "changelog_change_148",
+      "target": "changelog_change_155",
       "confidence_score": 1.0
     },
     {
@@ -34015,5 +34065,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "facab7d7d6df3e3bd19a58eab66dbfbd8704d525"
+  "built_at_commit": "bc10fd0a2acd323a75c84e9e38f51e4b18c76ac6"
 }

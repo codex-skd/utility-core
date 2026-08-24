@@ -145,5 +145,9 @@
   "143": "Plan: `/utilitycore cleanorphans` — purge orphaned block-registry entries left by removed mods",
   "144": "[HUD] 0.0.0-beta.1",
   "145": "1.0.0_hud.md",
-  "146": "2.4.0_qol.md"
+  "146": "2.4.0_qol.md",
+  "147": "BridgingAdjacency",
+  "148": "Path.java",
+  "149": "[HUD] 0.0.0-beta.1",
+  "150": "2.4.0_admin.md"
 }

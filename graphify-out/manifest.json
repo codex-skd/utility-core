@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787580678.9080477,
-    "ast_hash": "f9facf8bf3355359120b1b59748d8ec1",
+    "mtime": 1787581343.4540114,
+    "ast_hash": "3ce99c896289809d77aea76f1e28c39a",
     "semantic_hash": ""
   },
   "README.md": {
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
-    "mtime": 1787581162.484443,
-    "ast_hash": "64a67edb2d2e8b9d997aab12956a2bb9",
+    "mtime": 1787581415.177845,
+    "ast_hash": "73d35f2e6be0255075baf1ae57a8fdbc",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -1157,6 +1157,11 @@
   "hud/src/main/resources/assets/utility_core_hud/textures/gui/hud/placeholder.png": {
     "mtime": 1787323903.5970507,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.4.0_admin.md": {
+    "mtime": 1787581351.882567,
+    "ast_hash": "5ff7fb1e4c754476a1b572182bb8ead1",
     "semantic_hash": ""
   }
 }
