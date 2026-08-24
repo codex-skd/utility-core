@@ -3,6 +3,13 @@
 > A partir de aquí (post-2.2.1), `admin`, `fixes`, `qol` y `hud` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
 
+## [Admin] 2.4.0
+
+### Add
+
+- **Comando `/utilitycore cleanorphans`** (solo operadores): elimina bloques huérfanos que quedan en el mundo cuando se desinstala un mod. NeoForge conserva el nombre de registro original de esos bloques en la paleta de cada chunk en vez de convertirlos en aire, por lo que se renderizan con la textura magenta/negro de "modelo no encontrado" mientras siguen siendo sólidos. El comando recorre overworld, nether y end (sin tocar dimensiones modded) sustituyendo por `minecraft:air` cualquier entrada que coincida con la nueva lista configurable `orphanBlocks.blacklist` (sembrada por defecto con los IDs conocidos de los mods `naraka` y `warlockery`), reescribiendo directamente la paleta de los chunks no cargados a través del mismo camino de I/O de región que usa el propio servidor (respetando la compresión de FastAsyncWorldSave) y usando la API normal de bloques para los chunks que sí están cargados. Incluye `/utilitycore cleanorphans dryrun` para contar sin escribir nada, y un aviso explícito de que es una operación irreversible — se recomienda backup del mundo antes de ejecutar en real.
+
+
 ## [QoL] 2.4.0
 
 ### Add

@@ -2,6 +2,8 @@ package com.skd.utilitycore.admin.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+import java.util.List;
+
 public class AdminConfig {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
@@ -104,6 +106,35 @@ public class AdminConfig {
             .comment("EN: Folder scanned for datapacks (relative to the game directory) when dataPackFolder.enabled is true.",
                      "ES: Carpeta que se escanea en busca de datapacks (relativa al directorio del juego) cuando dataPackFolder.enabled está activado.")
             .define("dataPackFolder.path", "datapacks");
+
+    // Orphan Blocks
+    public static final ModConfigSpec.ConfigValue<List<? extends String>> ORPHAN_BLOCKS_BLACKLIST = BUILDER
+            .comment(
+                    "EN: List of block registry names (namespace:path) or bare namespaces to treat as orphaned blocks from removed mods. "
+                            + "Entries without a colon are treated as namespace wildcards (all blocks in that namespace). "
+                            + "These will be replaced with minecraft:air when running /utilitycore cleanorphans. "
+                            + "Default includes known orphans from naraka and warlockery mods.",
+                    "ES: Lista de nombres de registro de bloques (namespace:path) o namespaces sin más para tratar como bloques huérfanos de mods eliminados. "
+                            + "Las entradas sin dos puntos se tratan como comodines de namespace (todos los bloques de ese namespace). "
+                            + "Serán reemplazados por minecraft:air al ejecutar /utilitycore cleanorphans. "
+                            + "El valor por defecto incluye huérfanos conocidos de los mods naraka y warlockery.")
+            .defineList("orphanBlocks.blacklist", () -> List.of(
+                    "naraka:amethyst_ore",
+                    "naraka:deepslate_amethyst_ore",
+                    "naraka:deepslate_nectarium_ore",
+                    "naraka:nectarium_ore",
+                    "naraka:diamond_golem_spawner",
+                    "warlockery:silver_ore",
+                    "warlockery:deepslate_silver_ore",
+                    "warlockery:delvealloy_ore",
+                    "warlockery:deepslate_delvealloy_ore",
+                    "warlockery:alder_leaves",
+                    "warlockery:alder_log",
+                    "warlockery:hawthorn_leaves",
+                    "warlockery:hawthorn_log",
+                    "warlockery:rowan_leaves",
+                    "warlockery:rowan_log"
+            ), obj -> obj instanceof String);
 
     public static final ModConfigSpec SPEC = BUILDER.build();
 }
