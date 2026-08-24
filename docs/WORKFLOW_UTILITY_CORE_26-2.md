@@ -24,7 +24,7 @@
 |---|---|
 | Mod ID | `utility_core_admin` |
 | Display name | `Utility Core Admin` |
-| Versión actual | `2.4.0` |
+| Versión actual | `2.4.0` (CurseForge file ID 8724564) |
 | Estado | ✅ Release estable 2.4.0 |
 
 ### Fixes
