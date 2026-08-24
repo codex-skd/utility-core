@@ -25,6 +25,11 @@ public class QoLConfig {
                      "ES: Muestra un título en pantalla al entrar en un bioma o dimensión nuevos.")
             .define("enableBiomeDimensionTitles", true);
 
+    public static final ModConfigSpec.BooleanValue ENABLE_UNDERGROUND_BIOME_TITLES = BUILDER
+            .comment("EN: Shows the biome title even when the player is underground and can't see the sky (where Minecraft usually reports the surface biome). Disable to only show biome titles while the sky is visible.",
+                     "ES: Muestra el título de bioma incluso cuando el jugador está bajo tierra y no puede ver el cielo (donde Minecraft suele reportar el bioma de superficie). Desactívalo para mostrar el título de bioma solo cuando se ve el cielo.")
+            .define("enableUndergroundBiomeTitles", true);
+
     public static final ModConfigSpec.IntValue TITLE_VERTICAL_OFFSET = BUILDER
             .comment("EN: Shifts vanilla title/subtitle text vertically from screen center. Positive values move the text up (toward the top of the screen); negative values move it down.",
                      "ES: Desplaza verticalmente el título/subtítulo vanilla desde el centro de la pantalla. Valores positivos mueven el texto hacia arriba; negativos hacia abajo.")

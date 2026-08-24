@@ -43,7 +43,9 @@ public class BiomeDimensionTitleHandler {
         lastDimension = dimension;
 
         ResourceKey<Biome> biome = biomeKey(player, mc);
-        if (biome != null && lastBiome != null && !lastBiome.equals(biome)) {
+        boolean canShowBiomeTitle = QoLConfig.ENABLE_UNDERGROUND_BIOME_TITLES.get()
+                || mc.level.canSeeSky(player.blockPosition());
+        if (biome != null && lastBiome != null && !lastBiome.equals(biome) && canShowBiomeTitle) {
             showTitle(mc, biomeName(biome));
         }
         lastBiome = biome;
