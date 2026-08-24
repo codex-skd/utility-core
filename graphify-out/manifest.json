@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "settings.gradle": {
-    "mtime": 1786433542.4748466,
-    "ast_hash": "f01fb80291af751eb61f175cde9a70fc",
+    "mtime": 1787322169.373298,
+    "ast_hash": "b34b53a8ff18defce6b0275da86280d4",
     "semantic_hash": ""
   },
   "src/main/resources/assets/utility_core/lang/en_us.json": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787220773.1652925,
-    "ast_hash": "4c63fd582102cf25d94b293dc0dec3d0",
+    "mtime": 1787580678.9080477,
+    "ast_hash": "f9facf8bf3355359120b1b59748d8ec1",
     "semantic_hash": ""
   },
   "README.md": {
@@ -45,13 +45,13 @@
     "semantic_hash": ""
   },
   "docs/WORKFLOW_UTILITY_CORE_26-2.md": {
-    "mtime": 1787220929.1340945,
-    "ast_hash": "40b7c3591ec16cfff3b78c6ea63b9128",
+    "mtime": 1787581162.484443,
+    "ast_hash": "64a67edb2d2e8b9d997aab12956a2bb9",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
-    "mtime": 1787220788.7959816,
-    "ast_hash": "13fac8f7dcba5f2c8ac6841ffdbc8472",
+    "mtime": 1787315861.1984818,
+    "ast_hash": "7fce5270dd490f73bbfe5298fa4f9821",
     "semantic_hash": ""
   },
   "docs/curseforge/versions/0.0.0-beta.1.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/chunkgen/ChunkGenManager.java": {
-    "mtime": 1786402967.306929,
-    "ast_hash": "d32f0983bda4fc48c03ab5d6c4bc4067",
+    "mtime": 1787480489.3494823,
+    "ast_hash": "e4ff07ecbec6236ac00bea0138bb4ec4",
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/common/api/PolymorphApi.java": {
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/config/AdminConfig.java": {
-    "mtime": 1786460247.2720692,
-    "ast_hash": "8b82641b267e42f91408fd341f235cc9",
+    "mtime": 1787579021.6039417,
+    "ast_hash": "ca7d8a1b9f823b31818c3dd44256e8dc",
     "semantic_hash": ""
   },
   "admin/src/main/java/com/skd/utilitycore/admin/rules/ServerRulesManager.java": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/UtilityCoreFixes.java": {
-    "mtime": 1786576350.8506677,
-    "ast_hash": "f1536f98b6c0d314fb7129d580778ed8",
+    "mtime": 1787435671.7750857,
+    "ast_hash": "d047fa801add672d8d1ceb69ae2cfa56",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/ModAttachments.java": {
-    "mtime": 1786433771.9029999,
-    "ast_hash": "1dedd2a89e4ebe2afcca921a8aa37288",
+    "mtime": 1787349441.2465906,
+    "ast_hash": "56e7880cd4f1d3e315436b64cc2225d1",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/PlayerRecipeData.java": {
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/config/FixesConfig.java": {
-    "mtime": 1786983051.7849996,
-    "ast_hash": "fb7b67ba29ad446afc89153ec6e7ba5d",
+    "mtime": 1787349426.119454,
+    "ast_hash": "c3499ab8bf5c31277ad4a105e7f8d8b6",
     "semantic_hash": ""
   },
   "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinDamageContainer.java": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "fixes/src/main/resources/utility_core_fixes.mixins.json": {
-    "mtime": 1787047815.5492108,
-    "ast_hash": "9947e3b4cdf9b462fa8a4938b9daf1bd",
+    "mtime": 1787351593.4504845,
+    "ast_hash": "ed898ceaaf1df3fabe96ab3689f30086",
     "semantic_hash": ""
   },
   "qol/build.gradle": {
@@ -570,8 +570,8 @@
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/client/titles/BiomeDimensionTitleHandler.java": {
-    "mtime": 1786434929.738195,
-    "ast_hash": "631408d382da2a993a976a72bb0325e8",
+    "mtime": 1787580543.4491203,
+    "ast_hash": "68b0b2d984819d703d63a713b2414982",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/common/api/PolymorphApi.java": {
@@ -625,8 +625,8 @@
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/config/QoLConfig.java": {
-    "mtime": 1786435216.8363905,
-    "ast_hash": "9c39407c1fd9444054c27bfdb7969348",
+    "mtime": 1787580539.6767244,
+    "ast_hash": "134dc4a7ac2f859bc3eae0865f0f87a2",
     "semantic_hash": ""
   },
   "qol/src/main/java/com/skd/utilitycore/qol/mixin/MixinCraftingMenu.java": {
@@ -695,13 +695,13 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_admin.md": {
-    "mtime": 1787053538.1448882,
-    "ast_hash": "e5b76a5b1cbc0a457bd5dc2e4333ecff",
+    "mtime": 1787421769.1641333,
+    "ast_hash": "2c8848b851f32ca0a9689109d965c147",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_fixes.md": {
-    "mtime": 1787044880.1544645,
-    "ast_hash": "9321ef2d5545088a50c0c04520f7d346",
+    "mtime": 1787358608.124627,
+    "ast_hash": "1fd067bd20686d9f2e548c173b5018d8",
     "semantic_hash": ""
   },
   "docs/curseforge/project_description_qol.md": {
@@ -932,6 +932,231 @@
   "docs/curseforge/versions/2.4.0_fixes.md": {
     "mtime": 1787220751.0193417,
     "ast_hash": "6539bb4a6a7c9b5116da14f8303f5beb",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/orphans/OrphanBlockCleaner.java": {
+    "mtime": 1787580748.4399416,
+    "ast_hash": "443e8dfc4d090425656a68f057ed52f3",
+    "semantic_hash": ""
+  },
+  "admin/src/main/java/com/skd/utilitycore/admin/orphans/OrphanBlockCommand.java": {
+    "mtime": 1787580774.6045876,
+    "ast_hash": "56ddb2918901f45a0eaef3c432449980",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/common/attachment/ReturnPortalData.java": {
+    "mtime": 1787349398.6477323,
+    "ast_hash": "0ec589316e15140d9c017e72667dc7d0",
+    "semantic_hash": ""
+  },
+  "fixes/src/main/java/com/skd/utilitycore/fixes/mixin/MixinNetherReturnPortalFix.java": {
+    "mtime": 1787352270.1031625,
+    "ast_hash": "3e75d036de54249cec7e0adb4ad94f81",
+    "semantic_hash": ""
+  },
+  "hud/build.gradle": {
+    "mtime": 1787561556.2549973,
+    "ast_hash": "de276c52c644aba0cdcb7d0c8e44b8aa",
+    "semantic_hash": ""
+  },
+  "hud/src/main/java/com/skd/utilitycore/hud/UtilityCoreHud.java": {
+    "mtime": 1787419735.8015287,
+    "ast_hash": "f570d826e9a68fccd3748f1ad816e904",
+    "semantic_hash": ""
+  },
+  "hud/src/main/java/com/skd/utilitycore/hud/client/HudConfig.java": {
+    "mtime": 1787328129.2896707,
+    "ast_hash": "c6ad7cdbb67a57029bd761e05d42dee0",
+    "semantic_hash": ""
+  },
+  "hud/src/main/java/com/skd/utilitycore/hud/client/HudOverlay.java": {
+    "mtime": 1787342861.61352,
+    "ast_hash": "0528e7a1fdfe42a248d831602b5bb226",
+    "semantic_hash": ""
+  },
+  "hud/src/main/java/com/skd/utilitycore/hud/client/menu/HudMenuScreen.java": {
+    "mtime": 1787396963.5992515,
+    "ast_hash": "0aa5f407f6631697874dae7fec2a015c",
+    "semantic_hash": ""
+  },
+  "hud/src/main/java/com/skd/utilitycore/hud/client/menu/HudPositionEditorScreen.java": {
+    "mtime": 1787565836.5151417,
+    "ast_hash": "48af133b2d01e4c4783ce78777400459",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/cs_cz.json": {
+    "mtime": 1787566083.9811263,
+    "ast_hash": "488a7b97d0a2a88052d5a6c63fc9637c",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/de_de.json": {
+    "mtime": 1787565902.8145845,
+    "ast_hash": "87a608e403d7dca17accace6f3ff34aa",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/en_us.json": {
+    "mtime": 1787565868.0460339,
+    "ast_hash": "b0c08a23fa22e650a13324ffef77f013",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/es_es.json": {
+    "mtime": 1787565876.46495,
+    "ast_hash": "9458dba8acc966fdb6790c8f8e699336",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/es_mx.json": {
+    "mtime": 1787565885.3174183,
+    "ast_hash": "9458dba8acc966fdb6790c8f8e699336",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/fr_fr.json": {
+    "mtime": 1787565895.7538483,
+    "ast_hash": "d1080a7bf64dc4c1cf1ef9b79a1c97c4",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/hu_hu.json": {
+    "mtime": 1787566102.7573705,
+    "ast_hash": "d583c206025fa4b212b7b74a98f19eb1",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/it_it.json": {
+    "mtime": 1787565915.621618,
+    "ast_hash": "76daee50fac12339a0c92c0c4f63c370",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/ja_jp.json": {
+    "mtime": 1787566016.4890783,
+    "ast_hash": "8bea7c05ac0fc85b14a137edf305b2a1",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/ko_kr.json": {
+    "mtime": 1787566025.8681986,
+    "ast_hash": "ea6be8e58cfe09cb82b9796d9f518a50",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/nl_nl.json": {
+    "mtime": 1787566120.8108475,
+    "ast_hash": "4d54e00ad9235995e0f67bd432cc0c44",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/pl_pl.json": {
+    "mtime": 1787566035.7461486,
+    "ast_hash": "45c8c509916bf31bb1cbbfacf72d514f",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/pt_br.json": {
+    "mtime": 1787565922.9984977,
+    "ast_hash": "f92defb16e76f97c6196292b28353a7d",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/ro_ro.json": {
+    "mtime": 1787566109.4222937,
+    "ast_hash": "df08efaf853708f8ac574e70b4486ab3",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/ru_ru.json": {
+    "mtime": 1787565964.1673825,
+    "ast_hash": "b140bdc2d7463bf6911c1577ab884cbe",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/sv_se.json": {
+    "mtime": 1787566130.1295848,
+    "ast_hash": "8058f332e9a0fc5d1466f7610367fe9b",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/tr_tr.json": {
+    "mtime": 1787566052.8505895,
+    "ast_hash": "16d1ca2a9a1fbd70a4c1e5f8f61d5a9b",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/uk_ua.json": {
+    "mtime": 1787566074.6477382,
+    "ast_hash": "61cad2d291582b243cb25849b608b609",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/zh_cn.json": {
+    "mtime": 1787565970.3024247,
+    "ast_hash": "8a018ab5941c4ea64cc3c746138d40a7",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/lang/zh_tw.json": {
+    "mtime": 1787566003.0805123,
+    "ast_hash": "b3593a0b5edb59f119888b9e95ff4b8e",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/vellumli_books/hud_guide/en_us/categories/general.json": {
+    "mtime": 1787333656.1029017,
+    "ast_hash": "710d9c38916307a51eb260fb0d83349c",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/vellumli_books/hud_guide/en_us/entries/main.json": {
+    "mtime": 1787399772.6486206,
+    "ast_hash": "471043e1c07a3a8ce446c48f870e2910",
+    "semantic_hash": ""
+  },
+  ".claude/plans/clean-orphan-blocks.md": {
+    "mtime": 1787577942.5409253,
+    "ast_hash": "9ec5851ced0474e54a3f72ac665f0c29",
+    "semantic_hash": ""
+  },
+  "docs/HUD_ROADMAP.md": {
+    "mtime": 1787394872.9459999,
+    "ast_hash": "1d59adc1651e1539e587c313a797da3a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description_hud.md": {
+    "mtime": 1787399981.5305967,
+    "ast_hash": "23e74e69516bcf56579e8b58fae5de0c",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1_hud.md": {
+    "mtime": 1787399943.3887334,
+    "ast_hash": "143e21f036b951d1df38dc5af519e6bc",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.2_hud.md": {
+    "mtime": 1787422339.1718483,
+    "ast_hash": "3e0d24327dfc5ace1f05fa5f1c624096",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/1.0.0_hud.md": {
+    "mtime": 1787566797.184481,
+    "ast_hash": "17643b9dd166de9437a1cceaf43a280a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.1_admin.md": {
+    "mtime": 1787421949.2307928,
+    "ast_hash": "5e7e4c19ca5197d325e813956f362eef",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.3.2_admin.md": {
+    "mtime": 1787483669.9611187,
+    "ast_hash": "44428f1171f22efcc93429752ce7e097",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.4.0_qol.md": {
+    "mtime": 1787580674.2895672,
+    "ast_hash": "136e535cf7ee6ee9ced574969b4b50b5",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.5.0_fixes.md": {
+    "mtime": 1787358625.1777797,
+    "ast_hash": "c80720a40417d3e7fbaa35ec3f1cef77",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/2.5.1_fixes.md": {
+    "mtime": 1787435999.0780635,
+    "ast_hash": "e9c4e4b31ab1b8a79f45ee3a6ceb4f5d",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/icon.png": {
+    "mtime": 1787323125.0719745,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "hud/src/main/resources/assets/utility_core_hud/textures/gui/hud/placeholder.png": {
+    "mtime": 1787323903.5970507,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   }
 }
