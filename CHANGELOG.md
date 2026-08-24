@@ -3,6 +3,13 @@
 > A partir de aquí (post-2.2.1), `admin`, `fixes`, `qol` y `hud` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
 
+## [QoL] 2.4.0
+
+### Add
+
+- **Control del título de bioma bajo tierra**: nueva opción de config `enableUndergroundBiomeTitles` (default: `true`). Bajo tierra, el grafo de biomas de Minecraft suele reportar el mismo bioma que la superficie sobre el jugador (los biomas específicos de cueva como Lush Caves, Dripstone Caves o Deep Dark son la excepción), por lo que el título de bioma podía mostrar un nombre de superficie engañoso mientras se exploraban cuevas. Al desactivar esta opción se suprime el título de bioma siempre que el jugador no pueda ver el cielo.
+
+
 ## [HUD] 0.0.0-beta.1
 
 ### Add
