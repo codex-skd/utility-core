@@ -42,8 +42,8 @@
 |---|---|
 | Mod ID | `utility_core_qol` |
 | Display name | `Utility Core QoL` |
-| Versión actual | `2.3.0` (CurseForge file ID 8690356) |
-| Estado | ✅ Release estable 2.3.0 |
+| Versión actual | `2.4.0` (CurseForge file ID 8724530) |
+| Estado | ✅ Release estable 2.4.0 |
 
 ## Convenciones de nomenclatura
 
