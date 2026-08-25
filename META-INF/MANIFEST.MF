@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Mod-ID: utility_core_admin
-Mod-Name: Utility Core Admin
-Mod-Version: 2.0.0-beta.1
-
