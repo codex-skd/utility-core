@@ -105,7 +105,7 @@ hud/build/libs/utility_core_hud-26.2-neoforge-26.2.0.57-<hud_version>.jar
 - **Category**: Client QoL
 - **Side**: Client only
 - **Dependencies**: Vellumli (required)
-- **Config**: `config/utility_core_hud/` (posición/orientación/escala guardadas por el editor interactivo, no TOML estático)
+- **Config**: `config/utility_core/hud/` (posición/orientación/escala guardadas por el editor interactivo, no TOML estático)
 - **Description**: `docs/curseforge/project_description_hud.md`
 
 ---

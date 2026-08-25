@@ -16,7 +16,7 @@ public class HudConfig {
     public static float scale = 1.0f;
 
     private static final Path CONFIG_PATH = Minecraft.getInstance().gameDirectory.toPath()
-            .resolve("config/utility_core_hud/hud_config.json");
+            .resolve("config/utility_core/hud/hud_config.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static void load() {
