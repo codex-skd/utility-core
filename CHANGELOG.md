@@ -3,6 +3,13 @@
 > A partir de aquí (post-2.2.1), `admin`, `fixes`, `qol` y `hud` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
 
 
+## [HUD] 1.0.1
+
+### Fix
+
+- **Ruta de config anidada bajo `utility_core`**: la config del HUD se guardaba en `config/utility_core_hud/hud_config.json`, una carpeta plana propia en vez de anidarse bajo la carpeta compartida del mod. Ahora se guarda en `config/utility_core/hud/hud_config.json`.
+
+
 ## [Admin] 2.4.0
 
 ### Add
