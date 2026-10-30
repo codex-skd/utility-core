@@ -1,0 +1,43 @@
+# This is an example neoforge.mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="assets/utility_core/icon.png"
+credits="Biome/Dimension Titles logic ported from Traveler's Titles by YUNGNICKYOUNG (LGPLv3)"
+description='''
+Utility Core - A library mod providing useful utilities for Minecraft.
+
+Features:
+- Recipe conflict resolution: choose between multiple crafting outputs when recipes overlap
+- Biome/Dimension Titles: shows a title when entering a new biome or dimension
+- Spawn Schematic: pastes your own .schem/.schematic structure at world creation with configurable height placement (align to ground, surface offset, or fixed absolute Y); the file is read from <game-dir>/utility_core/spawn_schem/schematic_spawn.schem (not bundled in the mod)
+- Data Pack Folder: auto-loads all datapacks from a folder into every world (dedicated servers and single-player)
+- Automatic chunk pregeneration (to run while the server is empty, set pause-when-empty-seconds=-1 in server.properties), damage safety, and mod compatibility fixes
+- Configurable settings for all features
+- API for other mods to integrate
+'''
+
+[[mixins]]
+config="utility_core.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
