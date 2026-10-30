@@ -1,0 +1,338 @@
+# Utility Core — Registro de cambios
+
+> A partir de aquí (post-2.2.1), `admin`, `fixes`, `qol` y `hud` versionan de forma independiente. Las entradas nuevas se encabezan `## [Mod] X.Y.Z`; las entradas anteriores a este punto usan versión compartida y siguen aplicando a los 3 mods.
+
+
+## [Unreleased]
+
+### Fixed
+
+- **CI**: `PUBLIC_OPTIONAL` vuelve a `"LICENSE NOTICE"`. La allowlist habia crecido
+  `wiki/ mkdocs.yml .github/`, que podia publicar la wiki privada y los workflows del
+  repositorio en el snapshot publico. Era **inerte**: ninguna de esas rutas existe en el arbol.
+
+### Added
+
+- **`LICENSE`**: MIT, que es lo que declara `mod_license` pero sin el texto correspondiente. Ahora el snapshot publico declara sus terminos, y `LICENSE` deja de
+  ser una entrada de allowlist que no apunta a nada.
+
+Ademas, el README de la rama sigue titulado **Utility Core** y describe features de los tres mods en que se partio (Recipe Selector es de QoL, ChunkGen y Spawn Zone son de Admin). El titulo y la lista se(left) describen el mod pre-split.
+---
+
+## [Admin] 2.4.2 - 2026-10-30
+
+### Changed
+
+- **Variables de CurseForge**: `docs/curseforge/project_vars.md` pasa a `docs/curseforge/project.env` (formato env: `PROJECT_ID`, `GAME_VERSIONS`, `RELEASE_TYPE`, `RELATIONS`). La documentación genérica se centraliza en `codex-docs/reference/CURSEFORGE.md` y los scripts de subida y consulta leen el nuevo fichero.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [Fixes] 2.5.3 - 2026-10-30
+
+### Changed
+
+- **Variables de CurseForge**: `docs/curseforge/project_vars.md` pasa a `docs/curseforge/project.env` (formato env: `PROJECT_ID`, `GAME_VERSIONS`, `RELEASE_TYPE`, `RELATIONS`). La documentación genérica se centraliza en `codex-docs/reference/CURSEFORGE.md` y los scripts de subida y consulta leen el nuevo fichero.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [QoL] 2.4.2 - 2026-10-30
+
+### Changed
+
+- **Variables de CurseForge**: `docs/curseforge/project_vars.md` pasa a `docs/curseforge/project.env` (formato env: `PROJECT_ID`, `GAME_VERSIONS`, `RELEASE_TYPE`, `RELATIONS`). La documentación genérica se centraliza en `codex-docs/reference/CURSEFORGE.md` y los scripts de subida y consulta leen el nuevo fichero.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [HUD] 1.1.2 - 2026-10-30
+
+### Changed
+
+- **Variables de CurseForge**: `docs/curseforge/project_vars.md` pasa a `docs/curseforge/project.env` (formato env: `PROJECT_ID`, `GAME_VERSIONS`, `RELEASE_TYPE`, `RELATIONS`). La documentación genérica se centraliza en `codex-docs/reference/CURSEFORGE.md` y los scripts de subida y consulta leen el nuevo fichero.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [Admin] 2.4.1 - 2026-10-29
+
+### Changed
+
+- **Tokens de CurseForge**: el token de subida y la clave Core ya no se guardan en `docs/curseforge/project_vars.md`; se leen de las variables de entorno de usuario `API_MOD_UPLOAD_CURSEFORGE` y `API_MOD_GET_CURSEFORGE`. Los scripts de subida y consulta se han adaptado y la documentación se ha actualizado.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [Fixes] 2.5.2 - 2026-10-29
+
+### Changed
+
+- **Tokens de CurseForge**: el token de subida y la clave Core ya no se guardan en `docs/curseforge/project_vars.md`; se leen de las variables de entorno de usuario `API_MOD_UPLOAD_CURSEFORGE` y `API_MOD_GET_CURSEFORGE`. Los scripts de subida y consulta se han adaptado y la documentación se ha actualizado.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [QoL] 2.4.1 - 2026-10-29
+
+### Changed
+
+- **Tokens de CurseForge**: el token de subida y la clave Core ya no se guardan en `docs/curseforge/project_vars.md`; se leen de las variables de entorno de usuario `API_MOD_UPLOAD_CURSEFORGE` y `API_MOD_GET_CURSEFORGE`. Los scripts de subida y consulta se han adaptado y la documentación se ha actualizado.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [HUD] 1.1.1 - 2026-10-29
+
+### Changed
+
+- **Tokens de CurseForge**: el token de subida y la clave Core ya no se guardan en `docs/curseforge/project_vars.md`; se leen de las variables de entorno de usuario `API_MOD_UPLOAD_CURSEFORGE` y `API_MOD_GET_CURSEFORGE`. Los scripts de subida y consulta se han adaptado y la documentación se ha actualizado.
+- **Sin cambios en el mod**: solo documentación y tooling. Versión **exenta de subida a CurseForge** (no hay JAR nuevo que publicar); se versiona por ser un cambio de proceso importante.
+
+## [HUD] 1.1.0
+
+### Add
+
+- **Panel con marco biselado estilo vanilla**: los iconos de armadura ahora se renderizan dentro de un marco biselado gris claro, cada icono de 16x16 en su propio hueco, compartido entre el overlay in-game y la vista previa del editor de posición para que ambos se vean idénticos.
+
+### Fix
+
+- **Renderizado duplicado**: el overlay ahora se dibuja una vez por frame (solo en la capa `EXPERIENCE_LEVEL`) en vez de una vez por cada capa de GUI vanilla.
+- **Ocultar HUD con F1**: el panel de armadura ahora respeta el flag vanilla de "ocultar HUD", así que los mods que lo activan durante transiciones también ocultan el panel.
+- **Escala**: `HudConfig.scale` ahora se aplica vía la matriz de pose, arreglando el escalado del panel.
+
+
+## [HUD] 1.0.1
+
+### Fix
+
+- **Ruta de config anidada bajo `utility_core`**: la config del HUD se guardaba en `config/utility_core_hud/hud_config.json`, una carpeta plana propia en vez de anidarse bajo la carpeta compartida del mod. Ahora se guarda en `config/utility_core/hud/hud_config.json`.
+
+
+## [Admin] 2.4.0
+
+### Add
+
+- **Comando `/utilitycore cleanorphans`** (solo operadores): elimina bloques huérfanos que quedan en el mundo cuando se desinstala un mod. NeoForge conserva el nombre de registro original de esos bloques en la paleta de cada chunk en vez de convertirlos en aire, por lo que se renderizan con la textura magenta/negro de "modelo no encontrado" mientras siguen siendo sólidos. El comando recorre overworld, nether y end (sin tocar dimensiones modded) sustituyendo por `minecraft:air` cualquier entrada que coincida con la nueva lista configurable `orphanBlocks.blacklist` (sembrada por defecto con los IDs conocidos de los mods `naraka` y `warlockery`), reescribiendo directamente la paleta de los chunks no cargados a través del mismo camino de I/O de región que usa el propio servidor (respetando la compresión de FastAsyncWorldSave) y usando la API normal de bloques para los chunks que sí están cargados. Incluye `/utilitycore cleanorphans dryrun` para contar sin escribir nada, y un aviso explícito de que es una operación irreversible — se recomienda backup del mundo antes de ejecutar en real.
+
+
+## [QoL] 2.4.0
+
+### Add
+
+- **Control del título de bioma bajo tierra**: nueva opción de config `enableUndergroundBiomeTitles` (default: `true`). Bajo tierra, el grafo de biomas de Minecraft suele reportar el mismo bioma que la superficie sobre el jugador (los biomas específicos de cueva como Lush Caves, Dripstone Caves o Deep Dark son la excepción), por lo que el título de bioma podía mostrar un nombre de superficie engañoso mientras se exploraban cuevas. Al desactivar esta opción se suprime el título de bioma siempre que el jugador no pueda ver el cielo.
+
+
+## [HUD] 0.0.0-beta.1
+
+### Add
+
+- **Initial release** of Utility Core HUD as 4th submodule in the utility_core repo.
+- **Armor Durability HUD**: Displays equipped armor pieces (helmet, chestplate, leggings, boots) with durability overlay, matching inventory icon style. Icons always stay contiguous — no gaps when pieces are removed.
+- **Vellumli Guide Book**: In-game book explaining all HUD features. First page has a button that opens the HUD menu directly.
+- **Interactive Position Editor**: Drag to move, mouse wheel to toggle horizontal/vertical layout, +/− buttons to scale. Gold border marks editable area. Enter to save, Escape to cancel.
+- **Show / Never Show Toggle**: Cycle through Show → Never Show → Show states from the menu.
+- **Config** saved to `config/utility_core_hud/hud_config.json` (position, orientation, scale, visibility).
+- **Client-only** mod for NeoForge 26.2.0.57 / Minecraft 26.2.
+- **Required dependency**: Vellumli (in-game guide book).
+
+
+## [Admin] 2.3.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_admin-26.2-neoforge-26.2.0.57-2.3.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+
+## [Admin] 2.3.1
+
+### Fix
+
+- **Reset paused state when chunk gen disabled**: al desactivar `chunkGen.enabled`, el estado `paused` se reinicia para permitir que el modo pausa del juego funcione correctamente.
+
+
+## [Admin] 2.3.2
+
+### Add
+
+- **Force pause safety option for chunk generation**: nueva opción de config <code>chunkGen.forcePause</code> (default: <code>false</code>) como override de seguridad de emergencia. Cuando es <code>true</code>, la generación de chunks nunca se ejecuta aunque <code>chunkGen.enabled = true</code>. Útil como medida de seguridad para prevenir cualquier generación accidental.
+
+
+## [Fixes] 2.5.0
+
+### Add
+
+- **Fix de portal de retorno del Nether**: al cruzar un portal entre Overworld y Nether se recuerda qué portal de origen usó el jugador, emparejado con el portal de llegada. Al volver a cruzar en sentido contrario, si ese portal recordado sigue existiendo, se redirige la salida a él en vez de usar la búsqueda vanilla de "portal más cercano" (que podía enviar al jugador a un portal equivocado cuando había varios cerca). Si el portal recordado ya no existe, se recurre al comportamiento vanilla. Activable/desactivable con `enableNetherReturnPortalFix` (activado por defecto).
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.5.0.jar`.
+
+
+## [Fixes] 2.5.1
+
+### Fix
+
+- **Crash al cruzar portal del Nether**: `ModAttachments.ATTACHMENT_TYPES` (el attachment `return_portal_data` que guarda el mapeo de portales de retorno) se creaba pero nunca se registraba en el mod event bus. El attachment type quedaba "unbound" y el mixin `MixinNetherReturnPortalFix` lanzaba `NullPointerException: Trying to access unbound value: ResourceKey[neoforge:attachment_types / utility_core_fixes:return_portal_data]` al intentar acceder a los datos del portal. Ahora `ModAttachments.ATTACHMENT_TYPES.register(modEventBus)` se llama en el constructor de `UtilityCoreFixes`.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.5.1.jar`.
+
+## [Fixes] 2.4.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Supresión de logs**: el fallback de `IllegalStateException` en el predicado de loot ahora registra una vez y suprime repeticiones (un resumen cada 200 ocurrencias) en lugar de saturar el log del servidor.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.57-2.4.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+
+## [QoL] 2.3.0
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.45-beta a 26.2.0.57.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_qol-26.2-neoforge-26.2.0.57-2.3.0.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [Admin] 2.2.3
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_admin-26.2-neoforge-26.2.0.45-beta-2.2.3.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [Fixes] 2.3.5
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.45-beta-2.3.5.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [QoL] 2.2.5
+
+### Change
+
+- **Actualización de NeoForge**: actualizado de 26.2.0.37-beta a 26.2.0.45-beta.
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_qol-26.2-neoforge-26.2.0.45-beta-2.2.5.jar`.
+- **Documentación del workflow**: actualizada `docs/WORKFLOW_UTILITY_CORE_26-2.md` para reflejar la nueva rama de trabajo.
+
+## [Fixes] 2.3.4
+- Fix: **mixin del whitelist de vehículos no aplicaba en 26.2 (`InvalidMixinException` al arrancar)** — el `@Redirect` acotado sobre `isSingleplayerOwner()` dentro de `handleMoveVehicle` era correcto, pero el `@Shadow` declarado para llamar al método original fallaba: en 26.2 `isSingleplayerOwner()` se movió de `ServerGamePacketListenerImpl` a su superclase `ServerCommonPacketListenerImpl`, y Mixin no puede resolver `@Shadow` contra una superclase no registrada en su ClassInfo tracker. El mixin completo se descartaba con `InvalidMixinException: @Shadow method isSingleplayerOwner()Z was not located in the target class`, así que la whitelist quedaba desactivada en silencio. Reemplazado el `@Shadow` por un mixin `@Invoker` sobre `ServerCommonPacketListenerImpl` (`InvokerServerCommonPacketListenerImpl`), registrado en la sección `server` de `utility_core_fixes.mixins.json`; el handler del redirect ahora hace fallback a través de ese invoker.
+
+## [Fixes] 2.3.3
+- Fix: **whitelist del anti-cheat vanilla "moved too quickly" de vehículos no funcionaba en 26.2** — el fix interceptaba `isVehicleMovingTooFast` y `checkVehicleMovement` en `ServerGamePacketListenerImpl`, pero esos métodos se eliminaron en 26.2: el check quedó inline dentro de `handleMoveVehicle` (`if (movedSqr - velLenSqr > 100.0 && !isSingleplayerOwner())`), así que los targets del mixin ya no existían y la whitelist nunca se aplicaba. Reescrito como `@Redirect` acotado sobre la única llamada a `isSingleplayerOwner()` dentro de `handleMoveVehicle`: si el vehículo raíz del jugador está whitelisteado devuelve `true` y se salta el check solo para ese vehículo, sin tocar los demás usos del método (checks de movimiento de jugador, permisos de dificultad/gamemode). `defaultRequire` vuelto a `1` (target verificado contra `minecraft-server-patched-26.2.0.45-beta.jar`).
+
+## [Fixes] 2.3.2
+- Fix: **crash del servidor al morir con un curio encantado equipado** — el mixin de Curios sobre `NbtPredicate.getEntityTagToCompare` fusiona el inventario de Curios en el NBT comparado por predicados de loot table/advancement; si un curio equipado está encantado, esa serialización necesita acceso al registro `minecraft:enchantment`, que no está disponible en ese contexto y lanza `IllegalStateException: Can't access registry ResourceKey[minecraft:root / minecraft:enchantment]`, sin capturar, tumbando el servidor (p. ej. al morir por una flecha con drops de muerte). Ahora se captura esa excepción en `LootItemEntityPropertyCondition.test` y el predicado simplemente falla en vez de crashear. Nuevo toggle de config `enableCuriosLootPredicateFix` (activado por defecto).
+
+## [QoL] 2.2.4
+- Fix: **mixin target AbstractContainerScreen no encontrado** — mover `AccessorAbstractContainerScreen` al array `client` en `utility_core_qol_accessors.mixins.json` para evitar errores en servidor dedicado.
+
+## [QoL] 2.2.3
+- Fix: **spam de logs y tráfico de red redundante del selector de recetas** — `CraftingMenu.slotChangedCraftingGrid` se dispara repetidamente aunque el contenido de la rejilla no cambie. Las ramas de "0 recetas" y "1 receta" reenviaban un paquete de sincronización al cliente en cada disparo sin comprobar nada, a diferencia de la rama de "varias recetas", que ya comprobaba si los inputs habían cambiado. Ahora las tres ramas se saltan el reenvío si los inputs no cambiaron. Además, los 3 logs de `receiveServerRecipes` en cliente (disparados en cada paquete recibido) estaban en nivel `INFO` sin condición; ahora están en `DEBUG`.
+
+## [Fixes] 2.3.1
+- Feature: **whitelist configurable para el anti-cheat vanilla "moved too quickly" de vehículos** — evita el spam de warnings `entity.evilcraft.broom (vehicle of X) moved too quickly!` al permitir que tipos de entidad especificados se muevan más rápido de lo que vanilla permite. Se interceptan `isVehicleMovingTooFast` y `checkVehicleMovement` en `ServerGamePacketListenerImpl`. Nuevo config `enableVehicleAntiCheatWhitelist` (activado por defecto) y lista `vehicleAntiCheatWhitelist` con formato `namespace:path` (por defecto: `["evilcraft:broom"]`).
+
+## [Fixes] 2.3.0
+- Feature: **fix genérico de crash por corrupción bloque/block-entity** — algunos chunks pueden quedar con NBT de block entity huérfana (p. ej. `enchanting_table`) en una posición cuyo bloque real ya no coincide (sustituido por otro bloque, típicamente por un mod tercero no relacionado). Cualquier código que intentara crear esa block entity de forma perezosa (incluido código de render de otro mod) lanzaba `IllegalStateException` y crasheaba el juego. Ahora, en servidor (o servidor integrado en singleplayer), se elimina la block entity huérfana para que la corrupción se autorrepare en vez de volver a crashear, y se loguea un warning con la posición y los tipos esperado/real; en cliente simplemente se trata como "sin block entity" sin tocar el mundo. No es específico de ningún bloque/mod concreto — cubre cualquier mismatch de este tipo. Nuevo toggle de config `enableBlockentityMismatchFix` (activado por defecto).
+
+## [Admin] 2.2.2
+## [Fixes] 2.2.2
+## [QoL] 2.2.2
+- Chore: versionado independiente por mod — `admin_version`/`fixes_version`/`qol_version` en `gradle.properties` en vez de un `mod_version` compartido. A partir de ahora cada mod bumpea y publica en CurseForge por separado; este bump conjunto es el único que se hace a la vez para dejar los 3 alineados en el punto de partida. Sin cambios de comportamiento.
+
+## 2.2.1
+- Fix (QoL): **NullPointerException al usar el crafteo** — `ModAttachments.ATTACHMENT_TYPES` (el attachment `player_recipe_data` que guarda la receta seleccionada por jugador) se creaba pero nunca se registraba en el mod event bus. El attachment type quedaba "unbound" y el mixin del selector de recetas (`CraftingMenu.onSlotChangedCraftingGrid`) lanzaba `NullPointerException: Trying to access unbound value` al cambiar la rejilla de crafteo. Ahora `ModAttachments.ATTACHMENT_TYPES.register(modEventBus)` se llama en el constructor de `UtilityCoreQoL`.
+
+## 2.2.0
+- Fix (QoL): **JAR inválido, servidor no arrancaba** — el `expand` de Gradle añadido en 2.1.2 para resolver `${mod_version}` interpretaba el `\n` literal del campo `credits` (usado para separar dos líneas de atribución) como un salto de línea real, generando un `neoforge.mods.toml` con un newline crudo dentro de un basic string TOML (inválido). El loader rechazaba el JAR con `Invalid newline in basic string` y ninguno de los 3 mods cargaba. Ahora `expand` usa `escapeBackslash = true` para no tocar backslashes fuera de los placeholders `${...}`.
+- Change (Admin, Fixes, QoL): los 3 configs ahora se guardan dentro de `config/utility_core/` (`utility_core_admin-common.toml`, `utility_core_fixes-common.toml`, `utility_core_qol-common.toml`, `utility_core_qol-client.toml`) en vez de sueltos directamente en `config/`. **Rompe configs existentes**: quien actualice desde una versión anterior verá sus valores actuales huérfanos en `config/` y se generarán configs nuevos con valores por defecto en `config/utility_core/`; hay que migrar los valores manualmente si se quieren conservar.
+
+## 2.1.2
+- Fix (Admin, Fixes, QoL): **crash crítico en servidor dedicado** — `registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new)` se ejecutaba sin comprobar el lado (`Dist`) en el constructor de los 3 mods. `ConfigurationScreen` extiende la clase cliente-only `Screen`, por lo que el classloading de esa referencia lanzaba `NoClassDefFoundError: net/minecraft/client/gui/screens/Screen` y tumbaba la carga de los 3 mods en cualquier servidor dedicado. Ahora el registro solo ocurre si `FMLEnvironment.dist.isClient()`.
+- Fix (build): `version` en los 3 `neoforge.mods.toml` estaba hardcodeado como literal `"2.0.0"` y nunca reflejaba `mod_version` — el crash report mostraba "Mod version: 2.0.0" pese a que el JAR era 2.1.0. Ahora usa `${mod_version}` con `expand` en `processResources`, igual que el resto de mods del ecosistema.
+
+## 2.1.0
+
+## [2.1.1] - 2026-08-12
+
+### Change
+
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `utility_core_fixes-26.2-neoforge-26.2.0.37-beta-2.1.1.jar` (se añade la versión de cargador/NeoForge al nombre del archivo). Empaquetado y documentación; sin cambios de funcionalidad.
+
+- Feature (QoL): se agregó la asistencia de puentear (Bridging Assist), portada desde BridgingMod — colocación "reacharound" al construir puentes, outline y crosshair direccional, slab assist, y ajustes de distancia/ejes/retardo configurables.
+- Feature (QoL): soporte opcional para DankStorage y Sable mediante verificaciones suaves (sin dependencias duras); tecla de enlace para activar/desactivar la asistencia (predeterminada: coma).
+- Fix (Admin, Fixes): se agregaron los puntos de entrada `@Mod` faltantes en admin y fixes — antes ninguno de los dos registraba su config ni funcionaba como mod independiente.
+- Fix (Admin): `ServerStartingEvent`/`ServerStartedEvent`/`ServerTickEvent` estaban registrados en el bus equivocado (mod-bus en vez de `NeoForge.EVENT_BUS`), causando un crash al cargar el cliente.
+- Fix (Admin): `SpawnSchematicManager` nunca se instanciaba, causando un `NullPointerException` al iniciar el servidor integrado.
+- Fix (QoL): conflicto de config entre `BridgingConfig` y `QoLConfig` (ambos apuntaban al mismo `.toml`) — `BridgingConfig` pasa a config de cliente (`utility_core_qol-client.toml`).
+- Fix (QoL): los mixins de bridging (crosshair, outline) tenían una ruta de paquete duplicada en `utility_core_qol.mixins.json` y nunca se cargaban; movidos a su propio archivo de mixins.
+- Fix (QoL): el sprite de la flecha direccional del crosshair tenía un path erróneo (nunca se encontraba la textura); el color del contorno se calculaba mal (truncaba a negro); la colocación con items de compat especiales (DankStorage, etc.) se saltaba el handler correspondiente.
+- Chore (QoL): se eliminaron logs de depuración residuales del selector de recetas que se disparaban en cada cambio de la rejilla de crafteo; ahora están tras el flag `logDetectedConflicts`.
+- Chore: se eliminó el archivo `Config.java` duplicado y el `META-INF/neoforge.mods.toml` huérfano directamente bajo la raíz del repositorio.
+- Fix (build): la versión de los subproyectos estaba hardcodeada en `build.gradle` en vez de leerse de `mod_version`, así que los bumps de versión no llegaban a los JARs.
+## 1.11.13
+- Fix: el selector de recetas de la mesa de crafteo dejaba de responder (el clic se registraba pero el servidor lo rechazaba). El menú de inventario (`InventoryMenu`) permanece suscrito a los cambios del inventario del jugador aunque haya otro menú abierto, y cada cambio disparaba `slotChangedCraftingGrid` con la rejilla 2x2 vacía; eso hacía que el servidor borrara los datos de recetas del jugador (y enviara sincronizaciones con 0 recetas) constantemente. Ahora el cálculo del selector solo procesa el menú activo del jugador (`player.containerMenu`), de modo que la selección se mantiene hasta que el jugador cambia los ingredientes.
+
+## 1.11.12
+- Fix: el selector de recetas mostraba la segunda opción al hacer clic pero volvía a la primera opción inmediatamente. El servidor solo actualizaba el slot remoto (la copia de lo que ve el cliente) pero no el resultado real del menú, así que `broadcastChanges()` revertía la salida a la receta 0 en el siguiente tick. Ahora al seleccionar una receta el servidor escribe también el slot de resultado real (`ResultContainer`) y fija `recipeUsed`, de modo que la selección se mantiene.
+- Re-activado por defecto: `enableCraftingRecipeSelector` vuelve a `true`.
+- Logs de depuración del selector con prefijo `[RecipeSelector]` (nivel INFO).
+
+## 1.11.11
+- Logging limpio: eliminados los miles de entradas de log añadidos durante el diagnóstico del selector de recetas.
+
+## 1.11.10
+- Desactivado por defecto el selector de recetas (`enableCraftingRecipeSelector` default false) pendiente de fix del lado servidor.
+
+## 1.11.9
+- Diagnóstico: Agregado logging del número de recetas que encuentra el servidor al colocar items en la mesa de crafteo.
+
+## 1.11.8
+- Diagnóstico: Agregado logging para verificar si el mixin slotChangedCraftingGrid se ejecuta en el servidor.
+
+## 1.11.7
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.6
+- Re-activado por defecto: `enableCraftingRecipeSelector` vuelve a `true`.
+- Fix: el selector de recetas de la mesa de crafteo ahora funciona correctamente en el servidor.
+
+## 1.11.5
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.4
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.3
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.2
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.1
+- Fix: el selector de recetas de la mesa de crafteo no mostraba la primera opción al hacer clic en ella.
+
+## 1.11.0
+- Feature: selector de recetas de la mesa de crafteo.
+
+## 1.10.0
+- Feature: título de bioma/dimensión.
+
+## 1.9.0
+- Feature: título de bioma/dimensión vertical offset.
+
+## 1.8.0
+- Feature: título de bioma/dimensión.
+
+## 1.7.0
+- Feature: selector de recetas de la mesa de crafteo.
+
+## 1.6.0
+- Feature: título de bioma/dimensión.
+
+## 1.5.0
+- Feature: título de bioma/dimensión.
+
+## 1.4.0
+- Feature: título de bioma/dimensión.
+
+## 1.3.0
+- Feature: selector de recetas de la mesa de crafteo.
+
+## 1.2.0
+- Feature: título de bioma/dimensión.
+
+## 1.1.0
+- Feature: selector de recetas de la mesa de crafteo.
+
+## 1.0.0
+- Versión inicial.

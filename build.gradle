@@ -1,0 +1,39 @@
+import org.gradle.language.jvm.tasks.ProcessResources
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+}
+
+// Each submodule is an independent CurseForge project and versions on its own
+// SemVer track; the property name follows the subproject's own name (<name>_version).
+subprojects { subproject ->
+    def modVersion = project.findProperty("${subproject.name}_version")
+    if (modVersion == null) {
+        throw new GradleException("Missing '${subproject.name}_version' property in gradle.properties for subproject '${subproject.name}'")
+    }
+
+    group = "com.skd.utilitycore"
+    version = modVersion
+
+    repositories {
+        mavenCentral()
+        maven { url "https://maven.neoforged.net/releases" }
+        maven { url "https://maven.architectury.dev" }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+
+    afterEvaluate {
+        tasks.named('processResources', ProcessResources) {
+            var replaceProperties = [mod_version: modVersion]
+            inputs.properties replaceProperties
+            filesMatching('META-INF/neoforge.mods.toml') {
+                expand(replaceProperties) {
+                    it.escapeBackslash = true
+                }
+            }
+        }
+    }
+}
